@@ -1,0 +1,23 @@
+{
+  "n_validas": 8541,
+  "n_municipios": 1825,
+  "n_panel": 12385,
+  "n_completo6": 11925,
+  "n_nombre_estable": 12195,
+  "LN_2024_validas": 81666826,
+  "LN_2024_total_panel": 98330348,
+  "cobertura_LN_2024_pct": 83.05353094041729,
+  "features": [
+    "media_presidencial",
+    "media_intermedia",
+    "cambio_presidencial_pp",
+    "cambio_intermedia_pp"
+  ],
+  "filtros": "completo 6 + nombres municipales estables + observados >= 100 por año + NS <=20% todos los años",
+  "k_demo": 5,
+  "best_silhouette": {
+    "algoritmo": "KMeans",
+    "k": 4,
+    "silhouette_muestra_2000": 0.24707030034436708
+  }
+}

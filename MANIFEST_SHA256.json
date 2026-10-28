@@ -1,0 +1,611 @@
+{
+  "version": "1.0.0",
+  "hash_algorithm": "sha256",
+  "files": [
+    {
+      "path": ".dockerignore",
+      "sha256": "d3035f3e7c5631495bcbec9eb01cad98f10d2d8b7764fc0597168d2a0e38ff53",
+      "bytes": 68
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "c7214e3b40fb9f363c6c5b1b376ff1e9500a0f46535e8382a03ba5facec330c2",
+      "bytes": 197
+    },
+    {
+      "path": ".vscode/launch.json",
+      "sha256": "c2749daab675709a8ea2910d9723eb9602b278ac77b133518b8d53b0cf5772b3",
+      "bytes": 261
+    },
+    {
+      "path": ".vscode/settings.json",
+      "sha256": "1f7fc950f93f33954c1b53767969a3bcb24aad8b4d8748ed17d4185a8423ef0c",
+      "bytes": 175
+    },
+    {
+      "path": "Dockerfile",
+      "sha256": "9b6fa1bc36e9022dc565b6487dd2bd6c48f84df64b03bbe6c160e9b31574ab64",
+      "bytes": 219
+    },
+    {
+      "path": "README.md",
+      "sha256": "b732ee6f0723291c84aeffcc7efb8c60509716dd3fba76537f150007ec946893",
+      "bytes": 4816
+    },
+    {
+      "path": "analisis/figuras/centros_perfiles.png",
+      "sha256": "5f46a136073f78e4972d052a1e19a66667275b4ed07af15020b09c7271417f53",
+      "bytes": 62854
+    },
+    {
+      "path": "analisis/figuras/comparacion_clustering.png",
+      "sha256": "20937d849a18ef77d104594e3b1d5f2e522e3337fcbb86fcc614d7bb22f9f186",
+      "bytes": 67044
+    },
+    {
+      "path": "analisis/figuras/no_especificados.png",
+      "sha256": "5d61e3560e6535f0564aeeb0c22a27c9f0888db8e1a1bad5e18b89fa1499a998",
+      "bytes": 32534
+    },
+    {
+      "path": "analisis/figuras/participacion_grupos_edad.png",
+      "sha256": "07daecd2d46c8d8f631cbc9c6a9567632c77247ea885f1a233e91aec5f9f8075",
+      "bytes": 167696
+    },
+    {
+      "path": "analisis/figuras/participacion_nacional.png",
+      "sha256": "0b05d4af5ebc1dfc200365b6a003f83c10dc41937da069aa9cc74fe896cdbcc9",
+      "bytes": 73725
+    },
+    {
+      "path": "analisis/notebooks/01_auditoria.ipynb",
+      "sha256": "4eef7bdf68a233280744d050d87bb64dc880ba82c5725ddf06da3725a0d88c63",
+      "bytes": 33731
+    },
+    {
+      "path": "analisis/notebooks/02_historico.ipynb",
+      "sha256": "a647be5dceeadd210c937826d0b647bb768da56377f1dde28e04d19c967fe82d",
+      "bytes": 318799
+    },
+    {
+      "path": "analisis/notebooks/03_territorios.ipynb",
+      "sha256": "06e8bd38966e7a7cd8c8f69a56d869601d8ac4f1e03ea8e517d0cbd91a125eaa",
+      "bytes": 53403
+    },
+    {
+      "path": "analisis/notebooks/05_auditoria_homologacion_producto.ipynb",
+      "sha256": "36fb38eb45b20437e46eb807d91128a6f077ac71de29489f5d6c06458a2bc494",
+      "bytes": 46544
+    },
+    {
+      "path": "analisis/reportes/RESUMEN_EJECUTIVO.md",
+      "sha256": "87006cf89921ad2b2fa7b747384bc0f871e609ee5f208559229a6919e7156c61",
+      "bytes": 4894
+    },
+    {
+      "path": "analisis/reportes/auditoria_resumen.csv",
+      "sha256": "d74b6fa16b12ac7774ac374e89cd0b8372c29935d25d6834e0a1851a895963c7",
+      "bytes": 1471
+    },
+    {
+      "path": "analisis/reportes/causas_exclusion_superpuestas.csv",
+      "sha256": "0d550dfb3680871f317f327a9ae5d5e5cc4ca0a3613e14322a145e1966926592",
+      "bytes": 154
+    },
+    {
+      "path": "analisis/reportes/cobertura_panel.csv",
+      "sha256": "32da464706ce924de815b0646ed2da2476143e061a61429fda469fcbf983c6cd",
+      "bytes": 139
+    },
+    {
+      "path": "analisis/reportes/participacion_por_edad_y_anio.csv",
+      "sha256": "a3f77281fd360ffcccc58c3b2a31d04ed4e4953c1da4e8856451c6617807f485",
+      "bytes": 2448
+    },
+    {
+      "path": "analisis/reportes/participacion_por_sexo_y_anio.csv",
+      "sha256": "81403c4c2b1fab2c25b7a6b9741cc002df7d39ad8d7359c51b53ac059676c179",
+      "bytes": 790
+    },
+    {
+      "path": "analisis/reportes/participacion_por_tipo_seccion_y_anio.csv",
+      "sha256": "423833a90220b27603aa97bb747088f857f9206111c688cb64ce6f45d6a56777",
+      "bytes": 1085
+    },
+    {
+      "path": "analisis/reportes/resumen_nacional.csv",
+      "sha256": "d50d9582808192d6ac6a995a24d966f09f1d5306362ab562bb0076630cb425b4",
+      "bytes": 703
+    },
+    {
+      "path": "dashboard/index.html",
+      "sha256": "fb74945032a822ef97b45077e73a6c432c56860566d1decc8a60f1757386b614",
+      "bytes": 8664
+    },
+    {
+      "path": "dashboard/static/app.css",
+      "sha256": "2d74c446dfadc0ace11abce6568a245c529d7b85619d5ef4cfe159e8bfa8f9de",
+      "bytes": 7847
+    },
+    {
+      "path": "dashboard/static/app.js",
+      "sha256": "a900aa8efd3f26e44c2cbf53c00b11acf894748ec55b75a9e7d0ee1cfb7075c9",
+      "bytes": 9328
+    },
+    {
+      "path": "dashboard/static/plotly.min.js",
+      "sha256": "e2b0f77ee8156ff9d525852fe4acb7bfe7d85e8a2e1da0523f6d16209b848968",
+      "bytes": 4838938
+    },
+    {
+      "path": "datos/processed/2009/auditoria.json",
+      "sha256": "66c30391290e6332fa98d48af30fb52d1070debe9118a54a7f81a67caa251688",
+      "bytes": 6609
+    },
+    {
+      "path": "datos/processed/2009/municipio_edad.csv",
+      "sha256": "3857ef79b8ca21241b1bbab1596c6b08e2432703c597d108d6b3b6291082530e",
+      "bytes": 401296
+    },
+    {
+      "path": "datos/processed/2009/municipio_edad_sexo.csv",
+      "sha256": "ab8eb9a28e4526e16c007396995e0e6bb44f04edc015839238e5809ee62c3280",
+      "bytes": 826849
+    },
+    {
+      "path": "datos/processed/2009/municipio_edad_tipo_seccion.csv",
+      "sha256": "a5cdd451d62f7c8c3d4e06ddc64dc528778583c8b160572234403cc6440f4af7",
+      "bytes": 944384
+    },
+    {
+      "path": "datos/processed/2009/municipios_nombres.csv",
+      "sha256": "19afac8680c49e89bedad84ba276b9c855d6a4c8d6ed9f5d347337a7c39086be",
+      "bytes": 105473
+    },
+    {
+      "path": "datos/processed/2012/auditoria.json",
+      "sha256": "0dad13f92e06d06f529d0c8b49524db6aba755a8c15db418497220b81ef2065f",
+      "bytes": 6561
+    },
+    {
+      "path": "datos/processed/2012/municipio_edad.csv",
+      "sha256": "126fdfb78b95ba534f9041a854feee2aabca201585679eb390d1acc720e29d57",
+      "bytes": 395976
+    },
+    {
+      "path": "datos/processed/2012/municipio_edad_sexo.csv",
+      "sha256": "4ae6d77a4532bbb82b8b6024f4421d408eed98683631f1688a2cac54c8a40a36",
+      "bytes": 817802
+    },
+    {
+      "path": "datos/processed/2012/municipio_edad_tipo_seccion.csv",
+      "sha256": "ae36ad0d3a21b34791763d1275c8c2885b1a0cf1f46410fd0e903e7e839e683e",
+      "bytes": 933741
+    },
+    {
+      "path": "datos/processed/2012/municipios_nombres.csv",
+      "sha256": "6ccaa6207b5738fa8c2e41c9d969c6688917190d714ade2bea118005fba59d7f",
+      "bytes": 105323
+    },
+    {
+      "path": "datos/processed/2015/auditoria.json",
+      "sha256": "725b8effbe04085dd682d2752f8435bb48f3ebf5b2d355c986d8be748ae325ad",
+      "bytes": 6626
+    },
+    {
+      "path": "datos/processed/2015/municipio_edad.csv",
+      "sha256": "e5424e437e99ccf358a8b61d6ecf750b071060c01fc6354045e906fac20ae888",
+      "bytes": 406789
+    },
+    {
+      "path": "datos/processed/2015/municipio_edad_sexo.csv",
+      "sha256": "f2ff178b948378158d67f8fc466d78200fecc4b5ba84aa105ba709e5b03a54b3",
+      "bytes": 836366
+    },
+    {
+      "path": "datos/processed/2015/municipio_edad_tipo_seccion.csv",
+      "sha256": "a2d63cd2536ab359abde7941da7dae30631b4dc48267c5e056fc8fc8c0a0c9c0",
+      "bytes": 954506
+    },
+    {
+      "path": "datos/processed/2015/municipios_nombres.csv",
+      "sha256": "19afac8680c49e89bedad84ba276b9c855d6a4c8d6ed9f5d347337a7c39086be",
+      "bytes": 105473
+    },
+    {
+      "path": "datos/processed/2018/auditoria.json",
+      "sha256": "68d41fea9606aff010aec2c320ef7407f076d1e6795f0d21d0f0a11f36404a41",
+      "bytes": 6633
+    },
+    {
+      "path": "datos/processed/2018/municipio_edad.csv",
+      "sha256": "42b3691af5c582a2de8b7b952c4740d56c48ac02525eebc6dbfa7abce412b97c",
+      "bytes": 410207
+    },
+    {
+      "path": "datos/processed/2018/municipio_edad_sexo.csv",
+      "sha256": "3929d709e52a67e11bfd3790bfb8fa5043cd54bf7fac2f43da71709a420a0a94",
+      "bytes": 842854
+    },
+    {
+      "path": "datos/processed/2018/municipio_edad_tipo_seccion.csv",
+      "sha256": "55226643f41a10824f64088310de3b6a07f12c566e18a4cc2fef052d4c9ddbca",
+      "bytes": 962397
+    },
+    {
+      "path": "datos/processed/2018/municipios_nombres.csv",
+      "sha256": "69aa9b4bfca793c8ee5249468fda63402722ec12f27ecf7107a2cdac3909a1b7",
+      "bytes": 105710
+    },
+    {
+      "path": "datos/processed/2021/auditoria.json",
+      "sha256": "38fd616170cf7c9e5fadf38da9147421a65822852002577f26da09afe7ecf72f",
+      "bytes": 6633
+    },
+    {
+      "path": "datos/processed/2021/municipio_edad.csv",
+      "sha256": "77bc9580d1c416214fe35611ebe7b55791416827b9d6b730574f5f968a504eb5",
+      "bytes": 410356
+    },
+    {
+      "path": "datos/processed/2021/municipio_edad_sexo.csv",
+      "sha256": "eb5f580e4f15244d31de10d28923abd47b6daab7ba6d487527211057f7b8ba80",
+      "bytes": 843065
+    },
+    {
+      "path": "datos/processed/2021/municipio_edad_tipo_seccion.csv",
+      "sha256": "6eecdb7acb50f86c73f15180c19e14632bc4c9adcb753e63bfd2fdc3abb79de0",
+      "bytes": 964600
+    },
+    {
+      "path": "datos/processed/2021/municipios_nombres.csv",
+      "sha256": "78beb1f60ab4a32790e97807425cff8dfb4f26699025a7aa6100f315f61ea019",
+      "bytes": 106031
+    },
+    {
+      "path": "datos/processed/2024/auditoria.json",
+      "sha256": "38c82eabfb387ee9c7c8be898ef1956198f799361bdd93e6086b02fd0faf0ec8",
+      "bytes": 6677
+    },
+    {
+      "path": "datos/processed/2024/municipio_edad.csv",
+      "sha256": "9977aed6acce14823a92d3038a680ad121d5e929538ebae23c14f33b425c36af",
+      "bytes": 415048
+    },
+    {
+      "path": "datos/processed/2024/municipio_edad_sexo.csv",
+      "sha256": "ae689975c7d25157ce7d4ecf9a310276f154f9bc9308171291a8fca11d93f2d9",
+      "bytes": 854120
+    },
+    {
+      "path": "datos/processed/2024/municipio_edad_tipo_seccion.csv",
+      "sha256": "490085e5ff428bdd7eb4dda05f912c36af8df4ca16f4a27ab8d67516fcfef145",
+      "bytes": 975249
+    },
+    {
+      "path": "datos/processed/2024/municipios_nombres.csv",
+      "sha256": "05ef7bf5f55a7fb11766325aac13d12ee5513d5f7463ec79ca42fe542a33f354",
+      "bytes": 106274
+    },
+    {
+      "path": "datos/processed/README.md",
+      "sha256": "330f9591d439da503b4f4077a1910e1a9233508c6f6483b15e3c670c53b64404",
+      "bytes": 755
+    },
+    {
+      "path": "datos/processed/matriz_modelo_6_anios.csv",
+      "sha256": "5a6602669eb16e80201087b7d6fc0bab79d11e54b7115a007b017795323c6ea5",
+      "bytes": 6546543
+    },
+    {
+      "path": "datos/processed/municipios_auditoria_identidad.csv",
+      "sha256": "5e8be398b2379ea418f7f45b62649a98f0004e2c7d317782ea339962080fc878",
+      "bytes": 32530
+    },
+    {
+      "path": "datos/processed/municipios_nombres_historicos.csv",
+      "sha256": "2dd1481d1a0ede14f55aa23d6d353f23ba9b2c7f5277d1b0fea699ba5a586048",
+      "bytes": 582629
+    },
+    {
+      "path": "datos/processed/producto/historico_nacional.csv",
+      "sha256": "491cbb24811d9d39381f51343d9d7818a7964bf2272b8bcc0d4e802bff8c93bd",
+      "bytes": 702
+    },
+    {
+      "path": "datos/processed/producto/homologacion_municipal_auditoria.csv",
+      "sha256": "da42131b31066c9ade69ff8d3fd5cf4508c473615f9714e1a1db037b91a6a00a",
+      "bytes": 544806
+    },
+    {
+      "path": "datos/processed/producto/metadatos_dashboard.json",
+      "sha256": "53747e41f3a6fcef66c0f84118d4e123efee8c8d6bed7f1a56869e843b167284",
+      "bytes": 3970
+    },
+    {
+      "path": "datos/processed/producto/observaciones_dashboard.csv",
+      "sha256": "785e5b0b884514ce7a41ec32b0294cd439939ecedf0bea7dd09269e264f1ff0d",
+      "bytes": 3170702
+    },
+    {
+      "path": "datos/processed/producto/perfiles.json",
+      "sha256": "f96d3d13d9f0fb1364dbf99d376a350a6336bd438540ccd0a3a71164de4eb3ee",
+      "bytes": 3309
+    },
+    {
+      "path": "datos/processed/serie_municipio_edad_2009_2024.csv",
+      "sha256": "f6796a59a236924aa4b069fcc261baf94304ddaea34c9a0837dda1913ff19cd2",
+      "bytes": 5333406
+    },
+    {
+      "path": "datos/raw/2009/CCPC_2009_original_INE.zip",
+      "sha256": "e626e9528a91206c23fc8f96987e1a297db285e7cbc0fa1e37a18ed473ebf61c",
+      "bytes": 40203573
+    },
+    {
+      "path": "datos/raw/2012/CCPC_2012_original_INE.zip",
+      "sha256": "5999f86e21154138b904723cb5d55ebde9e108ac72872f2ff5695d9eb8fde9cd",
+      "bytes": 39515896
+    },
+    {
+      "path": "datos/raw/2015/CCPC_2015_original_INE.zip",
+      "sha256": "7435ac54a3a6aebf5d9c9466a064b320b64bf5ff8b4d8ae787bad898497341da",
+      "bytes": 42594136
+    },
+    {
+      "path": "datos/raw/2018/CCPC_2018_original_INE.zip",
+      "sha256": "b20981a0aea1ac773e7bc0b54784bba7619346585ba3996744ad22458279dd8b",
+      "bytes": 43389665
+    },
+    {
+      "path": "datos/raw/2021/CCPC_2021_original_INE.zip",
+      "sha256": "29bdfaaa33be5151c2ae8c8e406d8a27976006d11e6cbe201ac05cc04def4849",
+      "bytes": 44357326
+    },
+    {
+      "path": "datos/raw/2024/CCPC_2024_original_INE.zip",
+      "sha256": "c0de34d04e782ad99579b83591a6e3e6c8d1e20f4914d4845743bd79d2bd28b2",
+      "bytes": 82419841
+    },
+    {
+      "path": "datos/raw/README.md",
+      "sha256": "6456f49ae30bf42259b696912bcbbc207ef5a2bf188a79dde6f496e6065a2a50",
+      "bytes": 435
+    },
+    {
+      "path": "docs/01_fuentes_y_diccionario.md",
+      "sha256": "36491a38eeb30f3ed8e10725f3e6b8b64de770bf0fa5cbf0f870ee21b02d8245",
+      "bytes": 2785
+    },
+    {
+      "path": "docs/02_decisiones_metodologicas.md",
+      "sha256": "429cb4d497968ac8d3271d0256baeeed6e5c26056558949253d04871c6fe9ed7",
+      "bytes": 3901
+    },
+    {
+      "path": "docs/03_model_card.md",
+      "sha256": "0e3864e82eb64b778599a88fd07433b11e850e569739fd4f785d1fae9ac40145",
+      "bytes": 3436
+    },
+    {
+      "path": "docs/04_limitaciones_y_etica.md",
+      "sha256": "aad49a4dbb8a552b1c25d68e19cb9362b71e519ca0f7aeb9f6f37d05474db9cd",
+      "bytes": 2409
+    },
+    {
+      "path": "docs/05_siguiente_paso_vscode.md",
+      "sha256": "5f5de2deabbe1c4cb8dfd217792bef7c7ca2695c17329f218cd5c142216f7cd8",
+      "bytes": 3114
+    },
+    {
+      "path": "docs/06_producto_dashboard.md",
+      "sha256": "c051a889a962d3c1fb83f98b70a940d9fda6262aa955b75d67143727c6a941c1",
+      "bytes": 2445
+    },
+    {
+      "path": "docs/07_homologacion_territorial.md",
+      "sha256": "7fcc19422e87093eca9b63e0bc697b7b0d605b822ad1a08c32d00a7eb76a1482",
+      "bytes": 2887
+    },
+    {
+      "path": "docs/08_entrega_y_siguientes_pasos.md",
+      "sha256": "86ad4afdf0b0997a9193b1f1df30dc47f096e13faf22be4430beb847c8552b4a",
+      "bytes": 2825
+    },
+    {
+      "path": "docs/09_arquitectura_y_pruebas.md",
+      "sha256": "b6cc79369a348554022c930b8d5a94e318be5e688c5ff321b23e9a509954d116",
+      "bytes": 1918
+    },
+    {
+      "path": "docs/referencias/Convocatoria_Hackaton-1.pdf",
+      "sha256": "9df0f6aa9ee916d5b9c6e1b670bdcd0aec80427337f101ed0b80b5f4f44fa55e",
+      "bytes": 1018991
+    },
+    {
+      "path": "entregables/README.md",
+      "sha256": "723a8b10fbadfaff0602e038b61ab00773d1347cdf4c12a3e405194a3148641f",
+      "bytes": 703
+    },
+    {
+      "path": "entregables/fichas/perfil_1_borrador_no_aprobado.pdf",
+      "sha256": "83b9f24aba092e72792a02ac6e9c5e04f4ace458d92af09ad8d5685dbc3eafa1",
+      "bytes": 24176
+    },
+    {
+      "path": "entregables/fichas/perfil_2_borrador_no_aprobado.pdf",
+      "sha256": "bc7ba93d8e685d7cee71f7f8cdba9edad16ffe869434807ea23c5daf35147930",
+      "bytes": 24199
+    },
+    {
+      "path": "entregables/fichas/perfil_3_borrador_no_aprobado.pdf",
+      "sha256": "912eaae9e2f6c4a8da2a4984d35abba95c26b5c42074c06cf9114991690f9e51",
+      "bytes": 24178
+    },
+    {
+      "path": "entregables/fichas/perfil_4_borrador_no_aprobado.pdf",
+      "sha256": "616534a6e12d8fac7b7c0765159701d1c0dd9e0cc01fdc07cccb632ce2174397",
+      "bytes": 24183
+    },
+    {
+      "path": "entregables/fichas/perfil_5_borrador_no_aprobado.pdf",
+      "sha256": "3e4d3af7a14f804ec340d6aea1a316c99743adc29c9f2d3583e18a3bd92e6098",
+      "bytes": 24183
+    },
+    {
+      "path": "entregables/reportes/documento_tecnico_reto1_10_paginas.pdf",
+      "sha256": "450897ec57ae3dbcc2453bb073acc3d161175552a8deb20ce1fd4194a8c69a98",
+      "bytes": 61864
+    },
+    {
+      "path": "ml/modelos/kmeans5_exploratorio.joblib",
+      "sha256": "af0a33a52e75dc5370844c799cb347a7c276491ed938f0fa11f396f316741a98",
+      "bytes": 35833
+    },
+    {
+      "path": "ml/notebooks/04_modelado.ipynb",
+      "sha256": "88919c9f33c014e7017e7ef4bd7c36b095ebc9280aab977fd9190ef5b8106ebc",
+      "bytes": 105756
+    },
+    {
+      "path": "ml/notebooks/06_producto_inferencia_y_fichas.ipynb",
+      "sha256": "b101e3c10f41e7f53e8f3fc40264fcd8fb8a00e3f8bf430cc52e315e8144d9d3",
+      "bytes": 35007
+    },
+    {
+      "path": "ml/resultados/comparacion_modelos.csv",
+      "sha256": "6726277bf09d5876a26da4aaffee02da615451aeee0139d89090190d33025527",
+      "bytes": 1126
+    },
+    {
+      "path": "ml/resultados/estabilidad_semillas.csv",
+      "sha256": "8fb929195cefa2a514b1705cd2a8b5d2e850c19f141c0b531db07e7da36bc206",
+      "bytes": 114
+    },
+    {
+      "path": "ml/resultados/fichas_perfiles_exploratorias.csv",
+      "sha256": "4980f022d0c48c8f4de7b8dd6d68de1856a4a6621c7a406808f146efba877a79",
+      "bytes": 924
+    },
+    {
+      "path": "ml/resultados/observaciones_segmentadas.csv",
+      "sha256": "7d1b4a2cd875e7cef0fd2ddf68429e4cd03bba281f8ef7f35f6042d8bcff09db",
+      "bytes": 4797166
+    },
+    {
+      "path": "ml/resultados/perfiles_por_edad.csv",
+      "sha256": "da1fcb4e922a1db6971b0d3c44f21885010933ae79715f08013b892518a47bcf",
+      "bytes": 147
+    },
+    {
+      "path": "ml/resultados/resumen_modelado.json",
+      "sha256": "60f6da58f4567ac3839175a6f2b116427c0f9dbdf822cba12d60e78c60fca159",
+      "bytes": 607
+    },
+    {
+      "path": "ml/resultados/sensibilidad.csv",
+      "sha256": "9bae6d53be4723747a02ace2ee27c8aa4ec3a7c3c79515ae5344f714d37c3a4c",
+      "bytes": 216
+    },
+    {
+      "path": "ml/resultados/validacion_temporal_descriptiva.json",
+      "sha256": "5a074d256d6e361ed39149d8e9d61dc3bb09bad23b11f6a039af6f8aa2aa4d11",
+      "bytes": 320
+    },
+    {
+      "path": "requirements-app.txt",
+      "sha256": "8adf19f3bf5c2e7eab43737b0d29e3458fa33cac6ff420614c9f20a9046e660e",
+      "bytes": 199
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "6e7f77551a26239c36ebae4e536ac9b064605b3b2b7f14ca8f24bbfa49637115",
+      "bytes": 297
+    },
+    {
+      "path": "run.bat",
+      "sha256": "ce367919896c6bd239e0a77bbb9ff93345b5a2a22759ab7c2c706abac77ee365",
+      "bytes": 290
+    },
+    {
+      "path": "run.sh",
+      "sha256": "08d274de8764d9e03bead367fcc68865d767b18bfba5aa6c6f5b8e7a7be5a397",
+      "bytes": 322
+    },
+    {
+      "path": "samples/plantilla_clasificacion_ejemplo_SINTETICO.csv",
+      "sha256": "0ec3a330e5d5d013f6718661b9e06aec583b64e0ac6f7f1b3423de9102be4929",
+      "bytes": 327
+    },
+    {
+      "path": "src/build_delivery.py",
+      "sha256": "dd83628c341089a78ed976db4e899a94e0f9285a43fc77c20f8ab1163ea89ab7",
+      "bytes": 1210
+    },
+    {
+      "path": "src/create_product_notebooks.py",
+      "sha256": "77275e7074fc5817392e46ad2cf2afe1f7081601ee6cc4206687a4a2c0b4e4eb",
+      "bytes": 5242
+    },
+    {
+      "path": "src/dashboard_api.py",
+      "sha256": "bc89c1c79ce97935f2e503747660461af5db47232ce4d6b22531a494c3197cba",
+      "bytes": 9293
+    },
+    {
+      "path": "src/education.py",
+      "sha256": "eb571b7aa396037bcaf05a18c26e522f019b94457dcaf1e711caf083086efb29",
+      "bytes": 6661
+    },
+    {
+      "path": "src/generate_docs.py",
+      "sha256": "d33af8a0c2b74321e52d3124388d0461ede545677449192e771961f4f1aab891",
+      "bytes": 25947
+    },
+    {
+      "path": "src/generate_notebooks.py",
+      "sha256": "acb0b272ca3e6414a09812195f6a201ee66e8c65874ef4553e0f8bfef464b412",
+      "bytes": 9880
+    },
+    {
+      "path": "src/modeling.py",
+      "sha256": "eaccbe060e73174b3ecc757cd6dcfa32f1e05d330554ec2e68dca2cdfef75f7b",
+      "bytes": 8007
+    },
+    {
+      "path": "src/pipeline.py",
+      "sha256": "d4a63977f8ae716366d18cfd72d31ab3604a724d06156ecf8831355776ccb085",
+      "bytes": 9304
+    },
+    {
+      "path": "src/prepare_product.py",
+      "sha256": "027ce23e63f6e7ed1be7147b638280d15fbd75d628d219eae695ac80429fcb77",
+      "bytes": 4838
+    },
+    {
+      "path": "src/reporting.py",
+      "sha256": "ae5e0c263cba29289a8c5f9ca0e16ad790168f687f29c40cc71167bfe7830820",
+      "bytes": 5891
+    },
+    {
+      "path": "src/technical_report.py",
+      "sha256": "e753c4cadd0439a313675ae42be56aac0b1aecf470468d0584f45559be44f522",
+      "bytes": 15098
+    },
+    {
+      "path": "src/verify_manifest.py",
+      "sha256": "63fcc266325a617bad1808dae0cdbf487bd53fddf920a9a871832daf14f45f0d",
+      "bytes": 797
+    },
+    {
+      "path": "tests/test_dashboard.py",
+      "sha256": "09b831de3c1951962611a807aa3547b25db14d8c39465d8d3657b2414dd0973b",
+      "bytes": 1915
+    },
+    {
+      "path": "tests/test_metrics.py",
+      "sha256": "88270442dfd6ec415e089546b4a6f6d02e9818e7e57e46ffd811a7bcc0531e59",
+      "bytes": 436
+    }
+  ]
+}

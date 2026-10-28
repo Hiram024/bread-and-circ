@@ -1,0 +1,7 @@
+datos/raw/
+.venv/
+__pycache__/
+.pytest_cache/
+*.zip
+*.sqlite3
+.git/

@@ -1,0 +1,7 @@
+FROM python:3.11-slim
+WORKDIR /app
+COPY requirements-app.txt .
+RUN pip install --no-cache-dir -r requirements-app.txt
+COPY . .
+EXPOSE 8501
+CMD ["uvicorn", "src.dashboard_api:app", "--host", "0.0.0.0", "--port", "8501"]

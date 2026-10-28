@@ -1,0 +1,293 @@
+{
+  "anio": 2009,
+  "original_zip": "datos/raw/2009/DatosAbiertos_DECEyEC_ConteosCensales2009.zip",
+  "sha256_zip": "e626e9528a91206c23fc8f96987e1a297db285e7cbc0fa1e37a18ed473ebf61c",
+  "csv_estados": 32,
+  "filas": 8706843,
+  "municipios": 2458,
+  "municipio_edad": 12290,
+  "edad_min": 18,
+  "edad_max": 130,
+  "conteos": {
+    "LN": 77481831,
+    "SV": 33316974,
+    "NV": 42298963,
+    "NS": 1865894
+  },
+  "incidencias": {
+    "count_inconsistent": 0,
+    "count_negative": 0,
+    "unobserved_rows": 142141,
+    "LN_zero_rows": 0,
+    "age_lt18_rows": 0,
+    "age_unclassified_rows": 0
+  },
+  "faltantes_por_columna": {},
+  "LN_por_sexo": {
+    "0": 37353906,
+    "1": 40127925
+  },
+  "LN_por_tipo_seccion": {
+    "M": 8570122,
+    "R": 15048178,
+    "U": 53863531
+  },
+  "estados": [
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2009_ags.csv",
+      "rows": 77391,
+      "LN": 773430,
+      "SV": 291485,
+      "NV": 404607,
+      "NS": 77338
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2009_bc.csv",
+      "rows": 201728,
+      "LN": 2273180,
+      "SV": 661834,
+      "NV": 1516824,
+      "NS": 94522
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2009_bcs.csv",
+      "rows": 48740,
+      "LN": 392257,
+      "SV": 125675,
+      "NV": 254908,
+      "NS": 11674
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2009_camp.csv",
+      "rows": 64436,
+      "LN": 533813,
+      "SV": 327297,
+      "NV": 200205,
+      "NS": 6311
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2009_cdmx.csv",
+      "rows": 801738,
+      "LN": 7320164,
+      "SV": 2954313,
+      "NV": 4304608,
+      "NS": 61243
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2009_chih.csv",
+      "rows": 366917,
+      "LN": 2573727,
+      "SV": 772178,
+      "NV": 1665271,
+      "NS": 136278
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2009_chis.csv",
+      "rows": 267825,
+      "LN": 2854953,
+      "SV": 1082582,
+      "NV": 1694971,
+      "NS": 77400
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2009_coah.csv",
+      "rows": 204759,
+      "LN": 1850063,
+      "SV": 805065,
+      "NV": 1023516,
+      "NS": 21482
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2009_col.csv",
+      "rows": 46214,
+      "LN": 452880,
+      "SV": 259514,
+      "NV": 189881,
+      "NS": 3485
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2009_dgo.csv",
+      "rows": 174179,
+      "LN": 1145172,
+      "SV": 467624,
+      "NV": 669090,
+      "NS": 8458
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2009_gro.csv",
+      "rows": 349163,
+      "LN": 2309598,
+      "SV": 715995,
+      "NV": 1527144,
+      "NS": 66459
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2009_gto.csv",
+      "rows": 417088,
+      "LN": 3746664,
+      "SV": 1672589,
+      "NV": 1886766,
+      "NS": 187309
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2009_hgo.csv",
+      "rows": 226787,
+      "LN": 1787822,
+      "SV": 739622,
+      "NV": 993538,
+      "NS": 54662
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2009_jal.csv",
+      "rows": 472286,
+      "LN": 5133870,
+      "SV": 2570273,
+      "NV": 2450936,
+      "NS": 112661
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2009_mex.csv",
+      "rows": 838433,
+      "LN": 10020332,
+      "SV": 4969091,
+      "NV": 4805304,
+      "NS": 245937
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2009_mich.csv",
+      "rows": 374968,
+      "LN": 3208452,
+      "SV": 1012270,
+      "NV": 2086574,
+      "NS": 109608
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2009_mor.csv",
+      "rows": 126948,
+      "LN": 1286210,
+      "SV": 624132,
+      "NV": 650690,
+      "NS": 11388
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2009_nay.csv",
+      "rows": 115466,
+      "LN": 733687,
+      "SV": 296941,
+      "NV": 417486,
+      "NS": 19260
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2009_nl.csv",
+      "rows": 287784,
+      "LN": 3211187,
+      "SV": 1651406,
+      "NV": 1451247,
+      "NS": 108534
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2009_oax.csv",
+      "rows": 334877,
+      "LN": 2509649,
+      "SV": 1017987,
+      "NV": 1473998,
+      "NS": 17664
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2009_pue.csv",
+      "rows": 361929,
+      "LN": 3752422,
+      "SV": 1397426,
+      "NV": 2327319,
+      "NS": 27677
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2009_qro.csv",
+      "rows": 103566,
+      "LN": 1154593,
+      "SV": 671180,
+      "NV": 477056,
+      "NS": 6357
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2009_qroo.csv",
+      "rows": 83052,
+      "LN": 811649,
+      "SV": 291252,
+      "NV": 509757,
+      "NS": 10640
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2009_sin.csv",
+      "rows": 439948,
+      "LN": 1859810,
+      "SV": 722122,
+      "NV": 1046910,
+      "NS": 90778
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2009_slp.csv",
+      "rows": 234867,
+      "LN": 1729267,
+      "SV": 932656,
+      "NV": 776862,
+      "NS": 19749
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2009_son.csv",
+      "rows": 181623,
+      "LN": 1826173,
+      "SV": 908889,
+      "NV": 899166,
+      "NS": 18118
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2009_tab.csv",
+      "rows": 153668,
+      "LN": 1457283,
+      "SV": 552736,
+      "NV": 804737,
+      "NS": 99810
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2009_tamps.csv",
+      "rows": 248211,
+      "LN": 2429402,
+      "SV": 978451,
+      "NV": 1426883,
+      "NS": 24068
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2009_tlax.csv",
+      "rows": 81095,
+      "LN": 771952,
+      "SV": 276272,
+      "NV": 490907,
+      "NS": 4773
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2009_ver.csv",
+      "rows": 649864,
+      "LN": 5210210,
+      "SV": 2390340,
+      "NV": 2706908,
+      "NS": 112962
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2009_yuc.csv",
+      "rows": 147855,
+      "LN": 1279091,
+      "SV": 708573,
+      "NV": 562771,
+      "NS": 7747
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2009_zac.csv",
+      "rows": 223438,
+      "LN": 1082869,
+      "SV": 469204,
+      "NV": 602123,
+      "NS": 11542
+    }
+  ]
+}

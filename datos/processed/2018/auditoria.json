@@ -1,0 +1,293 @@
+{
+  "anio": 2018,
+  "original_zip": "datos/raw/2018/DatosAbiertos_DECEyEC_ConteosCensales2018.zip",
+  "sha256_zip": "b20981a0aea1ac773e7bc0b54784bba7619346585ba3996744ad22458279dd8b",
+  "csv_estados": 32,
+  "filas": 9251122,
+  "municipios": 2463,
+  "municipio_edad": 12315,
+  "edad_min": 18,
+  "edad_max": 137,
+  "conteos": {
+    "LN": 89123997,
+    "SV": 51784399,
+    "NV": 31249856,
+    "NS": 6089742
+  },
+  "incidencias": {
+    "count_inconsistent": 0,
+    "count_negative": 0,
+    "unobserved_rows": 363901,
+    "LN_zero_rows": 0,
+    "age_lt18_rows": 0,
+    "age_unclassified_rows": 0
+  },
+  "faltantes_por_columna": {},
+  "LN_por_sexo": {
+    "0": 42913845,
+    "1": 46210152
+  },
+  "LN_por_tipo_seccion": {
+    "M": 12149928,
+    "R": 15647060,
+    "U": 61327009
+  },
+  "estados": [
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2018_ags.csv",
+      "rows": 82051,
+      "LN": 943459,
+      "SV": 538993,
+      "NV": 391032,
+      "NS": 13434
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2018_bc.csv",
+      "rows": 254599,
+      "LN": 2731569,
+      "SV": 1376956,
+      "NV": 1302969,
+      "NS": 51644
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2018_bcs.csv",
+      "rows": 60686,
+      "LN": 516152,
+      "SV": 273586,
+      "NV": 213158,
+      "NS": 29408
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2018_camp.csv",
+      "rows": 70050,
+      "LN": 642058,
+      "SV": 397912,
+      "NV": 181761,
+      "NS": 62385
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2018_cdmx.csv",
+      "rows": 796028,
+      "LN": 7628415,
+      "SV": 5186417,
+      "NV": 2215649,
+      "NS": 226349
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2018_chih.csv",
+      "rows": 399883,
+      "LN": 2743272,
+      "SV": 1290601,
+      "NV": 1136840,
+      "NS": 315831
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2018_chis.csv",
+      "rows": 287852,
+      "LN": 3549418,
+      "SV": 2165008,
+      "NV": 1003433,
+      "NS": 380977
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2018_coah.csv",
+      "rows": 222146,
+      "LN": 2154102,
+      "SV": 1281125,
+      "NV": 774570,
+      "NS": 98407
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2018_col.csv",
+      "rows": 51010,
+      "LN": 530721,
+      "SV": 321518,
+      "NV": 199436,
+      "NS": 9767
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2018_dgo.csv",
+      "rows": 179719,
+      "LN": 1279684,
+      "SV": 671514,
+      "NV": 528267,
+      "NS": 79903
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2018_gro.csv",
+      "rows": 357049,
+      "LN": 2506957,
+      "SV": 1455177,
+      "NV": 874896,
+      "NS": 176884
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2018_gto.csv",
+      "rows": 438743,
+      "LN": 4359543,
+      "SV": 2117801,
+      "NV": 1928631,
+      "NS": 313111
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2018_hgo.csv",
+      "rows": 238830,
+      "LN": 2118489,
+      "SV": 1186248,
+      "NV": 627732,
+      "NS": 304509
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2018_jal.csv",
+      "rows": 503247,
+      "LN": 5904226,
+      "SV": 3209827,
+      "NV": 2308286,
+      "NS": 386113
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2018_mex.csv",
+      "rows": 895048,
+      "LN": 11832204,
+      "SV": 7492239,
+      "NV": 3666301,
+      "NS": 673664
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2018_mich.csv",
+      "rows": 377900,
+      "LN": 3409274,
+      "SV": 1831908,
+      "NV": 1376416,
+      "NS": 200950
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2018_mor.csv",
+      "rows": 129417,
+      "LN": 1439383,
+      "SV": 902649,
+      "NV": 477236,
+      "NS": 59498
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2018_nay.csv",
+      "rows": 126741,
+      "LN": 846813,
+      "SV": 461910,
+      "NV": 369166,
+      "NS": 15737
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2018_nl.csv",
+      "rows": 353721,
+      "LN": 3900556,
+      "SV": 1941574,
+      "NV": 1600329,
+      "NS": 358653
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2018_oax.csv",
+      "rows": 341236,
+      "LN": 2863268,
+      "SV": 1765686,
+      "NV": 921416,
+      "NS": 176166
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2018_pue.csv",
+      "rows": 382518,
+      "LN": 4500628,
+      "SV": 2814553,
+      "NV": 1358990,
+      "NS": 327085
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2018_qro.csv",
+      "rows": 119031,
+      "LN": 1582958,
+      "SV": 962418,
+      "NV": 580330,
+      "NS": 40210
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2018_qroo.csv",
+      "rows": 112931,
+      "LN": 1208670,
+      "SV": 682880,
+      "NV": 487665,
+      "NS": 38125
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2018_sin.csv",
+      "rows": 454408,
+      "LN": 2135263,
+      "SV": 1051232,
+      "NV": 723409,
+      "NS": 360622
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2018_slp.csv",
+      "rows": 243452,
+      "LN": 1974334,
+      "SV": 1180567,
+      "NV": 702249,
+      "NS": 91518
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2018_son.csv",
+      "rows": 203600,
+      "LN": 2101726,
+      "SV": 908495,
+      "NV": 894834,
+      "NS": 298397
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2018_tab.csv",
+      "rows": 157068,
+      "LN": 1687628,
+      "SV": 1020270,
+      "NV": 440353,
+      "NS": 227005
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2018_tamps.csv",
+      "rows": 274386,
+      "LN": 2628755,
+      "SV": 1477627,
+      "NV": 972669,
+      "NS": 178459
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2018_tlax.csv",
+      "rows": 83868,
+      "LN": 922017,
+      "SV": 573366,
+      "NV": 304083,
+      "NS": 44568
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2018_ver.csv",
+      "rows": 672332,
+      "LN": 5775930,
+      "SV": 3461610,
+      "NV": 1915641,
+      "NS": 398679
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2018_yuc.csv",
+      "rows": 154736,
+      "LN": 1544063,
+      "SV": 1056284,
+      "NV": 361942,
+      "NS": 125837
+    },
+    {
+      "file": "datosabiertos_deceyec_conteoscensales2018_zac.csv",
+      "rows": 226836,
+      "LN": 1162462,
+      "SV": 726448,
+      "NV": 410167,
+      "NS": 25847
+    }
+  ]
+}

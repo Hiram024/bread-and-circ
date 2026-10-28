@@ -1,0 +1,113 @@
+{
+  "anios": [
+    2009,
+    2012,
+    2015,
+    2018,
+    2021,
+    2024
+  ],
+  "total_unidades_modeladas": 8541,
+  "total_municipios_modelados": 1825,
+  "total_unidades_panel": 12385,
+  "modelo": "KMeans k=5 exploratorio",
+  "origen": "CCPC INE 2009–2024; agregación municipio × edad",
+  "advertencia_territorial": "No se dispone de crosswalk cartográfico oficial multianual verificado; se utiliza un filtro conservador de estabilidad nominal.",
+  "perfiles": [
+    {
+      "perfil_id": 1,
+      "nombre": "Participación baja; descenso presidencial",
+      "n_unidades": 1366,
+      "municipios": 655,
+      "porcentaje_unidades": 15.99,
+      "lista_nominal_2024": 21500969,
+      "edad_predominante": "18-24",
+      "media_presidencial": 46.61,
+      "media_intermedia": 34.57,
+      "brecha_pres_intermedia": 12.03,
+      "cambio_presidencial_pp": -9.83,
+      "cambio_intermedia_pp": 3.35,
+      "notas": [
+        "Perfiles estadísticos de unidades agregadas municipio × edad.",
+        "Las medias son no ponderadas por población y no representan individuos.",
+        "La comparabilidad territorial histórica no está certificada."
+      ]
+    },
+    {
+      "perfil_id": 2,
+      "nombre": "Participación media-baja; aumento intermedio",
+      "n_unidades": 1872,
+      "municipios": 900,
+      "porcentaje_unidades": 21.92,
+      "lista_nominal_2024": 17309608,
+      "edad_predominante": "25-34",
+      "media_presidencial": 58.98,
+      "media_intermedia": 45.01,
+      "brecha_pres_intermedia": 13.97,
+      "cambio_presidencial_pp": 0.3,
+      "cambio_intermedia_pp": 18.68,
+      "notas": [
+        "Perfiles estadísticos de unidades agregadas municipio × edad.",
+        "Las medias son no ponderadas por población y no representan individuos.",
+        "La comparabilidad territorial histórica no está certificada."
+      ]
+    },
+    {
+      "perfil_id": 3,
+      "nombre": "Participación media-alta; descenso presidencial",
+      "n_unidades": 1964,
+      "municipios": 897,
+      "porcentaje_unidades": 22.99,
+      "lista_nominal_2024": 25170800,
+      "edad_predominante": "45-59",
+      "media_presidencial": 64.33,
+      "media_intermedia": 56.96,
+      "brecha_pres_intermedia": 7.37,
+      "cambio_presidencial_pp": -9.05,
+      "cambio_intermedia_pp": 0.21,
+      "notas": [
+        "Perfiles estadísticos de unidades agregadas municipio × edad.",
+        "Las medias son no ponderadas por población y no representan individuos.",
+        "La comparabilidad territorial histórica no está certificada."
+      ]
+    },
+    {
+      "perfil_id": 4,
+      "nombre": "Participación media-alta; crecimiento intermedio",
+      "n_unidades": 1259,
+      "municipios": 482,
+      "porcentaje_unidades": 14.74,
+      "lista_nominal_2024": 3359359,
+      "edad_predominante": "60+",
+      "media_presidencial": 68.66,
+      "media_intermedia": 52.69,
+      "brecha_pres_intermedia": 15.97,
+      "cambio_presidencial_pp": 11.42,
+      "cambio_intermedia_pp": 33.45,
+      "notas": [
+        "Perfiles estadísticos de unidades agregadas municipio × edad.",
+        "Las medias son no ponderadas por población y no representan individuos.",
+        "La comparabilidad territorial histórica no está certificada."
+      ]
+    },
+    {
+      "perfil_id": 5,
+      "nombre": "Participación alta; comportamiento sostenido",
+      "n_unidades": 2080,
+      "municipios": 949,
+      "porcentaje_unidades": 24.35,
+      "lista_nominal_2024": 14326090,
+      "edad_predominante": "60+",
+      "media_presidencial": 77.56,
+      "media_intermedia": 69.11,
+      "brecha_pres_intermedia": 8.45,
+      "cambio_presidencial_pp": -1.41,
+      "cambio_intermedia_pp": 14.9,
+      "notas": [
+        "Perfiles estadísticos de unidades agregadas municipio × edad.",
+        "Las medias son no ponderadas por población y no representan individuos.",
+        "La comparabilidad territorial histórica no está certificada."
+      ]
+    }
+  ]
+}

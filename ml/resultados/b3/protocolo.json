@@ -1,0 +1,84 @@
+{
+  "estado": "Fijado antes de los nuevos ajustes B3; no selecciona k anticipadamente",
+  "base": "a5794fd008bbb2bdf4ec7d68c96d823812e399be",
+  "universo": "Todas las unidades apto_modelo de la matriz aprobada B2, ordenadas por EDOCVE, MPIOCVE, grupo_edad",
+  "clave": [
+    "EDOCVE",
+    "MPIOCVE",
+    "grupo_edad"
+  ],
+  "features": [
+    "media_presidencial",
+    "media_intermedia",
+    "cambio_presidencial_pp",
+    "cambio_intermedia_pp"
+  ],
+  "formulas": [
+    "mean(tasa_2012,tasa_2018,tasa_2024)",
+    "mean(tasa_2009,tasa_2015,tasa_2021)",
+    "tasa_2024-tasa_2012",
+    "tasa_2021-tasa_2009"
+  ],
+  "ponderacion": "Una unidad agregada, un peso; sin sample_weight poblacional",
+  "escalador_principal": "StandardScaler",
+  "k": [
+    4,
+    5,
+    6
+  ],
+  "semillas": [
+    7,
+    21,
+    42,
+    64,
+    98
+  ],
+  "semilla_referencia": 42,
+  "kmeans": {
+    "init": "k-means++",
+    "n_init": 30,
+    "max_iter": 300,
+    "tol": 0.0001,
+    "algorithm": "lloyd"
+  },
+  "hilos": 1,
+  "evaluacion": {
+    "n_muestra": 2000,
+    "semillas_muestra": [
+      64,
+      2026
+    ],
+    "muestreo": "RandomState(seed).permutation(n)[:min(2000,n)], mismas claves para todos los candidatos principales",
+    "metricas": [
+      "silhouette_muestras_comunes",
+      "Davies-Bouldin_todas_unidades",
+      "Calinski-Harabasz_todas_unidades",
+      "silhouette_negativo_por_grupo_en_muestra"
+    ]
+  },
+  "estabilidad": "ARI en los 10 pares de semillas por k, todas las mismas unidades; media, mediana, mínimo y máximo. No accuracy ni comparación directa de IDs.",
+  "sensibilidad": [
+    {
+      "escenario": "RobustScaler",
+      "cambia": "Solo escalador, mismas unidades/features, semilla 42 y n_init 30",
+      "comparacion": "ARI contra principal del mismo k sobre todas las unidades; métricas en geometría propia no son ranking entre escaladores"
+    },
+    {
+      "escenario": "NS10",
+      "cambia": "NS <=10% en cada uno de los seis años; StandardScaler y KMeans reajustados solo en ese subconjunto",
+      "comparacion": "ARI contra principal del mismo k restringido a claves comunes; métricas sobre muestra predefinida del subconjunto, se informa cobertura"
+    }
+  ],
+  "criterios_seleccion": [
+    "Separación conjunta: silhouette en ambas muestras/semillas, DB, tamaños, fracción negativa por grupo y dispersión; sin suma ponderada ni umbrales universales.",
+    "Estabilidad de inicialización mediante ARI y sensibilidad separada a escalador/calidad; estabilidad de semillas no implica robustez metodológica.",
+    "Un k mayor requiere un patrón adicional distinguible por sus cuatro variables, tamaño y dispersión; examinar cruces 4/5 y 5/6 sin asumir jerarquía.",
+    "Si las alternativas no se diferencian claramente, preferir la solución más simple que conserve los patrones defendibles y declarar incertidumbre.",
+    "Seleccionar k tras revisar evidencia; conservar semilla 42 aunque otra tenga mejor métrica. Los nombres se proponen después de las estadísticas."
+  ],
+  "IDs": "Orden ascendente por promedio conjunto de medias presidencial/intermedia; desempate lexicográfico por las cuatro coordenadas del centroide en unidades originales y por etiqueta interna. IDs locales, no equivalencia con IDs activos.",
+  "remuestreo_municipal": "Omitido en este alcance; ARI entre semillas no demuestra estabilidad ante remuestreo",
+  "referencia": "Examinar artefacto k5 n_init30 en sklearn1.8.0 y contrastar predicciones con asignaciones guardadas por clave; reproducir receta sin sobrescribir activo. La tabla antigua de comparación n_init20 es solo contexto.",
+  "salida": "Solo ml/resultados/b3; candidato sujeto a B4, sin adopción de producto ni cambios de contratos",
+  "fecha_fijacion": "2026-10-28T20:35:18.239564-07:00"
+}

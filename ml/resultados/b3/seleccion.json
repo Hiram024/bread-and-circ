@@ -1,0 +1,26 @@
+{
+  "k_recomendado": 4,
+  "semilla_referencia": 42,
+  "estado": "Recomendación B3; no adoptada por el producto",
+  "nombres": {
+    "1": "Menor participación media; descenso presidencial",
+    "2": "Crecimiento medio en ambos tipos de elección",
+    "3": "Participación media; descenso presidencial",
+    "4": "Mayor participación media; cambio presidencial cercano a cero"
+  },
+  "razones": [
+    "k4 tiene mayor silhouette en las dos muestras comunes para las cinco semillas, y menor Davies-Bouldin que k5/k6; no se empleó una suma ponderada de métricas.",
+    "Los cuatro grupos conservan patrones distintos de nivel y cambios: menor participación/descenso presidencial, crecimiento en ambos tipos, nivel intermedio/descenso presidencial y mayor participación/cambio presidencial reducido. Sus tamaños son 21.54-29.40%.",
+    "k5 es ligeramente más estable entre semillas (ARI medio 0.9704 frente a 0.9633). Añade un patrón medio-bajo con cambio presidencial cercano a cero e incremento intermedio, pero pierde separación y su grupo de crecimiento tiene hasta 13.49% de silhouette negativo en la segunda muestra. El refinamiento es plausible, no una mejora demostrada suficiente para preferirlo.",
+    "k6 redistribuye grupos en lugar de añadir una subdivisión limpia. ARI entre semillas 0.7041-0.9967, mediana 0.7107: particiones alternativas con inertia parecida y menor separación. No se escogió otra semilla para mejorar su presentación.",
+    "k4 es menos sensible al escalador de los tres (ARI 0.8690), pero su sensibilidad NS10 (ARI 0.8428 sobre 5671 unidades comunes) sigue siendo material. No se promociona RobustScaler ni el filtro NS10.",
+    "La selección es operativa y descriptiva: favorece menor complejidad con mejor separación observada y patrones interpretables. No implica que existan cuatro clases verdaderas ni descarta revisar k5 por utilidad sustantiva futura."
+  ],
+  "advertencias": [
+    "Separación moderada y dispersión intragrupo; silhouette muestreada no es intervalo de confianza.",
+    "Alta estabilidad entre semillas no prueba estabilidad al remuestreo; no se realizó remuestreo municipal.",
+    "Cobertura B2 desigual: 8541/12385 unidades, 1825/2477 municipios y LN 2024 81666826/98330348. Nombres iguales no prueban fronteras históricas constantes.",
+    "La evaluación temporal previa es retrospectiva y condicionada a elegibilidad de seis elecciones, incluida 2024; no es validación temporal completamente independiente.",
+    "Las etiquetas nuevas son locales. Se entrega cruce 5x4 frente al activo; B4 debe revisar nombres, contratos y consumidores con Rubén."
+  ]
+}

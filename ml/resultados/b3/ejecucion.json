@@ -1,0 +1,179 @@
+{
+  "fecha": "2026-10-28T20:42:32.161471-07:00",
+  "zona": "America/Tijuana",
+  "commit_base": "a5794fd008bbb2bdf4ec7d68c96d823812e399be",
+  "rama": "feat/analysis-dashboard",
+  "git_status": "?? ml/resultados/b3/\n?? requirements-b3.txt\n?? src/evaluate_clustering.py\n?? tests/test_evaluate_clustering.py",
+  "entorno": {
+    "python": "3.11.15",
+    "plataforma": "Windows-10-10.0.26200-SP0",
+    "paquetes": {
+      "numpy": "2.4.6",
+      "pandas": "2.3.3",
+      "scipy": "1.17.1",
+      "scikit-learn": "1.8.0",
+      "joblib": "1.6.0",
+      "threadpoolctl": "3.7.0"
+    },
+    "ejecutable": "C:\\Users\\Hiram\\Downloads\\bread-and-circ-main\\bread-and-circ-main\\.venv\\Scripts\\python.exe",
+    "librerias_nativas": [
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "C:\\Users\\Hiram\\Downloads\\bread-and-circ-main\\bread-and-circ-main\\.venv\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-63c857e738469261263c764a36be9436.dll",
+        "version": "0.3.31.188.0",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "C:\\Users\\Hiram\\Downloads\\bread-and-circ-main\\bread-and-circ-main\\.venv\\Lib\\site-packages\\scipy.libs\\libscipy_openblas-64eda39e79589aedb16f58e5547eb599.dll",
+        "version": "0.3.30",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "vcomp",
+        "filepath": "C:\\Users\\Hiram\\Downloads\\bread-and-circ-main\\bread-and-circ-main\\.venv\\Lib\\site-packages\\sklearn\\.libs\\vcomp140.dll",
+        "version": null
+      }
+    ]
+  },
+  "B2": {
+    "resultado_sha256": "6238e682d6d1c34ba2fa9b33030f42f6827c05cecbc48655750f8337181bb2f8",
+    "huellas_comprobadas": 89,
+    "resumen": {
+      "n_panel": 12385,
+      "n_completo6": 11925,
+      "n_validas": 8541,
+      "n_nombre_estable": 12195,
+      "n_municipios": 1825,
+      "LN_2024_validas": 81666826,
+      "LN_2024_total_panel": 98330348,
+      "cobertura_LN_2024_pct": 83.05353094041729,
+      "excluidas_unicas": 3844,
+      "municipios_panel": 2477,
+      "filas_serie": 73895,
+      "causas_superpuestas": {
+        "faltan_tasas": 460,
+        "identidad_inestable": 190,
+        "observados_menor_100": 863,
+        "ns_mayor_20": 3307,
+        "faltan_conteos_o_ns": 110
+      },
+      "municipios_identidad_inestable": 38
+    }
+  },
+  "parametros": {
+    "estado": "Fijado antes de los nuevos ajustes B3; no selecciona k anticipadamente",
+    "base": "a5794fd008bbb2bdf4ec7d68c96d823812e399be",
+    "universo": "Todas las unidades apto_modelo de la matriz aprobada B2, ordenadas por EDOCVE, MPIOCVE, grupo_edad",
+    "clave": [
+      "EDOCVE",
+      "MPIOCVE",
+      "grupo_edad"
+    ],
+    "features": [
+      "media_presidencial",
+      "media_intermedia",
+      "cambio_presidencial_pp",
+      "cambio_intermedia_pp"
+    ],
+    "formulas": [
+      "mean(tasa_2012,tasa_2018,tasa_2024)",
+      "mean(tasa_2009,tasa_2015,tasa_2021)",
+      "tasa_2024-tasa_2012",
+      "tasa_2021-tasa_2009"
+    ],
+    "ponderacion": "Una unidad agregada, un peso; sin sample_weight poblacional",
+    "escalador_principal": "StandardScaler",
+    "k": [
+      4,
+      5,
+      6
+    ],
+    "semillas": [
+      7,
+      21,
+      42,
+      64,
+      98
+    ],
+    "semilla_referencia": 42,
+    "kmeans": {
+      "init": "k-means++",
+      "n_init": 30,
+      "max_iter": 300,
+      "tol": 0.0001,
+      "algorithm": "lloyd"
+    },
+    "hilos": 1,
+    "evaluacion": {
+      "n_muestra": 2000,
+      "semillas_muestra": [
+        64,
+        2026
+      ],
+      "muestreo": "RandomState(seed).permutation(n)[:min(2000,n)], mismas claves para todos los candidatos principales",
+      "metricas": [
+        "silhouette_muestras_comunes",
+        "Davies-Bouldin_todas_unidades",
+        "Calinski-Harabasz_todas_unidades",
+        "silhouette_negativo_por_grupo_en_muestra"
+      ]
+    },
+    "estabilidad": "ARI en los 10 pares de semillas por k, todas las mismas unidades; media, mediana, mínimo y máximo. No accuracy ni comparación directa de IDs.",
+    "sensibilidad": [
+      {
+        "escenario": "RobustScaler",
+        "cambia": "Solo escalador, mismas unidades/features, semilla 42 y n_init 30",
+        "comparacion": "ARI contra principal del mismo k sobre todas las unidades; métricas en geometría propia no son ranking entre escaladores"
+      },
+      {
+        "escenario": "NS10",
+        "cambia": "NS <=10% en cada uno de los seis años; StandardScaler y KMeans reajustados solo en ese subconjunto",
+        "comparacion": "ARI contra principal del mismo k restringido a claves comunes; métricas sobre muestra predefinida del subconjunto, se informa cobertura"
+      }
+    ],
+    "criterios_seleccion": [
+      "Separación conjunta: silhouette en ambas muestras/semillas, DB, tamaños, fracción negativa por grupo y dispersión; sin suma ponderada ni umbrales universales.",
+      "Estabilidad de inicialización mediante ARI y sensibilidad separada a escalador/calidad; estabilidad de semillas no implica robustez metodológica.",
+      "Un k mayor requiere un patrón adicional distinguible por sus cuatro variables, tamaño y dispersión; examinar cruces 4/5 y 5/6 sin asumir jerarquía.",
+      "Si las alternativas no se diferencian claramente, preferir la solución más simple que conserve los patrones defendibles y declarar incertidumbre.",
+      "Seleccionar k tras revisar evidencia; conservar semilla 42 aunque otra tenga mejor métrica. Los nombres se proponen después de las estadísticas."
+    ],
+    "IDs": "Orden ascendente por promedio conjunto de medias presidencial/intermedia; desempate lexicográfico por las cuatro coordenadas del centroide en unidades originales y por etiqueta interna. IDs locales, no equivalencia con IDs activos.",
+    "remuestreo_municipal": "Omitido en este alcance; ARI entre semillas no demuestra estabilidad ante remuestreo",
+    "referencia": "Examinar artefacto k5 n_init30 en sklearn1.8.0 y contrastar predicciones con asignaciones guardadas por clave; reproducir receta sin sobrescribir activo. La tabla antigua de comparación n_init20 es solo contexto.",
+    "salida": "Solo ml/resultados/b3; candidato sujeto a B4, sin adopción de producto ni cambios de contratos",
+    "fecha_fijacion": "2026-10-28T20:35:18.239564-07:00"
+  },
+  "protocolo_sha256": "ec95b6dc2f9936c3a25ae06dd85fcd033619244e3ef5def33a35ef4fdd848202",
+  "datos_entrenamiento_sha256": "5a6602669eb16e80201087b7d6fc0bab79d11e54b7115a007b017795323c6ea5",
+  "features_ordenadas_sha256": "a73923678808cddf02b0313291de608cff81b968c9de039fded7dd034e2b74e2",
+  "claves_ordenadas_sha256": "acdfb2782fbb0c35d6d82c09378f8c584a33d57236efab4eceda60e6e0bc0817",
+  "codigo_sha256": {
+    "src/evaluate_clustering.py": "5a1b7147c2cb575f355c0c1a99854f831e5188516757ef01f6c0c8b9e0f1086c",
+    "src/modeling.py": "eaccbe060e73174b3ecc757cd6dcfa32f1e05d330554ec2e68dca2cdfef75f7b",
+    "src/pipeline.py": "d4a63977f8ae716366d18cfd72d31ab3604a724d06156ecf8831355776ccb085",
+    "src/validate_processed.py": "f01f3450fd9ddc97c8569d4fa76b62b1d4307a651564a6004295a9cb0b217ad0",
+    "tests/test_evaluate_clustering.py": "333ab42a2daca46a72029818340dbc2bcbcaf545307ece63093794bb204589b3",
+    "requirements-b3.txt": "453f23ccc89ec3ae2e7af98e7745b14d2cad2dd01fddafb658b45ddbedcda18e"
+  },
+  "candidatos_sha256": {
+    "k4_seed42.joblib": "6adafa9e7d9694963ef1bb988593667075efcc45a13ac79d4d29e5606299dfed",
+    "k5_seed42.joblib": "987447e44a0beb1695d4a293d81f3be925635fdee30b768e780c30fc03d973ad",
+    "k6_seed42.joblib": "46f809566dc86904e1f7911f629012c82100b40bc8f02e19f8221932ad173b8e"
+  },
+  "archivos_base_sin_cambios": 131,
+  "ponderacion": "Unidades, sin pesos poblacionales",
+  "etapa": "Comparación ejecutada; selección aún pendiente"
+}

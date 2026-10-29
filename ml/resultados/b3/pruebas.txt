@@ -1,0 +1,9 @@
+Comando: C:\Users\Hiram\Downloads\bread-and-circ-main\bread-and-circ-main\.venv\Scripts\python.exe -B -m pytest -q -p no:cacheprovider --basetemp C:\Users\Hiram\AppData\Local\Temp\bread-and-circ-b3-tests-2c15c4ed77aa4e209d633372fcccccac tests
+................                                                         [100%]
+============================== warnings summary ===============================
+.venv\Lib\site-packages\fastapi\testclient.py:1
+  C:\Users\Hiram\Downloads\bread-and-circ-main\bread-and-circ-main\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+16 passed, 1 warning in 4.47s

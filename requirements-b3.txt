@@ -1,0 +1,11 @@
+# Isolated B3 training AND application-regression environment; Python 3.11.15.
+# The app requirements are constrained here; production requirements are unchanged.
+-r requirements-app.txt
+numpy==2.4.6
+pandas==2.3.3
+scipy==1.17.1
+scikit-learn==1.8.0
+joblib==1.6.0
+threadpoolctl==3.7.0
+pytest==9.2.0
+httpx==0.28.1

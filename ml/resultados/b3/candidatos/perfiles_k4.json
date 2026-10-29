@@ -1,0 +1,78 @@
+[
+  {
+    "perfil_id": 1,
+    "nombre": "Presidencial 48.4%; intermedia 35.7%",
+    "n_unidades": 1840,
+    "municipios": 837,
+    "porcentaje_unidades": 21.543144830816065,
+    "lista_nominal_2024": 27693625,
+    "edad_predominante": "18-24",
+    "media_presidencial": 48.44176823940163,
+    "media_intermedia": 35.72189919163344,
+    "cambio_presidencial_pp": -7.578960804751601,
+    "cambio_intermedia_pp": 6.377071254945573,
+    "brecha_pres_intermedia": 12.71986904776819,
+    "notas": [
+      "Candidato B3 pendiente de B4",
+      "Medias simples de unidades agregadas, no personas",
+      "Geografía histórica no certificada"
+    ]
+  },
+  {
+    "perfil_id": 2,
+    "nombre": "Presidencial 64.5%; intermedia 49.2%",
+    "n_unidades": 2155,
+    "municipios": 779,
+    "porcentaje_unidades": 25.231237560004683,
+    "lista_nominal_2024": 9288568,
+    "edad_predominante": "25-34",
+    "media_presidencial": 64.54374978215095,
+    "media_intermedia": 49.21851434169895,
+    "cambio_presidencial_pp": 7.969280217175109,
+    "cambio_intermedia_pp": 28.584605933054327,
+    "brecha_pres_intermedia": 15.325235440452008,
+    "notas": [
+      "Candidato B3 pendiente de B4",
+      "Medias simples de unidades agregadas, no personas",
+      "Geografía histórica no certificada"
+    ]
+  },
+  {
+    "perfil_id": 3,
+    "nombre": "Presidencial 64.1%; intermedia 55.8%",
+    "n_unidades": 2511,
+    "municipios": 1115,
+    "porcentaje_unidades": 29.39936775553214,
+    "lista_nominal_2024": 32433580,
+    "edad_predominante": "45-59",
+    "media_presidencial": 64.12761560619717,
+    "media_intermedia": 55.79408898013212,
+    "cambio_presidencial_pp": -8.116071120823172,
+    "cambio_intermedia_pp": 3.2817191128308987,
+    "brecha_pres_intermedia": 8.333526626065046,
+    "notas": [
+      "Candidato B3 pendiente de B4",
+      "Medias simples de unidades agregadas, no personas",
+      "Geografía histórica no certificada"
+    ]
+  },
+  {
+    "perfil_id": 4,
+    "nombre": "Presidencial 78.1%; intermedia 69.6%",
+    "n_unidades": 2035,
+    "municipios": 928,
+    "porcentaje_unidades": 23.826249853647113,
+    "lista_nominal_2024": 12251053,
+    "edad_predominante": "60+",
+    "media_presidencial": 78.10013211072082,
+    "media_intermedia": 69.55722679351958,
+    "cambio_presidencial_pp": -1.0032821093152735,
+    "cambio_intermedia_pp": 15.478537315422871,
+    "brecha_pres_intermedia": 8.542905317201269,
+    "notas": [
+      "Candidato B3 pendiente de B4",
+      "Medias simples de unidades agregadas, no personas",
+      "Geografía histórica no certificada"
+    ]
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "estado": "APTO PARA B4 CON ADVERTENCIAS",
+  "claves_verificadas": 8541,
+  "coincidencia_asignaciones_por_clave": true,
+  "perfiles_recalculados_coherentes": true,
+  "k": 4,
+  "candidato_sha256": "246da2f60bf2d951be8c52368a9ea9730b37e5a1d2a028f07b05b9d3801b3865",
+  "archivos_base_sin_cambios": 131,
+  "fecha": "2026-10-28T20:49:21.773405-07:00"
+}

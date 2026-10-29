@@ -16,7 +16,12 @@ Para revisar notebooks o rehacer análisis completo instala también `pip instal
 
 ## Lo que contiene
 
-- **6 elecciones** (2009, 2012, 2015, 2018, 2021, 2024); 54,872,712 filas agregadas originales.
+La auditoría independiente **B2 de los CSV procesados** está documentada en
+[`docs/10_auditoria_procesados_B2.md`](docs/10_auditoria_procesados_B2.md).
+Se repite con `python -m src.validate_processed --root . --out analisis/reportes/b2`
+desde un entorno con las dependencias instaladas; conserva los insumos y no entrena.
+
+- **6 elecciones** (2009, 2012, 2015, 2018, 2021, 2024); 54,872,712 registros RAW documentados por la extracción anterior y 73,895 filas municipio × edad verificadas en B2. B2 no recontó los RAW.
 - **Panel:** 12,385 unidades municipio × grupo de edad; **8,541 aptas** para clustering exploratorio; **1,825 municipios**.
 - **5 perfiles experimentales** con etiquetas y estadísticos, `StandardScaler` + K-Means, comparación contra 4 y 6 clusters y otros algoritmos.
 - **Dashboard local** con gráficos, filtros, auditoría municipal, clasificación por CSV y fichas PDF con revisión humana.

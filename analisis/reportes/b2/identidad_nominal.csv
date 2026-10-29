@@ -1,0 +1,2478 @@
+EDOCVE,MPIOCVE,anios_observados,variantes_normalizadas,nombres,estatus_administrativo,requiere_revision_territorial
+01,001,6,1,Aguascalientes,estable_por_nombre_y_clave,True
+01,002,6,1,Asientos,estable_por_nombre_y_clave,True
+01,003,6,1,Calvillo,estable_por_nombre_y_clave,True
+01,004,6,1,Cosío,estable_por_nombre_y_clave,True
+01,005,6,1,Jesús María,estable_por_nombre_y_clave,True
+01,006,6,1,Pabellón de Arteaga,estable_por_nombre_y_clave,True
+01,007,6,1,Rincón de Romos,estable_por_nombre_y_clave,True
+01,008,6,1,San José de Gracia | San José de Gracía,estable_por_nombre_y_clave,True
+01,009,6,1,Tepezalá,estable_por_nombre_y_clave,True
+01,010,6,1,San Francisco de los Romo,estable_por_nombre_y_clave,True
+01,011,6,1,El Llano,estable_por_nombre_y_clave,True
+02,001,6,1,Ensenada,estable_por_nombre_y_clave,True
+02,002,6,1,Mexicali,estable_por_nombre_y_clave,True
+02,003,6,1,Tecate,estable_por_nombre_y_clave,True
+02,004,6,1,Tijuana,estable_por_nombre_y_clave,True
+02,005,6,1,Playas de Rosarito,estable_por_nombre_y_clave,True
+02,006,1,1,San Quintin,incompleto_en_serie,True
+02,007,1,1,San Felipe,incompleto_en_serie,True
+03,001,6,1,Comondú,estable_por_nombre_y_clave,True
+03,002,6,1,Mulegé,estable_por_nombre_y_clave,True
+03,003,6,1,La Paz,estable_por_nombre_y_clave,True
+03,004,6,1,Los Cabos,estable_por_nombre_y_clave,True
+03,005,6,1,Loreto,estable_por_nombre_y_clave,True
+04,001,6,1,Campeche,estable_por_nombre_y_clave,True
+04,002,6,1,Calkiní,estable_por_nombre_y_clave,True
+04,003,6,1,Carmen,estable_por_nombre_y_clave,True
+04,004,6,1,Champotón,estable_por_nombre_y_clave,True
+04,005,6,1,Hecelchakán,estable_por_nombre_y_clave,True
+04,006,6,2,Hopelche}én | Hopelchén,revisar_identidad_nominal,True
+04,007,6,1,Palizada,estable_por_nombre_y_clave,True
+04,008,6,1,Tenabo,estable_por_nombre_y_clave,True
+04,009,6,1,Escárcega,estable_por_nombre_y_clave,True
+04,010,6,1,Candelaria,estable_por_nombre_y_clave,True
+04,011,6,1,Calakmul,estable_por_nombre_y_clave,True
+04,012,2,2,Dzitbalché | Dzitblache,incompleto_en_serie,True
+04,013,2,1,Seybaplaya,incompleto_en_serie,True
+05,001,6,1,Abasolo,estable_por_nombre_y_clave,True
+05,002,6,1,Acuña,estable_por_nombre_y_clave,True
+05,003,6,1,Allende,estable_por_nombre_y_clave,True
+05,004,6,1,Arteaga,estable_por_nombre_y_clave,True
+05,005,6,1,Candela,estable_por_nombre_y_clave,True
+05,006,6,1,Castaños,estable_por_nombre_y_clave,True
+05,007,6,1,Cuatro Ciénegas | Cuatrociénegas,estable_por_nombre_y_clave,True
+05,008,6,1,Escobedo,estable_por_nombre_y_clave,True
+05,009,6,1,Francisco I. Madero,estable_por_nombre_y_clave,True
+05,010,6,1,Frontera,estable_por_nombre_y_clave,True
+05,011,6,1,General Cepeda,estable_por_nombre_y_clave,True
+05,012,6,1,Guerrero,estable_por_nombre_y_clave,True
+05,013,6,1,Hidalgo,estable_por_nombre_y_clave,True
+05,014,6,1,Jiménez,estable_por_nombre_y_clave,True
+05,015,6,1,Juárez,estable_por_nombre_y_clave,True
+05,016,6,1,Lamadrid,estable_por_nombre_y_clave,True
+05,017,6,1,Matamoros,estable_por_nombre_y_clave,True
+05,018,6,1,Monclova,estable_por_nombre_y_clave,True
+05,019,6,1,Morelos,estable_por_nombre_y_clave,True
+05,020,6,1,Múzquiz,estable_por_nombre_y_clave,True
+05,021,6,1,Nadadores,estable_por_nombre_y_clave,True
+05,022,6,1,Nava,estable_por_nombre_y_clave,True
+05,023,6,1,Ocampo,estable_por_nombre_y_clave,True
+05,024,6,1,Parras,estable_por_nombre_y_clave,True
+05,025,6,1,Piedras Negras,estable_por_nombre_y_clave,True
+05,026,6,1,Progreso,estable_por_nombre_y_clave,True
+05,027,6,1,Ramos Arizpe,estable_por_nombre_y_clave,True
+05,028,6,1,Sabinas,estable_por_nombre_y_clave,True
+05,029,6,1,Sacramento,estable_por_nombre_y_clave,True
+05,030,6,1,Saltillo,estable_por_nombre_y_clave,True
+05,031,6,1,San Buenaventura,estable_por_nombre_y_clave,True
+05,032,6,1,San Juan de Sabinas,estable_por_nombre_y_clave,True
+05,033,6,1,San Pedro,estable_por_nombre_y_clave,True
+05,034,6,1,Sierra Mojada,estable_por_nombre_y_clave,True
+05,035,6,1,Torreón,estable_por_nombre_y_clave,True
+05,036,6,1,Viesca,estable_por_nombre_y_clave,True
+05,037,6,1,Villa Unión,estable_por_nombre_y_clave,True
+05,038,6,1,Zaragoza,estable_por_nombre_y_clave,True
+06,001,6,1,Colima,estable_por_nombre_y_clave,True
+06,002,6,1,Comala,estable_por_nombre_y_clave,True
+06,003,6,1,Coquimatlán,estable_por_nombre_y_clave,True
+06,004,6,1,Cuauhtémoc,estable_por_nombre_y_clave,True
+06,005,6,1,Villa de Álvarez,estable_por_nombre_y_clave,True
+06,006,6,1,Armería,estable_por_nombre_y_clave,True
+06,007,6,1,Ixtlahuacán,estable_por_nombre_y_clave,True
+06,008,6,1,Manzanillo,estable_por_nombre_y_clave,True
+06,009,6,1,Minatitlán,estable_por_nombre_y_clave,True
+06,010,6,1,Tecomán,estable_por_nombre_y_clave,True
+07,001,6,1,Acacoyagua,estable_por_nombre_y_clave,True
+07,002,6,1,Acala,estable_por_nombre_y_clave,True
+07,003,6,1,Acapetahua,estable_por_nombre_y_clave,True
+07,004,6,1,Altamirano,estable_por_nombre_y_clave,True
+07,005,6,1,Amatán,estable_por_nombre_y_clave,True
+07,006,6,1,Amatenango de la Frontera,estable_por_nombre_y_clave,True
+07,007,6,1,Amatenango del Valle,estable_por_nombre_y_clave,True
+07,008,6,1,Angel Albino Corzo | Ángel Albino Corzo,estable_por_nombre_y_clave,True
+07,009,6,1,Arriaga,estable_por_nombre_y_clave,True
+07,010,6,1,Bejucal de Ocampo,estable_por_nombre_y_clave,True
+07,011,6,1,Bella Vista,estable_por_nombre_y_clave,True
+07,012,6,1,Berriozábal,estable_por_nombre_y_clave,True
+07,013,6,1,Bochil,estable_por_nombre_y_clave,True
+07,014,6,1,El Bosque,estable_por_nombre_y_clave,True
+07,015,6,1,Cacahoatán,estable_por_nombre_y_clave,True
+07,016,6,1,Catazajá,estable_por_nombre_y_clave,True
+07,017,6,1,Cintalapa,estable_por_nombre_y_clave,True
+07,018,6,1,Coapilla,estable_por_nombre_y_clave,True
+07,019,6,1,Comitán de Domínguez,estable_por_nombre_y_clave,True
+07,020,6,1,La Concordia,estable_por_nombre_y_clave,True
+07,021,6,1,Copainalá,estable_por_nombre_y_clave,True
+07,022,6,1,Chalchihuitán,estable_por_nombre_y_clave,True
+07,023,6,1,Chamula,estable_por_nombre_y_clave,True
+07,024,6,1,Chanal,estable_por_nombre_y_clave,True
+07,025,6,1,Chapultenango,estable_por_nombre_y_clave,True
+07,026,6,1,Chenalhó,estable_por_nombre_y_clave,True
+07,027,6,1,Chiapa de Corzo,estable_por_nombre_y_clave,True
+07,028,6,1,Chiapilla,estable_por_nombre_y_clave,True
+07,029,6,1,Chicoasén,estable_por_nombre_y_clave,True
+07,030,6,1,Chicomuselo,estable_por_nombre_y_clave,True
+07,031,6,1,Chilón,estable_por_nombre_y_clave,True
+07,032,6,1,Escuintla,estable_por_nombre_y_clave,True
+07,033,6,1,Francisco León,estable_por_nombre_y_clave,True
+07,034,6,1,Frontera Comalapa,estable_por_nombre_y_clave,True
+07,035,6,1,Frontera Hidalgo,estable_por_nombre_y_clave,True
+07,036,6,1,La Grandeza,estable_por_nombre_y_clave,True
+07,037,6,1,Huehuetán,estable_por_nombre_y_clave,True
+07,038,6,2,Huitiupaán | Huitiupán,revisar_identidad_nominal,True
+07,039,6,1,Huixtán,estable_por_nombre_y_clave,True
+07,040,6,1,Huixtla,estable_por_nombre_y_clave,True
+07,041,6,1,La Independencia,estable_por_nombre_y_clave,True
+07,042,6,1,Ixhuatán,estable_por_nombre_y_clave,True
+07,043,6,1,Ixtacomitán,estable_por_nombre_y_clave,True
+07,044,6,1,Ixtapa,estable_por_nombre_y_clave,True
+07,045,6,1,Ixtapangajoya,estable_por_nombre_y_clave,True
+07,046,6,1,Jiquipilas,estable_por_nombre_y_clave,True
+07,047,6,1,Jitotol,estable_por_nombre_y_clave,True
+07,048,6,1,Juárez,estable_por_nombre_y_clave,True
+07,049,6,1,Larráinzar,estable_por_nombre_y_clave,True
+07,050,6,1,La Libertad,estable_por_nombre_y_clave,True
+07,051,6,1,Mapastepec,estable_por_nombre_y_clave,True
+07,052,6,1,Las Margaritas,estable_por_nombre_y_clave,True
+07,053,6,1,Mazapa de Madero,estable_por_nombre_y_clave,True
+07,054,6,1,Mazatán,estable_por_nombre_y_clave,True
+07,055,6,1,Metapa,estable_por_nombre_y_clave,True
+07,056,6,1,Mitontic,estable_por_nombre_y_clave,True
+07,057,6,1,Motozintla,estable_por_nombre_y_clave,True
+07,058,6,1,Nicolás Ruíz,estable_por_nombre_y_clave,True
+07,059,6,1,Ocosingo,estable_por_nombre_y_clave,True
+07,060,6,1,Ocotepec,estable_por_nombre_y_clave,True
+07,061,6,1,Ocozocoautla de Espinosa,estable_por_nombre_y_clave,True
+07,062,6,1,Ostuacán,estable_por_nombre_y_clave,True
+07,063,6,1,Osumacinta,estable_por_nombre_y_clave,True
+07,064,6,1,Oxchuc,estable_por_nombre_y_clave,True
+07,065,6,1,Palenque,estable_por_nombre_y_clave,True
+07,066,6,1,Pantelhó,estable_por_nombre_y_clave,True
+07,067,6,1,Pantepec,estable_por_nombre_y_clave,True
+07,068,6,1,Pichucalco,estable_por_nombre_y_clave,True
+07,069,6,1,Pijijiapan,estable_por_nombre_y_clave,True
+07,070,6,1,El Porvenir,estable_por_nombre_y_clave,True
+07,071,6,1,Pueblo Nuevo Solistahuacán,estable_por_nombre_y_clave,True
+07,072,6,1,Rayón,estable_por_nombre_y_clave,True
+07,073,6,1,Reforma,estable_por_nombre_y_clave,True
+07,074,6,1,Las Rosas,estable_por_nombre_y_clave,True
+07,075,6,1,Sabanilla,estable_por_nombre_y_clave,True
+07,076,6,1,Salto De Agua | Salto de Agua,estable_por_nombre_y_clave,True
+07,077,6,1,San Cristóbal de las Casas,estable_por_nombre_y_clave,True
+07,078,6,1,San Fernando,estable_por_nombre_y_clave,True
+07,079,6,1,San Juan Cancuc,estable_por_nombre_y_clave,True
+07,080,6,1,San Lucas,estable_por_nombre_y_clave,True
+07,081,6,1,Siltepec,estable_por_nombre_y_clave,True
+07,082,6,1,Simojovel,estable_por_nombre_y_clave,True
+07,083,6,1,Sitalá,estable_por_nombre_y_clave,True
+07,084,6,1,Socoltenango,estable_por_nombre_y_clave,True
+07,085,6,1,Solosuchiapa,estable_por_nombre_y_clave,True
+07,086,6,1,Soyaló,estable_por_nombre_y_clave,True
+07,087,6,1,Suchiapa,estable_por_nombre_y_clave,True
+07,088,6,1,Suchiate,estable_por_nombre_y_clave,True
+07,089,6,1,Sunuapa,estable_por_nombre_y_clave,True
+07,090,6,1,Tapachula,estable_por_nombre_y_clave,True
+07,091,6,1,Tapalapa,estable_por_nombre_y_clave,True
+07,092,6,1,Tapilula,estable_por_nombre_y_clave,True
+07,093,6,1,Tecpatán,estable_por_nombre_y_clave,True
+07,094,6,1,Tenejapa,estable_por_nombre_y_clave,True
+07,095,6,1,Teopisca,estable_por_nombre_y_clave,True
+07,096,6,1,Tila,estable_por_nombre_y_clave,True
+07,097,6,1,Tonalá,estable_por_nombre_y_clave,True
+07,098,6,1,Totolapa,estable_por_nombre_y_clave,True
+07,099,6,1,La Trinitaria,estable_por_nombre_y_clave,True
+07,100,6,1,Tumbalá,estable_por_nombre_y_clave,True
+07,101,6,1,Tuxtla Chico,estable_por_nombre_y_clave,True
+07,102,6,1,Tuxtla Gutiérrez,estable_por_nombre_y_clave,True
+07,103,6,1,Tuzantán,estable_por_nombre_y_clave,True
+07,104,6,1,Tzimol,estable_por_nombre_y_clave,True
+07,105,6,1,Unión Juárez,estable_por_nombre_y_clave,True
+07,106,6,1,Venustiano Carranza,estable_por_nombre_y_clave,True
+07,107,6,1,Villa Comaltitlán | Villacomaltitlán,estable_por_nombre_y_clave,True
+07,108,6,1,Villa Corzo,estable_por_nombre_y_clave,True
+07,109,6,1,Villaflores,estable_por_nombre_y_clave,True
+07,110,6,1,Yajalón,estable_por_nombre_y_clave,True
+07,111,6,1,Zinacantán,estable_por_nombre_y_clave,True
+07,112,6,1,Aldama,estable_por_nombre_y_clave,True
+07,113,6,1,Benemérito de las Américas,estable_por_nombre_y_clave,True
+07,114,6,2,Maravilla Tejenapa | Maravilla Tenejapa,revisar_identidad_nominal,True
+07,115,6,1,Marqués de Comillas,estable_por_nombre_y_clave,True
+07,116,6,1,Montecristo de Guerrero,estable_por_nombre_y_clave,True
+07,117,5,1,San Andrés Duraznal,incompleto_en_serie,True
+07,118,6,1,Santiago El Pinar | Santiago el Pinar,estable_por_nombre_y_clave,True
+07,119,2,1,Capitán Luis Ángel Vidal,incompleto_en_serie,True
+07,120,3,2,Emiliano Zapata | Rincón Chamula San Pedro,incompleto_en_serie,True
+07,121,3,2,El Parral | Mezcalapa,incompleto_en_serie,True
+07,122,3,2,El Parral | Emiliano Zapata,incompleto_en_serie,True
+07,123,3,2,Capitán Luis Ángel Vidal | Mezcalapa,incompleto_en_serie,True
+07,124,3,2,Honduras de la Sierra | Rincón Chamula San Pedro,incompleto_en_serie,True
+08,001,6,1,Ahumada,estable_por_nombre_y_clave,True
+08,002,6,1,Aldama,estable_por_nombre_y_clave,True
+08,003,6,1,Allende,estable_por_nombre_y_clave,True
+08,004,6,1,Aquiles Serdán,estable_por_nombre_y_clave,True
+08,005,6,1,Ascensión,estable_por_nombre_y_clave,True
+08,006,6,1,Bachíniva,estable_por_nombre_y_clave,True
+08,007,6,1,Balleza,estable_por_nombre_y_clave,True
+08,008,6,2,Batopilas | Batopilas de Manuel Gómez Morín,revisar_identidad_nominal,True
+08,009,6,1,Bocoyna,estable_por_nombre_y_clave,True
+08,010,6,1,Buenaventura,estable_por_nombre_y_clave,True
+08,011,6,1,Camargo,estable_por_nombre_y_clave,True
+08,012,6,1,Carichí,estable_por_nombre_y_clave,True
+08,013,6,1,Casas Grandes,estable_por_nombre_y_clave,True
+08,014,6,1,Coronado,estable_por_nombre_y_clave,True
+08,015,6,1,Coyame del Sotol,estable_por_nombre_y_clave,True
+08,016,6,1,La Cruz,estable_por_nombre_y_clave,True
+08,017,6,1,Cuauhtémoc,estable_por_nombre_y_clave,True
+08,018,6,1,Cusihuiriachi,estable_por_nombre_y_clave,True
+08,019,6,1,Chihuahua,estable_por_nombre_y_clave,True
+08,020,6,1,Chínipas,estable_por_nombre_y_clave,True
+08,021,6,1,Delicias,estable_por_nombre_y_clave,True
+08,022,6,1,Dr. BelisaRío Domínguez | Dr. Belisario Domínguez,estable_por_nombre_y_clave,True
+08,023,6,1,Galeana,estable_por_nombre_y_clave,True
+08,024,6,1,Santa Isabel,estable_por_nombre_y_clave,True
+08,025,6,1,Gómez Farías,estable_por_nombre_y_clave,True
+08,026,6,1,Gran Morelos,estable_por_nombre_y_clave,True
+08,027,6,1,Guachochi,estable_por_nombre_y_clave,True
+08,028,6,1,Guadalupe,estable_por_nombre_y_clave,True
+08,029,6,1,Guadalupe y Calvo,estable_por_nombre_y_clave,True
+08,030,6,1,Guazapares,estable_por_nombre_y_clave,True
+08,031,6,1,Guerrero,estable_por_nombre_y_clave,True
+08,032,6,1,Hidalgo del Parral,estable_por_nombre_y_clave,True
+08,033,6,1,Huejotitán,estable_por_nombre_y_clave,True
+08,034,6,1,Ignacio Zaragoza,estable_por_nombre_y_clave,True
+08,035,6,1,Janos,estable_por_nombre_y_clave,True
+08,036,6,1,Jiménez,estable_por_nombre_y_clave,True
+08,037,6,1,Juárez,estable_por_nombre_y_clave,True
+08,038,6,1,Julimes,estable_por_nombre_y_clave,True
+08,039,6,1,López,estable_por_nombre_y_clave,True
+08,040,6,1,Madera,estable_por_nombre_y_clave,True
+08,041,6,1,Maguarichi,estable_por_nombre_y_clave,True
+08,042,6,1,Manuel Benavides,estable_por_nombre_y_clave,True
+08,043,6,1,Matachí,estable_por_nombre_y_clave,True
+08,044,6,1,Matamoros,estable_por_nombre_y_clave,True
+08,045,6,1,Meoqui,estable_por_nombre_y_clave,True
+08,046,6,1,Morelos,estable_por_nombre_y_clave,True
+08,047,6,1,Moris,estable_por_nombre_y_clave,True
+08,048,6,1,Namiquipa,estable_por_nombre_y_clave,True
+08,049,6,1,Nonoava,estable_por_nombre_y_clave,True
+08,050,6,1,Nuevo Casas Grandes,estable_por_nombre_y_clave,True
+08,051,6,1,Ocampo,estable_por_nombre_y_clave,True
+08,052,6,1,Ojinaga,estable_por_nombre_y_clave,True
+08,053,6,1,Praxedis G. Guerrero,estable_por_nombre_y_clave,True
+08,054,6,1,Riva Palacio,estable_por_nombre_y_clave,True
+08,055,6,1,Rosales,estable_por_nombre_y_clave,True
+08,056,6,1,Rosario,estable_por_nombre_y_clave,True
+08,057,6,1,San Francisco de Borja,estable_por_nombre_y_clave,True
+08,058,6,1,San Francisco de Conchos,estable_por_nombre_y_clave,True
+08,059,6,1,San Francisco del Oro,estable_por_nombre_y_clave,True
+08,060,6,1,Santa Bárbara,estable_por_nombre_y_clave,True
+08,061,6,1,Satevó,estable_por_nombre_y_clave,True
+08,062,6,1,Saucillo,estable_por_nombre_y_clave,True
+08,063,6,1,Temósachic,estable_por_nombre_y_clave,True
+08,064,6,1,El Tule,estable_por_nombre_y_clave,True
+08,065,6,1,Urique,estable_por_nombre_y_clave,True
+08,066,6,1,Uruachi,estable_por_nombre_y_clave,True
+08,067,6,1,Valle de Zaragoza,estable_por_nombre_y_clave,True
+09,002,6,1,Azcapotzalco,estable_por_nombre_y_clave,True
+09,003,6,1,Coyoacán,estable_por_nombre_y_clave,True
+09,004,6,1,Cuajimalpa de Morelos,estable_por_nombre_y_clave,True
+09,005,6,1,Gustavo A. Madero,estable_por_nombre_y_clave,True
+09,006,6,1,Iztacalco,estable_por_nombre_y_clave,True
+09,007,6,1,Iztapalapa,estable_por_nombre_y_clave,True
+09,008,6,1,La Magdalena Contreras,estable_por_nombre_y_clave,True
+09,009,6,1,Milpa Alta,estable_por_nombre_y_clave,True
+09,010,6,1,Álvaro Obregón,estable_por_nombre_y_clave,True
+09,011,6,1,Tláhuac,estable_por_nombre_y_clave,True
+09,012,6,1,Tlalpan,estable_por_nombre_y_clave,True
+09,013,6,1,Xochimilco,estable_por_nombre_y_clave,True
+09,014,6,1,Benito Juárez,estable_por_nombre_y_clave,True
+09,015,6,1,Cuauhtémoc,estable_por_nombre_y_clave,True
+09,016,6,1,Miguel Hidalgo,estable_por_nombre_y_clave,True
+09,017,6,1,Venustiano Carranza,estable_por_nombre_y_clave,True
+10,001,6,1,Canatlán,estable_por_nombre_y_clave,True
+10,002,6,1,Canelas,estable_por_nombre_y_clave,True
+10,003,6,1,Coneto de Comonfort,estable_por_nombre_y_clave,True
+10,004,6,1,Cuencamé,estable_por_nombre_y_clave,True
+10,005,6,1,Durango,estable_por_nombre_y_clave,True
+10,006,6,2,General Simón Bolívar | Simón Bolívar,revisar_identidad_nominal,True
+10,007,6,1,Gómez Palacio,estable_por_nombre_y_clave,True
+10,008,6,1,Guadalupe Victoria,estable_por_nombre_y_clave,True
+10,009,6,1,Guanaceví,estable_por_nombre_y_clave,True
+10,010,6,1,Hidalgo,estable_por_nombre_y_clave,True
+10,011,6,1,Indé,estable_por_nombre_y_clave,True
+10,012,6,1,Lerdo,estable_por_nombre_y_clave,True
+10,013,6,1,Mapimí,estable_por_nombre_y_clave,True
+10,014,6,1,Mezquital,estable_por_nombre_y_clave,True
+10,015,6,1,Nazas,estable_por_nombre_y_clave,True
+10,016,6,1,Nombre de Dios,estable_por_nombre_y_clave,True
+10,017,6,1,Nuevo Ideal,estable_por_nombre_y_clave,True
+10,018,6,1,Ocampo,estable_por_nombre_y_clave,True
+10,019,6,1,El Oro,estable_por_nombre_y_clave,True
+10,020,6,1,Otáez,estable_por_nombre_y_clave,True
+10,021,6,1,Pánuco de Coronado,estable_por_nombre_y_clave,True
+10,022,6,1,Peñón Blanco,estable_por_nombre_y_clave,True
+10,023,6,1,Poanas,estable_por_nombre_y_clave,True
+10,024,6,1,Pueblo Nuevo,estable_por_nombre_y_clave,True
+10,025,6,1,Rodeo,estable_por_nombre_y_clave,True
+10,026,6,1,San Bernardo,estable_por_nombre_y_clave,True
+10,027,6,1,San Dimas,estable_por_nombre_y_clave,True
+10,028,6,1,San Juan de Guadalupe,estable_por_nombre_y_clave,True
+10,029,6,1,San Juan del Río,estable_por_nombre_y_clave,True
+10,030,6,1,San Luis del Cordero,estable_por_nombre_y_clave,True
+10,031,6,1,San Pedro del Gallo,estable_por_nombre_y_clave,True
+10,032,6,1,Santa Clara,estable_por_nombre_y_clave,True
+10,033,6,1,Santiago Papasquiaro,estable_por_nombre_y_clave,True
+10,034,6,1,Súchil,estable_por_nombre_y_clave,True
+10,035,6,1,Tamazula,estable_por_nombre_y_clave,True
+10,036,6,1,Tepehuanes,estable_por_nombre_y_clave,True
+10,037,6,1,Tlahualilo,estable_por_nombre_y_clave,True
+10,038,6,1,Topia,estable_por_nombre_y_clave,True
+10,039,6,1,Vicente Guerrero,estable_por_nombre_y_clave,True
+11,001,6,1,Abasolo,estable_por_nombre_y_clave,True
+11,002,6,1,Acámbaro,estable_por_nombre_y_clave,True
+11,003,6,1,San Miguel de Allende,estable_por_nombre_y_clave,True
+11,004,6,1,Apaseo el Alto,estable_por_nombre_y_clave,True
+11,005,6,1,Apaseo el Grande,estable_por_nombre_y_clave,True
+11,006,6,1,Atarjea,estable_por_nombre_y_clave,True
+11,007,6,1,Celaya,estable_por_nombre_y_clave,True
+11,008,6,1,Manuel Doblado,estable_por_nombre_y_clave,True
+11,009,6,1,Comonfort,estable_por_nombre_y_clave,True
+11,010,6,1,Coroneo,estable_por_nombre_y_clave,True
+11,011,6,1,Cortazar,estable_por_nombre_y_clave,True
+11,012,6,1,Cuerámaro,estable_por_nombre_y_clave,True
+11,013,6,1,Doctor Mora,estable_por_nombre_y_clave,True
+11,014,6,1,Dolores Hidalgo Cuna de la Independencia Nacional,estable_por_nombre_y_clave,True
+11,015,6,1,Guanajuato,estable_por_nombre_y_clave,True
+11,016,6,1,Huanímaro,estable_por_nombre_y_clave,True
+11,017,6,1,Irapuato,estable_por_nombre_y_clave,True
+11,018,6,1,Jaral del Progreso,estable_por_nombre_y_clave,True
+11,019,6,1,Jerécuaro,estable_por_nombre_y_clave,True
+11,020,6,1,León,estable_por_nombre_y_clave,True
+11,021,6,1,Moroleón,estable_por_nombre_y_clave,True
+11,022,6,1,Ocampo,estable_por_nombre_y_clave,True
+11,023,6,1,Pénjamo,estable_por_nombre_y_clave,True
+11,024,6,1,Pueblo Nuevo,estable_por_nombre_y_clave,True
+11,025,6,1,Purísima del Rincón,estable_por_nombre_y_clave,True
+11,026,6,1,Romita,estable_por_nombre_y_clave,True
+11,027,6,1,Salamanca,estable_por_nombre_y_clave,True
+11,028,6,1,Salvatierra,estable_por_nombre_y_clave,True
+11,029,6,1,San Diego de la Unión,estable_por_nombre_y_clave,True
+11,030,6,1,San Felipe,estable_por_nombre_y_clave,True
+11,031,6,1,San Francisco del Rincón,estable_por_nombre_y_clave,True
+11,032,6,1,San José Iturbide,estable_por_nombre_y_clave,True
+11,033,6,1,San Luis de la Paz,estable_por_nombre_y_clave,True
+11,034,6,1,Santa Catarina,estable_por_nombre_y_clave,True
+11,035,6,1,Santa Cruz de Juventino Rosas,estable_por_nombre_y_clave,True
+11,036,6,1,Santiago Maravatío,estable_por_nombre_y_clave,True
+11,037,6,1,Silao de la Victoria,estable_por_nombre_y_clave,True
+11,038,6,1,Tarandacuao,estable_por_nombre_y_clave,True
+11,039,6,1,Tarimoro,estable_por_nombre_y_clave,True
+11,040,6,1,Tierra Blanca,estable_por_nombre_y_clave,True
+11,041,6,1,Uriangato,estable_por_nombre_y_clave,True
+11,042,6,1,Valle de Santiago,estable_por_nombre_y_clave,True
+11,043,6,1,Victoria,estable_por_nombre_y_clave,True
+11,044,6,1,Villagrán,estable_por_nombre_y_clave,True
+11,045,6,1,Xichú,estable_por_nombre_y_clave,True
+11,046,6,1,Yuriria,estable_por_nombre_y_clave,True
+12,001,6,1,Acapulco de Juárez,estable_por_nombre_y_clave,True
+12,002,6,1,Ahuacuotzingo,estable_por_nombre_y_clave,True
+12,003,6,1,Ajuchitlán del Progreso,estable_por_nombre_y_clave,True
+12,004,6,1,Alcozauca de Guerrero,estable_por_nombre_y_clave,True
+12,005,6,1,Alpoyeca,estable_por_nombre_y_clave,True
+12,006,6,1,Apaxtla,estable_por_nombre_y_clave,True
+12,007,6,1,Arcelia,estable_por_nombre_y_clave,True
+12,008,6,1,Atenango del Río,estable_por_nombre_y_clave,True
+12,009,6,1,Atlamajalcingo del Monte,estable_por_nombre_y_clave,True
+12,010,6,1,Atlixtac,estable_por_nombre_y_clave,True
+12,011,6,1,Atoyac de Álvarez,estable_por_nombre_y_clave,True
+12,012,6,1,Ayutla de los Libres,estable_por_nombre_y_clave,True
+12,013,6,1,Azoyú,estable_por_nombre_y_clave,True
+12,014,6,1,Benito Juárez,estable_por_nombre_y_clave,True
+12,015,6,1,Buenavista de Cuéllar,estable_por_nombre_y_clave,True
+12,016,6,1,Coahuayutla de José María Izazaga,estable_por_nombre_y_clave,True
+12,017,6,1,Cocula,estable_por_nombre_y_clave,True
+12,018,6,1,Copala,estable_por_nombre_y_clave,True
+12,019,6,1,Copalillo,estable_por_nombre_y_clave,True
+12,020,6,1,Copanatoyac,estable_por_nombre_y_clave,True
+12,021,6,1,Coyuca de Benítez,estable_por_nombre_y_clave,True
+12,022,6,1,Coyuca de Catalán,estable_por_nombre_y_clave,True
+12,023,6,1,Cuajinicuilapa,estable_por_nombre_y_clave,True
+12,024,6,1,Cualác,estable_por_nombre_y_clave,True
+12,025,6,1,Cuautepec,estable_por_nombre_y_clave,True
+12,026,6,1,Cuetzala del Progreso,estable_por_nombre_y_clave,True
+12,027,6,1,Cutzamala de Pinzón,estable_por_nombre_y_clave,True
+12,028,6,1,Chilapa de Álvarez,estable_por_nombre_y_clave,True
+12,029,6,1,Chilpancingo de los Bravo,estable_por_nombre_y_clave,True
+12,030,6,1,Eduardo Neri,estable_por_nombre_y_clave,True
+12,031,6,1,Florencio Villarreal,estable_por_nombre_y_clave,True
+12,032,6,1,General Canuto A. Neri,estable_por_nombre_y_clave,True
+12,033,6,1,General Heliodoro Castillo,estable_por_nombre_y_clave,True
+12,034,6,1,Huamuxtitlán,estable_por_nombre_y_clave,True
+12,035,6,1,Huitzuco de los Figueroa,estable_por_nombre_y_clave,True
+12,036,6,1,Iguala de la Independencia,estable_por_nombre_y_clave,True
+12,037,6,1,Igualapa,estable_por_nombre_y_clave,True
+12,038,6,1,Ixcateopan de Cuauhtémoc,estable_por_nombre_y_clave,True
+12,039,6,1,Zihuatanejo de Azueta,estable_por_nombre_y_clave,True
+12,040,6,1,Juan R. Escudero,estable_por_nombre_y_clave,True
+12,041,6,1,Leonardo Bravo,estable_por_nombre_y_clave,True
+12,042,6,1,Malinaltepec,estable_por_nombre_y_clave,True
+12,043,6,1,Mártir De Cuilapan | Mártir de Cuilapan,estable_por_nombre_y_clave,True
+12,044,6,1,Metlatónoc,estable_por_nombre_y_clave,True
+12,045,6,1,Mochitlán,estable_por_nombre_y_clave,True
+12,046,6,1,Olinalá,estable_por_nombre_y_clave,True
+12,047,6,1,Ometepec,estable_por_nombre_y_clave,True
+12,048,6,1,Pedro Ascencio Alquisiras,estable_por_nombre_y_clave,True
+12,049,6,1,Petatlán,estable_por_nombre_y_clave,True
+12,050,6,1,Pilcaya,estable_por_nombre_y_clave,True
+12,051,6,1,Pungarabato,estable_por_nombre_y_clave,True
+12,052,6,1,Quechultenango,estable_por_nombre_y_clave,True
+12,053,6,1,San Luis Acatlán,estable_por_nombre_y_clave,True
+12,054,6,1,San Marcos,estable_por_nombre_y_clave,True
+12,055,6,1,San Miguel Totolapan,estable_por_nombre_y_clave,True
+12,056,6,1,Taxco de Alarcón,estable_por_nombre_y_clave,True
+12,057,6,1,Tecoanapa,estable_por_nombre_y_clave,True
+12,058,6,1,Técpan de Galeana,estable_por_nombre_y_clave,True
+12,059,6,1,Teloloapan,estable_por_nombre_y_clave,True
+12,060,6,1,Tepecoacuilco de Trujano,estable_por_nombre_y_clave,True
+12,061,6,1,Tetipac,estable_por_nombre_y_clave,True
+12,062,6,1,Tixtla de Guerrero,estable_por_nombre_y_clave,True
+12,063,6,1,Tlacoachistlahuaca,estable_por_nombre_y_clave,True
+12,064,6,1,Tlacoapa,estable_por_nombre_y_clave,True
+12,065,6,1,Tlalchapa,estable_por_nombre_y_clave,True
+12,066,6,1,Tlalixtaquilla de Maldonado,estable_por_nombre_y_clave,True
+12,067,6,1,Tlapa de Comonfort,estable_por_nombre_y_clave,True
+12,068,6,1,Tlapehuala,estable_por_nombre_y_clave,True
+12,069,6,1,La Unión de Isidoro Montes de Oca,estable_por_nombre_y_clave,True
+12,070,6,1,Xalpatláhuac,estable_por_nombre_y_clave,True
+12,071,6,1,Xochihuehuetlán,estable_por_nombre_y_clave,True
+12,072,6,1,Xochistlahuaca,estable_por_nombre_y_clave,True
+12,073,6,1,Zapotitlán Tablas,estable_por_nombre_y_clave,True
+12,074,6,1,Zirándaro,estable_por_nombre_y_clave,True
+12,075,6,1,Zitlala,estable_por_nombre_y_clave,True
+12,076,6,1,Acatepec,estable_por_nombre_y_clave,True
+12,077,6,1,José Joaquín de Herrera,estable_por_nombre_y_clave,True
+12,078,6,1,Iliatenco,estable_por_nombre_y_clave,True
+12,079,6,1,Cochoapa el Grande,estable_por_nombre_y_clave,True
+12,080,6,1,Marquelia,estable_por_nombre_y_clave,True
+12,081,6,1,Juchitán,estable_por_nombre_y_clave,True
+12,082,1,1,Ñuu Savi,incompleto_en_serie,True
+12,083,1,1,Las Vigas,incompleto_en_serie,True
+12,084,1,1,San Nicolás,incompleto_en_serie,True
+12,085,1,1,Santa Cruz del Rincón,incompleto_en_serie,True
+13,001,6,1,Acatlán,estable_por_nombre_y_clave,True
+13,002,6,1,Acaxochitlán,estable_por_nombre_y_clave,True
+13,003,6,1,Actopan,estable_por_nombre_y_clave,True
+13,004,6,1,Agua Blanca de Iturbide,estable_por_nombre_y_clave,True
+13,005,6,1,Ajacuba,estable_por_nombre_y_clave,True
+13,006,6,1,Alfajayucan,estable_por_nombre_y_clave,True
+13,007,6,1,Almoloya,estable_por_nombre_y_clave,True
+13,008,6,1,Apan,estable_por_nombre_y_clave,True
+13,009,6,1,Atitalaquia,estable_por_nombre_y_clave,True
+13,010,6,1,Atlapexco,estable_por_nombre_y_clave,True
+13,011,6,1,Atotonilco el Grande,estable_por_nombre_y_clave,True
+13,012,6,1,Atotonilco de Tula,estable_por_nombre_y_clave,True
+13,013,6,1,Calnali,estable_por_nombre_y_clave,True
+13,014,6,1,Cardonal,estable_por_nombre_y_clave,True
+13,015,6,1,Cuautepec de Hinojosa,estable_por_nombre_y_clave,True
+13,016,6,1,Chapantongo,estable_por_nombre_y_clave,True
+13,017,6,1,Chapulhuacán,estable_por_nombre_y_clave,True
+13,018,6,1,Chilcuautla,estable_por_nombre_y_clave,True
+13,019,6,1,El Arenal,estable_por_nombre_y_clave,True
+13,020,6,1,Eloxochitlán,estable_por_nombre_y_clave,True
+13,021,6,1,Emiliano Zapata,estable_por_nombre_y_clave,True
+13,022,6,1,Epazoyucan,estable_por_nombre_y_clave,True
+13,023,6,1,Francisco I. Madero,estable_por_nombre_y_clave,True
+13,024,6,1,Huasca de Ocampo,estable_por_nombre_y_clave,True
+13,025,6,1,Huautla,estable_por_nombre_y_clave,True
+13,026,6,1,Huazalingo,estable_por_nombre_y_clave,True
+13,027,6,1,Huehuetla,estable_por_nombre_y_clave,True
+13,028,6,1,Huejutla de Reyes,estable_por_nombre_y_clave,True
+13,029,6,1,Huichapan,estable_por_nombre_y_clave,True
+13,030,6,1,Ixmiquilpan,estable_por_nombre_y_clave,True
+13,031,6,1,Jacala de Ledezma,estable_por_nombre_y_clave,True
+13,032,6,1,Jaltocán,estable_por_nombre_y_clave,True
+13,033,6,1,Juárez Hidalgo,estable_por_nombre_y_clave,True
+13,034,6,1,La Misión,estable_por_nombre_y_clave,True
+13,035,6,1,Lolotla,estable_por_nombre_y_clave,True
+13,036,6,1,Metepec,estable_por_nombre_y_clave,True
+13,037,6,1,Metztitlán,estable_por_nombre_y_clave,True
+13,038,6,1,Mineral del Chico,estable_por_nombre_y_clave,True
+13,039,6,1,Mineral del Monte,estable_por_nombre_y_clave,True
+13,040,6,1,Mineral de la Reforma,estable_por_nombre_y_clave,True
+13,041,6,1,Mixquiahuala de Juárez,estable_por_nombre_y_clave,True
+13,042,6,1,Molango de Escamilla,estable_por_nombre_y_clave,True
+13,043,6,1,Nicolás Flores,estable_por_nombre_y_clave,True
+13,044,6,1,Nopala de Villagrán,estable_por_nombre_y_clave,True
+13,045,6,1,Omitlán de Juárez,estable_por_nombre_y_clave,True
+13,046,6,1,Pacula,estable_por_nombre_y_clave,True
+13,047,6,1,Pachuca de Soto,estable_por_nombre_y_clave,True
+13,048,6,1,Pisaflores,estable_por_nombre_y_clave,True
+13,049,6,1,Progreso de Obregón,estable_por_nombre_y_clave,True
+13,050,6,2,San Agustín Metzquititlán | San Agustón Metzquititlán,revisar_identidad_nominal,True
+13,051,6,1,San Agustín Tlaxiaca,estable_por_nombre_y_clave,True
+13,052,6,1,San Bartolo Tutotepec,estable_por_nombre_y_clave,True
+13,053,6,1,San Felipe Orizatlán,estable_por_nombre_y_clave,True
+13,054,6,1,San Salvador,estable_por_nombre_y_clave,True
+13,055,6,1,Santiago de Anaya,estable_por_nombre_y_clave,True
+13,056,6,1,Santiago Tulantepec de Lugo Guerrero,estable_por_nombre_y_clave,True
+13,057,6,1,Singuilucan,estable_por_nombre_y_clave,True
+13,058,6,1,Tasquillo,estable_por_nombre_y_clave,True
+13,059,6,1,Tecozautla,estable_por_nombre_y_clave,True
+13,060,6,1,Tenango de Doria,estable_por_nombre_y_clave,True
+13,061,6,1,Tepeapulco,estable_por_nombre_y_clave,True
+13,062,6,1,Tepehuacán de Guerrero,estable_por_nombre_y_clave,True
+13,063,6,1,Tepeji del Río de Ocampo,estable_por_nombre_y_clave,True
+13,064,6,1,Tepetitlán,estable_por_nombre_y_clave,True
+13,065,6,1,Tetepango,estable_por_nombre_y_clave,True
+13,066,6,1,Tezontepec de Aldama,estable_por_nombre_y_clave,True
+13,067,6,1,Tianguistengo,estable_por_nombre_y_clave,True
+13,068,6,1,Tizayuca,estable_por_nombre_y_clave,True
+13,069,6,1,Tlahuelilpan,estable_por_nombre_y_clave,True
+13,070,6,1,Tlahuiltepa,estable_por_nombre_y_clave,True
+13,071,6,1,Tlanalapa,estable_por_nombre_y_clave,True
+13,072,6,1,Tlanchinol,estable_por_nombre_y_clave,True
+13,073,6,1,Tlaxcoapan,estable_por_nombre_y_clave,True
+13,074,6,1,Tolcayuca,estable_por_nombre_y_clave,True
+13,075,6,1,Tula de Allende,estable_por_nombre_y_clave,True
+13,076,6,1,Tulancingo de Bravo,estable_por_nombre_y_clave,True
+13,077,6,1,Villa de Tezontepec,estable_por_nombre_y_clave,True
+13,078,6,1,Xochiatipan,estable_por_nombre_y_clave,True
+13,079,6,1,Xochicoatlán,estable_por_nombre_y_clave,True
+13,080,6,1,Yahualica,estable_por_nombre_y_clave,True
+13,081,6,1,Zacualtipán de Ángeles,estable_por_nombre_y_clave,True
+13,082,6,1,Zapotlán de Juárez,estable_por_nombre_y_clave,True
+13,083,6,1,Zempoala,estable_por_nombre_y_clave,True
+13,084,6,1,Zimapán,estable_por_nombre_y_clave,True
+14,001,6,1,Acatic,estable_por_nombre_y_clave,True
+14,002,6,1,Acatlán de Juárez,estable_por_nombre_y_clave,True
+14,003,6,1,Ahualulco de Mercado,estable_por_nombre_y_clave,True
+14,004,6,1,Amacueca,estable_por_nombre_y_clave,True
+14,005,6,1,Amatitán,estable_por_nombre_y_clave,True
+14,006,6,1,Ameca,estable_por_nombre_y_clave,True
+14,007,6,1,San Juanito de Escobedo,estable_por_nombre_y_clave,True
+14,008,6,1,Arandas,estable_por_nombre_y_clave,True
+14,009,6,1,El Arenal,estable_por_nombre_y_clave,True
+14,010,6,1,Atemajac de Brizuela,estable_por_nombre_y_clave,True
+14,011,6,1,Atengo,estable_por_nombre_y_clave,True
+14,012,6,1,Atenguillo,estable_por_nombre_y_clave,True
+14,013,6,1,Atotonilco el Alto,estable_por_nombre_y_clave,True
+14,014,6,1,Atoyac,estable_por_nombre_y_clave,True
+14,015,6,1,Autlán de Navarro,estable_por_nombre_y_clave,True
+14,016,6,1,Ayotlán,estable_por_nombre_y_clave,True
+14,017,6,1,Ayutla,estable_por_nombre_y_clave,True
+14,018,6,1,La Barca,estable_por_nombre_y_clave,True
+14,019,6,1,Bolaños,estable_por_nombre_y_clave,True
+14,020,6,1,Cabo Corrientes,estable_por_nombre_y_clave,True
+14,021,6,1,Casimiro Castillo,estable_por_nombre_y_clave,True
+14,022,6,1,Cihuatlán,estable_por_nombre_y_clave,True
+14,023,6,1,Zapotlán el Grande,estable_por_nombre_y_clave,True
+14,024,6,1,San Gabriel,estable_por_nombre_y_clave,True
+14,025,6,1,Cocula,estable_por_nombre_y_clave,True
+14,026,6,1,Colotlán,estable_por_nombre_y_clave,True
+14,027,6,1,Concepción de Buenos Aires,estable_por_nombre_y_clave,True
+14,028,6,1,Cuautitlán de García Barragán,estable_por_nombre_y_clave,True
+14,029,6,1,Cuautla,estable_por_nombre_y_clave,True
+14,030,6,1,Cuquío,estable_por_nombre_y_clave,True
+14,031,6,1,Chapala,estable_por_nombre_y_clave,True
+14,032,6,1,Chimaltitán,estable_por_nombre_y_clave,True
+14,033,6,1,Chiquilistlán,estable_por_nombre_y_clave,True
+14,034,6,1,Degollado,estable_por_nombre_y_clave,True
+14,035,6,1,Ejutla,estable_por_nombre_y_clave,True
+14,036,6,1,Encarnación de Díaz,estable_por_nombre_y_clave,True
+14,037,6,1,Etzatlán,estable_por_nombre_y_clave,True
+14,038,6,1,Gómez Farías,estable_por_nombre_y_clave,True
+14,039,6,1,El Grullo,estable_por_nombre_y_clave,True
+14,040,6,1,Guachinango,estable_por_nombre_y_clave,True
+14,041,6,1,Guadalajara,estable_por_nombre_y_clave,True
+14,042,6,1,Hostotipaquillo,estable_por_nombre_y_clave,True
+14,043,6,1,Huejúcar,estable_por_nombre_y_clave,True
+14,044,6,1,Huejuquilla el Alto,estable_por_nombre_y_clave,True
+14,045,6,1,La Huerta,estable_por_nombre_y_clave,True
+14,046,6,1,Ixtlahuacán de los Membrillos,estable_por_nombre_y_clave,True
+14,047,6,1,Ixtlahuacán del Río,estable_por_nombre_y_clave,True
+14,048,6,1,Jalostotitlán,estable_por_nombre_y_clave,True
+14,049,6,1,Jamay,estable_por_nombre_y_clave,True
+14,050,6,1,Jesús María,estable_por_nombre_y_clave,True
+14,051,6,1,Jilotlán de los Dolores,estable_por_nombre_y_clave,True
+14,052,6,1,Jocotepec,estable_por_nombre_y_clave,True
+14,053,6,1,Juanacatlán,estable_por_nombre_y_clave,True
+14,054,6,1,Juchitlán,estable_por_nombre_y_clave,True
+14,055,6,1,Lagos de Moreno,estable_por_nombre_y_clave,True
+14,056,6,1,El Limón,estable_por_nombre_y_clave,True
+14,057,6,1,Magdalena,estable_por_nombre_y_clave,True
+14,058,6,1,Santa María del Oro,estable_por_nombre_y_clave,True
+14,059,6,1,La Manzanilla de la Paz,estable_por_nombre_y_clave,True
+14,060,6,1,Mascota,estable_por_nombre_y_clave,True
+14,061,6,1,Mazamitla,estable_por_nombre_y_clave,True
+14,062,6,1,Mexticacán,estable_por_nombre_y_clave,True
+14,063,6,1,Mezquitic,estable_por_nombre_y_clave,True
+14,064,6,1,Mixtlán,estable_por_nombre_y_clave,True
+14,065,6,1,Ocotlán,estable_por_nombre_y_clave,True
+14,066,6,1,Ojuelos de Jalisco,estable_por_nombre_y_clave,True
+14,067,6,1,Pihuamo,estable_por_nombre_y_clave,True
+14,068,6,1,Poncitlán,estable_por_nombre_y_clave,True
+14,069,6,1,Puerto Vallarta,estable_por_nombre_y_clave,True
+14,070,6,1,Villa Purificación,estable_por_nombre_y_clave,True
+14,071,6,1,Quitupan,estable_por_nombre_y_clave,True
+14,072,6,1,El Salto,estable_por_nombre_y_clave,True
+14,073,6,1,San Cristóbal de la Barranca,estable_por_nombre_y_clave,True
+14,074,6,1,San Diego de Alejandría,estable_por_nombre_y_clave,True
+14,075,6,1,San Juan de los Lagos,estable_por_nombre_y_clave,True
+14,076,6,1,San Julián,estable_por_nombre_y_clave,True
+14,077,6,1,San Marcos,estable_por_nombre_y_clave,True
+14,078,6,1,San Martín de Bolaños,estable_por_nombre_y_clave,True
+14,079,6,1,San Martín Hidalgo,estable_por_nombre_y_clave,True
+14,080,6,1,San Miguel el Alto,estable_por_nombre_y_clave,True
+14,081,6,1,San Sebastián del Oeste,estable_por_nombre_y_clave,True
+14,082,6,1,Santa María de los Ángeles,estable_por_nombre_y_clave,True
+14,083,6,1,Sayula,estable_por_nombre_y_clave,True
+14,084,6,1,Tala,estable_por_nombre_y_clave,True
+14,085,6,1,Talpa de Allende,estable_por_nombre_y_clave,True
+14,086,6,1,Tamazula de Gordiano,estable_por_nombre_y_clave,True
+14,087,6,1,Tapalpa,estable_por_nombre_y_clave,True
+14,088,6,1,Tecalitlán,estable_por_nombre_y_clave,True
+14,089,6,1,Tecolotlán,estable_por_nombre_y_clave,True
+14,090,6,1,Techaluta de Montenegro,estable_por_nombre_y_clave,True
+14,091,6,1,Tenamaxtlán,estable_por_nombre_y_clave,True
+14,092,6,1,Teocaltiche,estable_por_nombre_y_clave,True
+14,093,6,1,Teocuitatlán de Corona,estable_por_nombre_y_clave,True
+14,094,6,1,Tepatitlán de Morelos,estable_por_nombre_y_clave,True
+14,095,6,1,Tequila,estable_por_nombre_y_clave,True
+14,096,6,1,Teuchitlán,estable_por_nombre_y_clave,True
+14,097,6,1,Tizapán el Alto,estable_por_nombre_y_clave,True
+14,098,6,1,Tlajomulco de Zúñiga,estable_por_nombre_y_clave,True
+14,099,6,1,San Pedro Tlaquepaque,estable_por_nombre_y_clave,True
+14,100,6,1,Tolimán,estable_por_nombre_y_clave,True
+14,101,6,1,Tomatlán,estable_por_nombre_y_clave,True
+14,102,6,1,Tonalá,estable_por_nombre_y_clave,True
+14,103,6,1,Tonaya,estable_por_nombre_y_clave,True
+14,104,6,1,Tonila,estable_por_nombre_y_clave,True
+14,105,6,1,Totatiche,estable_por_nombre_y_clave,True
+14,106,6,1,Tototlán,estable_por_nombre_y_clave,True
+14,107,6,1,Tuxcacuesco,estable_por_nombre_y_clave,True
+14,108,6,1,Tuxcueca,estable_por_nombre_y_clave,True
+14,109,6,1,Tuxpan,estable_por_nombre_y_clave,True
+14,110,6,1,Unión de San Antonio,estable_por_nombre_y_clave,True
+14,111,6,1,Unión de Tula,estable_por_nombre_y_clave,True
+14,112,6,1,Valle de Guadalupe,estable_por_nombre_y_clave,True
+14,113,6,1,Valle de Juárez,estable_por_nombre_y_clave,True
+14,114,6,1,Villa Corona,estable_por_nombre_y_clave,True
+14,115,6,1,Villa Guerrero,estable_por_nombre_y_clave,True
+14,116,6,1,Villa Hidalgo,estable_por_nombre_y_clave,True
+14,117,6,1,Cañadas de Obregón,estable_por_nombre_y_clave,True
+14,118,6,1,Yahualica de González Gallo,estable_por_nombre_y_clave,True
+14,119,6,1,Zacoalco de Torres,estable_por_nombre_y_clave,True
+14,120,6,1,Zapopan,estable_por_nombre_y_clave,True
+14,121,6,1,Zapotiltic,estable_por_nombre_y_clave,True
+14,122,6,1,Zapotitlán de Vadillo,estable_por_nombre_y_clave,True
+14,123,6,1,Zapotlán del Rey,estable_por_nombre_y_clave,True
+14,124,6,1,Zapotlanejo,estable_por_nombre_y_clave,True
+14,125,6,1,San Ignacio Cerro Gordo,estable_por_nombre_y_clave,True
+15,001,6,1,Acambay de Ruíz Castañeda,estable_por_nombre_y_clave,True
+15,002,6,1,Acolman,estable_por_nombre_y_clave,True
+15,003,6,1,Aculco,estable_por_nombre_y_clave,True
+15,004,6,1,Almoloya de Alquisiras,estable_por_nombre_y_clave,True
+15,005,6,1,Almoloya de Juárez,estable_por_nombre_y_clave,True
+15,006,6,1,Almoloya del Río,estable_por_nombre_y_clave,True
+15,007,6,1,Amanalco,estable_por_nombre_y_clave,True
+15,008,6,1,Amatepec,estable_por_nombre_y_clave,True
+15,009,6,1,Amecameca,estable_por_nombre_y_clave,True
+15,010,6,1,Apaxco,estable_por_nombre_y_clave,True
+15,011,6,1,Atenco,estable_por_nombre_y_clave,True
+15,012,6,1,Atizapán,estable_por_nombre_y_clave,True
+15,013,6,1,Atizapán de Zaragoza,estable_por_nombre_y_clave,True
+15,014,6,1,Atlacomulco,estable_por_nombre_y_clave,True
+15,015,6,1,Atlautla,estable_por_nombre_y_clave,True
+15,016,6,1,Axapusco,estable_por_nombre_y_clave,True
+15,017,6,1,Ayapango,estable_por_nombre_y_clave,True
+15,018,6,1,Calimaya,estable_por_nombre_y_clave,True
+15,019,6,1,Capulhuac,estable_por_nombre_y_clave,True
+15,020,6,1,Coacalco de Berriozábal,estable_por_nombre_y_clave,True
+15,021,6,1,Coatepec Harinas,estable_por_nombre_y_clave,True
+15,022,6,1,Cocotitlán,estable_por_nombre_y_clave,True
+15,023,6,1,Coyotepec,estable_por_nombre_y_clave,True
+15,024,6,1,Cuautitlán,estable_por_nombre_y_clave,True
+15,025,6,1,Cuautitlán Izcalli,estable_por_nombre_y_clave,True
+15,026,6,1,Chalco,estable_por_nombre_y_clave,True
+15,027,6,1,Chapa de Mota,estable_por_nombre_y_clave,True
+15,028,6,1,Chapultepec,estable_por_nombre_y_clave,True
+15,029,6,1,Chiautla,estable_por_nombre_y_clave,True
+15,030,6,1,Chicoloapan,estable_por_nombre_y_clave,True
+15,031,6,1,Chiconcuac,estable_por_nombre_y_clave,True
+15,032,6,1,Chimalhuacán,estable_por_nombre_y_clave,True
+15,033,6,1,Donato Guerra,estable_por_nombre_y_clave,True
+15,034,6,1,Ecatepec de Morelos,estable_por_nombre_y_clave,True
+15,035,6,1,Ecatzingo,estable_por_nombre_y_clave,True
+15,036,6,1,Huehuetoca,estable_por_nombre_y_clave,True
+15,037,6,1,Hueypoxtla,estable_por_nombre_y_clave,True
+15,038,6,1,Huixquilucan,estable_por_nombre_y_clave,True
+15,039,6,1,Isidro Fabela,estable_por_nombre_y_clave,True
+15,040,6,1,Ixtapaluca,estable_por_nombre_y_clave,True
+15,041,6,1,Ixtapan de la Sal,estable_por_nombre_y_clave,True
+15,042,6,1,Ixtapan del Oro,estable_por_nombre_y_clave,True
+15,043,6,1,Ixtlahuaca,estable_por_nombre_y_clave,True
+15,044,6,1,Xalatlaco,estable_por_nombre_y_clave,True
+15,045,6,1,Jaltenco,estable_por_nombre_y_clave,True
+15,046,6,1,Jilotepec,estable_por_nombre_y_clave,True
+15,047,6,1,Jilotzingo,estable_por_nombre_y_clave,True
+15,048,6,1,Jiquipilco,estable_por_nombre_y_clave,True
+15,049,6,1,Jocotitlán,estable_por_nombre_y_clave,True
+15,050,6,1,Joquicingo,estable_por_nombre_y_clave,True
+15,051,6,1,Juchitepec,estable_por_nombre_y_clave,True
+15,052,6,1,Lerma,estable_por_nombre_y_clave,True
+15,053,6,1,Malinalco,estable_por_nombre_y_clave,True
+15,054,6,1,Melchor Ocampo,estable_por_nombre_y_clave,True
+15,055,6,1,Metepec,estable_por_nombre_y_clave,True
+15,056,6,1,Mexicaltzingo,estable_por_nombre_y_clave,True
+15,057,6,1,Morelos,estable_por_nombre_y_clave,True
+15,058,6,1,Naucalpan de Juárez,estable_por_nombre_y_clave,True
+15,059,6,1,Nextlalpan,estable_por_nombre_y_clave,True
+15,060,6,1,Nezahualcóyotl,estable_por_nombre_y_clave,True
+15,061,6,1,Nicolás Romero,estable_por_nombre_y_clave,True
+15,062,6,1,Nopaltepec,estable_por_nombre_y_clave,True
+15,063,6,1,Ocoyoacac,estable_por_nombre_y_clave,True
+15,064,6,1,Ocuilan,estable_por_nombre_y_clave,True
+15,065,6,1,El Oro,estable_por_nombre_y_clave,True
+15,066,6,1,Otumba,estable_por_nombre_y_clave,True
+15,067,6,1,Otzoloapan,estable_por_nombre_y_clave,True
+15,068,6,1,Otzolotepec,estable_por_nombre_y_clave,True
+15,069,6,1,Ozumba,estable_por_nombre_y_clave,True
+15,070,6,1,Papalotla,estable_por_nombre_y_clave,True
+15,071,6,1,La Paz,estable_por_nombre_y_clave,True
+15,072,6,1,Polotitlán,estable_por_nombre_y_clave,True
+15,073,6,1,Rayón,estable_por_nombre_y_clave,True
+15,074,6,1,San Antonio la Isla,estable_por_nombre_y_clave,True
+15,075,6,1,San Felipe del Progreso,estable_por_nombre_y_clave,True
+15,076,6,1,San Martín de las Pirámides,estable_por_nombre_y_clave,True
+15,077,6,1,San Mateo Atenco,estable_por_nombre_y_clave,True
+15,078,6,1,San Simón de Guerrero,estable_por_nombre_y_clave,True
+15,079,6,1,Santo Tomás,estable_por_nombre_y_clave,True
+15,080,6,1,Soyaniquilpan de Juárez,estable_por_nombre_y_clave,True
+15,081,6,1,Sultepec,estable_por_nombre_y_clave,True
+15,082,6,1,Tecámac,estable_por_nombre_y_clave,True
+15,083,6,1,Tejupilco,estable_por_nombre_y_clave,True
+15,084,6,1,Temamatla,estable_por_nombre_y_clave,True
+15,085,6,1,Temascalapa,estable_por_nombre_y_clave,True
+15,086,6,1,Temascalcingo,estable_por_nombre_y_clave,True
+15,087,6,1,Temascaltepec,estable_por_nombre_y_clave,True
+15,088,6,1,Temoaya,estable_por_nombre_y_clave,True
+15,089,6,1,Tenancingo,estable_por_nombre_y_clave,True
+15,090,6,1,Tenango del Aire,estable_por_nombre_y_clave,True
+15,091,6,1,Tenango del Valle,estable_por_nombre_y_clave,True
+15,092,6,1,Teoloyucan,estable_por_nombre_y_clave,True
+15,093,6,1,Teotihuacán,estable_por_nombre_y_clave,True
+15,094,6,1,Tepetlaoxtoc,estable_por_nombre_y_clave,True
+15,095,6,1,Tepetlixpa,estable_por_nombre_y_clave,True
+15,096,6,1,Tepotzotlán,estable_por_nombre_y_clave,True
+15,097,6,1,Tequixquiac,estable_por_nombre_y_clave,True
+15,098,6,1,Texcaltitlán,estable_por_nombre_y_clave,True
+15,099,6,1,Texcalyacac,estable_por_nombre_y_clave,True
+15,100,6,1,Texcoco,estable_por_nombre_y_clave,True
+15,101,6,1,Tezoyuca,estable_por_nombre_y_clave,True
+15,102,6,1,Tianguistenco,estable_por_nombre_y_clave,True
+15,103,6,1,Timilpan,estable_por_nombre_y_clave,True
+15,104,6,1,Tlalmanalco,estable_por_nombre_y_clave,True
+15,105,6,1,Tlalnepantla de Baz,estable_por_nombre_y_clave,True
+15,106,6,1,Tlatlaya,estable_por_nombre_y_clave,True
+15,107,6,1,Toluca,estable_por_nombre_y_clave,True
+15,108,6,1,Tonatico,estable_por_nombre_y_clave,True
+15,109,6,1,Tultepec,estable_por_nombre_y_clave,True
+15,110,6,1,Tultitlán,estable_por_nombre_y_clave,True
+15,111,6,1,Valle de Bravo,estable_por_nombre_y_clave,True
+15,112,6,1,Villa de Allende,estable_por_nombre_y_clave,True
+15,113,6,1,Villa del Carbón,estable_por_nombre_y_clave,True
+15,114,6,1,Villa Guerrero,estable_por_nombre_y_clave,True
+15,115,6,1,Villa Victoria,estable_por_nombre_y_clave,True
+15,116,6,1,Xonacatlán,estable_por_nombre_y_clave,True
+15,117,6,1,Zacazonapan,estable_por_nombre_y_clave,True
+15,118,6,1,Zacualpan,estable_por_nombre_y_clave,True
+15,119,6,1,Zinacantepec,estable_por_nombre_y_clave,True
+15,120,6,1,Zumpahuacán,estable_por_nombre_y_clave,True
+15,121,6,1,Zumpango,estable_por_nombre_y_clave,True
+15,122,6,1,Valle de Chalco Solidaridad,estable_por_nombre_y_clave,True
+15,123,6,1,Luvianos,estable_por_nombre_y_clave,True
+15,124,6,1,San José del Rincón,estable_por_nombre_y_clave,True
+15,125,6,1,Tonanitla,estable_por_nombre_y_clave,True
+16,001,6,1,Acuitzio,estable_por_nombre_y_clave,True
+16,002,6,1,Aguililla,estable_por_nombre_y_clave,True
+16,003,6,1,Álvaro Obregón,estable_por_nombre_y_clave,True
+16,004,6,1,Angamacutiro,estable_por_nombre_y_clave,True
+16,005,6,1,Angangueo,estable_por_nombre_y_clave,True
+16,006,6,1,Apatzingán,estable_por_nombre_y_clave,True
+16,007,6,1,Aporo,estable_por_nombre_y_clave,True
+16,008,6,1,Aquila,estable_por_nombre_y_clave,True
+16,009,6,1,ARío | Ario,estable_por_nombre_y_clave,True
+16,010,6,1,Arteaga,estable_por_nombre_y_clave,True
+16,011,6,1,Briseñas,estable_por_nombre_y_clave,True
+16,012,6,1,Buenavista,estable_por_nombre_y_clave,True
+16,013,6,1,Carácuaro,estable_por_nombre_y_clave,True
+16,014,6,1,Coahuayana,estable_por_nombre_y_clave,True
+16,015,6,1,Coalcomán de Vázquez Pallares,estable_por_nombre_y_clave,True
+16,016,6,1,Coeneo,estable_por_nombre_y_clave,True
+16,017,6,1,Contepec,estable_por_nombre_y_clave,True
+16,018,6,1,Copándaro,estable_por_nombre_y_clave,True
+16,019,6,1,Cotija,estable_por_nombre_y_clave,True
+16,020,6,1,Cuitzeo,estable_por_nombre_y_clave,True
+16,021,6,1,Charapan,estable_por_nombre_y_clave,True
+16,022,6,1,Charo,estable_por_nombre_y_clave,True
+16,023,6,1,Chavinda,estable_por_nombre_y_clave,True
+16,024,6,1,Cherán,estable_por_nombre_y_clave,True
+16,025,6,1,Chilchota,estable_por_nombre_y_clave,True
+16,026,6,1,Chinicuila,estable_por_nombre_y_clave,True
+16,027,6,1,Chucándiro,estable_por_nombre_y_clave,True
+16,028,6,1,Churintzio,estable_por_nombre_y_clave,True
+16,029,6,1,Churumuco,estable_por_nombre_y_clave,True
+16,030,6,1,Ecuandureo,estable_por_nombre_y_clave,True
+16,031,6,1,Epitacio Huerta,estable_por_nombre_y_clave,True
+16,032,6,1,Erongarícuaro,estable_por_nombre_y_clave,True
+16,033,6,1,Gabriel Zamora,estable_por_nombre_y_clave,True
+16,034,6,1,Hidalgo,estable_por_nombre_y_clave,True
+16,035,6,1,La Huacana,estable_por_nombre_y_clave,True
+16,036,6,1,Huandacareo,estable_por_nombre_y_clave,True
+16,037,6,1,Huaniqueo,estable_por_nombre_y_clave,True
+16,038,6,1,Huetamo,estable_por_nombre_y_clave,True
+16,039,6,1,Huiramba,estable_por_nombre_y_clave,True
+16,040,6,1,Indaparapeo,estable_por_nombre_y_clave,True
+16,041,6,1,Irimbo,estable_por_nombre_y_clave,True
+16,042,6,1,Ixtlán,estable_por_nombre_y_clave,True
+16,043,6,1,Jacona,estable_por_nombre_y_clave,True
+16,044,6,1,Jiménez,estable_por_nombre_y_clave,True
+16,045,6,1,Jiquilpan,estable_por_nombre_y_clave,True
+16,046,6,1,José Sixto Verduzco,estable_por_nombre_y_clave,True
+16,047,6,1,Juárez,estable_por_nombre_y_clave,True
+16,048,6,1,Jungapeo,estable_por_nombre_y_clave,True
+16,049,6,1,Lagunillas,estable_por_nombre_y_clave,True
+16,050,6,1,Lázaro Cárdenas,estable_por_nombre_y_clave,True
+16,051,6,1,Madero,estable_por_nombre_y_clave,True
+16,052,6,1,Maravatío,estable_por_nombre_y_clave,True
+16,053,6,1,Marcos Castellanos,estable_por_nombre_y_clave,True
+16,054,6,1,Morelia,estable_por_nombre_y_clave,True
+16,055,6,1,Morelos,estable_por_nombre_y_clave,True
+16,056,6,1,Múgica,estable_por_nombre_y_clave,True
+16,057,6,1,Nahuatzen,estable_por_nombre_y_clave,True
+16,058,6,1,Nocupétaro,estable_por_nombre_y_clave,True
+16,059,6,1,Nuevo Parangaricutiro,estable_por_nombre_y_clave,True
+16,060,6,1,Nuevo Urecho,estable_por_nombre_y_clave,True
+16,061,6,1,Numarán,estable_por_nombre_y_clave,True
+16,062,6,1,Ocampo,estable_por_nombre_y_clave,True
+16,063,6,1,Pajacuarán,estable_por_nombre_y_clave,True
+16,064,6,1,Panindícuaro,estable_por_nombre_y_clave,True
+16,065,6,2,Paracho | Parácuaro,revisar_identidad_nominal,True
+16,066,6,2,Paracho | Parácuaro,revisar_identidad_nominal,True
+16,067,6,1,Pátzcuaro,estable_por_nombre_y_clave,True
+16,068,6,1,Penjamillo,estable_por_nombre_y_clave,True
+16,069,6,1,Peribán,estable_por_nombre_y_clave,True
+16,070,6,1,La Piedad,estable_por_nombre_y_clave,True
+16,071,6,1,Purépero,estable_por_nombre_y_clave,True
+16,072,6,1,Puruándiro,estable_por_nombre_y_clave,True
+16,073,6,1,Queréndaro,estable_por_nombre_y_clave,True
+16,074,6,1,Quiroga,estable_por_nombre_y_clave,True
+16,075,6,1,Cojumatlán de Régules,estable_por_nombre_y_clave,True
+16,076,6,1,Los Reyes,estable_por_nombre_y_clave,True
+16,077,6,1,Sahuayo,estable_por_nombre_y_clave,True
+16,078,6,1,San Lucas,estable_por_nombre_y_clave,True
+16,079,6,1,Santa Ana Maya,estable_por_nombre_y_clave,True
+16,080,6,1,Salvador Escalante,estable_por_nombre_y_clave,True
+16,081,6,1,Senguio,estable_por_nombre_y_clave,True
+16,082,6,1,Susupuato,estable_por_nombre_y_clave,True
+16,083,6,1,Tacámbaro,estable_por_nombre_y_clave,True
+16,084,6,1,Tancítaro,estable_por_nombre_y_clave,True
+16,085,6,1,Tangamandapio,estable_por_nombre_y_clave,True
+16,086,6,1,Tangancícuaro,estable_por_nombre_y_clave,True
+16,087,6,1,Tanhuato,estable_por_nombre_y_clave,True
+16,088,6,1,Taretan,estable_por_nombre_y_clave,True
+16,089,6,1,Tarímbaro,estable_por_nombre_y_clave,True
+16,090,6,1,Tepalcatepec,estable_por_nombre_y_clave,True
+16,091,6,1,Tingambato,estable_por_nombre_y_clave,True
+16,092,6,1,Tingüindín,estable_por_nombre_y_clave,True
+16,093,6,1,Tiquicheo de Nicolás Romero,estable_por_nombre_y_clave,True
+16,094,6,1,Tlalpujahua,estable_por_nombre_y_clave,True
+16,095,6,1,Tlazazalca,estable_por_nombre_y_clave,True
+16,096,6,1,Tocumbo,estable_por_nombre_y_clave,True
+16,097,6,1,Tumbiscatío,estable_por_nombre_y_clave,True
+16,098,6,1,Turicato,estable_por_nombre_y_clave,True
+16,099,6,1,Tuxpan,estable_por_nombre_y_clave,True
+16,100,6,1,Tuzantla,estable_por_nombre_y_clave,True
+16,101,6,1,Tzintzuntzan,estable_por_nombre_y_clave,True
+16,102,6,1,Tzitzio,estable_por_nombre_y_clave,True
+16,103,6,1,Uruapan,estable_por_nombre_y_clave,True
+16,104,6,1,Venustiano Carranza,estable_por_nombre_y_clave,True
+16,105,6,1,Villamar,estable_por_nombre_y_clave,True
+16,106,6,1,Vista Hermosa,estable_por_nombre_y_clave,True
+16,107,6,1,Yurécuaro,estable_por_nombre_y_clave,True
+16,108,6,1,Zacapu,estable_por_nombre_y_clave,True
+16,109,6,1,Zamora,estable_por_nombre_y_clave,True
+16,110,6,1,Zináparo,estable_por_nombre_y_clave,True
+16,111,6,1,Zinapécuaro,estable_por_nombre_y_clave,True
+16,112,6,1,Ziracuaretiro,estable_por_nombre_y_clave,True
+16,113,6,1,Zitácuaro,estable_por_nombre_y_clave,True
+17,001,6,1,Amacuzac,estable_por_nombre_y_clave,True
+17,002,6,1,Atlatlahucan,estable_por_nombre_y_clave,True
+17,003,6,1,Axochiapan,estable_por_nombre_y_clave,True
+17,004,6,1,Ayala,estable_por_nombre_y_clave,True
+17,005,6,1,Coatlán del Río,estable_por_nombre_y_clave,True
+17,006,6,1,Cuautla,estable_por_nombre_y_clave,True
+17,007,6,1,Cuernavaca,estable_por_nombre_y_clave,True
+17,008,6,1,Emiliano Zapata,estable_por_nombre_y_clave,True
+17,009,6,1,Huitzilac,estable_por_nombre_y_clave,True
+17,010,6,1,Jantetelco,estable_por_nombre_y_clave,True
+17,011,6,1,Jiutepec,estable_por_nombre_y_clave,True
+17,012,6,1,Jojutla,estable_por_nombre_y_clave,True
+17,013,6,2,Jonacatepec | Jonacatepec de Leandro Valle,revisar_identidad_nominal,True
+17,014,6,1,Mazatepec,estable_por_nombre_y_clave,True
+17,015,6,1,Miacatlán,estable_por_nombre_y_clave,True
+17,016,6,1,Ocuituco,estable_por_nombre_y_clave,True
+17,017,6,1,Puente de Ixtla,estable_por_nombre_y_clave,True
+17,018,6,1,Temixco,estable_por_nombre_y_clave,True
+17,019,6,1,Tepalcingo,estable_por_nombre_y_clave,True
+17,020,6,1,Tepoztlán,estable_por_nombre_y_clave,True
+17,021,6,1,Tetecala,estable_por_nombre_y_clave,True
+17,022,6,1,Tetela del Volcán,estable_por_nombre_y_clave,True
+17,023,6,1,Tlalnepantla,estable_por_nombre_y_clave,True
+17,024,6,1,Tlaltizapán de Zapata,estable_por_nombre_y_clave,True
+17,025,6,1,Tlaquiltenango,estable_por_nombre_y_clave,True
+17,026,6,1,Tlayacapan,estable_por_nombre_y_clave,True
+17,027,6,1,Totolapan,estable_por_nombre_y_clave,True
+17,028,6,1,Xochitepec,estable_por_nombre_y_clave,True
+17,029,6,1,Yautepec,estable_por_nombre_y_clave,True
+17,030,6,1,Yecapixtla,estable_por_nombre_y_clave,True
+17,031,6,1,Zacatepec,estable_por_nombre_y_clave,True
+17,032,6,1,Zacualpan de Amilpas,estable_por_nombre_y_clave,True
+17,033,6,1,Temoac,estable_por_nombre_y_clave,True
+17,034,2,1,Coatetelco,incompleto_en_serie,True
+17,035,2,1,Xoxocotla,incompleto_en_serie,True
+17,036,1,1,Hueyapan,incompleto_en_serie,True
+18,001,6,1,Acaponeta,estable_por_nombre_y_clave,True
+18,002,6,1,Ahuacatlán,estable_por_nombre_y_clave,True
+18,003,6,1,Amatlán de Cañas,estable_por_nombre_y_clave,True
+18,004,6,1,Bahía de Banderas,estable_por_nombre_y_clave,True
+18,005,6,1,Compostela,estable_por_nombre_y_clave,True
+18,006,6,1,Huajicori,estable_por_nombre_y_clave,True
+18,007,6,1,Ixtlán del Río,estable_por_nombre_y_clave,True
+18,008,6,1,Jala,estable_por_nombre_y_clave,True
+18,009,6,1,Del Nayar,estable_por_nombre_y_clave,True
+18,010,6,1,Rosamorada,estable_por_nombre_y_clave,True
+18,011,6,1,Ruíz,estable_por_nombre_y_clave,True
+18,012,6,1,San Blas,estable_por_nombre_y_clave,True
+18,013,6,1,San Pedro Lagunillas,estable_por_nombre_y_clave,True
+18,014,6,1,Santa María del Oro,estable_por_nombre_y_clave,True
+18,015,6,1,Santiago Ixcuintla,estable_por_nombre_y_clave,True
+18,016,6,1,Tecuala,estable_por_nombre_y_clave,True
+18,017,6,1,Tepic,estable_por_nombre_y_clave,True
+18,018,6,1,Tuxpan,estable_por_nombre_y_clave,True
+18,019,6,1,Xalisco,estable_por_nombre_y_clave,True
+18,020,6,1,La Yesca,estable_por_nombre_y_clave,True
+19,001,6,1,Abasolo,estable_por_nombre_y_clave,True
+19,002,6,1,Agualeguas,estable_por_nombre_y_clave,True
+19,003,6,1,Los Aldamas,estable_por_nombre_y_clave,True
+19,004,6,1,Allende,estable_por_nombre_y_clave,True
+19,005,6,1,Anáhuac,estable_por_nombre_y_clave,True
+19,006,6,1,Apodaca,estable_por_nombre_y_clave,True
+19,007,6,1,Aramberri,estable_por_nombre_y_clave,True
+19,008,6,1,Bustamante,estable_por_nombre_y_clave,True
+19,009,6,1,Cadereyta Jiménez,estable_por_nombre_y_clave,True
+19,010,6,2,Carmen | El Carmen,revisar_identidad_nominal,True
+19,011,6,1,Cerralvo,estable_por_nombre_y_clave,True
+19,012,6,1,Ciénega de Flores,estable_por_nombre_y_clave,True
+19,013,6,1,China,estable_por_nombre_y_clave,True
+19,014,6,2,Doctor Arroyo | Dr. Arroyo,revisar_identidad_nominal,True
+19,015,6,2,Doctor Coss | Dr. Coss,revisar_identidad_nominal,True
+19,016,6,2,Doctor González | Dr. González,revisar_identidad_nominal,True
+19,017,6,1,Galeana,estable_por_nombre_y_clave,True
+19,018,6,1,García,estable_por_nombre_y_clave,True
+19,019,6,1,San Pedro Garza García,estable_por_nombre_y_clave,True
+19,020,6,2,General Bravo | Gral. Bravo,revisar_identidad_nominal,True
+19,021,6,2,General Escobedo | Gral. Escobedo,revisar_identidad_nominal,True
+19,022,6,2,General Terán | Gral. Terán,revisar_identidad_nominal,True
+19,023,6,2,General Treviño | Gral. Treviño,revisar_identidad_nominal,True
+19,024,6,2,General Zaragoza | Gral. Zaragoza,revisar_identidad_nominal,True
+19,025,6,2,General Zuazua | Gral. Zuazua,revisar_identidad_nominal,True
+19,026,6,1,Guadalupe,estable_por_nombre_y_clave,True
+19,027,6,1,Los Herreras,estable_por_nombre_y_clave,True
+19,028,6,1,Hidalgo,estable_por_nombre_y_clave,True
+19,029,6,1,Higueras,estable_por_nombre_y_clave,True
+19,030,6,1,Hualahuises,estable_por_nombre_y_clave,True
+19,031,6,1,Iturbide,estable_por_nombre_y_clave,True
+19,032,6,1,Juárez,estable_por_nombre_y_clave,True
+19,033,6,1,Lampazos de Naranjo,estable_por_nombre_y_clave,True
+19,034,6,1,Linares,estable_por_nombre_y_clave,True
+19,035,6,1,Marín,estable_por_nombre_y_clave,True
+19,036,6,1,Melchor Ocampo,estable_por_nombre_y_clave,True
+19,037,6,1,Mier y Noriega,estable_por_nombre_y_clave,True
+19,038,6,1,Mina,estable_por_nombre_y_clave,True
+19,039,6,1,Montemorelos,estable_por_nombre_y_clave,True
+19,040,6,1,Monterrey,estable_por_nombre_y_clave,True
+19,041,6,1,Parás,estable_por_nombre_y_clave,True
+19,042,6,1,Pesquería,estable_por_nombre_y_clave,True
+19,043,6,1,Los Ramones,estable_por_nombre_y_clave,True
+19,044,6,1,Rayones,estable_por_nombre_y_clave,True
+19,045,6,1,Sabinas Hidalgo,estable_por_nombre_y_clave,True
+19,046,6,1,Salinas Victoria,estable_por_nombre_y_clave,True
+19,047,6,1,San Nicolás de los Garza,estable_por_nombre_y_clave,True
+19,048,6,1,Santa Catarina,estable_por_nombre_y_clave,True
+19,049,6,1,Santiago,estable_por_nombre_y_clave,True
+19,050,6,1,Vallecillo,estable_por_nombre_y_clave,True
+19,051,6,1,Villaldama,estable_por_nombre_y_clave,True
+20,001,6,1,Abejones,estable_por_nombre_y_clave,True
+20,002,6,1,Acatlán de Pérez Figueroa,estable_por_nombre_y_clave,True
+20,003,6,1,Ánimas Trujano,estable_por_nombre_y_clave,True
+20,004,6,1,Asunción Cacalotepec,estable_por_nombre_y_clave,True
+20,005,6,1,Asunción Cuyotepeji,estable_por_nombre_y_clave,True
+20,006,6,1,Asunción Ixtaltepec,estable_por_nombre_y_clave,True
+20,007,6,1,Asunción Nochixtlán,estable_por_nombre_y_clave,True
+20,008,6,1,Asunción Ocotlán,estable_por_nombre_y_clave,True
+20,009,6,1,Asunción Tlacolulita,estable_por_nombre_y_clave,True
+20,010,6,1,Ayoquezco De Aldama | Ayoquezco de Aldama,estable_por_nombre_y_clave,True
+20,011,6,1,Ayotzintepec,estable_por_nombre_y_clave,True
+20,012,6,1,El BarRío de la Soledad | El Barrio de la Soledad,estable_por_nombre_y_clave,True
+20,013,6,1,Calihualá,estable_por_nombre_y_clave,True
+20,014,6,1,Candelaria Loxicha,estable_por_nombre_y_clave,True
+20,015,6,1,Chahuites,estable_por_nombre_y_clave,True
+20,016,6,1,Chalcatongo De Hidalgo | Chalcatongo de Hidalgo,estable_por_nombre_y_clave,True
+20,017,6,1,Ciénega de Zimatlán,estable_por_nombre_y_clave,True
+20,018,6,1,Coatecas Altas,estable_por_nombre_y_clave,True
+20,019,6,1,Coicoyán de las Flores,estable_por_nombre_y_clave,True
+20,020,6,1,La Compañía,estable_por_nombre_y_clave,True
+20,021,6,1,Concepción Buenavista,estable_por_nombre_y_clave,True
+20,022,6,1,Concepción Papalo | Concepción Pápalo,estable_por_nombre_y_clave,True
+20,023,6,1,Constancia del Rosario,estable_por_nombre_y_clave,True
+20,024,6,1,Cosolapa,estable_por_nombre_y_clave,True
+20,025,6,1,Cosoltepec,estable_por_nombre_y_clave,True
+20,026,6,1,Cuilápam de Guerrero,estable_por_nombre_y_clave,True
+20,027,6,1,Cuyamecalco Villa de Zaragoza,estable_por_nombre_y_clave,True
+20,028,6,1,Heroica Ciudad de Ejutla de Crespo,estable_por_nombre_y_clave,True
+20,029,6,1,Eloxochitlán de Flores Magón,estable_por_nombre_y_clave,True
+20,030,6,1,El Espinal,estable_por_nombre_y_clave,True
+20,031,6,1,Fresnillo de Trujano,estable_por_nombre_y_clave,True
+20,032,6,1,Guadalupe de Ramírez,estable_por_nombre_y_clave,True
+20,033,6,1,Guadalupe Etla,estable_por_nombre_y_clave,True
+20,034,6,1,Guelatao de Juárez,estable_por_nombre_y_clave,True
+20,035,6,1,Guevea De Humboldt | Guevea de Humboldt,estable_por_nombre_y_clave,True
+20,036,6,1,Mesones Hidalgo,estable_por_nombre_y_clave,True
+20,037,6,1,Heroica Ciudad de Huajuapan de León,estable_por_nombre_y_clave,True
+20,038,6,1,Huautepec,estable_por_nombre_y_clave,True
+20,039,6,1,Huautla de Jiménez,estable_por_nombre_y_clave,True
+20,040,6,1,Ixpantepec Nieves,estable_por_nombre_y_clave,True
+20,041,6,1,Ciudad Ixtepec,estable_por_nombre_y_clave,True
+20,042,6,1,Ixtlán de Juárez,estable_por_nombre_y_clave,True
+20,043,6,2,Heroica Ciudad de Juchitán de Zaragoza | Juchitán de Zaragoza,revisar_identidad_nominal,True
+20,044,6,1,Loma Bonita,estable_por_nombre_y_clave,True
+20,045,6,1,Magdalena Apasco,estable_por_nombre_y_clave,True
+20,046,6,1,Magdalena Jaltepec,estable_por_nombre_y_clave,True
+20,047,6,1,Magdalena Mixtepec,estable_por_nombre_y_clave,True
+20,048,6,1,Magdalena Ocotlán,estable_por_nombre_y_clave,True
+20,049,6,1,Magdalena Peñasco,estable_por_nombre_y_clave,True
+20,050,6,1,Magdalena Teitipac,estable_por_nombre_y_clave,True
+20,051,6,1,Magdalena Tequisistlán,estable_por_nombre_y_clave,True
+20,052,6,1,Magdalena Tlacotepec,estable_por_nombre_y_clave,True
+20,053,6,1,Magdalena Yodocono de Porfirio Díaz,estable_por_nombre_y_clave,True
+20,054,6,1,Magdalena Zahuatlán,estable_por_nombre_y_clave,True
+20,055,6,1,Mariscala de Juárez,estable_por_nombre_y_clave,True
+20,056,6,1,Mártires de Tacubaya,estable_por_nombre_y_clave,True
+20,057,6,1,Matías Romero Avendaño,estable_por_nombre_y_clave,True
+20,058,6,1,Mazatlán Villa de Flores,estable_por_nombre_y_clave,True
+20,059,6,1,Miahuatlán de Porfirio Díaz,estable_por_nombre_y_clave,True
+20,060,6,1,Mixistlán de la Reforma,estable_por_nombre_y_clave,True
+20,061,6,1,Monjas,estable_por_nombre_y_clave,True
+20,062,6,1,Natividad,estable_por_nombre_y_clave,True
+20,063,6,1,Nazareno Etla,estable_por_nombre_y_clave,True
+20,064,6,1,Nejapa de Madero,estable_por_nombre_y_clave,True
+20,065,6,1,Nuevo Zoquiápam,estable_por_nombre_y_clave,True
+20,066,6,1,Oaxaca de Juárez,estable_por_nombre_y_clave,True
+20,067,6,1,Ocotlán de Morelos,estable_por_nombre_y_clave,True
+20,068,6,1,La Pe,estable_por_nombre_y_clave,True
+20,069,6,1,Pinotepa de Don Luis,estable_por_nombre_y_clave,True
+20,070,6,1,Pluma Hidalgo,estable_por_nombre_y_clave,True
+20,071,6,1,Putla Villa de Guerrero,estable_por_nombre_y_clave,True
+20,072,6,1,Reforma de Pineda,estable_por_nombre_y_clave,True
+20,073,6,1,La Reforma,estable_por_nombre_y_clave,True
+20,074,6,1,Reyes Etla,estable_por_nombre_y_clave,True
+20,075,6,1,Rojas de Cuauhtémoc,estable_por_nombre_y_clave,True
+20,076,6,1,Salina Cruz,estable_por_nombre_y_clave,True
+20,077,6,1,San Agustín Amatengo,estable_por_nombre_y_clave,True
+20,078,6,1,San Agustín Atenango,estable_por_nombre_y_clave,True
+20,079,6,1,San Agustín Chayuco,estable_por_nombre_y_clave,True
+20,080,6,1,San Agustín De Las Juntas | San Agustín de las Juntas,estable_por_nombre_y_clave,True
+20,081,6,1,San Agustín Etla,estable_por_nombre_y_clave,True
+20,082,6,1,San Agustín Loxicha,estable_por_nombre_y_clave,True
+20,083,6,1,San Agustín Tlacotepec,estable_por_nombre_y_clave,True
+20,084,6,1,San Agustín Yatareni,estable_por_nombre_y_clave,True
+20,085,6,1,San Andrés Cabecera Nueva,estable_por_nombre_y_clave,True
+20,086,6,1,San Andrés Dinicuiti,estable_por_nombre_y_clave,True
+20,087,6,1,San Andrés Huaxpaltepec,estable_por_nombre_y_clave,True
+20,088,6,1,San Andrés Huayápam,estable_por_nombre_y_clave,True
+20,089,6,1,San Andrés Ixtlahuaca,estable_por_nombre_y_clave,True
+20,090,6,1,San Andrés Lagunas,estable_por_nombre_y_clave,True
+20,091,6,1,San Andrés Nuxiño,estable_por_nombre_y_clave,True
+20,092,6,1,San Andrés Paxtlán,estable_por_nombre_y_clave,True
+20,093,6,1,San Andrés Sinaxtla,estable_por_nombre_y_clave,True
+20,094,6,1,San Andrés Solaga,estable_por_nombre_y_clave,True
+20,095,6,1,San Andrés Teotilálpam,estable_por_nombre_y_clave,True
+20,096,6,1,San Andrés Tepetlapa,estable_por_nombre_y_clave,True
+20,097,6,1,San Andrés Yaá,estable_por_nombre_y_clave,True
+20,098,6,1,San Andrés Zabache,estable_por_nombre_y_clave,True
+20,099,6,1,San Andrés Zautla,estable_por_nombre_y_clave,True
+20,100,6,1,San Antonino Castillo Velasco,estable_por_nombre_y_clave,True
+20,101,6,1,San Antonino el Alto,estable_por_nombre_y_clave,True
+20,102,6,1,San Antonino Monte Verde,estable_por_nombre_y_clave,True
+20,103,6,1,San Antonio Acutla,estable_por_nombre_y_clave,True
+20,104,6,1,San Antonio de la Cal,estable_por_nombre_y_clave,True
+20,105,6,1,San Antonio Huitepec,estable_por_nombre_y_clave,True
+20,106,6,1,San Antonio Nanahuatípam,estable_por_nombre_y_clave,True
+20,107,6,1,San Antonio Sinicahua,estable_por_nombre_y_clave,True
+20,108,6,1,San Antonio Tepetlapa,estable_por_nombre_y_clave,True
+20,109,6,1,San Baltazar Chichicápam,estable_por_nombre_y_clave,True
+20,110,6,1,San Baltazar Loxicha,estable_por_nombre_y_clave,True
+20,111,6,1,San Baltazar Yatzachi el Bajo,estable_por_nombre_y_clave,True
+20,112,6,1,San Bartolo Coyotepec,estable_por_nombre_y_clave,True
+20,113,6,1,San Bartolo Soyaltepec,estable_por_nombre_y_clave,True
+20,114,6,1,San Bartolo Yautepec,estable_por_nombre_y_clave,True
+20,115,6,1,San Bartolomé Ayautla,estable_por_nombre_y_clave,True
+20,116,6,1,San Bartolomé Loxicha,estable_por_nombre_y_clave,True
+20,117,6,1,San Bartolomé Quialana,estable_por_nombre_y_clave,True
+20,118,6,1,San Bartolomé Yucuañe,estable_por_nombre_y_clave,True
+20,119,6,1,San Bartolomé Zoogocho,estable_por_nombre_y_clave,True
+20,120,6,1,San Bernardo Mixtepec,estable_por_nombre_y_clave,True
+20,121,6,2,Heroica Villa de San Blas Atempa | San Blas Atempa,revisar_identidad_nominal,True
+20,122,6,1,San Carlos Yautepec,estable_por_nombre_y_clave,True
+20,123,6,1,San Cristóbal Amatlán,estable_por_nombre_y_clave,True
+20,124,6,1,San Cristóbal Amoltepec,estable_por_nombre_y_clave,True
+20,125,6,1,San Cristóbal LachiRíoag | San Cristóbal Lachirioag,estable_por_nombre_y_clave,True
+20,126,6,1,San Cristóbal Suchixtlahuaca,estable_por_nombre_y_clave,True
+20,127,6,1,San Dionisio del Mar,estable_por_nombre_y_clave,True
+20,128,6,1,San Dionisio Ocotepec,estable_por_nombre_y_clave,True
+20,129,6,1,San Dionisio Ocotlán,estable_por_nombre_y_clave,True
+20,130,6,1,San Esteban Atatlahuca,estable_por_nombre_y_clave,True
+20,131,6,1,San Felipe Jalapa de Díaz,estable_por_nombre_y_clave,True
+20,132,6,1,San Felipe Tejalápam,estable_por_nombre_y_clave,True
+20,133,6,1,San Felipe Usila,estable_por_nombre_y_clave,True
+20,134,6,1,San Francisco Cahuacuá,estable_por_nombre_y_clave,True
+20,135,6,1,San Francisco Cajonos,estable_por_nombre_y_clave,True
+20,136,6,1,San Francisco Chapulapa,estable_por_nombre_y_clave,True
+20,137,6,1,San Francisco Chindúa,estable_por_nombre_y_clave,True
+20,138,6,1,San Francisco del Mar,estable_por_nombre_y_clave,True
+20,139,6,1,San Francisco Huehuetlán,estable_por_nombre_y_clave,True
+20,140,6,1,San Francisco Ixhuatán,estable_por_nombre_y_clave,True
+20,141,6,1,San Francisco Jaltepetongo,estable_por_nombre_y_clave,True
+20,142,6,1,San Francisco Lachigoló,estable_por_nombre_y_clave,True
+20,143,6,1,San Francisco Logueche,estable_por_nombre_y_clave,True
+20,144,5,1,San Francisco Nuxaño,incompleto_en_serie,True
+20,145,6,1,San Francisco Ozolotepec,estable_por_nombre_y_clave,True
+20,146,6,1,San Francisco Sola,estable_por_nombre_y_clave,True
+20,147,6,1,San Francisco Telixtlahuaca,estable_por_nombre_y_clave,True
+20,148,6,1,San Francisco Teopan,estable_por_nombre_y_clave,True
+20,149,6,1,San Francisco Tlapancingo,estable_por_nombre_y_clave,True
+20,150,6,1,San Gabriel Mixtepec,estable_por_nombre_y_clave,True
+20,151,6,1,San Ildefonso Amatlán,estable_por_nombre_y_clave,True
+20,152,6,1,San Ildefonso Sola,estable_por_nombre_y_clave,True
+20,153,6,1,San Ildefonso Villa Alta,estable_por_nombre_y_clave,True
+20,154,6,1,San Jacinto Amilpas,estable_por_nombre_y_clave,True
+20,155,6,1,San Jacinto Tlacotepec,estable_por_nombre_y_clave,True
+20,156,6,1,San Jerónimo Coatlán,estable_por_nombre_y_clave,True
+20,157,6,1,San Jerónimo Silacayoapilla,estable_por_nombre_y_clave,True
+20,158,6,1,San Jerónimo Sosola,estable_por_nombre_y_clave,True
+20,159,6,1,San Jerónimo Taviche,estable_por_nombre_y_clave,True
+20,160,6,1,San Jerónimo Tecóatl,estable_por_nombre_y_clave,True
+20,161,6,1,San Jerónimo Tlacochahuaya,estable_por_nombre_y_clave,True
+20,162,6,1,San Jorge Nuchita,estable_por_nombre_y_clave,True
+20,163,6,1,San José Ayuquila,estable_por_nombre_y_clave,True
+20,164,6,1,San José Chiltepec,estable_por_nombre_y_clave,True
+20,165,6,1,San José del Peñasco,estable_por_nombre_y_clave,True
+20,166,6,1,San José Estancia Grande,estable_por_nombre_y_clave,True
+20,167,6,1,San José Independencia,estable_por_nombre_y_clave,True
+20,168,6,1,San José Lachiguiri,estable_por_nombre_y_clave,True
+20,169,6,1,San José del Progreso,estable_por_nombre_y_clave,True
+20,170,6,1,San José Tenango,estable_por_nombre_y_clave,True
+20,171,6,1,San Juan Achiutla,estable_por_nombre_y_clave,True
+20,172,6,1,San Juan Atepec,estable_por_nombre_y_clave,True
+20,173,6,1,San Juan Bautista Atatlahuca,estable_por_nombre_y_clave,True
+20,174,6,1,San Juan Bautista Coixtlahuaca,estable_por_nombre_y_clave,True
+20,175,6,1,San Juan Bautista Cuicatlán,estable_por_nombre_y_clave,True
+20,176,6,1,San Juan Bautista Guelache,estable_por_nombre_y_clave,True
+20,177,6,1,San Juan Bautista Jayacatlán,estable_por_nombre_y_clave,True
+20,178,6,1,San Juan Bautista Lo de Soto,estable_por_nombre_y_clave,True
+20,179,6,1,San Juan Bautista Suchitepec,estable_por_nombre_y_clave,True
+20,180,6,1,San Juan Bautista Tlachichilco,estable_por_nombre_y_clave,True
+20,181,6,1,San Juan Bautista Tlacoatzintepec,estable_por_nombre_y_clave,True
+20,182,6,1,San Juan Bautista Tuxtepec,estable_por_nombre_y_clave,True
+20,183,6,1,San Juan Bautista Valle Nacional,estable_por_nombre_y_clave,True
+20,184,6,1,San Juan Cacahuatepec,estable_por_nombre_y_clave,True
+20,185,6,1,San Juan Chicomezúchil,estable_por_nombre_y_clave,True
+20,186,6,1,San Juan Chilateca,estable_por_nombre_y_clave,True
+20,187,6,1,Chiquihuitlán de Benito Juárez,estable_por_nombre_y_clave,True
+20,188,6,1,San Juan Cieneguilla,estable_por_nombre_y_clave,True
+20,189,6,1,San Juan Coatzóspam,estable_por_nombre_y_clave,True
+20,190,6,1,San Juan Colorado,estable_por_nombre_y_clave,True
+20,191,6,1,San Juan Comaltepec,estable_por_nombre_y_clave,True
+20,192,6,1,San Juan Cotzocón,estable_por_nombre_y_clave,True
+20,193,6,1,San Juan de los Cués,estable_por_nombre_y_clave,True
+20,194,6,1,San Juan del Estado,estable_por_nombre_y_clave,True
+20,195,6,1,San Juan del Río,estable_por_nombre_y_clave,True
+20,196,6,1,San Juan Diuxi,estable_por_nombre_y_clave,True
+20,197,6,1,San Juan Evangelista Analco,estable_por_nombre_y_clave,True
+20,198,6,1,San Juan Guelavía,estable_por_nombre_y_clave,True
+20,199,6,1,San Juan Guichicovi,estable_por_nombre_y_clave,True
+20,200,6,1,San Juan Ihualtepec,estable_por_nombre_y_clave,True
+20,201,6,1,San Juan Juquila Mixes,estable_por_nombre_y_clave,True
+20,202,6,1,San Juan Juquila Vijanos,estable_por_nombre_y_clave,True
+20,203,6,1,San Juan Lachao,estable_por_nombre_y_clave,True
+20,204,6,1,San Juan Lachigalla,estable_por_nombre_y_clave,True
+20,205,6,1,San Juan Lajarcia,estable_por_nombre_y_clave,True
+20,206,6,1,San Juan Lalana,estable_por_nombre_y_clave,True
+20,207,6,1,San Juan Mazatlán,estable_por_nombre_y_clave,True
+20,208,6,2,San Juan Mixtepec | San Juan Mixtepec Dto 08,revisar_identidad_nominal,True
+20,209,6,2,San Juan Mixtepec | San Juan Mixtepec Dto 26,revisar_identidad_nominal,True
+20,210,6,1,San Juan Ñumí,estable_por_nombre_y_clave,True
+20,211,6,1,San Juan Ozolotepec,estable_por_nombre_y_clave,True
+20,212,6,1,San Juan Petlapa,estable_por_nombre_y_clave,True
+20,213,6,1,San Juan Quiahije,estable_por_nombre_y_clave,True
+20,214,6,1,San Juan Quiotepec,estable_por_nombre_y_clave,True
+20,215,6,1,San Juan Sayultepec,estable_por_nombre_y_clave,True
+20,216,6,1,San Juan Tabaá,estable_por_nombre_y_clave,True
+20,217,6,1,San Juan Tamazola,estable_por_nombre_y_clave,True
+20,218,5,1,San Juan Teita,incompleto_en_serie,True
+20,219,6,1,San Juan Teitipac,estable_por_nombre_y_clave,True
+20,220,6,1,San Juan Tepeuxila,estable_por_nombre_y_clave,True
+20,221,6,1,San Juan Teposcolula,estable_por_nombre_y_clave,True
+20,222,6,1,San Juan Yaeé,estable_por_nombre_y_clave,True
+20,223,6,1,San Juan Yatzona,estable_por_nombre_y_clave,True
+20,224,6,1,San Juan Yucuita,estable_por_nombre_y_clave,True
+20,225,6,1,San Lorenzo,estable_por_nombre_y_clave,True
+20,226,6,1,San Lorenzo Albarradas,estable_por_nombre_y_clave,True
+20,227,6,1,San Lorenzo Cacaotepec,estable_por_nombre_y_clave,True
+20,228,6,1,San Lorenzo Cuaunecuiltitla,estable_por_nombre_y_clave,True
+20,229,6,1,San Lorenzo Texmelúcan,estable_por_nombre_y_clave,True
+20,230,6,1,San Lorenzo Victoria,estable_por_nombre_y_clave,True
+20,231,6,1,San Lucas Camotlán,estable_por_nombre_y_clave,True
+20,232,6,1,San Lucas Ojitlán,estable_por_nombre_y_clave,True
+20,233,6,1,San Lucas Quiaviní,estable_por_nombre_y_clave,True
+20,234,6,1,San Lucas Zoquiápam,estable_por_nombre_y_clave,True
+20,235,6,1,San Luis Amatlán,estable_por_nombre_y_clave,True
+20,236,6,1,San Marcial Ozolotepec,estable_por_nombre_y_clave,True
+20,237,6,1,San Marcos Arteaga,estable_por_nombre_y_clave,True
+20,238,6,1,San Martín de los Cansecos,estable_por_nombre_y_clave,True
+20,239,6,1,San Martín Huamelúlpam,estable_por_nombre_y_clave,True
+20,240,6,1,San Martín Itunyoso,estable_por_nombre_y_clave,True
+20,241,6,1,San Martín Lachilá,estable_por_nombre_y_clave,True
+20,242,6,1,San Martín Peras,estable_por_nombre_y_clave,True
+20,243,6,1,San Martín Tilcajete,estable_por_nombre_y_clave,True
+20,244,6,1,San Martín Toxpalan,estable_por_nombre_y_clave,True
+20,245,6,1,San Martín Zacatepec,estable_por_nombre_y_clave,True
+20,246,6,1,San Mateo Cajonos,estable_por_nombre_y_clave,True
+20,247,6,1,San Mateo del Mar,estable_por_nombre_y_clave,True
+20,248,6,1,San Mateo Etlatongo,estable_por_nombre_y_clave,True
+20,249,6,1,San Mateo Nejápam,estable_por_nombre_y_clave,True
+20,250,6,1,San Mateo Peñasco,estable_por_nombre_y_clave,True
+20,251,6,1,San Mateo Piñas,estable_por_nombre_y_clave,True
+20,252,6,1,San Mateo Río Hondo,estable_por_nombre_y_clave,True
+20,253,6,1,San Mateo Sindihui,estable_por_nombre_y_clave,True
+20,254,6,1,San Mateo Tlapiltepec,estable_por_nombre_y_clave,True
+20,255,6,1,San Mateo Yoloxochitlán,estable_por_nombre_y_clave,True
+20,256,6,1,San Melchor Betaza,estable_por_nombre_y_clave,True
+20,257,6,1,San Miguel Achiutla,estable_por_nombre_y_clave,True
+20,258,6,1,San Miguel Ahuehuetitlán,estable_por_nombre_y_clave,True
+20,259,6,1,San Miguel Aloapam | San Miguel Aloápam,estable_por_nombre_y_clave,True
+20,260,6,1,San Miguel Amatitlán,estable_por_nombre_y_clave,True
+20,261,6,1,San Miguel Amatlán,estable_por_nombre_y_clave,True
+20,262,6,1,San Miguel Chicahua,estable_por_nombre_y_clave,True
+20,263,6,1,San Miguel Chimalapa,estable_por_nombre_y_clave,True
+20,264,6,1,San Miguel Coatlán,estable_por_nombre_y_clave,True
+20,265,6,1,San Miguel del Puerto,estable_por_nombre_y_clave,True
+20,266,6,1,San Miguel del Río,estable_por_nombre_y_clave,True
+20,267,6,1,San Miguel Ejutla,estable_por_nombre_y_clave,True
+20,268,6,1,San Miguel El Grande | San Miguel el Grande,estable_por_nombre_y_clave,True
+20,269,6,1,San Miguel Huautla,estable_por_nombre_y_clave,True
+20,270,6,1,San Miguel Mixtepec,estable_por_nombre_y_clave,True
+20,271,6,1,San Miguel Panixtlahuaca,estable_por_nombre_y_clave,True
+20,272,6,1,San Miguel Peras,estable_por_nombre_y_clave,True
+20,273,6,1,San Miguel Piedras,estable_por_nombre_y_clave,True
+20,274,6,1,San Miguel Quetzaltepec,estable_por_nombre_y_clave,True
+20,275,6,1,San Miguel Santa Flor,estable_por_nombre_y_clave,True
+20,276,6,1,San Miguel Soyaltepec,estable_por_nombre_y_clave,True
+20,277,6,1,San Miguel Suchixtepec,estable_por_nombre_y_clave,True
+20,278,6,1,Villa Talea De Castro | Villa Talea de Castro,estable_por_nombre_y_clave,True
+20,279,6,1,San Miguel Tecomatlán,estable_por_nombre_y_clave,True
+20,280,6,1,San Miguel Tenango,estable_por_nombre_y_clave,True
+20,281,6,1,San Miguel Tequixtepec,estable_por_nombre_y_clave,True
+20,282,6,1,San Miguel Tilquiápam,estable_por_nombre_y_clave,True
+20,283,6,1,San Miguel Tlacamama,estable_por_nombre_y_clave,True
+20,284,6,1,San Miguel Tlacotepec,estable_por_nombre_y_clave,True
+20,285,6,1,San Miguel Tulancingo,estable_por_nombre_y_clave,True
+20,286,6,1,San Miguel Yotao,estable_por_nombre_y_clave,True
+20,287,6,1,San Nicolás,estable_por_nombre_y_clave,True
+20,288,6,1,San Nicolás Hidalgo,estable_por_nombre_y_clave,True
+20,289,6,1,San Pablo Coatlán,estable_por_nombre_y_clave,True
+20,290,6,1,San Pablo Cuatro Venados,estable_por_nombre_y_clave,True
+20,291,6,1,San Pablo Etla,estable_por_nombre_y_clave,True
+20,292,6,1,San Pablo Huitzo,estable_por_nombre_y_clave,True
+20,293,6,1,San Pablo Huixtepec,estable_por_nombre_y_clave,True
+20,294,6,1,San Pablo Macuiltianguis,estable_por_nombre_y_clave,True
+20,295,6,1,San Pablo Tijaltepec,estable_por_nombre_y_clave,True
+20,296,6,1,San Pablo Villa de Mitla,estable_por_nombre_y_clave,True
+20,297,6,1,San Pablo Yaganiza,estable_por_nombre_y_clave,True
+20,298,6,1,San Pedro Amuzgos,estable_por_nombre_y_clave,True
+20,299,6,1,San Pedro Apóstol,estable_por_nombre_y_clave,True
+20,300,6,1,San Pedro Atoyac,estable_por_nombre_y_clave,True
+20,301,6,1,San Pedro Cajonos,estable_por_nombre_y_clave,True
+20,302,6,1,San Pedro Coxcaltepec Cántaros,estable_por_nombre_y_clave,True
+20,303,6,1,San Pedro Comitancillo,estable_por_nombre_y_clave,True
+20,304,6,1,San Pedro El Alto | San Pedro el Alto,estable_por_nombre_y_clave,True
+20,305,6,1,San Pedro Huamelula,estable_por_nombre_y_clave,True
+20,306,6,1,San Pedro Huilotepec,estable_por_nombre_y_clave,True
+20,307,6,1,San Pedro Ixcatlán,estable_por_nombre_y_clave,True
+20,308,6,1,San Pedro Ixtlahuaca,estable_por_nombre_y_clave,True
+20,309,6,1,San Pedro Jaltepetongo,estable_por_nombre_y_clave,True
+20,310,6,1,San Pedro Jicayán,estable_por_nombre_y_clave,True
+20,311,6,1,San Pedro Jocotipac,estable_por_nombre_y_clave,True
+20,312,6,1,San Pedro Juchatengo,estable_por_nombre_y_clave,True
+20,313,6,1,San Pedro Mártir,estable_por_nombre_y_clave,True
+20,314,6,1,San Pedro Mártir Quiechapa,estable_por_nombre_y_clave,True
+20,315,6,1,San Pedro Mártir Yucuxaco,estable_por_nombre_y_clave,True
+20,316,6,2,San Pedro Mixtepec | San Pedro Mixtepec Dto 22,revisar_identidad_nominal,True
+20,317,6,2,San Pedro Mixtepec | San Pedro Mixtepec Dto 26,revisar_identidad_nominal,True
+20,318,6,1,San Pedro Molinos,estable_por_nombre_y_clave,True
+20,319,6,1,San Pedro Nopala,estable_por_nombre_y_clave,True
+20,320,6,1,San Pedro Ocopetatillo,estable_por_nombre_y_clave,True
+20,321,6,1,San Pedro Ocotepec,estable_por_nombre_y_clave,True
+20,322,6,1,San Pedro Pochutla,estable_por_nombre_y_clave,True
+20,323,6,1,San Pedro Quiatoni,estable_por_nombre_y_clave,True
+20,324,6,1,San Pedro Sochiápam,estable_por_nombre_y_clave,True
+20,325,6,1,San Pedro Tapanatepec,estable_por_nombre_y_clave,True
+20,326,6,1,San Pedro Taviche,estable_por_nombre_y_clave,True
+20,327,6,1,San Pedro Teozacoalco,estable_por_nombre_y_clave,True
+20,328,6,1,San Pedro Teutila,estable_por_nombre_y_clave,True
+20,329,6,1,San Pedro Tidaá,estable_por_nombre_y_clave,True
+20,330,6,1,San Pedro Topiltepec,estable_por_nombre_y_clave,True
+20,331,6,1,San Pedro Totolápam,estable_por_nombre_y_clave,True
+20,332,6,2,Villa de Tututepec | Villa de Tututepec de Melchor Ocampo,revisar_identidad_nominal,True
+20,333,6,1,San Pedro y San Pablo Ayutla,estable_por_nombre_y_clave,True
+20,334,6,1,San Pedro y San Pablo Teposcolula,estable_por_nombre_y_clave,True
+20,335,6,1,San Pedro y San Pablo Tequixtepec,estable_por_nombre_y_clave,True
+20,336,6,1,San Pedro Yaneri,estable_por_nombre_y_clave,True
+20,337,6,1,San Pedro Yólox,estable_por_nombre_y_clave,True
+20,338,6,1,San Pedro Yucunama,estable_por_nombre_y_clave,True
+20,339,6,1,San Raymundo Jalpan,estable_por_nombre_y_clave,True
+20,340,6,1,San Sebastián Abasolo,estable_por_nombre_y_clave,True
+20,341,6,1,San Sebastián Coatlán,estable_por_nombre_y_clave,True
+20,342,6,1,San Sebastián Ixcapa,estable_por_nombre_y_clave,True
+20,343,6,1,San Sebastián Nicananduta,estable_por_nombre_y_clave,True
+20,344,6,1,San Sebastián Río Hondo,estable_por_nombre_y_clave,True
+20,345,6,1,San Sebastián Tecomaxtlahuaca,estable_por_nombre_y_clave,True
+20,346,6,1,San Sebastián Teitipac,estable_por_nombre_y_clave,True
+20,347,6,1,San Sebastián Tutla,estable_por_nombre_y_clave,True
+20,348,6,1,San Simón Almolongas,estable_por_nombre_y_clave,True
+20,349,6,1,San Simón Zahuatlán,estable_por_nombre_y_clave,True
+20,350,6,1,San Vicente Coatlán,estable_por_nombre_y_clave,True
+20,351,6,1,San Vicente Lachixío,estable_por_nombre_y_clave,True
+20,352,6,1,San Vicente Nuñú,estable_por_nombre_y_clave,True
+20,353,6,1,Santa Ana,estable_por_nombre_y_clave,True
+20,354,6,1,Santa Ana Ateixtlahuaca,estable_por_nombre_y_clave,True
+20,355,6,1,Santa Ana Cuauhtémoc,estable_por_nombre_y_clave,True
+20,356,6,1,Santa Ana del Valle,estable_por_nombre_y_clave,True
+20,357,6,1,Santa Ana Tavela,estable_por_nombre_y_clave,True
+20,358,6,1,Santa Ana Tlapacoyan,estable_por_nombre_y_clave,True
+20,359,6,1,Santa Ana Yareni,estable_por_nombre_y_clave,True
+20,360,6,1,Santa Ana Zegache,estable_por_nombre_y_clave,True
+20,361,6,1,Santa Catalina Quierí,estable_por_nombre_y_clave,True
+20,362,6,1,Santa Catarina Cuixtla,estable_por_nombre_y_clave,True
+20,363,6,1,Santa Catarina Ixtepeji,estable_por_nombre_y_clave,True
+20,364,6,1,Santa Catarina Juquila,estable_por_nombre_y_clave,True
+20,365,6,1,Santa Catarina Lachatao,estable_por_nombre_y_clave,True
+20,366,6,1,Santa Catarina Loxicha,estable_por_nombre_y_clave,True
+20,367,6,1,Santa Catarina Mechoacán,estable_por_nombre_y_clave,True
+20,368,6,1,Santa Catarina Minas,estable_por_nombre_y_clave,True
+20,369,6,1,Santa Catarina Quiané,estable_por_nombre_y_clave,True
+20,370,6,1,Santa Catarina Quioquitani,estable_por_nombre_y_clave,True
+20,371,6,1,Santa Catarina Tayata,estable_por_nombre_y_clave,True
+20,372,6,1,Santa Catarina Ticuá,estable_por_nombre_y_clave,True
+20,373,6,1,Santa Catarina Yosonotú,estable_por_nombre_y_clave,True
+20,374,6,1,Santa Catarina Zapoquila,estable_por_nombre_y_clave,True
+20,375,6,1,Santa Cruz Acatepec,estable_por_nombre_y_clave,True
+20,376,6,1,Santa Cruz Amilpas,estable_por_nombre_y_clave,True
+20,377,6,1,Santa Cruz de Bravo,estable_por_nombre_y_clave,True
+20,378,6,1,Santa Cruz Itundujia,estable_por_nombre_y_clave,True
+20,379,6,1,Santa Cruz Mixtepec,estable_por_nombre_y_clave,True
+20,380,6,1,Santa Cruz Nundaco,estable_por_nombre_y_clave,True
+20,381,6,1,Santa Cruz Papalutla,estable_por_nombre_y_clave,True
+20,382,6,1,Santa Cruz Tacache de Mina,estable_por_nombre_y_clave,True
+20,383,6,1,Santa Cruz Tacahua,estable_por_nombre_y_clave,True
+20,384,6,1,Santa Cruz Tayata,estable_por_nombre_y_clave,True
+20,385,6,1,Santa Cruz Xitla,estable_por_nombre_y_clave,True
+20,386,6,1,Santa Cruz Xoxocotlán,estable_por_nombre_y_clave,True
+20,387,6,1,Santa Cruz Zenzontepec,estable_por_nombre_y_clave,True
+20,388,6,1,Santa Gertrudis,estable_por_nombre_y_clave,True
+20,389,6,1,Santa Inés del Monte,estable_por_nombre_y_clave,True
+20,390,6,1,Santa Inés Yatzeche,estable_por_nombre_y_clave,True
+20,391,6,1,Santa Inés de Zaragoza,estable_por_nombre_y_clave,True
+20,392,6,1,Santa Lucia del Camino | Santa Lucía del Camino,estable_por_nombre_y_clave,True
+20,393,6,1,Santa Lucia Miahuatlán | Santa Lucía Miahuatlán,estable_por_nombre_y_clave,True
+20,394,6,1,Santa Lucia Monteverde | Santa Lucía Monteverde,estable_por_nombre_y_clave,True
+20,395,6,1,Santa Lucia Ocotlán | Santa Lucía Ocotlán,estable_por_nombre_y_clave,True
+20,396,6,1,Santa Magdalena Jicotlán,estable_por_nombre_y_clave,True
+20,397,6,1,Santa María Alotepec,estable_por_nombre_y_clave,True
+20,398,6,1,Santa María Apazco,estable_por_nombre_y_clave,True
+20,399,6,1,Santa María La Asunción | Santa María la Asunción,estable_por_nombre_y_clave,True
+20,400,6,1,Santa María Atzompa,estable_por_nombre_y_clave,True
+20,401,6,1,Santa María Camotlán,estable_por_nombre_y_clave,True
+20,402,6,1,Santa María Chachoápam,estable_por_nombre_y_clave,True
+20,403,6,1,Villa De Chilapa de Díaz | Villa de Chilapa de Díaz,estable_por_nombre_y_clave,True
+20,404,6,1,Santa María Chilchotla,estable_por_nombre_y_clave,True
+20,405,6,1,Santa María Chimalapa,estable_por_nombre_y_clave,True
+20,406,6,1,Santa María Colotepec,estable_por_nombre_y_clave,True
+20,407,6,1,Santa María Cortijo,estable_por_nombre_y_clave,True
+20,408,6,1,Santa María Coyotepec,estable_por_nombre_y_clave,True
+20,409,6,1,Santa María del Rosario,estable_por_nombre_y_clave,True
+20,410,6,1,Santa María del Tule,estable_por_nombre_y_clave,True
+20,411,6,1,Santa María Ecatepec,estable_por_nombre_y_clave,True
+20,412,6,1,Santa María Guelacé,estable_por_nombre_y_clave,True
+20,413,6,1,Santa María Guienagati,estable_por_nombre_y_clave,True
+20,414,6,1,Santa María Huatulco,estable_por_nombre_y_clave,True
+20,415,6,1,Santa María Huazolotitlán,estable_por_nombre_y_clave,True
+20,416,6,1,Santa María Ipalapa,estable_por_nombre_y_clave,True
+20,417,6,1,Santa María Ixcatlán,estable_por_nombre_y_clave,True
+20,418,6,1,Santa María Jacatepec,estable_por_nombre_y_clave,True
+20,419,6,1,Santa María Jalapa del Marqués,estable_por_nombre_y_clave,True
+20,420,6,1,Santa María Jaltianguis,estable_por_nombre_y_clave,True
+20,421,6,1,Santa María Lachixío,estable_por_nombre_y_clave,True
+20,422,6,1,Santa María Mixtequilla,estable_por_nombre_y_clave,True
+20,423,6,1,Santa María Nativitas,estable_por_nombre_y_clave,True
+20,424,6,1,Santa María Nduayaco,estable_por_nombre_y_clave,True
+20,425,6,1,Santa María Ozolotepec,estable_por_nombre_y_clave,True
+20,426,6,1,Santa María Pápalo,estable_por_nombre_y_clave,True
+20,427,6,1,Santa María Petapa,estable_por_nombre_y_clave,True
+20,428,6,1,Santa María Peñoles,estable_por_nombre_y_clave,True
+20,429,6,1,Santa María Quiegolani,estable_por_nombre_y_clave,True
+20,430,6,1,Santa María Sola,estable_por_nombre_y_clave,True
+20,431,6,1,Santa María Tataltepec,estable_por_nombre_y_clave,True
+20,432,6,1,Santa María Tecomavaca,estable_por_nombre_y_clave,True
+20,433,6,1,Santa María Temaxcalapa,estable_por_nombre_y_clave,True
+20,434,6,1,Santa María Temaxcaltepec,estable_por_nombre_y_clave,True
+20,435,6,1,Santa María Teopoxco,estable_por_nombre_y_clave,True
+20,436,6,1,Santa María Tepantlali,estable_por_nombre_y_clave,True
+20,437,6,1,Santa María Texcatitlán,estable_por_nombre_y_clave,True
+20,438,6,1,Santa María Tlahuitoltepec,estable_por_nombre_y_clave,True
+20,439,6,1,Santa María Tlalixtac,estable_por_nombre_y_clave,True
+20,440,6,1,Santa María Tonameca,estable_por_nombre_y_clave,True
+20,441,6,1,Santa María Totolapilla,estable_por_nombre_y_clave,True
+20,442,6,1,Santa María Xadani,estable_por_nombre_y_clave,True
+20,443,6,1,Santa María Yalina,estable_por_nombre_y_clave,True
+20,444,6,1,Santa María Yavesía,estable_por_nombre_y_clave,True
+20,445,6,1,Santa María Yolotepec,estable_por_nombre_y_clave,True
+20,446,6,1,Santa María Yosoyúa,estable_por_nombre_y_clave,True
+20,447,6,1,Santa María Yucuhiti,estable_por_nombre_y_clave,True
+20,448,6,1,Santa María Zacatepec,estable_por_nombre_y_clave,True
+20,449,6,1,Santa María Zaniza,estable_por_nombre_y_clave,True
+20,450,6,1,Santa María Zoquitlán,estable_por_nombre_y_clave,True
+20,451,6,1,Santiago Amoltepec,estable_por_nombre_y_clave,True
+20,452,6,1,Santiago Apoala,estable_por_nombre_y_clave,True
+20,453,6,1,Santiago Apóstol,estable_por_nombre_y_clave,True
+20,454,6,1,Santiago Astata,estable_por_nombre_y_clave,True
+20,455,6,1,Santiago Atitlán,estable_por_nombre_y_clave,True
+20,456,6,1,Santiago Ayuquililla,estable_por_nombre_y_clave,True
+20,457,6,1,Santiago Cacaloxtepec,estable_por_nombre_y_clave,True
+20,458,6,1,Santiago Camotlán,estable_por_nombre_y_clave,True
+20,459,6,2,Santiago Chazumba | Villa de Santiago Chazumba,revisar_identidad_nominal,True
+20,460,6,1,Santiago Choápam,estable_por_nombre_y_clave,True
+20,461,6,1,Santiago Comaltepec,estable_por_nombre_y_clave,True
+20,462,6,1,Santiago del Río,estable_por_nombre_y_clave,True
+20,463,6,1,Santiago Huajolotitlán,estable_por_nombre_y_clave,True
+20,464,6,1,Santiago Huauclilla,estable_por_nombre_y_clave,True
+20,465,6,1,Santiago Ihuitlán Plumas,estable_por_nombre_y_clave,True
+20,466,6,1,Santiago Ixcuintepec,estable_por_nombre_y_clave,True
+20,467,6,1,Santiago Ixtayutla,estable_por_nombre_y_clave,True
+20,468,6,1,Santiago Jamiltepec,estable_por_nombre_y_clave,True
+20,469,6,1,Santiago Jocotepec,estable_por_nombre_y_clave,True
+20,470,6,1,Santiago Juxtlahuaca,estable_por_nombre_y_clave,True
+20,471,6,1,Santiago Lachiguiri,estable_por_nombre_y_clave,True
+20,472,6,1,Santiago Lalopa,estable_por_nombre_y_clave,True
+20,473,6,1,Santiago Laollaga,estable_por_nombre_y_clave,True
+20,474,6,1,Santiago Laxopa,estable_por_nombre_y_clave,True
+20,475,6,1,Santiago Llano Grande,estable_por_nombre_y_clave,True
+20,476,6,1,Santiago Matatlán,estable_por_nombre_y_clave,True
+20,477,6,1,Santiago Miltepec,estable_por_nombre_y_clave,True
+20,478,6,1,Santiago Minas,estable_por_nombre_y_clave,True
+20,479,6,1,Santiago Nacaltepec,estable_por_nombre_y_clave,True
+20,480,6,1,Santiago Nejapilla,estable_por_nombre_y_clave,True
+20,481,6,1,Santiago Niltepec,estable_por_nombre_y_clave,True
+20,482,6,1,Santiago Nundiche,estable_por_nombre_y_clave,True
+20,483,6,1,Santiago Nuyoó,estable_por_nombre_y_clave,True
+20,484,6,1,Santiago Pinotepa Nacional,estable_por_nombre_y_clave,True
+20,485,6,1,Santiago Suchilquitongo,estable_por_nombre_y_clave,True
+20,486,6,1,Santiago Tamazola,estable_por_nombre_y_clave,True
+20,487,6,1,Santiago Tapextla,estable_por_nombre_y_clave,True
+20,488,6,1,Santiago Tenango,estable_por_nombre_y_clave,True
+20,489,6,1,Santiago Tepetlapa,estable_por_nombre_y_clave,True
+20,490,6,1,Santiago Tetepec,estable_por_nombre_y_clave,True
+20,491,6,1,Santiago Texcalcingo,estable_por_nombre_y_clave,True
+20,492,6,1,Santiago Textitlán,estable_por_nombre_y_clave,True
+20,493,6,1,Santiago Tilantongo,estable_por_nombre_y_clave,True
+20,494,6,1,Santiago Tillo,estable_por_nombre_y_clave,True
+20,495,6,1,Santiago Tlazoyaltepec,estable_por_nombre_y_clave,True
+20,496,6,1,Santiago Xanica,estable_por_nombre_y_clave,True
+20,497,6,1,Santiago Xiacuí,estable_por_nombre_y_clave,True
+20,498,6,1,Santiago Yaitepec,estable_por_nombre_y_clave,True
+20,499,6,1,Santiago Yaveo,estable_por_nombre_y_clave,True
+20,500,6,1,Santiago Yolomécatl,estable_por_nombre_y_clave,True
+20,501,6,1,Santiago Yosondúa,estable_por_nombre_y_clave,True
+20,502,6,1,Santiago Yucuyachi,estable_por_nombre_y_clave,True
+20,503,6,1,Santiago Zacatepec,estable_por_nombre_y_clave,True
+20,504,6,1,Santiago Zoochila,estable_por_nombre_y_clave,True
+20,505,6,1,Santo Domingo Albarradas,estable_por_nombre_y_clave,True
+20,506,6,1,Santo Domingo Armenta,estable_por_nombre_y_clave,True
+20,507,6,1,Santo Domingo Chihuitán,estable_por_nombre_y_clave,True
+20,508,6,1,Santo Domingo de Morelos,estable_por_nombre_y_clave,True
+20,509,6,1,Santo Domingo Ingenio,estable_por_nombre_y_clave,True
+20,510,6,1,Santo Domingo Ixcatlán,estable_por_nombre_y_clave,True
+20,511,6,1,Santo Domingo Nuxaá,estable_por_nombre_y_clave,True
+20,512,6,1,Santo Domingo Ozolotepec,estable_por_nombre_y_clave,True
+20,513,6,1,Santo Domingo Petapa,estable_por_nombre_y_clave,True
+20,514,6,1,Santo Domingo Roayaga,estable_por_nombre_y_clave,True
+20,515,6,1,Santo Domingo Tehuantepec,estable_por_nombre_y_clave,True
+20,516,6,1,Santo Domingo Teojomulco,estable_por_nombre_y_clave,True
+20,517,6,1,Santo Domingo Tepuxtepec,estable_por_nombre_y_clave,True
+20,518,6,1,Santo Domingo Tlatayápam,estable_por_nombre_y_clave,True
+20,519,6,1,Santo Domingo Tomaltepec,estable_por_nombre_y_clave,True
+20,520,6,1,Santo Domingo Tonalá,estable_por_nombre_y_clave,True
+20,521,6,1,Santo Domingo Tonaltepec,estable_por_nombre_y_clave,True
+20,522,6,1,Santo Domingo Xagacía,estable_por_nombre_y_clave,True
+20,523,6,1,Santo Domingo Yanhuitlán,estable_por_nombre_y_clave,True
+20,524,6,1,Santo Domingo Yodohino,estable_por_nombre_y_clave,True
+20,525,6,1,Santo Domingo Zanatepec,estable_por_nombre_y_clave,True
+20,526,6,1,Santo Tomás Jalieza,estable_por_nombre_y_clave,True
+20,527,6,1,Santo Tomás Mazaltepec,estable_por_nombre_y_clave,True
+20,528,6,1,Santo Tomás Ocotepec,estable_por_nombre_y_clave,True
+20,529,6,1,Santo Tomás Tamazulapan,estable_por_nombre_y_clave,True
+20,530,6,1,Santos Reyes Nopala,estable_por_nombre_y_clave,True
+20,531,6,1,Santos Reyes Pápalo,estable_por_nombre_y_clave,True
+20,532,6,1,Santos Reyes Tepejillo,estable_por_nombre_y_clave,True
+20,533,6,1,Santos Reyes Yucuná,estable_por_nombre_y_clave,True
+20,534,6,1,Silacayoápam,estable_por_nombre_y_clave,True
+20,535,6,1,Sitio de Xitlapehua,estable_por_nombre_y_clave,True
+20,536,6,1,Villa Sola de Vega,estable_por_nombre_y_clave,True
+20,537,6,1,Soledad Etla,estable_por_nombre_y_clave,True
+20,538,6,1,Taniche,estable_por_nombre_y_clave,True
+20,539,6,1,Villa de Tamazulápam del Progreso,estable_por_nombre_y_clave,True
+20,540,6,1,Tamazulápam del Espíritu Santo,estable_por_nombre_y_clave,True
+20,541,6,1,Tanetze de Zaragoza,estable_por_nombre_y_clave,True
+20,542,6,1,Tataltepec de Valdés,estable_por_nombre_y_clave,True
+20,543,6,1,Villa Tejúpam de la Unión,estable_por_nombre_y_clave,True
+20,544,6,1,Teococuilco de Marcos Pérez,estable_por_nombre_y_clave,True
+20,545,6,1,Teotitlán de Flores Magón,estable_por_nombre_y_clave,True
+20,546,6,1,Teotitlán del Valle,estable_por_nombre_y_clave,True
+20,547,6,1,Teotongo,estable_por_nombre_y_clave,True
+20,548,6,1,Tepelmeme Villa de Morelos,estable_por_nombre_y_clave,True
+20,549,6,2,"Heroica Villa Tezoatlán de Segura y Luna, Cuna de | Heroica Villa Tezoatlán de Segura y Luna, Cuna de la Independencia de Oaxaca",revisar_identidad_nominal,True
+20,550,6,1,Tlacolula de Matamoros,estable_por_nombre_y_clave,True
+20,551,6,1,Tlacotepec Plumas,estable_por_nombre_y_clave,True
+20,552,6,1,Tlalixtac de Cabrera,estable_por_nombre_y_clave,True
+20,553,6,1,Heroica Ciudad de Tlaxiaco,estable_por_nombre_y_clave,True
+20,554,6,1,Totontepec Villa de Morelos,estable_por_nombre_y_clave,True
+20,555,6,1,Trinidad Zaachila,estable_por_nombre_y_clave,True
+20,556,6,1,La Trinidad Vista Hermosa,estable_por_nombre_y_clave,True
+20,557,6,1,Unión Hidalgo,estable_por_nombre_y_clave,True
+20,558,6,1,Valerio Trujano,estable_por_nombre_y_clave,True
+20,559,6,1,Capulálpam de Méndez,estable_por_nombre_y_clave,True
+20,560,6,1,Villa de Etla,estable_por_nombre_y_clave,True
+20,561,6,1,Villa Díaz Ordaz,estable_por_nombre_y_clave,True
+20,562,6,2,Villa Hidalgo | Villa Hidalgo Yalalag,revisar_identidad_nominal,True
+20,563,6,1,Yaxe,estable_por_nombre_y_clave,True
+20,564,6,1,Yogana,estable_por_nombre_y_clave,True
+20,565,6,1,Yutanduchi de Guerrero,estable_por_nombre_y_clave,True
+20,566,6,1,Villa de Zaachila,estable_por_nombre_y_clave,True
+20,567,6,1,San Mateo Yucutindoo,estable_por_nombre_y_clave,True
+20,568,6,1,Zapotitlán Lagunas,estable_por_nombre_y_clave,True
+20,569,6,1,Zapotitlán Palmas,estable_por_nombre_y_clave,True
+20,570,6,1,Zimatlán de Álvarez,estable_por_nombre_y_clave,True
+21,001,6,1,Acajete,estable_por_nombre_y_clave,True
+21,002,6,1,Acateno,estable_por_nombre_y_clave,True
+21,003,6,1,Acatlán,estable_por_nombre_y_clave,True
+21,004,6,1,Acatzingo,estable_por_nombre_y_clave,True
+21,005,6,1,Acteopan,estable_por_nombre_y_clave,True
+21,006,6,1,Ahuacatlán,estable_por_nombre_y_clave,True
+21,007,6,1,Ahuatlán,estable_por_nombre_y_clave,True
+21,008,6,1,Ahuazotepec,estable_por_nombre_y_clave,True
+21,009,6,1,Ahuehuetitla,estable_por_nombre_y_clave,True
+21,010,6,1,Ajalpan,estable_por_nombre_y_clave,True
+21,011,6,1,Albino Zertuche,estable_por_nombre_y_clave,True
+21,012,6,1,Aljojuca,estable_por_nombre_y_clave,True
+21,013,6,1,Altepexi,estable_por_nombre_y_clave,True
+21,014,6,1,Amixtlán,estable_por_nombre_y_clave,True
+21,015,6,1,Amozoc,estable_por_nombre_y_clave,True
+21,016,6,1,Aquixtla,estable_por_nombre_y_clave,True
+21,017,6,1,Atempan,estable_por_nombre_y_clave,True
+21,018,6,1,Atexcal,estable_por_nombre_y_clave,True
+21,019,6,1,Atlixco,estable_por_nombre_y_clave,True
+21,020,6,1,Atoyatempan,estable_por_nombre_y_clave,True
+21,021,6,1,Atzala,estable_por_nombre_y_clave,True
+21,022,6,1,Atzitzihuacán,estable_por_nombre_y_clave,True
+21,023,6,1,Atzitzintla,estable_por_nombre_y_clave,True
+21,024,6,1,Axutla,estable_por_nombre_y_clave,True
+21,025,6,1,Ayotoxco de Guerrero,estable_por_nombre_y_clave,True
+21,026,6,1,Calpan,estable_por_nombre_y_clave,True
+21,027,6,1,Caltepec,estable_por_nombre_y_clave,True
+21,028,6,1,Camocuautla,estable_por_nombre_y_clave,True
+21,029,6,1,Cañada Morelos,estable_por_nombre_y_clave,True
+21,030,6,1,Caxhuacan,estable_por_nombre_y_clave,True
+21,031,6,1,Coatepec,estable_por_nombre_y_clave,True
+21,032,6,1,Coatzingo,estable_por_nombre_y_clave,True
+21,033,6,1,Cohetzala,estable_por_nombre_y_clave,True
+21,034,6,1,Cohuecan,estable_por_nombre_y_clave,True
+21,035,6,1,Coronango,estable_por_nombre_y_clave,True
+21,036,6,1,Coxcatlán,estable_por_nombre_y_clave,True
+21,037,6,1,Coyomeapan,estable_por_nombre_y_clave,True
+21,038,6,1,Coyotepec,estable_por_nombre_y_clave,True
+21,039,6,1,Cuapiaxtla De Madero | Cuapiaxtla de Madero,estable_por_nombre_y_clave,True
+21,040,6,1,Cuautempan,estable_por_nombre_y_clave,True
+21,041,6,1,Cuautinchán,estable_por_nombre_y_clave,True
+21,042,6,1,Cuautlancingo,estable_por_nombre_y_clave,True
+21,043,6,1,Cuayuca de Andrade,estable_por_nombre_y_clave,True
+21,044,6,1,Cuetzalan del Progreso,estable_por_nombre_y_clave,True
+21,045,6,1,Cuyoaco,estable_por_nombre_y_clave,True
+21,046,6,1,Chalchicomula de Sesma,estable_por_nombre_y_clave,True
+21,047,6,1,Chapulco,estable_por_nombre_y_clave,True
+21,048,6,1,Chiautla,estable_por_nombre_y_clave,True
+21,049,6,1,Chiautzingo,estable_por_nombre_y_clave,True
+21,050,6,1,Chiconcuautla,estable_por_nombre_y_clave,True
+21,051,6,1,Chichiquila,estable_por_nombre_y_clave,True
+21,052,6,1,Chietla,estable_por_nombre_y_clave,True
+21,053,6,1,Chigmecatitlán,estable_por_nombre_y_clave,True
+21,054,6,1,Chignahuapan,estable_por_nombre_y_clave,True
+21,055,6,1,Chignautla,estable_por_nombre_y_clave,True
+21,056,6,1,Chila,estable_por_nombre_y_clave,True
+21,057,6,1,Chila de la Sal,estable_por_nombre_y_clave,True
+21,058,6,1,Honey,estable_por_nombre_y_clave,True
+21,059,6,1,Chilchotla,estable_por_nombre_y_clave,True
+21,060,6,1,Chinantla,estable_por_nombre_y_clave,True
+21,061,6,1,Domingo Arenas,estable_por_nombre_y_clave,True
+21,062,6,1,Eloxochitlán,estable_por_nombre_y_clave,True
+21,063,6,1,Epatlán,estable_por_nombre_y_clave,True
+21,064,6,1,Esperanza,estable_por_nombre_y_clave,True
+21,065,6,1,Francisco Z. Mena,estable_por_nombre_y_clave,True
+21,066,6,1,General Felipe Ángeles,estable_por_nombre_y_clave,True
+21,067,6,1,Guadalupe,estable_por_nombre_y_clave,True
+21,068,6,1,Guadalupe Victoria,estable_por_nombre_y_clave,True
+21,069,6,1,Hermenegildo Galeana,estable_por_nombre_y_clave,True
+21,070,6,1,Huaquechula,estable_por_nombre_y_clave,True
+21,071,6,1,Huatlatlauca,estable_por_nombre_y_clave,True
+21,072,6,1,Huauchinango,estable_por_nombre_y_clave,True
+21,073,6,1,Huehuetla,estable_por_nombre_y_clave,True
+21,074,6,1,Huehuetlán el Chico,estable_por_nombre_y_clave,True
+21,075,6,1,Huehuetlán el Grande,estable_por_nombre_y_clave,True
+21,076,6,1,Huejotzingo,estable_por_nombre_y_clave,True
+21,077,6,1,Hueyapan,estable_por_nombre_y_clave,True
+21,078,6,1,Hueytamalco,estable_por_nombre_y_clave,True
+21,079,6,1,Hueytlalpan,estable_por_nombre_y_clave,True
+21,080,6,1,Huitzilan de Serdán,estable_por_nombre_y_clave,True
+21,081,6,1,Huitziltepec,estable_por_nombre_y_clave,True
+21,082,6,1,Atlequizayan,estable_por_nombre_y_clave,True
+21,083,6,1,Ixcamilpa de Guerrero,estable_por_nombre_y_clave,True
+21,084,6,1,Ixcaquixtla,estable_por_nombre_y_clave,True
+21,085,6,1,Ixtacamaxtitlán,estable_por_nombre_y_clave,True
+21,086,6,1,Ixtepec,estable_por_nombre_y_clave,True
+21,087,6,1,Izúcar de Matamoros,estable_por_nombre_y_clave,True
+21,088,6,1,Jalpan,estable_por_nombre_y_clave,True
+21,089,6,1,Jolalpan,estable_por_nombre_y_clave,True
+21,090,6,1,Jonotla,estable_por_nombre_y_clave,True
+21,091,6,1,Jopala,estable_por_nombre_y_clave,True
+21,092,6,1,Juan C. Bonilla,estable_por_nombre_y_clave,True
+21,093,6,1,Juan Galindo,estable_por_nombre_y_clave,True
+21,094,6,1,Juan N. Méndez,estable_por_nombre_y_clave,True
+21,095,6,1,Lafragua,estable_por_nombre_y_clave,True
+21,096,6,1,Libres,estable_por_nombre_y_clave,True
+21,097,6,1,La Magdalena Tlatlauquitepec,estable_por_nombre_y_clave,True
+21,098,6,1,Mazapiltepec de Juárez,estable_por_nombre_y_clave,True
+21,099,6,1,Mixtla,estable_por_nombre_y_clave,True
+21,100,6,1,Molcaxac,estable_por_nombre_y_clave,True
+21,101,6,1,Naupan,estable_por_nombre_y_clave,True
+21,102,6,1,Nauzontla,estable_por_nombre_y_clave,True
+21,103,6,1,Nealtican,estable_por_nombre_y_clave,True
+21,104,6,1,Nicolás Bravo,estable_por_nombre_y_clave,True
+21,105,6,1,Nopalucan,estable_por_nombre_y_clave,True
+21,106,6,1,Ocotepec,estable_por_nombre_y_clave,True
+21,107,6,1,Ocoyucan,estable_por_nombre_y_clave,True
+21,108,6,1,Olintla,estable_por_nombre_y_clave,True
+21,109,6,1,Oriental,estable_por_nombre_y_clave,True
+21,110,6,1,Pahuatlán,estable_por_nombre_y_clave,True
+21,111,6,1,Palmar de Bravo,estable_por_nombre_y_clave,True
+21,112,6,1,Pantepec,estable_por_nombre_y_clave,True
+21,113,6,1,Petlalcingo,estable_por_nombre_y_clave,True
+21,114,6,1,Piaxtla,estable_por_nombre_y_clave,True
+21,115,6,1,Puebla,estable_por_nombre_y_clave,True
+21,116,6,1,Quecholac,estable_por_nombre_y_clave,True
+21,117,6,1,Quimixtlán,estable_por_nombre_y_clave,True
+21,118,6,1,Rafael Lara Grajales,estable_por_nombre_y_clave,True
+21,119,6,1,Los Reyes de Juárez,estable_por_nombre_y_clave,True
+21,120,6,1,San Andrés Cholula,estable_por_nombre_y_clave,True
+21,121,6,1,San Antonio Cañada,estable_por_nombre_y_clave,True
+21,122,6,1,San Diego la Mesa Tochimiltzingo,estable_por_nombre_y_clave,True
+21,123,6,1,San Felipe Teotlalcingo,estable_por_nombre_y_clave,True
+21,124,6,1,San Felipe Tepatlán,estable_por_nombre_y_clave,True
+21,125,6,1,San Gabriel Chilac,estable_por_nombre_y_clave,True
+21,126,6,1,San Gregorio Atzompa,estable_por_nombre_y_clave,True
+21,127,6,1,San Jerónimo Tecuanipan,estable_por_nombre_y_clave,True
+21,128,6,1,San Jerónimo Xayacatlán,estable_por_nombre_y_clave,True
+21,129,6,1,San José Chiapa,estable_por_nombre_y_clave,True
+21,130,6,1,San José Miahuatlán,estable_por_nombre_y_clave,True
+21,131,6,1,San Juan Atenco,estable_por_nombre_y_clave,True
+21,132,6,1,San Juan Atzompa,estable_por_nombre_y_clave,True
+21,133,6,1,San Martín Texmelucan,estable_por_nombre_y_clave,True
+21,134,6,1,San Martín Totoltepec,estable_por_nombre_y_clave,True
+21,135,6,1,San Matias Tlalancaleca | San Matías Tlalancaleca,estable_por_nombre_y_clave,True
+21,136,6,1,San Miguel Ixitlán,estable_por_nombre_y_clave,True
+21,137,6,1,San Miguel Xoxtla,estable_por_nombre_y_clave,True
+21,138,6,1,San Nicolás Buenos Aires,estable_por_nombre_y_clave,True
+21,139,6,1,San Nicolás de los Ranchos,estable_por_nombre_y_clave,True
+21,140,6,1,San Pablo Anicano,estable_por_nombre_y_clave,True
+21,141,6,1,San Pedro Cholula,estable_por_nombre_y_clave,True
+21,142,6,1,San Pedro Yeloixtlahuaca,estable_por_nombre_y_clave,True
+21,143,6,1,San Salvador El Seco | San Salvador el Seco,estable_por_nombre_y_clave,True
+21,144,6,1,San Salvador El Verde | San Salvador el Verde,estable_por_nombre_y_clave,True
+21,145,6,1,San Salvador Huixcolotla,estable_por_nombre_y_clave,True
+21,146,6,1,Santa Catarina Tlaltempan,estable_por_nombre_y_clave,True
+21,147,6,1,Santa Inés Ahuatempan,estable_por_nombre_y_clave,True
+21,148,6,1,Santa Isabel Cholula,estable_por_nombre_y_clave,True
+21,149,6,1,Santiago Miahuatlán,estable_por_nombre_y_clave,True
+21,150,6,1,Santo Tomás Hueyotlipan,estable_por_nombre_y_clave,True
+21,151,6,1,Soltepec,estable_por_nombre_y_clave,True
+21,152,6,1,Tecali de Herrera,estable_por_nombre_y_clave,True
+21,153,6,1,Tecamachalco,estable_por_nombre_y_clave,True
+21,154,6,1,Tecomatlán,estable_por_nombre_y_clave,True
+21,155,6,1,Tehuacán,estable_por_nombre_y_clave,True
+21,156,6,1,Tehuitzingo,estable_por_nombre_y_clave,True
+21,157,6,1,Tenampulco,estable_por_nombre_y_clave,True
+21,158,6,1,Teopantlán,estable_por_nombre_y_clave,True
+21,159,6,1,Teotlalco,estable_por_nombre_y_clave,True
+21,160,6,1,Tepanco de López,estable_por_nombre_y_clave,True
+21,161,6,1,Tepango de Rodríguez,estable_por_nombre_y_clave,True
+21,162,6,1,Tepatlaxco de Hidalgo,estable_por_nombre_y_clave,True
+21,163,6,1,Tepeaca,estable_por_nombre_y_clave,True
+21,164,6,1,Tepemaxalco,estable_por_nombre_y_clave,True
+21,165,6,1,Tepeojuma,estable_por_nombre_y_clave,True
+21,166,6,1,Tepetzintla,estable_por_nombre_y_clave,True
+21,167,6,1,Tepexco,estable_por_nombre_y_clave,True
+21,168,6,1,Tepexi de Rodríguez,estable_por_nombre_y_clave,True
+21,169,6,1,Tepeyahualco,estable_por_nombre_y_clave,True
+21,170,6,1,Tepeyahualco de Cuauhtémoc,estable_por_nombre_y_clave,True
+21,171,6,1,Tetela de Ocampo,estable_por_nombre_y_clave,True
+21,172,6,1,Teteles de Avila Castillo | Teteles de Ávila Castillo,estable_por_nombre_y_clave,True
+21,173,6,1,Teziutlán,estable_por_nombre_y_clave,True
+21,174,6,1,Tianguismanalco,estable_por_nombre_y_clave,True
+21,175,6,1,Tilapa,estable_por_nombre_y_clave,True
+21,176,6,1,Tlacotepec de Benito Juárez,estable_por_nombre_y_clave,True
+21,177,6,1,San Sebastián Tlacotepec,estable_por_nombre_y_clave,True
+21,178,6,1,Tlacuilotepec,estable_por_nombre_y_clave,True
+21,179,6,1,Tlachichuca,estable_por_nombre_y_clave,True
+21,180,6,1,Tlahuapan,estable_por_nombre_y_clave,True
+21,181,6,1,Tlaltenango,estable_por_nombre_y_clave,True
+21,182,6,1,Tlanepantla,estable_por_nombre_y_clave,True
+21,183,6,1,Tlaola,estable_por_nombre_y_clave,True
+21,184,6,1,Tlapacoya,estable_por_nombre_y_clave,True
+21,185,6,1,Tlapanalá,estable_por_nombre_y_clave,True
+21,186,6,1,Tlatlauquitepec,estable_por_nombre_y_clave,True
+21,187,6,1,Tlaxco,estable_por_nombre_y_clave,True
+21,188,6,1,Tochimilco,estable_por_nombre_y_clave,True
+21,189,6,1,Tochtepec,estable_por_nombre_y_clave,True
+21,190,6,1,Totoltepec de Guerrero,estable_por_nombre_y_clave,True
+21,191,6,1,Tulcingo,estable_por_nombre_y_clave,True
+21,192,6,1,Tuzamapan de Galeana,estable_por_nombre_y_clave,True
+21,193,6,1,Tzicatlacoyan,estable_por_nombre_y_clave,True
+21,194,6,1,Venustiano Carranza,estable_por_nombre_y_clave,True
+21,195,6,1,Vicente Guerrero,estable_por_nombre_y_clave,True
+21,196,6,1,Xayacatlán de Bravo,estable_por_nombre_y_clave,True
+21,197,6,1,Xicotepec,estable_por_nombre_y_clave,True
+21,198,6,1,Xicotlán,estable_por_nombre_y_clave,True
+21,199,6,1,Xiutetelco,estable_por_nombre_y_clave,True
+21,200,6,1,Xochiapulco,estable_por_nombre_y_clave,True
+21,201,6,1,Xochiltepec,estable_por_nombre_y_clave,True
+21,202,6,1,Xochitlán de Vicente Suárez,estable_por_nombre_y_clave,True
+21,203,6,1,Xochitlán Todos Santos,estable_por_nombre_y_clave,True
+21,204,6,1,Yaonáhuac,estable_por_nombre_y_clave,True
+21,205,6,1,Yehualtepec,estable_por_nombre_y_clave,True
+21,206,6,1,Zacapala,estable_por_nombre_y_clave,True
+21,207,6,1,Zacapoaxtla,estable_por_nombre_y_clave,True
+21,208,6,1,Zacatlán,estable_por_nombre_y_clave,True
+21,209,6,1,Zapotitlán,estable_por_nombre_y_clave,True
+21,210,6,1,Zapotitlán de Méndez,estable_por_nombre_y_clave,True
+21,211,6,1,Zaragoza,estable_por_nombre_y_clave,True
+21,212,6,1,Zautla,estable_por_nombre_y_clave,True
+21,213,6,1,Zihuateutla,estable_por_nombre_y_clave,True
+21,214,6,1,Zinacatepec,estable_por_nombre_y_clave,True
+21,215,6,1,Zongozotla,estable_por_nombre_y_clave,True
+21,216,6,1,Zoquiapan,estable_por_nombre_y_clave,True
+21,217,6,1,Zoquitlán,estable_por_nombre_y_clave,True
+22,001,6,1,Amealco de Bonfil,estable_por_nombre_y_clave,True
+22,002,6,1,Arroyo Seco,estable_por_nombre_y_clave,True
+22,003,6,1,Cadereyta de Montes,estable_por_nombre_y_clave,True
+22,004,6,1,Colón,estable_por_nombre_y_clave,True
+22,005,6,1,Corregidora,estable_por_nombre_y_clave,True
+22,006,6,1,Ezequiel Montes,estable_por_nombre_y_clave,True
+22,007,6,1,Huimilpan,estable_por_nombre_y_clave,True
+22,008,6,1,Jalpan de Serra,estable_por_nombre_y_clave,True
+22,009,6,1,Landa de Matamoros,estable_por_nombre_y_clave,True
+22,010,6,1,El Marqués,estable_por_nombre_y_clave,True
+22,011,6,1,Pedro Escobedo,estable_por_nombre_y_clave,True
+22,012,6,1,Peñamiller,estable_por_nombre_y_clave,True
+22,013,6,1,Pinal de Amoles,estable_por_nombre_y_clave,True
+22,014,6,1,Querétaro,estable_por_nombre_y_clave,True
+22,015,6,1,San Joaquín,estable_por_nombre_y_clave,True
+22,016,6,1,San Juan del Río,estable_por_nombre_y_clave,True
+22,017,6,1,Tequisquiapan,estable_por_nombre_y_clave,True
+22,018,6,1,Tolimán,estable_por_nombre_y_clave,True
+23,001,6,1,Benito Juárez,estable_por_nombre_y_clave,True
+23,002,6,1,Cozumel,estable_por_nombre_y_clave,True
+23,003,6,1,Felipe Carrillo Puerto,estable_por_nombre_y_clave,True
+23,004,6,1,Isla Mujeres,estable_por_nombre_y_clave,True
+23,005,6,1,José María Morelos,estable_por_nombre_y_clave,True
+23,006,6,1,Lázaro Cárdenas,estable_por_nombre_y_clave,True
+23,007,6,1,Othón P. Blanco,estable_por_nombre_y_clave,True
+23,008,6,1,Solidaridad,estable_por_nombre_y_clave,True
+23,009,6,1,Tulum,estable_por_nombre_y_clave,True
+23,010,6,1, Bacalar | Bacalar,estable_por_nombre_y_clave,True
+23,011,6,1,Puerto Morelos,estable_por_nombre_y_clave,True
+24,001,6,1,Ahualulco,estable_por_nombre_y_clave,True
+24,002,6,1,Alaquines,estable_por_nombre_y_clave,True
+24,003,6,1,Aquismón,estable_por_nombre_y_clave,True
+24,004,6,1,Armadillo de los Infante,estable_por_nombre_y_clave,True
+24,005,6,1,Cárdenas,estable_por_nombre_y_clave,True
+24,006,6,1,Catorce,estable_por_nombre_y_clave,True
+24,007,6,1,Cedral,estable_por_nombre_y_clave,True
+24,008,6,1,Cerritos,estable_por_nombre_y_clave,True
+24,009,6,1,Cerro de San Pedro,estable_por_nombre_y_clave,True
+24,010,6,1,Ciudad del Maíz,estable_por_nombre_y_clave,True
+24,011,6,1,Ciudad Fernández,estable_por_nombre_y_clave,True
+24,012,6,1,Tancanhuitz,estable_por_nombre_y_clave,True
+24,013,6,1,Ciudad Valles,estable_por_nombre_y_clave,True
+24,014,6,1,Coxcatlán,estable_por_nombre_y_clave,True
+24,015,6,1,Charcas,estable_por_nombre_y_clave,True
+24,016,6,1,Ebano,estable_por_nombre_y_clave,True
+24,017,6,1,Guadalcázar,estable_por_nombre_y_clave,True
+24,018,6,1,Huehuetlán,estable_por_nombre_y_clave,True
+24,019,6,1,Lagunillas,estable_por_nombre_y_clave,True
+24,020,6,1,Matehuala,estable_por_nombre_y_clave,True
+24,021,6,1,Mexquitic De Carmona | Mexquitic de Carmona,estable_por_nombre_y_clave,True
+24,022,6,1,Moctezuma,estable_por_nombre_y_clave,True
+24,023,6,1,Rayón,estable_por_nombre_y_clave,True
+24,024,6,1,Rioverde,estable_por_nombre_y_clave,True
+24,025,6,1,Salinas,estable_por_nombre_y_clave,True
+24,026,6,1,San Antonio,estable_por_nombre_y_clave,True
+24,027,6,1,San Ciro de Acosta,estable_por_nombre_y_clave,True
+24,028,6,1,San Luis Potosí,estable_por_nombre_y_clave,True
+24,029,6,1,San Martín Chalchicuautla,estable_por_nombre_y_clave,True
+24,030,6,1,San Nicolás Tolentino,estable_por_nombre_y_clave,True
+24,031,6,1,San Vicente Tancuayalab,estable_por_nombre_y_clave,True
+24,032,6,1,Santa Catarina,estable_por_nombre_y_clave,True
+24,033,6,1,Santa María del Río,estable_por_nombre_y_clave,True
+24,034,6,1,Santo Domingo,estable_por_nombre_y_clave,True
+24,035,6,1,Soledad de Graciano Sánchez,estable_por_nombre_y_clave,True
+24,036,6,1,Tamasopo,estable_por_nombre_y_clave,True
+24,037,6,1,Tamazunchale,estable_por_nombre_y_clave,True
+24,038,6,1,Tampacán,estable_por_nombre_y_clave,True
+24,039,6,1,Tampamolón Corona,estable_por_nombre_y_clave,True
+24,040,6,1,Tamuín,estable_por_nombre_y_clave,True
+24,041,6,1,Tanlajás,estable_por_nombre_y_clave,True
+24,042,6,1,Tanquián de Escobedo,estable_por_nombre_y_clave,True
+24,043,6,1,Tierra Nueva,estable_por_nombre_y_clave,True
+24,044,6,1,Vanegas,estable_por_nombre_y_clave,True
+24,045,6,1,Venado,estable_por_nombre_y_clave,True
+24,046,6,1,Villa de Arista,estable_por_nombre_y_clave,True
+24,047,6,1,Villa de Arriaga,estable_por_nombre_y_clave,True
+24,048,6,1,Villa de Guadalupe,estable_por_nombre_y_clave,True
+24,049,6,1,Villa de la Paz,estable_por_nombre_y_clave,True
+24,050,6,1,Villa de Ramos,estable_por_nombre_y_clave,True
+24,051,6,1,Villa de Reyes,estable_por_nombre_y_clave,True
+24,052,6,1,Villa Hidalgo,estable_por_nombre_y_clave,True
+24,053,6,1,Villa Juárez,estable_por_nombre_y_clave,True
+24,054,6,1,Axtla De Terrazas | Axtla de Terrazas,estable_por_nombre_y_clave,True
+24,055,6,1,Xilitla,estable_por_nombre_y_clave,True
+24,056,6,1,Zaragoza,estable_por_nombre_y_clave,True
+24,057,6,1,El Naranjo,estable_por_nombre_y_clave,True
+24,058,6,1,Matlapa,estable_por_nombre_y_clave,True
+25,001,6,1,Ahome,estable_por_nombre_y_clave,True
+25,002,6,1,Angostura,estable_por_nombre_y_clave,True
+25,003,6,1,Badiraguato,estable_por_nombre_y_clave,True
+25,004,6,1,Concordia,estable_por_nombre_y_clave,True
+25,005,6,1,Cosalá,estable_por_nombre_y_clave,True
+25,006,6,1,Culiacán,estable_por_nombre_y_clave,True
+25,007,6,1,Choix,estable_por_nombre_y_clave,True
+25,008,6,1,Elota,estable_por_nombre_y_clave,True
+25,009,6,1,Escuinapa,estable_por_nombre_y_clave,True
+25,010,6,1,El Fuerte,estable_por_nombre_y_clave,True
+25,011,6,1,Guasave,estable_por_nombre_y_clave,True
+25,012,6,1,Mazatlán,estable_por_nombre_y_clave,True
+25,013,6,1,Mocorito,estable_por_nombre_y_clave,True
+25,014,6,1,Rosario,estable_por_nombre_y_clave,True
+25,015,6,1,Salvador Alvarado,estable_por_nombre_y_clave,True
+25,016,6,1,San Ignacio,estable_por_nombre_y_clave,True
+25,017,6,1,Sinaloa,estable_por_nombre_y_clave,True
+25,018,6,1,Navolato,estable_por_nombre_y_clave,True
+25,019,1,1,Eldorado,incompleto_en_serie,True
+25,020,1,1,Juan José Ríos,incompleto_en_serie,True
+26,001,6,1,Aconchi,estable_por_nombre_y_clave,True
+26,002,6,1,Agua Prieta,estable_por_nombre_y_clave,True
+26,003,6,1,Altar,estable_por_nombre_y_clave,True
+26,004,6,1,Arivechi,estable_por_nombre_y_clave,True
+26,005,6,1,Arizpe,estable_por_nombre_y_clave,True
+26,006,6,1,Atil,estable_por_nombre_y_clave,True
+26,007,6,1,Bacadéhuachi,estable_por_nombre_y_clave,True
+26,008,6,1,Bacanora,estable_por_nombre_y_clave,True
+26,009,6,1,Bacerac,estable_por_nombre_y_clave,True
+26,010,6,1,Bacoachi,estable_por_nombre_y_clave,True
+26,011,6,1,Banámichi,estable_por_nombre_y_clave,True
+26,012,6,1,Baviácora,estable_por_nombre_y_clave,True
+26,013,6,1,Bavispe,estable_por_nombre_y_clave,True
+26,014,6,1,Benjamín Hill,estable_por_nombre_y_clave,True
+26,015,6,1,Cananea,estable_por_nombre_y_clave,True
+26,016,6,1,Cucurpe,estable_por_nombre_y_clave,True
+26,017,6,1,Cumpas,estable_por_nombre_y_clave,True
+26,018,6,1,Divisaderos,estable_por_nombre_y_clave,True
+26,019,6,1,Fronteras,estable_por_nombre_y_clave,True
+26,020,6,1,Granados,estable_por_nombre_y_clave,True
+26,021,6,1,Huachinera,estable_por_nombre_y_clave,True
+26,022,6,1,Huásabas,estable_por_nombre_y_clave,True
+26,023,6,1,Huépac,estable_por_nombre_y_clave,True
+26,024,6,1,Imuris,estable_por_nombre_y_clave,True
+26,025,6,1,Magdalena,estable_por_nombre_y_clave,True
+26,026,6,1,Moctezuma,estable_por_nombre_y_clave,True
+26,027,6,1,Naco,estable_por_nombre_y_clave,True
+26,028,6,1,Nácori Chico,estable_por_nombre_y_clave,True
+26,029,6,1,Nacozari de García,estable_por_nombre_y_clave,True
+26,030,6,1,Nogales,estable_por_nombre_y_clave,True
+26,031,6,1,Oquitoa,estable_por_nombre_y_clave,True
+26,032,6,1,Sahuaripa,estable_por_nombre_y_clave,True
+26,033,6,1,San Felipe de Jesús,estable_por_nombre_y_clave,True
+26,034,6,1,San Javier,estable_por_nombre_y_clave,True
+26,035,6,1,San Pedro De La Cueva | San Pedro de la Cueva,estable_por_nombre_y_clave,True
+26,036,6,1,Santa Ana,estable_por_nombre_y_clave,True
+26,037,6,1,Santa Cruz,estable_por_nombre_y_clave,True
+26,038,6,1,Sáric,estable_por_nombre_y_clave,True
+26,039,6,1,Soyopa,estable_por_nombre_y_clave,True
+26,040,6,1,Suaqui Grande,estable_por_nombre_y_clave,True
+26,041,6,1,Tepache,estable_por_nombre_y_clave,True
+26,042,6,1,Trincheras,estable_por_nombre_y_clave,True
+26,043,6,1,Tubutama,estable_por_nombre_y_clave,True
+26,044,6,1,Villa Hidalgo,estable_por_nombre_y_clave,True
+26,045,6,1,Villa Pesqueira,estable_por_nombre_y_clave,True
+26,046,6,1,Caborca,estable_por_nombre_y_clave,True
+26,047,6,1,Carbó,estable_por_nombre_y_clave,True
+26,048,6,1,La Colorada,estable_por_nombre_y_clave,True
+26,049,6,1,Hermosillo,estable_por_nombre_y_clave,True
+26,050,6,1,Mazatán,estable_por_nombre_y_clave,True
+26,051,6,1,Opodepe,estable_por_nombre_y_clave,True
+26,052,6,1,Pitiquito,estable_por_nombre_y_clave,True
+26,053,6,1,Puerto Peñasco,estable_por_nombre_y_clave,True
+26,054,6,1,Rayon | Rayón,estable_por_nombre_y_clave,True
+26,055,6,1,San Luis Río Colorado,estable_por_nombre_y_clave,True
+26,056,6,1,San Miguel de Horcasitas,estable_por_nombre_y_clave,True
+26,057,6,1,Ures,estable_por_nombre_y_clave,True
+26,058,6,1,Bácum,estable_por_nombre_y_clave,True
+26,059,6,1,Cajeme,estable_por_nombre_y_clave,True
+26,060,6,1,Empalme,estable_por_nombre_y_clave,True
+26,061,6,1,Guaymas,estable_por_nombre_y_clave,True
+26,062,6,1,Alamos | Álamos,estable_por_nombre_y_clave,True
+26,063,6,1,Etchojoa,estable_por_nombre_y_clave,True
+26,064,6,1,Huatabampo,estable_por_nombre_y_clave,True
+26,065,6,1,Navojoa,estable_por_nombre_y_clave,True
+26,066,6,1,Onavas | Ónavas,estable_por_nombre_y_clave,True
+26,067,6,1,Quiriego,estable_por_nombre_y_clave,True
+26,068,6,1,Rosario,estable_por_nombre_y_clave,True
+26,069,6,1,Yécora,estable_por_nombre_y_clave,True
+26,070,6,1,General Plutarco Elías Calles,estable_por_nombre_y_clave,True
+26,071,6,1,Benito Juárez,estable_por_nombre_y_clave,True
+26,072,6,1,San Ignacio Río Muerto,estable_por_nombre_y_clave,True
+27,001,6,1,Balancán,estable_por_nombre_y_clave,True
+27,002,6,1,Cárdenas,estable_por_nombre_y_clave,True
+27,003,6,1,Centla,estable_por_nombre_y_clave,True
+27,004,6,1,Centro,estable_por_nombre_y_clave,True
+27,005,6,1,Comalcalco,estable_por_nombre_y_clave,True
+27,006,6,1,Cunduacán,estable_por_nombre_y_clave,True
+27,007,6,1,Emiliano Zapata,estable_por_nombre_y_clave,True
+27,008,6,1,Huimanguillo,estable_por_nombre_y_clave,True
+27,009,6,1,Jalapa,estable_por_nombre_y_clave,True
+27,010,6,1,Jalpa de Méndez,estable_por_nombre_y_clave,True
+27,011,6,1,Jonuta,estable_por_nombre_y_clave,True
+27,012,6,1,Macuspana,estable_por_nombre_y_clave,True
+27,013,6,1,Nacajuca,estable_por_nombre_y_clave,True
+27,014,6,1,Paraíso,estable_por_nombre_y_clave,True
+27,015,6,1,Tacotalpa,estable_por_nombre_y_clave,True
+27,016,6,1,Teapa,estable_por_nombre_y_clave,True
+27,017,6,1,Tenosique,estable_por_nombre_y_clave,True
+28,001,6,1,Abasolo,estable_por_nombre_y_clave,True
+28,002,6,1,Aldama,estable_por_nombre_y_clave,True
+28,003,6,1,Altamira,estable_por_nombre_y_clave,True
+28,004,6,1,Antiguo Morelos,estable_por_nombre_y_clave,True
+28,005,6,1,Burgos,estable_por_nombre_y_clave,True
+28,006,6,1,Bustamante,estable_por_nombre_y_clave,True
+28,007,6,1,Camargo,estable_por_nombre_y_clave,True
+28,008,6,1,Casas,estable_por_nombre_y_clave,True
+28,009,6,1,Ciudad Madero,estable_por_nombre_y_clave,True
+28,010,6,1,Cruillas,estable_por_nombre_y_clave,True
+28,011,6,1,Gómez Farías,estable_por_nombre_y_clave,True
+28,012,6,1,González,estable_por_nombre_y_clave,True
+28,013,6,1,Güémez,estable_por_nombre_y_clave,True
+28,014,6,1,Guerrero,estable_por_nombre_y_clave,True
+28,015,6,1,Gustavo Díaz Ordaz,estable_por_nombre_y_clave,True
+28,016,6,1,Hidalgo,estable_por_nombre_y_clave,True
+28,017,6,1,Jaumave,estable_por_nombre_y_clave,True
+28,018,6,1,Jiménez,estable_por_nombre_y_clave,True
+28,019,6,1,Llera,estable_por_nombre_y_clave,True
+28,020,6,1,Mainero,estable_por_nombre_y_clave,True
+28,021,6,1,El Mante,estable_por_nombre_y_clave,True
+28,022,6,1,Matamoros,estable_por_nombre_y_clave,True
+28,023,6,1,Méndez,estable_por_nombre_y_clave,True
+28,024,6,1,Mier,estable_por_nombre_y_clave,True
+28,025,6,1,Miguel Alemán,estable_por_nombre_y_clave,True
+28,026,6,1,Miquihuana,estable_por_nombre_y_clave,True
+28,027,6,1,Nuevo Laredo,estable_por_nombre_y_clave,True
+28,028,6,1,Nuevo Morelos,estable_por_nombre_y_clave,True
+28,029,6,1,Ocampo,estable_por_nombre_y_clave,True
+28,030,6,1,Padilla,estable_por_nombre_y_clave,True
+28,031,6,1,Palmillas,estable_por_nombre_y_clave,True
+28,032,6,1,Reynosa,estable_por_nombre_y_clave,True
+28,033,6,1,Río Bravo,estable_por_nombre_y_clave,True
+28,034,6,1,San Carlos,estable_por_nombre_y_clave,True
+28,035,6,1,San Fernando,estable_por_nombre_y_clave,True
+28,036,6,1,San Nicolás,estable_por_nombre_y_clave,True
+28,037,6,1,Soto la Marina,estable_por_nombre_y_clave,True
+28,038,6,1,Tampico,estable_por_nombre_y_clave,True
+28,039,6,1,Tula,estable_por_nombre_y_clave,True
+28,040,6,1,Valle Hermoso,estable_por_nombre_y_clave,True
+28,041,6,1,Victoria,estable_por_nombre_y_clave,True
+28,042,6,1,Villagrán,estable_por_nombre_y_clave,True
+28,043,6,1,Xicoténcatl,estable_por_nombre_y_clave,True
+29,001,6,1,Amaxac de Guerrero,estable_por_nombre_y_clave,True
+29,002,6,1,Apetatitlán de Antonio Carvajal,estable_por_nombre_y_clave,True
+29,003,6,1,Apizaco,estable_por_nombre_y_clave,True
+29,004,6,1,Atlangatepec,estable_por_nombre_y_clave,True
+29,005,6,1,Atltzayanca,estable_por_nombre_y_clave,True
+29,006,6,1,Calpulalpan,estable_por_nombre_y_clave,True
+29,007,6,1,El Carmen Tequexquitla,estable_por_nombre_y_clave,True
+29,008,6,1,Cuapiaxtla,estable_por_nombre_y_clave,True
+29,009,6,1,Cuaxomulco,estable_por_nombre_y_clave,True
+29,010,6,1,Chiautempan,estable_por_nombre_y_clave,True
+29,011,6,1,Muñoz de Domingo Arenas,estable_por_nombre_y_clave,True
+29,012,6,1,Españita,estable_por_nombre_y_clave,True
+29,013,6,1,Huamantla,estable_por_nombre_y_clave,True
+29,014,6,1,Hueyotlipan,estable_por_nombre_y_clave,True
+29,015,6,1,Ixtacuixtla de Mariano Matamoros,estable_por_nombre_y_clave,True
+29,016,6,1,Ixtenco,estable_por_nombre_y_clave,True
+29,017,6,1,Mazatecochco de José María Morelos,estable_por_nombre_y_clave,True
+29,018,6,1,Contla de Juan Cuamatzi,estable_por_nombre_y_clave,True
+29,019,6,1,Tepetitla de Lardizábal,estable_por_nombre_y_clave,True
+29,020,6,1,Sanctórum de Lázaro Cárdenas,estable_por_nombre_y_clave,True
+29,021,6,1,Nanacamilpa de Mariano Arista,estable_por_nombre_y_clave,True
+29,022,6,1,Acuamanala de Miguel Hidalgo,estable_por_nombre_y_clave,True
+29,023,6,1,Natívitas,estable_por_nombre_y_clave,True
+29,024,6,1,Panotla,estable_por_nombre_y_clave,True
+29,025,6,1,San Pablo del Monte,estable_por_nombre_y_clave,True
+29,026,6,1,Santa Cruz Tlaxcala,estable_por_nombre_y_clave,True
+29,027,6,1,Tenancingo,estable_por_nombre_y_clave,True
+29,028,6,1,Teolocholco,estable_por_nombre_y_clave,True
+29,029,6,1,Tepeyanco,estable_por_nombre_y_clave,True
+29,030,6,1,Terrenate,estable_por_nombre_y_clave,True
+29,031,6,1,Tetla de la Solidaridad,estable_por_nombre_y_clave,True
+29,032,6,1,Tetlatlahuca,estable_por_nombre_y_clave,True
+29,033,6,1,Tlaxcala,estable_por_nombre_y_clave,True
+29,034,6,1,Tlaxco,estable_por_nombre_y_clave,True
+29,035,6,1,Tocatlán,estable_por_nombre_y_clave,True
+29,036,6,1,Totolac,estable_por_nombre_y_clave,True
+29,037,6,2,Ziltlaltépec de Trinidad Sánchez Santos | Zitlaltépec de Trinidad Sánchez Santos,revisar_identidad_nominal,True
+29,038,6,1,Tzompantepec,estable_por_nombre_y_clave,True
+29,039,6,1,Xaloztoc,estable_por_nombre_y_clave,True
+29,040,6,1,Xaltocan,estable_por_nombre_y_clave,True
+29,041,6,1,Papalotla de Xicohténcatl,estable_por_nombre_y_clave,True
+29,042,6,1,Xicohtzinco,estable_por_nombre_y_clave,True
+29,043,6,1,Yauhquemehcan,estable_por_nombre_y_clave,True
+29,044,6,1,Zacatelco,estable_por_nombre_y_clave,True
+29,045,6,1,Santa Apolonia Teacalco,estable_por_nombre_y_clave,True
+29,046,6,1,Santa Cruz Quilehtla,estable_por_nombre_y_clave,True
+29,047,6,1,San Juan Huactzinco,estable_por_nombre_y_clave,True
+29,048,6,1,Santa Catarina Ayometla,estable_por_nombre_y_clave,True
+29,049,6,1,Santa Isabel Xiloxoxtla,estable_por_nombre_y_clave,True
+29,050,6,1,San José Teacalco,estable_por_nombre_y_clave,True
+29,051,6,1,San Francisco Tetlanohcan,estable_por_nombre_y_clave,True
+29,052,6,1,La Magdalena Tlaltelulco,estable_por_nombre_y_clave,True
+29,053,6,1,San Damián Texóloc,estable_por_nombre_y_clave,True
+29,054,6,1,Emiliano Zapata,estable_por_nombre_y_clave,True
+29,055,6,1,Lázaro Cárdenas,estable_por_nombre_y_clave,True
+29,056,6,1,San Jerónimo Zacualpan,estable_por_nombre_y_clave,True
+29,057,6,1,San Lucas Tecopilco,estable_por_nombre_y_clave,True
+29,058,6,1,Santa Ana Nopalucan,estable_por_nombre_y_clave,True
+29,059,6,1,San Lorenzo Axocomanitla,estable_por_nombre_y_clave,True
+29,060,6,1,Benito Juárez,estable_por_nombre_y_clave,True
+30,001,6,1,Acajete,estable_por_nombre_y_clave,True
+30,002,6,1,Acatlán,estable_por_nombre_y_clave,True
+30,003,6,1,Acayucan,estable_por_nombre_y_clave,True
+30,004,6,1,Actopan,estable_por_nombre_y_clave,True
+30,005,6,1,Acula,estable_por_nombre_y_clave,True
+30,006,6,1,Acultzingo,estable_por_nombre_y_clave,True
+30,007,6,1,Camarón de Tejeda,estable_por_nombre_y_clave,True
+30,008,6,1,Álamo Temapache,estable_por_nombre_y_clave,True
+30,009,6,1,Alpatláhuac,estable_por_nombre_y_clave,True
+30,010,6,2,Alto Lucero de Gutiérrez Barios | Alto Lucero de Gutiérrez Barrios,revisar_identidad_nominal,True
+30,011,6,1,Altotonga,estable_por_nombre_y_clave,True
+30,012,6,1,Alvarado,estable_por_nombre_y_clave,True
+30,013,6,1,Amatitlán,estable_por_nombre_y_clave,True
+30,014,6,1,Amatlán de los Reyes,estable_por_nombre_y_clave,True
+30,015,6,1,Naranjos Amatlán,estable_por_nombre_y_clave,True
+30,016,6,1,Angel R. Cabada,estable_por_nombre_y_clave,True
+30,017,6,1,La Antigua,estable_por_nombre_y_clave,True
+30,018,6,1,Apazapan,estable_por_nombre_y_clave,True
+30,019,6,1,Aquila,estable_por_nombre_y_clave,True
+30,020,6,1,Astacinga,estable_por_nombre_y_clave,True
+30,021,6,1,Atlahuilco,estable_por_nombre_y_clave,True
+30,022,6,1,Atoyac,estable_por_nombre_y_clave,True
+30,023,6,1,Atzacan,estable_por_nombre_y_clave,True
+30,024,6,1,Atzalan,estable_por_nombre_y_clave,True
+30,025,6,1,Tlaltetela,estable_por_nombre_y_clave,True
+30,026,6,1,Ayahualulco,estable_por_nombre_y_clave,True
+30,027,6,1,Banderilla,estable_por_nombre_y_clave,True
+30,028,6,1,Benito Juárez,estable_por_nombre_y_clave,True
+30,029,6,1,Boca del Río,estable_por_nombre_y_clave,True
+30,030,6,1,Calcahualco,estable_por_nombre_y_clave,True
+30,031,6,1,Camerino Z. Mendoza,estable_por_nombre_y_clave,True
+30,032,6,1,Carrillo Puerto,estable_por_nombre_y_clave,True
+30,033,6,1,Castillo de Teayo,estable_por_nombre_y_clave,True
+30,034,6,1,Catemaco,estable_por_nombre_y_clave,True
+30,035,6,1,Cazones De Herrera | Cazones de Herrera,estable_por_nombre_y_clave,True
+30,036,6,1,Cerro Azul,estable_por_nombre_y_clave,True
+30,037,6,1,Citlaltépetl,estable_por_nombre_y_clave,True
+30,038,6,1,Coacoatzintla,estable_por_nombre_y_clave,True
+30,039,6,1,Coahuitlán,estable_por_nombre_y_clave,True
+30,040,6,1,Coatepec,estable_por_nombre_y_clave,True
+30,041,6,1,Coatzacoalcos,estable_por_nombre_y_clave,True
+30,042,6,1,Coatzintla,estable_por_nombre_y_clave,True
+30,043,6,1,Coetzala,estable_por_nombre_y_clave,True
+30,044,6,1,Colipa,estable_por_nombre_y_clave,True
+30,045,6,1,Comapa,estable_por_nombre_y_clave,True
+30,046,6,1,Córdoba,estable_por_nombre_y_clave,True
+30,047,6,2,Cosamaloapan | Cosamaloapan de Carpio,revisar_identidad_nominal,True
+30,048,6,1,Cosautlán de Carvajal,estable_por_nombre_y_clave,True
+30,049,6,1,Coscomatepec,estable_por_nombre_y_clave,True
+30,050,6,1,Cosoleacaque,estable_por_nombre_y_clave,True
+30,051,6,1,Cotaxtla,estable_por_nombre_y_clave,True
+30,052,6,1,Coxquihui,estable_por_nombre_y_clave,True
+30,053,6,1,Coyutla,estable_por_nombre_y_clave,True
+30,054,6,1,Cuichapa,estable_por_nombre_y_clave,True
+30,055,6,1,Cuitláhuac,estable_por_nombre_y_clave,True
+30,056,6,1,Chacaltianguis,estable_por_nombre_y_clave,True
+30,057,6,1,Chalma,estable_por_nombre_y_clave,True
+30,058,6,1,Chiconamel,estable_por_nombre_y_clave,True
+30,059,6,1,Chiconquiaco,estable_por_nombre_y_clave,True
+30,060,6,1,Chicontepec,estable_por_nombre_y_clave,True
+30,061,6,1,Chinameca,estable_por_nombre_y_clave,True
+30,062,6,1,Chinampa de Gorostiza,estable_por_nombre_y_clave,True
+30,063,6,1,Las Choapas,estable_por_nombre_y_clave,True
+30,064,6,1,Chocamán,estable_por_nombre_y_clave,True
+30,065,6,1,Chontla,estable_por_nombre_y_clave,True
+30,066,6,1,Chumatlán,estable_por_nombre_y_clave,True
+30,067,6,1,Emiliano Zapata,estable_por_nombre_y_clave,True
+30,068,6,1,Espinal,estable_por_nombre_y_clave,True
+30,069,6,1,Filomeno Mata,estable_por_nombre_y_clave,True
+30,070,6,1,Fortín,estable_por_nombre_y_clave,True
+30,071,6,1,Gutiérrez Zamora,estable_por_nombre_y_clave,True
+30,072,6,1,Hidalgotitlán,estable_por_nombre_y_clave,True
+30,073,6,1,Huatusco,estable_por_nombre_y_clave,True
+30,074,6,1,Huayacocotla,estable_por_nombre_y_clave,True
+30,075,6,1,Hueyapan de Ocampo,estable_por_nombre_y_clave,True
+30,076,6,1,Huiloapan de Cuauhtémoc,estable_por_nombre_y_clave,True
+30,077,6,1,Ignacio de la Llave,estable_por_nombre_y_clave,True
+30,078,6,1,Ilamatlán,estable_por_nombre_y_clave,True
+30,079,6,1,Isla,estable_por_nombre_y_clave,True
+30,080,6,1,Ixcatepec,estable_por_nombre_y_clave,True
+30,081,6,1,Ixhuacán de los Reyes,estable_por_nombre_y_clave,True
+30,082,6,1,Ixhuatlán de Madero,estable_por_nombre_y_clave,True
+30,083,6,1,Ixhuatlán del Café,estable_por_nombre_y_clave,True
+30,084,6,1,Ixhuatlán del Sureste,estable_por_nombre_y_clave,True
+30,085,6,1,Ixhuatlancillo,estable_por_nombre_y_clave,True
+30,086,6,1,Ixmatlahuacan,estable_por_nombre_y_clave,True
+30,087,6,1,Ixtaczoquitlán,estable_por_nombre_y_clave,True
+30,088,6,1,Jalacingo,estable_por_nombre_y_clave,True
+30,089,6,1,Xalapa,estable_por_nombre_y_clave,True
+30,090,6,1,Jalcomulco,estable_por_nombre_y_clave,True
+30,091,6,1,Jáltipan,estable_por_nombre_y_clave,True
+30,092,6,1,Jamapa,estable_por_nombre_y_clave,True
+30,093,6,1,Jesús Carranza,estable_por_nombre_y_clave,True
+30,094,6,1,Jilotepec,estable_por_nombre_y_clave,True
+30,095,6,1,Juan Rodríguez Clara,estable_por_nombre_y_clave,True
+30,096,6,1,Juchique de Ferrer,estable_por_nombre_y_clave,True
+30,097,6,1,Landero y Coss,estable_por_nombre_y_clave,True
+30,098,6,1,Lerdo de Tejada,estable_por_nombre_y_clave,True
+30,099,6,1,Magdalena,estable_por_nombre_y_clave,True
+30,100,6,1,Maltrata,estable_por_nombre_y_clave,True
+30,101,6,1,Manlio Fabio Altamirano,estable_por_nombre_y_clave,True
+30,102,6,1,Mariano Escobedo,estable_por_nombre_y_clave,True
+30,103,6,1,Martínez de la Torre,estable_por_nombre_y_clave,True
+30,104,6,1,Mecatlán,estable_por_nombre_y_clave,True
+30,105,6,1,Mecayapan,estable_por_nombre_y_clave,True
+30,106,6,1,Medellín de Bravo,estable_por_nombre_y_clave,True
+30,107,6,1,Miahuatlán,estable_por_nombre_y_clave,True
+30,108,6,1,Las Minas,estable_por_nombre_y_clave,True
+30,109,6,1,Minatitlán,estable_por_nombre_y_clave,True
+30,110,6,1,Misantla,estable_por_nombre_y_clave,True
+30,111,6,1,Mixtla de Altamirano,estable_por_nombre_y_clave,True
+30,112,6,1,Moloacán,estable_por_nombre_y_clave,True
+30,113,6,1,Naolinco,estable_por_nombre_y_clave,True
+30,114,6,1,Naranjal,estable_por_nombre_y_clave,True
+30,115,6,1,Nautla,estable_por_nombre_y_clave,True
+30,116,6,1,Nogales,estable_por_nombre_y_clave,True
+30,117,6,1,Oluta,estable_por_nombre_y_clave,True
+30,118,6,1,Omealca,estable_por_nombre_y_clave,True
+30,119,6,1,Orizaba,estable_por_nombre_y_clave,True
+30,120,6,1,Otatitlán,estable_por_nombre_y_clave,True
+30,121,6,1,Oteapan,estable_por_nombre_y_clave,True
+30,122,6,1,Ozuluama de Mascareñas,estable_por_nombre_y_clave,True
+30,123,6,1,Pajapan,estable_por_nombre_y_clave,True
+30,124,6,1,Pánuco,estable_por_nombre_y_clave,True
+30,125,6,1,Papantla,estable_por_nombre_y_clave,True
+30,126,6,1,Paso del Macho,estable_por_nombre_y_clave,True
+30,127,6,1,Paso de Ovejas,estable_por_nombre_y_clave,True
+30,128,6,1,La Perla,estable_por_nombre_y_clave,True
+30,129,6,1,Perote,estable_por_nombre_y_clave,True
+30,130,6,1,Platón Sánchez,estable_por_nombre_y_clave,True
+30,131,6,1,Playa Vicente,estable_por_nombre_y_clave,True
+30,132,6,1,Poza Rica de Hidalgo,estable_por_nombre_y_clave,True
+30,133,6,1,Pueblo Viejo,estable_por_nombre_y_clave,True
+30,134,6,1,Puente Nacional,estable_por_nombre_y_clave,True
+30,135,6,1,Rafael Delgado,estable_por_nombre_y_clave,True
+30,136,6,1,Rafael Lucio,estable_por_nombre_y_clave,True
+30,137,6,1,Las Vigas de Ramírez,estable_por_nombre_y_clave,True
+30,138,6,1,Los Reyes,estable_por_nombre_y_clave,True
+30,139,6,1,Río Blanco,estable_por_nombre_y_clave,True
+30,140,6,1,Saltabarranca,estable_por_nombre_y_clave,True
+30,141,6,1,San Andrés Tenejapan,estable_por_nombre_y_clave,True
+30,142,6,1,San Andrés Tuxtla,estable_por_nombre_y_clave,True
+30,143,6,1,San Juan Evangelista,estable_por_nombre_y_clave,True
+30,144,6,1,Santiago Tuxtla,estable_por_nombre_y_clave,True
+30,145,6,1,Sayula de Alemán,estable_por_nombre_y_clave,True
+30,146,6,1,Soconusco,estable_por_nombre_y_clave,True
+30,147,6,1,Sochiapa,estable_por_nombre_y_clave,True
+30,148,6,1,Soledad Atzompa,estable_por_nombre_y_clave,True
+30,149,6,1,Soledad De Doblado | Soledad de Doblado,estable_por_nombre_y_clave,True
+30,150,6,1,Soteapan,estable_por_nombre_y_clave,True
+30,151,6,1,Tamalín,estable_por_nombre_y_clave,True
+30,152,6,1,Tamiahua,estable_por_nombre_y_clave,True
+30,153,6,1,Tampico Alto,estable_por_nombre_y_clave,True
+30,154,6,1,Tancoco,estable_por_nombre_y_clave,True
+30,155,6,1,Tantima,estable_por_nombre_y_clave,True
+30,156,6,1,Tantoyuca,estable_por_nombre_y_clave,True
+30,157,6,1,Tatatila,estable_por_nombre_y_clave,True
+30,158,6,1,Tecolutla,estable_por_nombre_y_clave,True
+30,159,6,1,Tehuipango,estable_por_nombre_y_clave,True
+30,160,6,1,Tempoal,estable_por_nombre_y_clave,True
+30,161,6,1,Tenampa,estable_por_nombre_y_clave,True
+30,162,6,1,Tenochtitlán,estable_por_nombre_y_clave,True
+30,163,6,1,Teocelo,estable_por_nombre_y_clave,True
+30,164,6,1,Tepatlaxco,estable_por_nombre_y_clave,True
+30,165,6,1,Tepetlán,estable_por_nombre_y_clave,True
+30,166,6,1,Tepetzintla,estable_por_nombre_y_clave,True
+30,167,6,1,Tequila,estable_por_nombre_y_clave,True
+30,168,6,1,José Azueta,estable_por_nombre_y_clave,True
+30,169,6,1,Texcatepec,estable_por_nombre_y_clave,True
+30,170,6,1,Texhuacán,estable_por_nombre_y_clave,True
+30,171,6,1,Texistepec,estable_por_nombre_y_clave,True
+30,172,6,1,Tezonapa,estable_por_nombre_y_clave,True
+30,173,6,1,Tierra Blanca,estable_por_nombre_y_clave,True
+30,174,6,1,Tihuatlán,estable_por_nombre_y_clave,True
+30,175,6,1,Tlacojalpan,estable_por_nombre_y_clave,True
+30,176,6,1,Tlacolulan,estable_por_nombre_y_clave,True
+30,177,6,1,Tlacotalpan,estable_por_nombre_y_clave,True
+30,178,6,1,Tlacotepec de Mejía,estable_por_nombre_y_clave,True
+30,179,6,1,Tlachichilco,estable_por_nombre_y_clave,True
+30,180,6,1,Tlalixcoyan,estable_por_nombre_y_clave,True
+30,181,6,1,Tlalnelhuayocan,estable_por_nombre_y_clave,True
+30,182,6,1,Tlapacoyan,estable_por_nombre_y_clave,True
+30,183,6,1,Tlaquilpa,estable_por_nombre_y_clave,True
+30,184,6,1,Tlilapan,estable_por_nombre_y_clave,True
+30,185,6,1,Tomatlán,estable_por_nombre_y_clave,True
+30,186,6,1,Tonayán,estable_por_nombre_y_clave,True
+30,187,6,1,Totutla,estable_por_nombre_y_clave,True
+30,188,6,1,Tuxpan,estable_por_nombre_y_clave,True
+30,189,6,1,Tuxtilla,estable_por_nombre_y_clave,True
+30,190,6,1,Ursulo Galván,estable_por_nombre_y_clave,True
+30,191,6,1,Vega de Alatorre,estable_por_nombre_y_clave,True
+30,192,6,1,Veracruz,estable_por_nombre_y_clave,True
+30,193,6,1,Villa Aldama,estable_por_nombre_y_clave,True
+30,194,6,1,Xico,estable_por_nombre_y_clave,True
+30,195,6,1,Xoxocotla,estable_por_nombre_y_clave,True
+30,196,6,1,Yanga,estable_por_nombre_y_clave,True
+30,197,6,1,Yecuatla,estable_por_nombre_y_clave,True
+30,198,6,1,Zacualpan,estable_por_nombre_y_clave,True
+30,199,6,1,Zaragoza,estable_por_nombre_y_clave,True
+30,200,6,1,Zentla,estable_por_nombre_y_clave,True
+30,201,6,1,Zongolica,estable_por_nombre_y_clave,True
+30,202,6,1,Zontecomatlán de López y Fuentes,estable_por_nombre_y_clave,True
+30,203,6,1,Zozocolco De Hidalgo | Zozocolco de Hidalgo,estable_por_nombre_y_clave,True
+30,204,6,1,Tres Valles,estable_por_nombre_y_clave,True
+30,205,6,1,Nanchital de Lázaro Cárdenas del Río,estable_por_nombre_y_clave,True
+30,206,6,1,Agua Dulce,estable_por_nombre_y_clave,True
+30,207,6,1,El Higo,estable_por_nombre_y_clave,True
+30,208,6,1,Carlos A. Carrillo,estable_por_nombre_y_clave,True
+30,209,6,1,Uxpanapa,estable_por_nombre_y_clave,True
+30,210,6,1,Tatahuicapan de Juárez,estable_por_nombre_y_clave,True
+30,211,6,1,San Rafael,estable_por_nombre_y_clave,True
+30,212,6,1,Santiago Sochiapan,estable_por_nombre_y_clave,True
+31,001,6,1,Abalá,estable_por_nombre_y_clave,True
+31,002,6,1,Acanceh,estable_por_nombre_y_clave,True
+31,003,6,1,Akil,estable_por_nombre_y_clave,True
+31,004,6,1,Baca,estable_por_nombre_y_clave,True
+31,005,6,1,Bokobá,estable_por_nombre_y_clave,True
+31,006,6,1,Buctzotz,estable_por_nombre_y_clave,True
+31,007,6,1,Cacalchén,estable_por_nombre_y_clave,True
+31,008,6,1,Calotmul,estable_por_nombre_y_clave,True
+31,009,6,1,Cansahcab,estable_por_nombre_y_clave,True
+31,010,6,1,Cantamayec,estable_por_nombre_y_clave,True
+31,011,6,1,Celestún,estable_por_nombre_y_clave,True
+31,012,6,1,Cenotillo,estable_por_nombre_y_clave,True
+31,013,6,1,Conkal,estable_por_nombre_y_clave,True
+31,014,6,1,Cuncunul,estable_por_nombre_y_clave,True
+31,015,6,1,Cuzamá,estable_por_nombre_y_clave,True
+31,016,6,1,Chacsinkín,estable_por_nombre_y_clave,True
+31,017,6,1,Chankom,estable_por_nombre_y_clave,True
+31,018,6,1,Chapab,estable_por_nombre_y_clave,True
+31,019,6,1,Chemax,estable_por_nombre_y_clave,True
+31,020,6,1,Chicxulub Pueblo,estable_por_nombre_y_clave,True
+31,021,6,1,Chichimilá,estable_por_nombre_y_clave,True
+31,022,6,1,Chikindzonot,estable_por_nombre_y_clave,True
+31,023,6,1,Chocholá,estable_por_nombre_y_clave,True
+31,024,6,1,Chumayel,estable_por_nombre_y_clave,True
+31,025,6,1,Dzán,estable_por_nombre_y_clave,True
+31,026,6,1,Dzemul,estable_por_nombre_y_clave,True
+31,027,6,1,Dzidzantún,estable_por_nombre_y_clave,True
+31,028,6,1,Dzilam de Bravo,estable_por_nombre_y_clave,True
+31,029,6,1,Dzilam González,estable_por_nombre_y_clave,True
+31,030,6,1,Dzitás,estable_por_nombre_y_clave,True
+31,031,6,1,Dzoncauich,estable_por_nombre_y_clave,True
+31,032,6,1,Espita,estable_por_nombre_y_clave,True
+31,033,6,1,Halachó,estable_por_nombre_y_clave,True
+31,034,6,1,Hocabá,estable_por_nombre_y_clave,True
+31,035,6,1,Hoctún,estable_por_nombre_y_clave,True
+31,036,6,1,Homún,estable_por_nombre_y_clave,True
+31,037,6,1,Huhí,estable_por_nombre_y_clave,True
+31,038,6,1,Hunucmá,estable_por_nombre_y_clave,True
+31,039,6,1,Ixil,estable_por_nombre_y_clave,True
+31,040,6,1,Izamal,estable_por_nombre_y_clave,True
+31,041,6,1,Kanasín,estable_por_nombre_y_clave,True
+31,042,6,1,Kantunil,estable_por_nombre_y_clave,True
+31,043,6,1,Kaua,estable_por_nombre_y_clave,True
+31,044,6,1,Kinchil,estable_por_nombre_y_clave,True
+31,045,6,1,Kopomá,estable_por_nombre_y_clave,True
+31,046,6,1,Mama,estable_por_nombre_y_clave,True
+31,047,6,1,Maní,estable_por_nombre_y_clave,True
+31,048,6,1,Maxcanú,estable_por_nombre_y_clave,True
+31,049,6,1,Mayapán,estable_por_nombre_y_clave,True
+31,050,6,1,Mérida,estable_por_nombre_y_clave,True
+31,051,6,1,Mocochá,estable_por_nombre_y_clave,True
+31,052,6,1,Motul,estable_por_nombre_y_clave,True
+31,053,6,1,Muna,estable_por_nombre_y_clave,True
+31,054,6,1,Muxupip,estable_por_nombre_y_clave,True
+31,055,6,1,Opichén,estable_por_nombre_y_clave,True
+31,056,6,1,Oxkutzcab,estable_por_nombre_y_clave,True
+31,057,6,1,Panabá,estable_por_nombre_y_clave,True
+31,058,6,1,Peto,estable_por_nombre_y_clave,True
+31,059,6,1,Progreso,estable_por_nombre_y_clave,True
+31,060,6,1,Quintana Roo,estable_por_nombre_y_clave,True
+31,061,6,1,Río Lagartos,estable_por_nombre_y_clave,True
+31,062,6,1,Sacalum,estable_por_nombre_y_clave,True
+31,063,6,1,Samahil,estable_por_nombre_y_clave,True
+31,064,6,1,Sanahcat,estable_por_nombre_y_clave,True
+31,065,6,1,San Felipe,estable_por_nombre_y_clave,True
+31,066,6,1,Santa Elena,estable_por_nombre_y_clave,True
+31,067,6,1,Seyé,estable_por_nombre_y_clave,True
+31,068,6,1,Sinanché,estable_por_nombre_y_clave,True
+31,069,6,1,Sotuta,estable_por_nombre_y_clave,True
+31,070,6,1,Sucilá,estable_por_nombre_y_clave,True
+31,071,6,1,Sudzal,estable_por_nombre_y_clave,True
+31,072,6,1,Suma,estable_por_nombre_y_clave,True
+31,073,6,1,Tahdziú,estable_por_nombre_y_clave,True
+31,074,6,1,Tahmek,estable_por_nombre_y_clave,True
+31,075,6,1,Teabo,estable_por_nombre_y_clave,True
+31,076,6,1,Tecoh,estable_por_nombre_y_clave,True
+31,077,6,1,Tekal de Venegas,estable_por_nombre_y_clave,True
+31,078,6,1,Tekantó,estable_por_nombre_y_clave,True
+31,079,6,1,Tekax,estable_por_nombre_y_clave,True
+31,080,6,1,Tekit,estable_por_nombre_y_clave,True
+31,081,6,1,Tekom,estable_por_nombre_y_clave,True
+31,082,6,1,Telchac Pueblo,estable_por_nombre_y_clave,True
+31,083,6,1,Telchac Puerto,estable_por_nombre_y_clave,True
+31,084,6,1,Temax,estable_por_nombre_y_clave,True
+31,085,6,1,Temozón,estable_por_nombre_y_clave,True
+31,086,6,1,Tepakán,estable_por_nombre_y_clave,True
+31,087,6,1,Tetiz,estable_por_nombre_y_clave,True
+31,088,6,1,Teya,estable_por_nombre_y_clave,True
+31,089,6,1,Ticul,estable_por_nombre_y_clave,True
+31,090,6,1,Timucuy,estable_por_nombre_y_clave,True
+31,091,6,1,Tinum,estable_por_nombre_y_clave,True
+31,092,6,1,Tixcacalcupul,estable_por_nombre_y_clave,True
+31,093,6,1,Tixkokob,estable_por_nombre_y_clave,True
+31,094,6,1,Tixmehuac,estable_por_nombre_y_clave,True
+31,095,6,1,Tixpéhual,estable_por_nombre_y_clave,True
+31,096,6,1,Tizimín,estable_por_nombre_y_clave,True
+31,097,6,1,Tunkás,estable_por_nombre_y_clave,True
+31,098,6,1,Tzucacab,estable_por_nombre_y_clave,True
+31,099,6,1,Uayma,estable_por_nombre_y_clave,True
+31,100,6,1,Ucú,estable_por_nombre_y_clave,True
+31,101,6,1,Umán,estable_por_nombre_y_clave,True
+31,102,6,1,Valladolid,estable_por_nombre_y_clave,True
+31,103,6,1,Xocchel,estable_por_nombre_y_clave,True
+31,104,6,1,Yaxcabá,estable_por_nombre_y_clave,True
+31,105,6,1,Yaxkukul,estable_por_nombre_y_clave,True
+31,106,6,1,Yobaín,estable_por_nombre_y_clave,True
+32,001,6,1,Apozol,estable_por_nombre_y_clave,True
+32,002,6,1,Apulco,estable_por_nombre_y_clave,True
+32,003,6,1,Atolinga,estable_por_nombre_y_clave,True
+32,004,6,1,Benito Juárez,estable_por_nombre_y_clave,True
+32,005,6,1,Calera,estable_por_nombre_y_clave,True
+32,006,6,1,Cañitas de Felipe Pescador,estable_por_nombre_y_clave,True
+32,007,6,1,Concepción del Oro,estable_por_nombre_y_clave,True
+32,008,6,1,Cuauhtémoc,estable_por_nombre_y_clave,True
+32,009,6,1,Chalchihuites,estable_por_nombre_y_clave,True
+32,010,6,1,Fresnillo,estable_por_nombre_y_clave,True
+32,011,6,1,Trinidad García de la Cadena,estable_por_nombre_y_clave,True
+32,012,6,1,Genaro Codina,estable_por_nombre_y_clave,True
+32,013,6,1,General Enrique Estrada,estable_por_nombre_y_clave,True
+32,014,6,1,General Francisco R. Murguía,estable_por_nombre_y_clave,True
+32,015,6,1,El Plateado de Joaquín Amaro,estable_por_nombre_y_clave,True
+32,016,6,1,General Pánfilo Natera,estable_por_nombre_y_clave,True
+32,017,6,1,Guadalupe,estable_por_nombre_y_clave,True
+32,018,6,1,Huanusco,estable_por_nombre_y_clave,True
+32,019,6,1,Jalpa,estable_por_nombre_y_clave,True
+32,020,6,1,Jerez,estable_por_nombre_y_clave,True
+32,021,6,1,Jiménez del Teul,estable_por_nombre_y_clave,True
+32,022,6,1,Juan Aldama,estable_por_nombre_y_clave,True
+32,023,6,1,Juchipila,estable_por_nombre_y_clave,True
+32,024,6,1,Loreto,estable_por_nombre_y_clave,True
+32,025,6,1,Luis Moya,estable_por_nombre_y_clave,True
+32,026,6,1,Mazapil,estable_por_nombre_y_clave,True
+32,027,6,1,Melchor Ocampo,estable_por_nombre_y_clave,True
+32,028,6,1,Mezquital del Oro,estable_por_nombre_y_clave,True
+32,029,6,1,Miguel Auza,estable_por_nombre_y_clave,True
+32,030,6,1,Momax,estable_por_nombre_y_clave,True
+32,031,6,1,Monte Escobedo,estable_por_nombre_y_clave,True
+32,032,6,1,Morelos,estable_por_nombre_y_clave,True
+32,033,6,1,Moyahua de Estrada,estable_por_nombre_y_clave,True
+32,034,6,1,Nochistlán de Mejía,estable_por_nombre_y_clave,True
+32,035,6,1,Noria de Ángeles,estable_por_nombre_y_clave,True
+32,036,6,1,Ojocaliente,estable_por_nombre_y_clave,True
+32,037,6,1,Pánuco,estable_por_nombre_y_clave,True
+32,038,6,1,Pinos,estable_por_nombre_y_clave,True
+32,039,6,1,Río Grande,estable_por_nombre_y_clave,True
+32,040,6,1,Sain Alto,estable_por_nombre_y_clave,True
+32,041,6,1,El Salvador,estable_por_nombre_y_clave,True
+32,042,6,1,Sombrerete,estable_por_nombre_y_clave,True
+32,043,6,1,Susticacán,estable_por_nombre_y_clave,True
+32,044,6,1,Tabasco,estable_por_nombre_y_clave,True
+32,045,6,1,Tepechitlán,estable_por_nombre_y_clave,True
+32,046,6,1,Tepetongo,estable_por_nombre_y_clave,True
+32,047,6,1,Teúl de González Ortega,estable_por_nombre_y_clave,True
+32,048,6,1,Tlaltenango de Sánchez Román,estable_por_nombre_y_clave,True
+32,049,6,1,Valparaíso,estable_por_nombre_y_clave,True
+32,050,6,1,Vetagrande,estable_por_nombre_y_clave,True
+32,051,6,1,Villa de Cos,estable_por_nombre_y_clave,True
+32,052,6,1,Villa García,estable_por_nombre_y_clave,True
+32,053,6,1,Villa González Ortega,estable_por_nombre_y_clave,True
+32,054,6,1,Villa Hidalgo,estable_por_nombre_y_clave,True
+32,055,6,1,Villanueva,estable_por_nombre_y_clave,True
+32,056,6,1,Zacatecas,estable_por_nombre_y_clave,True
+32,057,6,1,Trancoso,estable_por_nombre_y_clave,True
+32,058,6,1,Santa María de la Paz,estable_por_nombre_y_clave,True

@@ -1,0 +1,784 @@
+control,archivo_universo,esperado,observado,estado,discrepancias,ejemplos,efecto_B3
+esquema,datos/processed/2009/municipio_edad.csv,"[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""anio"", ""LN"", ""SV"", ""NV"", ""NS""]","[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""anio"", ""LN"", ""SV"", ""NV"", ""NS""]",pasa,0,[],Bloquea B3 si falla
+clave_EDOCVE,datos/processed/2009/municipio_edad.csv,"""Entero 1..32, representación de ancho 2""",0,pasa,0,[],Bloquea B3 si falla
+clave_MPIOCVE,datos/processed/2009/municipio_edad.csv,"""Entero 1..999, representación de ancho 3""",0,pasa,0,[],Bloquea B3 si falla
+conteo_LN,datos/processed/2009/municipio_edad.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_SV,datos/processed/2009/municipio_edad.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_NV,datos/processed/2009/municipio_edad.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_NS,datos/processed/2009/municipio_edad.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+anio,datos/processed/2009/municipio_edad.csv,2009,"[""2009""]",pasa,0,[],Bloquea B3 si falla
+categorias_edad,datos/processed/2009/municipio_edad.csv,"[""18-24"", ""25-34"", ""35-44"", ""45-59"", ""60+""]","[""18-24"", ""25-34"", ""35-44"", ""45-59"", ""60+""]",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2009/municipio_edad.csv,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 12290, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+LN_igual_SV_NV_NS,datos/processed/2009/municipio_edad.csv,"""Igualdad exacta en todas las filas""",0,pasa,0,[],Bloquea B3 si falla
+denominador_cero_tasa,datos/processed/2009/municipio_edad.csv,"""Indefinido (nulo), nunca tasa cero""",35,advertencia,0,"[{""EDOCVE"": ""07"", ""MPIOCVE"": ""055"", ""grupo_edad"": ""18-24"", ""LN"": 714, ""SV"": 0, ""NV"": 0, ""NS"": 714, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""055"", ""grupo_edad"": ""25-34"", ""LN"": 937, ""SV"": 0, ""NV"": 0, ""NS"": 937, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""055"", ""grupo_edad"": ""35-44"", ""LN"": 915, ""SV"": 0, ""NV"": 0, ""NS"": 915, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""055"", ""grupo_edad"": ""45-59"", ""LN"": 881, ""SV"": 0, ""NV"": 0, ""NS"": 881, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""055"", ""grupo_edad"": ""60+"", ""LN"": 579, ""SV"": 0, ""NV"": 0, ""NS"": 579, ""tasa"": null}]",No bloquea si se conserva nulo y la unidad no se considera completa
+rango_tasa,datos/processed/2009/municipio_edad.csv,"""[0,100] cuando está definido""",0,pasa,0,[],Bloquea B3 si falla
+denominador_cero_ns_pct,datos/processed/2009/municipio_edad.csv,"""Indefinido (nulo), nunca tasa cero""",0,pasa,0,[],No bloquea si se conserva nulo y la unidad no se considera completa
+rango_ns_pct,datos/processed/2009/municipio_edad.csv,"""[0,100] cuando está definido""",0,pasa,0,[],Bloquea B3 si falla
+cinco_edades_por_municipio,datos/processed/2009/,5,[5],pasa,0,[],Bloquea B3 si falla
+esquema,datos/processed/2009/municipios_nombres.csv,"[""EDOCVE"", ""MPIOCVE"", ""EDONOM"", ""MPIONOM"", ""nombre_norm""]","[""EDOCVE"", ""MPIOCVE"", ""EDONOM"", ""MPIONOM"", ""nombre_norm""]",pasa,0,[],Bloquea B3 si falla
+clave_EDOCVE,datos/processed/2009/municipios_nombres.csv,"""Entero 1..32, representación de ancho 2""",0,pasa,0,[],Bloquea B3 si falla
+clave_MPIOCVE,datos/processed/2009/municipios_nombres.csv,"""Entero 1..999, representación de ancho 3""",0,pasa,0,[],Bloquea B3 si falla
+nombres_no_nulos,datos/processed/2009/,0,0,pasa,0,[],Bloquea B3 si falla
+normalizacion_independiente,datos/processed/2009/,"""NFKD, sin acentos ni caracteres fuera A-Z0-9""",0,pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2009/municipios_nombres.csv,"{""clave"": [""EDOCVE"", ""MPIOCVE"", ""MPIONOM"", ""nombre_norm""], ""duplicados_o_nulos"": 0}","{""filas"": 2458, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2009/nombres_vs_agregados:recalculado,"{""clave"": [""EDOCVE"", ""MPIOCVE""], ""duplicados_o_nulos"": 0}","{""filas"": 2458, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2009/nombres_vs_agregados:guardado,"{""clave"": [""EDOCVE"", ""MPIOCVE""], ""duplicados_o_nulos"": 0}","{""filas"": 2458, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,datos/processed/2009/nombres_vs_agregados,2458,2458,pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2009/auditoria.json:recalculado,"{""clave"": [""anio""], ""duplicados_o_nulos"": 0}","{""filas"": 1, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2009/auditoria.json:guardado,"{""clave"": [""anio""], ""duplicados_o_nulos"": 0}","{""filas"": 1, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,datos/processed/2009/auditoria.json,1,1,pasa,0,[],Bloquea B3 si falla
+valor_LN,datos/processed/2009/auditoria.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_SV,datos/processed/2009/auditoria.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NV,datos/processed/2009/auditoria.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NS,datos/processed/2009/auditoria.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_municipios,datos/processed/2009/auditoria.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_filas_agregadas,datos/processed/2009/auditoria.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+exclusion_etaria_heredada,datos/processed/2009/auditoria.json,"""No deducir microfilas desde agregados""","{""age_lt18_rows"": 0, ""age_unclassified_rows"": 0}",no comprobado,0,[],No bloquea: metadatos heredados; totales CSV/JSON se contrastan por separado
+metadato_estatal_LN,datos/processed/2009/auditoria.json,77481831,77481831,pasa,0,[],Bloquea B3 si falla
+metadato_estatal_SV,datos/processed/2009/auditoria.json,33316974,33316974,pasa,0,[],Bloquea B3 si falla
+metadato_estatal_NV,datos/processed/2009/auditoria.json,42298963,42298963,pasa,0,[],Bloquea B3 si falla
+metadato_estatal_NS,datos/processed/2009/auditoria.json,1865894,1865894,pasa,0,[],Bloquea B3 si falla
+metadato_estatal_rows,datos/processed/2009/auditoria.json,8706843,8706843,pasa,0,[],Bloquea B3 si falla
+esquema,datos/processed/2009/municipio_edad_sexo.csv,"[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""anio"", ""SEXO"", ""LN"", ""SV"", ""NV"", ""NS""]","[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""SEXO"", ""anio"", ""LN"", ""SV"", ""NV"", ""NS""]",pasa,0,[],Bloquea B3 si falla
+clave_EDOCVE,datos/processed/2009/municipio_edad_sexo.csv,"""Entero 1..32, representación de ancho 2""",0,pasa,0,[],Bloquea B3 si falla
+clave_MPIOCVE,datos/processed/2009/municipio_edad_sexo.csv,"""Entero 1..999, representación de ancho 3""",0,pasa,0,[],Bloquea B3 si falla
+conteo_LN,datos/processed/2009/municipio_edad_sexo.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_SV,datos/processed/2009/municipio_edad_sexo.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_NV,datos/processed/2009/municipio_edad_sexo.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_NS,datos/processed/2009/municipio_edad_sexo.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+anio,datos/processed/2009/municipio_edad_sexo.csv,2009,"[""2009""]",pasa,0,[],Bloquea B3 si falla
+categorias_edad,datos/processed/2009/municipio_edad_sexo.csv,"[""18-24"", ""25-34"", ""35-44"", ""45-59"", ""60+""]","[""18-24"", ""25-34"", ""35-44"", ""45-59"", ""60+""]",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2009/municipio_edad_sexo.csv,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""SEXO""], ""duplicados_o_nulos"": 0}","{""filas"": 24580, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+LN_igual_SV_NV_NS,datos/processed/2009/municipio_edad_sexo.csv,"""Igualdad exacta en todas las filas""",0,pasa,0,[],Bloquea B3 si falla
+denominador_cero_tasa,datos/processed/2009/municipio_edad_sexo.csv,"""Indefinido (nulo), nunca tasa cero""",70,advertencia,0,"[{""EDOCVE"": ""07"", ""MPIOCVE"": ""055"", ""grupo_edad"": ""18-24"", ""LN"": 337, ""SV"": 0, ""NV"": 0, ""NS"": 337, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""055"", ""grupo_edad"": ""18-24"", ""LN"": 377, ""SV"": 0, ""NV"": 0, ""NS"": 377, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""055"", ""grupo_edad"": ""25-34"", ""LN"": 439, ""SV"": 0, ""NV"": 0, ""NS"": 439, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""055"", ""grupo_edad"": ""25-34"", ""LN"": 498, ""SV"": 0, ""NV"": 0, ""NS"": 498, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""055"", ""grupo_edad"": ""35-44"", ""LN"": 443, ""SV"": 0, ""NV"": 0, ""NS"": 443, ""tasa"": null}]",No bloquea si se conserva nulo y la unidad no se considera completa
+rango_tasa,datos/processed/2009/municipio_edad_sexo.csv,"""[0,100] cuando está definido""",0,pasa,0,[],Bloquea B3 si falla
+denominador_cero_ns_pct,datos/processed/2009/municipio_edad_sexo.csv,"""Indefinido (nulo), nunca tasa cero""",0,pasa,0,[],No bloquea si se conserva nulo y la unidad no se considera completa
+rango_ns_pct,datos/processed/2009/municipio_edad_sexo.csv,"""[0,100] cuando está definido""",0,pasa,0,[],Bloquea B3 si falla
+categorias_SEXO,datos/processed/2009/municipio_edad_sexo.csv,"[""0"", ""1""]","[""0"", ""1""]",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2009/municipio_edad_sexo.csv:marginal_principal:recalculado,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 12290, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2009/municipio_edad_sexo.csv:marginal_principal:guardado,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 12290, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,datos/processed/2009/municipio_edad_sexo.csv:marginal_principal,12290,12290,pasa,0,[],Bloquea B3 si falla
+valor_LN,datos/processed/2009/municipio_edad_sexo.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_SV,datos/processed/2009/municipio_edad_sexo.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NV,datos/processed/2009/municipio_edad_sexo.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NS,datos/processed/2009/municipio_edad_sexo.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+LN_por_sexo,datos/processed/2009/auditoria.json,"{""0"": 37353906, ""1"": 40127925}","{""0"": 37353906, ""1"": 40127925}",pasa,0,[],Bloquea B3 si falla
+esquema,datos/processed/2009/municipio_edad_tipo_seccion.csv,"[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""anio"", ""TIPOSEC"", ""LN"", ""SV"", ""NV"", ""NS""]","[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""TIPOSEC"", ""anio"", ""LN"", ""SV"", ""NV"", ""NS""]",pasa,0,[],Bloquea B3 si falla
+clave_EDOCVE,datos/processed/2009/municipio_edad_tipo_seccion.csv,"""Entero 1..32, representación de ancho 2""",0,pasa,0,[],Bloquea B3 si falla
+clave_MPIOCVE,datos/processed/2009/municipio_edad_tipo_seccion.csv,"""Entero 1..999, representación de ancho 3""",0,pasa,0,[],Bloquea B3 si falla
+conteo_LN,datos/processed/2009/municipio_edad_tipo_seccion.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_SV,datos/processed/2009/municipio_edad_tipo_seccion.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_NV,datos/processed/2009/municipio_edad_tipo_seccion.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_NS,datos/processed/2009/municipio_edad_tipo_seccion.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+anio,datos/processed/2009/municipio_edad_tipo_seccion.csv,2009,"[""2009""]",pasa,0,[],Bloquea B3 si falla
+categorias_edad,datos/processed/2009/municipio_edad_tipo_seccion.csv,"[""18-24"", ""25-34"", ""35-44"", ""45-59"", ""60+""]","[""18-24"", ""25-34"", ""35-44"", ""45-59"", ""60+""]",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2009/municipio_edad_tipo_seccion.csv,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""TIPOSEC""], ""duplicados_o_nulos"": 0}","{""filas"": 28390, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+LN_igual_SV_NV_NS,datos/processed/2009/municipio_edad_tipo_seccion.csv,"""Igualdad exacta en todas las filas""",0,pasa,0,[],Bloquea B3 si falla
+denominador_cero_tasa,datos/processed/2009/municipio_edad_tipo_seccion.csv,"""Indefinido (nulo), nunca tasa cero""",130,advertencia,0,"[{""EDOCVE"": ""07"", ""MPIOCVE"": ""035"", ""grupo_edad"": ""18-24"", ""LN"": 709, ""SV"": 0, ""NV"": 0, ""NS"": 709, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""035"", ""grupo_edad"": ""25-34"", ""LN"": 946, ""SV"": 0, ""NV"": 0, ""NS"": 946, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""035"", ""grupo_edad"": ""35-44"", ""LN"": 813, ""SV"": 0, ""NV"": 0, ""NS"": 813, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""035"", ""grupo_edad"": ""45-59"", ""LN"": 828, ""SV"": 0, ""NV"": 0, ""NS"": 828, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""035"", ""grupo_edad"": ""60+"", ""LN"": 620, ""SV"": 0, ""NV"": 0, ""NS"": 620, ""tasa"": null}]",No bloquea si se conserva nulo y la unidad no se considera completa
+rango_tasa,datos/processed/2009/municipio_edad_tipo_seccion.csv,"""[0,100] cuando está definido""",0,pasa,0,[],Bloquea B3 si falla
+denominador_cero_ns_pct,datos/processed/2009/municipio_edad_tipo_seccion.csv,"""Indefinido (nulo), nunca tasa cero""",0,pasa,0,[],No bloquea si se conserva nulo y la unidad no se considera completa
+rango_ns_pct,datos/processed/2009/municipio_edad_tipo_seccion.csv,"""[0,100] cuando está definido""",0,pasa,0,[],Bloquea B3 si falla
+categorias_TIPOSEC,datos/processed/2009/municipio_edad_tipo_seccion.csv,"[""U"", ""M"", ""R""]","[""M"", ""R"", ""U""]",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2009/municipio_edad_tipo_seccion.csv:marginal_principal:recalculado,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 12290, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2009/municipio_edad_tipo_seccion.csv:marginal_principal:guardado,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 12290, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,datos/processed/2009/municipio_edad_tipo_seccion.csv:marginal_principal,12290,12290,pasa,0,[],Bloquea B3 si falla
+valor_LN,datos/processed/2009/municipio_edad_tipo_seccion.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_SV,datos/processed/2009/municipio_edad_tipo_seccion.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NV,datos/processed/2009/municipio_edad_tipo_seccion.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NS,datos/processed/2009/municipio_edad_tipo_seccion.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+LN_por_tipo_seccion,datos/processed/2009/auditoria.json,"{""M"": 8570122, ""R"": 15048178, ""U"": 53863531}","{""M"": 8570122, ""R"": 15048178, ""U"": 53863531}",pasa,0,[],Bloquea B3 si falla
+esquema,datos/processed/2012/municipio_edad.csv,"[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""anio"", ""LN"", ""SV"", ""NV"", ""NS""]","[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""anio"", ""LN"", ""SV"", ""NV"", ""NS""]",pasa,0,[],Bloquea B3 si falla
+clave_EDOCVE,datos/processed/2012/municipio_edad.csv,"""Entero 1..32, representación de ancho 2""",0,pasa,0,[],Bloquea B3 si falla
+clave_MPIOCVE,datos/processed/2012/municipio_edad.csv,"""Entero 1..999, representación de ancho 3""",0,pasa,0,[],Bloquea B3 si falla
+conteo_LN,datos/processed/2012/municipio_edad.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_SV,datos/processed/2012/municipio_edad.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_NV,datos/processed/2012/municipio_edad.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_NS,datos/processed/2012/municipio_edad.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+anio,datos/processed/2012/municipio_edad.csv,2012,"[""2012""]",pasa,0,[],Bloquea B3 si falla
+categorias_edad,datos/processed/2012/municipio_edad.csv,"[""18-24"", ""25-34"", ""35-44"", ""45-59"", ""60+""]","[""18-24"", ""25-34"", ""35-44"", ""45-59"", ""60+""]",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2012/municipio_edad.csv,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 12275, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+LN_igual_SV_NV_NS,datos/processed/2012/municipio_edad.csv,"""Igualdad exacta en todas las filas""",0,pasa,0,[],Bloquea B3 si falla
+denominador_cero_tasa,datos/processed/2012/municipio_edad.csv,"""Indefinido (nulo), nunca tasa cero""",5,advertencia,0,"[{""EDOCVE"": ""20"", ""MPIOCVE"": ""247"", ""grupo_edad"": ""18-24"", ""LN"": 1476, ""SV"": 0, ""NV"": 0, ""NS"": 1476, ""tasa"": null}, {""EDOCVE"": ""20"", ""MPIOCVE"": ""247"", ""grupo_edad"": ""25-34"", ""LN"": 2028, ""SV"": 0, ""NV"": 0, ""NS"": 2028, ""tasa"": null}, {""EDOCVE"": ""20"", ""MPIOCVE"": ""247"", ""grupo_edad"": ""35-44"", ""LN"": 1670, ""SV"": 0, ""NV"": 0, ""NS"": 1670, ""tasa"": null}, {""EDOCVE"": ""20"", ""MPIOCVE"": ""247"", ""grupo_edad"": ""45-59"", ""LN"": 1638, ""SV"": 0, ""NV"": 0, ""NS"": 1638, ""tasa"": null}, {""EDOCVE"": ""20"", ""MPIOCVE"": ""247"", ""grupo_edad"": ""60+"", ""LN"": 1215, ""SV"": 0, ""NV"": 0, ""NS"": 1215, ""tasa"": null}]",No bloquea si se conserva nulo y la unidad no se considera completa
+rango_tasa,datos/processed/2012/municipio_edad.csv,"""[0,100] cuando está definido""",0,pasa,0,[],Bloquea B3 si falla
+denominador_cero_ns_pct,datos/processed/2012/municipio_edad.csv,"""Indefinido (nulo), nunca tasa cero""",0,pasa,0,[],No bloquea si se conserva nulo y la unidad no se considera completa
+rango_ns_pct,datos/processed/2012/municipio_edad.csv,"""[0,100] cuando está definido""",0,pasa,0,[],Bloquea B3 si falla
+cinco_edades_por_municipio,datos/processed/2012/,5,[5],pasa,0,[],Bloquea B3 si falla
+esquema,datos/processed/2012/municipios_nombres.csv,"[""EDOCVE"", ""MPIOCVE"", ""EDONOM"", ""MPIONOM"", ""nombre_norm""]","[""EDOCVE"", ""MPIOCVE"", ""EDONOM"", ""MPIONOM"", ""nombre_norm""]",pasa,0,[],Bloquea B3 si falla
+clave_EDOCVE,datos/processed/2012/municipios_nombres.csv,"""Entero 1..32, representación de ancho 2""",0,pasa,0,[],Bloquea B3 si falla
+clave_MPIOCVE,datos/processed/2012/municipios_nombres.csv,"""Entero 1..999, representación de ancho 3""",0,pasa,0,[],Bloquea B3 si falla
+nombres_no_nulos,datos/processed/2012/,0,0,pasa,0,[],Bloquea B3 si falla
+normalizacion_independiente,datos/processed/2012/,"""NFKD, sin acentos ni caracteres fuera A-Z0-9""",0,pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2012/municipios_nombres.csv,"{""clave"": [""EDOCVE"", ""MPIOCVE"", ""MPIONOM"", ""nombre_norm""], ""duplicados_o_nulos"": 0}","{""filas"": 2455, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2012/nombres_vs_agregados:recalculado,"{""clave"": [""EDOCVE"", ""MPIOCVE""], ""duplicados_o_nulos"": 0}","{""filas"": 2455, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2012/nombres_vs_agregados:guardado,"{""clave"": [""EDOCVE"", ""MPIOCVE""], ""duplicados_o_nulos"": 0}","{""filas"": 2455, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,datos/processed/2012/nombres_vs_agregados,2455,2455,pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2012/auditoria.json:recalculado,"{""clave"": [""anio""], ""duplicados_o_nulos"": 0}","{""filas"": 1, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2012/auditoria.json:guardado,"{""clave"": [""anio""], ""duplicados_o_nulos"": 0}","{""filas"": 1, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,datos/processed/2012/auditoria.json,1,1,pasa,0,[],Bloquea B3 si falla
+valor_LN,datos/processed/2012/auditoria.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_SV,datos/processed/2012/auditoria.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NV,datos/processed/2012/auditoria.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NS,datos/processed/2012/auditoria.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_municipios,datos/processed/2012/auditoria.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_filas_agregadas,datos/processed/2012/auditoria.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+exclusion_etaria_heredada,datos/processed/2012/auditoria.json,"""No deducir microfilas desde agregados""","{""age_lt18_rows"": 0, ""age_unclassified_rows"": 0}",no comprobado,0,[],No bloquea: metadatos heredados; totales CSV/JSON se contrastan por separado
+metadato_estatal_LN,datos/processed/2012/auditoria.json,76490962,76490962,pasa,0,[],Bloquea B3 si falla
+metadato_estatal_SV,datos/processed/2012/auditoria.json,47383154,47383154,pasa,0,[],Bloquea B3 si falla
+metadato_estatal_NV,datos/processed/2012/auditoria.json,28939159,28939159,pasa,0,[],Bloquea B3 si falla
+metadato_estatal_NS,datos/processed/2012/auditoria.json,168649,168649,pasa,0,[],Bloquea B3 si falla
+metadato_estatal_rows,datos/processed/2012/auditoria.json,8604456,8604456,pasa,0,[],Bloquea B3 si falla
+esquema,datos/processed/2012/municipio_edad_sexo.csv,"[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""anio"", ""SEXO"", ""LN"", ""SV"", ""NV"", ""NS""]","[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""SEXO"", ""anio"", ""LN"", ""SV"", ""NV"", ""NS""]",pasa,0,[],Bloquea B3 si falla
+clave_EDOCVE,datos/processed/2012/municipio_edad_sexo.csv,"""Entero 1..32, representación de ancho 2""",0,pasa,0,[],Bloquea B3 si falla
+clave_MPIOCVE,datos/processed/2012/municipio_edad_sexo.csv,"""Entero 1..999, representación de ancho 3""",0,pasa,0,[],Bloquea B3 si falla
+conteo_LN,datos/processed/2012/municipio_edad_sexo.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_SV,datos/processed/2012/municipio_edad_sexo.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_NV,datos/processed/2012/municipio_edad_sexo.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_NS,datos/processed/2012/municipio_edad_sexo.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+anio,datos/processed/2012/municipio_edad_sexo.csv,2012,"[""2012""]",pasa,0,[],Bloquea B3 si falla
+categorias_edad,datos/processed/2012/municipio_edad_sexo.csv,"[""18-24"", ""25-34"", ""35-44"", ""45-59"", ""60+""]","[""18-24"", ""25-34"", ""35-44"", ""45-59"", ""60+""]",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2012/municipio_edad_sexo.csv,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""SEXO""], ""duplicados_o_nulos"": 0}","{""filas"": 24549, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+LN_igual_SV_NV_NS,datos/processed/2012/municipio_edad_sexo.csv,"""Igualdad exacta en todas las filas""",0,pasa,0,[],Bloquea B3 si falla
+denominador_cero_tasa,datos/processed/2012/municipio_edad_sexo.csv,"""Indefinido (nulo), nunca tasa cero""",10,advertencia,0,"[{""EDOCVE"": ""20"", ""MPIOCVE"": ""247"", ""grupo_edad"": ""18-24"", ""LN"": 707, ""SV"": 0, ""NV"": 0, ""NS"": 707, ""tasa"": null}, {""EDOCVE"": ""20"", ""MPIOCVE"": ""247"", ""grupo_edad"": ""18-24"", ""LN"": 769, ""SV"": 0, ""NV"": 0, ""NS"": 769, ""tasa"": null}, {""EDOCVE"": ""20"", ""MPIOCVE"": ""247"", ""grupo_edad"": ""25-34"", ""LN"": 928, ""SV"": 0, ""NV"": 0, ""NS"": 928, ""tasa"": null}, {""EDOCVE"": ""20"", ""MPIOCVE"": ""247"", ""grupo_edad"": ""25-34"", ""LN"": 1100, ""SV"": 0, ""NV"": 0, ""NS"": 1100, ""tasa"": null}, {""EDOCVE"": ""20"", ""MPIOCVE"": ""247"", ""grupo_edad"": ""35-44"", ""LN"": 808, ""SV"": 0, ""NV"": 0, ""NS"": 808, ""tasa"": null}]",No bloquea si se conserva nulo y la unidad no se considera completa
+rango_tasa,datos/processed/2012/municipio_edad_sexo.csv,"""[0,100] cuando está definido""",0,pasa,0,[],Bloquea B3 si falla
+denominador_cero_ns_pct,datos/processed/2012/municipio_edad_sexo.csv,"""Indefinido (nulo), nunca tasa cero""",0,pasa,0,[],No bloquea si se conserva nulo y la unidad no se considera completa
+rango_ns_pct,datos/processed/2012/municipio_edad_sexo.csv,"""[0,100] cuando está definido""",0,pasa,0,[],Bloquea B3 si falla
+categorias_SEXO,datos/processed/2012/municipio_edad_sexo.csv,"[""0"", ""1""]","[""0"", ""1""]",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2012/municipio_edad_sexo.csv:marginal_principal:recalculado,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 12275, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2012/municipio_edad_sexo.csv:marginal_principal:guardado,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 12275, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,datos/processed/2012/municipio_edad_sexo.csv:marginal_principal,12275,12275,pasa,0,[],Bloquea B3 si falla
+valor_LN,datos/processed/2012/municipio_edad_sexo.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_SV,datos/processed/2012/municipio_edad_sexo.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NV,datos/processed/2012/municipio_edad_sexo.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NS,datos/processed/2012/municipio_edad_sexo.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+LN_por_sexo,datos/processed/2012/auditoria.json,"{""0"": 36821304, ""1"": 39669658}","{""0"": 36821304, ""1"": 39669658}",pasa,0,[],Bloquea B3 si falla
+esquema,datos/processed/2012/municipio_edad_tipo_seccion.csv,"[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""anio"", ""TIPOSEC"", ""LN"", ""SV"", ""NV"", ""NS""]","[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""TIPOSEC"", ""anio"", ""LN"", ""SV"", ""NV"", ""NS""]",pasa,0,[],Bloquea B3 si falla
+clave_EDOCVE,datos/processed/2012/municipio_edad_tipo_seccion.csv,"""Entero 1..32, representación de ancho 2""",0,pasa,0,[],Bloquea B3 si falla
+clave_MPIOCVE,datos/processed/2012/municipio_edad_tipo_seccion.csv,"""Entero 1..999, representación de ancho 3""",0,pasa,0,[],Bloquea B3 si falla
+conteo_LN,datos/processed/2012/municipio_edad_tipo_seccion.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_SV,datos/processed/2012/municipio_edad_tipo_seccion.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_NV,datos/processed/2012/municipio_edad_tipo_seccion.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_NS,datos/processed/2012/municipio_edad_tipo_seccion.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+anio,datos/processed/2012/municipio_edad_tipo_seccion.csv,2012,"[""2012""]",pasa,0,[],Bloquea B3 si falla
+categorias_edad,datos/processed/2012/municipio_edad_tipo_seccion.csv,"[""18-24"", ""25-34"", ""35-44"", ""45-59"", ""60+""]","[""18-24"", ""25-34"", ""35-44"", ""45-59"", ""60+""]",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2012/municipio_edad_tipo_seccion.csv,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""TIPOSEC""], ""duplicados_o_nulos"": 0}","{""filas"": 28274, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+LN_igual_SV_NV_NS,datos/processed/2012/municipio_edad_tipo_seccion.csv,"""Igualdad exacta en todas las filas""",0,pasa,0,[],Bloquea B3 si falla
+denominador_cero_tasa,datos/processed/2012/municipio_edad_tipo_seccion.csv,"""Indefinido (nulo), nunca tasa cero""",30,advertencia,0,"[{""EDOCVE"": ""08"", ""MPIOCVE"": ""033"", ""grupo_edad"": ""18-24"", ""LN"": 80, ""SV"": 0, ""NV"": 0, ""NS"": 80, ""tasa"": null}, {""EDOCVE"": ""08"", ""MPIOCVE"": ""033"", ""grupo_edad"": ""25-34"", ""LN"": 140, ""SV"": 0, ""NV"": 0, ""NS"": 140, ""tasa"": null}, {""EDOCVE"": ""08"", ""MPIOCVE"": ""033"", ""grupo_edad"": ""35-44"", ""LN"": 117, ""SV"": 0, ""NV"": 0, ""NS"": 117, ""tasa"": null}, {""EDOCVE"": ""08"", ""MPIOCVE"": ""033"", ""grupo_edad"": ""45-59"", ""LN"": 131, ""SV"": 0, ""NV"": 0, ""NS"": 131, ""tasa"": null}, {""EDOCVE"": ""08"", ""MPIOCVE"": ""033"", ""grupo_edad"": ""60+"", ""LN"": 159, ""SV"": 0, ""NV"": 0, ""NS"": 159, ""tasa"": null}]",No bloquea si se conserva nulo y la unidad no se considera completa
+rango_tasa,datos/processed/2012/municipio_edad_tipo_seccion.csv,"""[0,100] cuando está definido""",0,pasa,0,[],Bloquea B3 si falla
+denominador_cero_ns_pct,datos/processed/2012/municipio_edad_tipo_seccion.csv,"""Indefinido (nulo), nunca tasa cero""",0,pasa,0,[],No bloquea si se conserva nulo y la unidad no se considera completa
+rango_ns_pct,datos/processed/2012/municipio_edad_tipo_seccion.csv,"""[0,100] cuando está definido""",0,pasa,0,[],Bloquea B3 si falla
+categorias_TIPOSEC,datos/processed/2012/municipio_edad_tipo_seccion.csv,"[""U"", ""M"", ""R""]","[""M"", ""R"", ""U""]",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2012/municipio_edad_tipo_seccion.csv:marginal_principal:recalculado,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 12275, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2012/municipio_edad_tipo_seccion.csv:marginal_principal:guardado,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 12275, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,datos/processed/2012/municipio_edad_tipo_seccion.csv:marginal_principal,12275,12275,pasa,0,[],Bloquea B3 si falla
+valor_LN,datos/processed/2012/municipio_edad_tipo_seccion.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_SV,datos/processed/2012/municipio_edad_tipo_seccion.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NV,datos/processed/2012/municipio_edad_tipo_seccion.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NS,datos/processed/2012/municipio_edad_tipo_seccion.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+LN_por_tipo_seccion,datos/processed/2012/auditoria.json,"{""M"": 9315920, ""R"": 13903181, ""U"": 53271861}","{""M"": 9315920, ""R"": 13903181, ""U"": 53271861}",pasa,0,[],Bloquea B3 si falla
+esquema,datos/processed/2015/municipio_edad.csv,"[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""anio"", ""LN"", ""SV"", ""NV"", ""NS""]","[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""anio"", ""LN"", ""SV"", ""NV"", ""NS""]",pasa,0,[],Bloquea B3 si falla
+clave_EDOCVE,datos/processed/2015/municipio_edad.csv,"""Entero 1..32, representación de ancho 2""",0,pasa,0,[],Bloquea B3 si falla
+clave_MPIOCVE,datos/processed/2015/municipio_edad.csv,"""Entero 1..999, representación de ancho 3""",0,pasa,0,[],Bloquea B3 si falla
+conteo_LN,datos/processed/2015/municipio_edad.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_SV,datos/processed/2015/municipio_edad.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_NV,datos/processed/2015/municipio_edad.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_NS,datos/processed/2015/municipio_edad.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+anio,datos/processed/2015/municipio_edad.csv,2015,"[""2015""]",pasa,0,[],Bloquea B3 si falla
+categorias_edad,datos/processed/2015/municipio_edad.csv,"[""18-24"", ""25-34"", ""35-44"", ""45-59"", ""60+""]","[""18-24"", ""25-34"", ""35-44"", ""45-59"", ""60+""]",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2015/municipio_edad.csv,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 12290, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+LN_igual_SV_NV_NS,datos/processed/2015/municipio_edad.csv,"""Igualdad exacta en todas las filas""",0,pasa,0,[],Bloquea B3 si falla
+denominador_cero_tasa,datos/processed/2015/municipio_edad.csv,"""Indefinido (nulo), nunca tasa cero""",150,advertencia,0,"[{""EDOCVE"": ""19"", ""MPIOCVE"": ""031"", ""grupo_edad"": ""18-24"", ""LN"": 498, ""SV"": 0, ""NV"": 0, ""NS"": 498, ""tasa"": null}, {""EDOCVE"": ""19"", ""MPIOCVE"": ""031"", ""grupo_edad"": ""25-34"", ""LN"": 574, ""SV"": 0, ""NV"": 0, ""NS"": 574, ""tasa"": null}, {""EDOCVE"": ""19"", ""MPIOCVE"": ""031"", ""grupo_edad"": ""35-44"", ""LN"": 539, ""SV"": 0, ""NV"": 0, ""NS"": 539, ""tasa"": null}, {""EDOCVE"": ""19"", ""MPIOCVE"": ""031"", ""grupo_edad"": ""45-59"", ""LN"": 663, ""SV"": 0, ""NV"": 0, ""NS"": 663, ""tasa"": null}, {""EDOCVE"": ""19"", ""MPIOCVE"": ""031"", ""grupo_edad"": ""60+"", ""LN"": 641, ""SV"": 0, ""NV"": 0, ""NS"": 641, ""tasa"": null}]",No bloquea si se conserva nulo y la unidad no se considera completa
+rango_tasa,datos/processed/2015/municipio_edad.csv,"""[0,100] cuando está definido""",0,pasa,0,[],Bloquea B3 si falla
+denominador_cero_ns_pct,datos/processed/2015/municipio_edad.csv,"""Indefinido (nulo), nunca tasa cero""",0,pasa,0,[],No bloquea si se conserva nulo y la unidad no se considera completa
+rango_ns_pct,datos/processed/2015/municipio_edad.csv,"""[0,100] cuando está definido""",0,pasa,0,[],Bloquea B3 si falla
+cinco_edades_por_municipio,datos/processed/2015/,5,[5],pasa,0,[],Bloquea B3 si falla
+esquema,datos/processed/2015/municipios_nombres.csv,"[""EDOCVE"", ""MPIOCVE"", ""EDONOM"", ""MPIONOM"", ""nombre_norm""]","[""EDOCVE"", ""MPIOCVE"", ""EDONOM"", ""MPIONOM"", ""nombre_norm""]",pasa,0,[],Bloquea B3 si falla
+clave_EDOCVE,datos/processed/2015/municipios_nombres.csv,"""Entero 1..32, representación de ancho 2""",0,pasa,0,[],Bloquea B3 si falla
+clave_MPIOCVE,datos/processed/2015/municipios_nombres.csv,"""Entero 1..999, representación de ancho 3""",0,pasa,0,[],Bloquea B3 si falla
+nombres_no_nulos,datos/processed/2015/,0,0,pasa,0,[],Bloquea B3 si falla
+normalizacion_independiente,datos/processed/2015/,"""NFKD, sin acentos ni caracteres fuera A-Z0-9""",0,pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2015/municipios_nombres.csv,"{""clave"": [""EDOCVE"", ""MPIOCVE"", ""MPIONOM"", ""nombre_norm""], ""duplicados_o_nulos"": 0}","{""filas"": 2458, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2015/nombres_vs_agregados:recalculado,"{""clave"": [""EDOCVE"", ""MPIOCVE""], ""duplicados_o_nulos"": 0}","{""filas"": 2458, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2015/nombres_vs_agregados:guardado,"{""clave"": [""EDOCVE"", ""MPIOCVE""], ""duplicados_o_nulos"": 0}","{""filas"": 2458, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,datos/processed/2015/nombres_vs_agregados,2458,2458,pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2015/auditoria.json:recalculado,"{""clave"": [""anio""], ""duplicados_o_nulos"": 0}","{""filas"": 1, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2015/auditoria.json:guardado,"{""clave"": [""anio""], ""duplicados_o_nulos"": 0}","{""filas"": 1, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,datos/processed/2015/auditoria.json,1,1,pasa,0,[],Bloquea B3 si falla
+valor_LN,datos/processed/2015/auditoria.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_SV,datos/processed/2015/auditoria.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NV,datos/processed/2015/auditoria.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NS,datos/processed/2015/auditoria.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_municipios,datos/processed/2015/auditoria.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_filas_agregadas,datos/processed/2015/auditoria.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+exclusion_etaria_heredada,datos/processed/2015/auditoria.json,"""No deducir microfilas desde agregados""","{""age_lt18_rows"": 0, ""age_unclassified_rows"": 0}",no comprobado,0,[],No bloquea: metadatos heredados; totales CSV/JSON se contrastan por separado
+metadato_estatal_LN,datos/processed/2015/auditoria.json,83563462,83563462,pasa,0,[],Bloquea B3 si falla
+metadato_estatal_SV,datos/processed/2015/auditoria.json,36926612,36926612,pasa,0,[],Bloquea B3 si falla
+metadato_estatal_NV,datos/processed/2015/auditoria.json,41517874,41517874,pasa,0,[],Bloquea B3 si falla
+metadato_estatal_NS,datos/processed/2015/auditoria.json,5118976,5118976,pasa,0,[],Bloquea B3 si falla
+metadato_estatal_rows,datos/processed/2015/auditoria.json,9106059,9106059,pasa,0,[],Bloquea B3 si falla
+esquema,datos/processed/2015/municipio_edad_sexo.csv,"[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""anio"", ""SEXO"", ""LN"", ""SV"", ""NV"", ""NS""]","[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""SEXO"", ""anio"", ""LN"", ""SV"", ""NV"", ""NS""]",pasa,0,[],Bloquea B3 si falla
+clave_EDOCVE,datos/processed/2015/municipio_edad_sexo.csv,"""Entero 1..32, representación de ancho 2""",0,pasa,0,[],Bloquea B3 si falla
+clave_MPIOCVE,datos/processed/2015/municipio_edad_sexo.csv,"""Entero 1..999, representación de ancho 3""",0,pasa,0,[],Bloquea B3 si falla
+conteo_LN,datos/processed/2015/municipio_edad_sexo.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_SV,datos/processed/2015/municipio_edad_sexo.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_NV,datos/processed/2015/municipio_edad_sexo.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_NS,datos/processed/2015/municipio_edad_sexo.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+anio,datos/processed/2015/municipio_edad_sexo.csv,2015,"[""2015""]",pasa,0,[],Bloquea B3 si falla
+categorias_edad,datos/processed/2015/municipio_edad_sexo.csv,"[""18-24"", ""25-34"", ""35-44"", ""45-59"", ""60+""]","[""18-24"", ""25-34"", ""35-44"", ""45-59"", ""60+""]",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2015/municipio_edad_sexo.csv,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""SEXO""], ""duplicados_o_nulos"": 0}","{""filas"": 24580, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+LN_igual_SV_NV_NS,datos/processed/2015/municipio_edad_sexo.csv,"""Igualdad exacta en todas las filas""",0,pasa,0,[],Bloquea B3 si falla
+denominador_cero_tasa,datos/processed/2015/municipio_edad_sexo.csv,"""Indefinido (nulo), nunca tasa cero""",300,advertencia,0,"[{""EDOCVE"": ""19"", ""MPIOCVE"": ""031"", ""grupo_edad"": ""18-24"", ""LN"": 261, ""SV"": 0, ""NV"": 0, ""NS"": 261, ""tasa"": null}, {""EDOCVE"": ""19"", ""MPIOCVE"": ""031"", ""grupo_edad"": ""18-24"", ""LN"": 237, ""SV"": 0, ""NV"": 0, ""NS"": 237, ""tasa"": null}, {""EDOCVE"": ""19"", ""MPIOCVE"": ""031"", ""grupo_edad"": ""25-34"", ""LN"": 307, ""SV"": 0, ""NV"": 0, ""NS"": 307, ""tasa"": null}, {""EDOCVE"": ""19"", ""MPIOCVE"": ""031"", ""grupo_edad"": ""25-34"", ""LN"": 267, ""SV"": 0, ""NV"": 0, ""NS"": 267, ""tasa"": null}, {""EDOCVE"": ""19"", ""MPIOCVE"": ""031"", ""grupo_edad"": ""35-44"", ""LN"": 275, ""SV"": 0, ""NV"": 0, ""NS"": 275, ""tasa"": null}]",No bloquea si se conserva nulo y la unidad no se considera completa
+rango_tasa,datos/processed/2015/municipio_edad_sexo.csv,"""[0,100] cuando está definido""",0,pasa,0,[],Bloquea B3 si falla
+denominador_cero_ns_pct,datos/processed/2015/municipio_edad_sexo.csv,"""Indefinido (nulo), nunca tasa cero""",0,pasa,0,[],No bloquea si se conserva nulo y la unidad no se considera completa
+rango_ns_pct,datos/processed/2015/municipio_edad_sexo.csv,"""[0,100] cuando está definido""",0,pasa,0,[],Bloquea B3 si falla
+categorias_SEXO,datos/processed/2015/municipio_edad_sexo.csv,"[""0"", ""1""]","[""0"", ""1""]",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2015/municipio_edad_sexo.csv:marginal_principal:recalculado,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 12290, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2015/municipio_edad_sexo.csv:marginal_principal:guardado,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 12290, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,datos/processed/2015/municipio_edad_sexo.csv:marginal_principal,12290,12290,pasa,0,[],Bloquea B3 si falla
+valor_LN,datos/processed/2015/municipio_edad_sexo.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_SV,datos/processed/2015/municipio_edad_sexo.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NV,datos/processed/2015/municipio_edad_sexo.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NS,datos/processed/2015/municipio_edad_sexo.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+LN_por_sexo,datos/processed/2015/auditoria.json,"{""0"": 40219786, ""1"": 43343676}","{""0"": 40219786, ""1"": 43343676}",pasa,0,[],Bloquea B3 si falla
+esquema,datos/processed/2015/municipio_edad_tipo_seccion.csv,"[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""anio"", ""TIPOSEC"", ""LN"", ""SV"", ""NV"", ""NS""]","[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""TIPOSEC"", ""anio"", ""LN"", ""SV"", ""NV"", ""NS""]",pasa,0,[],Bloquea B3 si falla
+clave_EDOCVE,datos/processed/2015/municipio_edad_tipo_seccion.csv,"""Entero 1..32, representación de ancho 2""",0,pasa,0,[],Bloquea B3 si falla
+clave_MPIOCVE,datos/processed/2015/municipio_edad_tipo_seccion.csv,"""Entero 1..999, representación de ancho 3""",0,pasa,0,[],Bloquea B3 si falla
+conteo_LN,datos/processed/2015/municipio_edad_tipo_seccion.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_SV,datos/processed/2015/municipio_edad_tipo_seccion.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_NV,datos/processed/2015/municipio_edad_tipo_seccion.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_NS,datos/processed/2015/municipio_edad_tipo_seccion.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+anio,datos/processed/2015/municipio_edad_tipo_seccion.csv,2015,"[""2015""]",pasa,0,[],Bloquea B3 si falla
+categorias_edad,datos/processed/2015/municipio_edad_tipo_seccion.csv,"[""18-24"", ""25-34"", ""35-44"", ""45-59"", ""60+""]","[""18-24"", ""25-34"", ""35-44"", ""45-59"", ""60+""]",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2015/municipio_edad_tipo_seccion.csv,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""TIPOSEC""], ""duplicados_o_nulos"": 0}","{""filas"": 28434, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+LN_igual_SV_NV_NS,datos/processed/2015/municipio_edad_tipo_seccion.csv,"""Igualdad exacta en todas las filas""",0,pasa,0,[],Bloquea B3 si falla
+denominador_cero_tasa,datos/processed/2015/municipio_edad_tipo_seccion.csv,"""Indefinido (nulo), nunca tasa cero""",474,advertencia,0,"[{""EDOCVE"": ""08"", ""MPIOCVE"": ""057"", ""grupo_edad"": ""18-24"", ""LN"": 81, ""SV"": 0, ""NV"": 0, ""NS"": 81, ""tasa"": null}, {""EDOCVE"": ""08"", ""MPIOCVE"": ""057"", ""grupo_edad"": ""25-34"", ""LN"": 132, ""SV"": 0, ""NV"": 0, ""NS"": 132, ""tasa"": null}, {""EDOCVE"": ""08"", ""MPIOCVE"": ""057"", ""grupo_edad"": ""35-44"", ""LN"": 106, ""SV"": 0, ""NV"": 0, ""NS"": 106, ""tasa"": null}, {""EDOCVE"": ""08"", ""MPIOCVE"": ""057"", ""grupo_edad"": ""45-59"", ""LN"": 160, ""SV"": 0, ""NV"": 0, ""NS"": 160, ""tasa"": null}, {""EDOCVE"": ""08"", ""MPIOCVE"": ""057"", ""grupo_edad"": ""60+"", ""LN"": 170, ""SV"": 0, ""NV"": 0, ""NS"": 170, ""tasa"": null}]",No bloquea si se conserva nulo y la unidad no se considera completa
+rango_tasa,datos/processed/2015/municipio_edad_tipo_seccion.csv,"""[0,100] cuando está definido""",0,pasa,0,[],Bloquea B3 si falla
+denominador_cero_ns_pct,datos/processed/2015/municipio_edad_tipo_seccion.csv,"""Indefinido (nulo), nunca tasa cero""",0,pasa,0,[],No bloquea si se conserva nulo y la unidad no se considera completa
+rango_ns_pct,datos/processed/2015/municipio_edad_tipo_seccion.csv,"""[0,100] cuando está definido""",0,pasa,0,[],Bloquea B3 si falla
+categorias_TIPOSEC,datos/processed/2015/municipio_edad_tipo_seccion.csv,"[""U"", ""M"", ""R""]","[""M"", ""R"", ""U""]",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2015/municipio_edad_tipo_seccion.csv:marginal_principal:recalculado,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 12290, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2015/municipio_edad_tipo_seccion.csv:marginal_principal:guardado,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 12290, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,datos/processed/2015/municipio_edad_tipo_seccion.csv:marginal_principal,12290,12290,pasa,0,[],Bloquea B3 si falla
+valor_LN,datos/processed/2015/municipio_edad_tipo_seccion.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_SV,datos/processed/2015/municipio_edad_tipo_seccion.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NV,datos/processed/2015/municipio_edad_tipo_seccion.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NS,datos/processed/2015/municipio_edad_tipo_seccion.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+LN_por_tipo_seccion,datos/processed/2015/auditoria.json,"{""M"": 10451349, ""R"": 14989955, ""U"": 58122158}","{""M"": 10451349, ""R"": 14989955, ""U"": 58122158}",pasa,0,[],Bloquea B3 si falla
+esquema,datos/processed/2018/municipio_edad.csv,"[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""anio"", ""LN"", ""SV"", ""NV"", ""NS""]","[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""anio"", ""LN"", ""SV"", ""NV"", ""NS""]",pasa,0,[],Bloquea B3 si falla
+clave_EDOCVE,datos/processed/2018/municipio_edad.csv,"""Entero 1..32, representación de ancho 2""",0,pasa,0,[],Bloquea B3 si falla
+clave_MPIOCVE,datos/processed/2018/municipio_edad.csv,"""Entero 1..999, representación de ancho 3""",0,pasa,0,[],Bloquea B3 si falla
+conteo_LN,datos/processed/2018/municipio_edad.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_SV,datos/processed/2018/municipio_edad.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_NV,datos/processed/2018/municipio_edad.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_NS,datos/processed/2018/municipio_edad.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+anio,datos/processed/2018/municipio_edad.csv,2018,"[""2018""]",pasa,0,[],Bloquea B3 si falla
+categorias_edad,datos/processed/2018/municipio_edad.csv,"[""18-24"", ""25-34"", ""35-44"", ""45-59"", ""60+""]","[""18-24"", ""25-34"", ""35-44"", ""45-59"", ""60+""]",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2018/municipio_edad.csv,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 12315, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+LN_igual_SV_NV_NS,datos/processed/2018/municipio_edad.csv,"""Igualdad exacta en todas las filas""",0,pasa,0,[],Bloquea B3 si falla
+denominador_cero_tasa,datos/processed/2018/municipio_edad.csv,"""Indefinido (nulo), nunca tasa cero""",65,advertencia,0,"[{""EDOCVE"": ""07"", ""MPIOCVE"": ""086"", ""grupo_edad"": ""18-24"", ""LN"": 1370, ""SV"": 0, ""NV"": 0, ""NS"": 1370, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""086"", ""grupo_edad"": ""25-34"", ""LN"": 1852, ""SV"": 0, ""NV"": 0, ""NS"": 1852, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""086"", ""grupo_edad"": ""35-44"", ""LN"": 1534, ""SV"": 0, ""NV"": 0, ""NS"": 1534, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""086"", ""grupo_edad"": ""45-59"", ""LN"": 1377, ""SV"": 0, ""NV"": 0, ""NS"": 1377, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""086"", ""grupo_edad"": ""60+"", ""LN"": 954, ""SV"": 0, ""NV"": 0, ""NS"": 954, ""tasa"": null}]",No bloquea si se conserva nulo y la unidad no se considera completa
+rango_tasa,datos/processed/2018/municipio_edad.csv,"""[0,100] cuando está definido""",0,pasa,0,[],Bloquea B3 si falla
+denominador_cero_ns_pct,datos/processed/2018/municipio_edad.csv,"""Indefinido (nulo), nunca tasa cero""",0,pasa,0,[],No bloquea si se conserva nulo y la unidad no se considera completa
+rango_ns_pct,datos/processed/2018/municipio_edad.csv,"""[0,100] cuando está definido""",0,pasa,0,[],Bloquea B3 si falla
+cinco_edades_por_municipio,datos/processed/2018/,5,[5],pasa,0,[],Bloquea B3 si falla
+esquema,datos/processed/2018/municipios_nombres.csv,"[""EDOCVE"", ""MPIOCVE"", ""EDONOM"", ""MPIONOM"", ""nombre_norm""]","[""EDOCVE"", ""MPIOCVE"", ""EDONOM"", ""MPIONOM"", ""nombre_norm""]",pasa,0,[],Bloquea B3 si falla
+clave_EDOCVE,datos/processed/2018/municipios_nombres.csv,"""Entero 1..32, representación de ancho 2""",0,pasa,0,[],Bloquea B3 si falla
+clave_MPIOCVE,datos/processed/2018/municipios_nombres.csv,"""Entero 1..999, representación de ancho 3""",0,pasa,0,[],Bloquea B3 si falla
+nombres_no_nulos,datos/processed/2018/,0,0,pasa,0,[],Bloquea B3 si falla
+normalizacion_independiente,datos/processed/2018/,"""NFKD, sin acentos ni caracteres fuera A-Z0-9""",0,pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2018/municipios_nombres.csv,"{""clave"": [""EDOCVE"", ""MPIOCVE"", ""MPIONOM"", ""nombre_norm""], ""duplicados_o_nulos"": 0}","{""filas"": 2463, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2018/nombres_vs_agregados:recalculado,"{""clave"": [""EDOCVE"", ""MPIOCVE""], ""duplicados_o_nulos"": 0}","{""filas"": 2463, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2018/nombres_vs_agregados:guardado,"{""clave"": [""EDOCVE"", ""MPIOCVE""], ""duplicados_o_nulos"": 0}","{""filas"": 2463, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,datos/processed/2018/nombres_vs_agregados,2463,2463,pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2018/auditoria.json:recalculado,"{""clave"": [""anio""], ""duplicados_o_nulos"": 0}","{""filas"": 1, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2018/auditoria.json:guardado,"{""clave"": [""anio""], ""duplicados_o_nulos"": 0}","{""filas"": 1, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,datos/processed/2018/auditoria.json,1,1,pasa,0,[],Bloquea B3 si falla
+valor_LN,datos/processed/2018/auditoria.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_SV,datos/processed/2018/auditoria.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NV,datos/processed/2018/auditoria.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NS,datos/processed/2018/auditoria.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_municipios,datos/processed/2018/auditoria.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_filas_agregadas,datos/processed/2018/auditoria.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+exclusion_etaria_heredada,datos/processed/2018/auditoria.json,"""No deducir microfilas desde agregados""","{""age_lt18_rows"": 0, ""age_unclassified_rows"": 0}",no comprobado,0,[],No bloquea: metadatos heredados; totales CSV/JSON se contrastan por separado
+metadato_estatal_LN,datos/processed/2018/auditoria.json,89123997,89123997,pasa,0,[],Bloquea B3 si falla
+metadato_estatal_SV,datos/processed/2018/auditoria.json,51784399,51784399,pasa,0,[],Bloquea B3 si falla
+metadato_estatal_NV,datos/processed/2018/auditoria.json,31249856,31249856,pasa,0,[],Bloquea B3 si falla
+metadato_estatal_NS,datos/processed/2018/auditoria.json,6089742,6089742,pasa,0,[],Bloquea B3 si falla
+metadato_estatal_rows,datos/processed/2018/auditoria.json,9251122,9251122,pasa,0,[],Bloquea B3 si falla
+esquema,datos/processed/2018/municipio_edad_sexo.csv,"[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""anio"", ""SEXO"", ""LN"", ""SV"", ""NV"", ""NS""]","[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""SEXO"", ""anio"", ""LN"", ""SV"", ""NV"", ""NS""]",pasa,0,[],Bloquea B3 si falla
+clave_EDOCVE,datos/processed/2018/municipio_edad_sexo.csv,"""Entero 1..32, representación de ancho 2""",0,pasa,0,[],Bloquea B3 si falla
+clave_MPIOCVE,datos/processed/2018/municipio_edad_sexo.csv,"""Entero 1..999, representación de ancho 3""",0,pasa,0,[],Bloquea B3 si falla
+conteo_LN,datos/processed/2018/municipio_edad_sexo.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_SV,datos/processed/2018/municipio_edad_sexo.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_NV,datos/processed/2018/municipio_edad_sexo.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_NS,datos/processed/2018/municipio_edad_sexo.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+anio,datos/processed/2018/municipio_edad_sexo.csv,2018,"[""2018""]",pasa,0,[],Bloquea B3 si falla
+categorias_edad,datos/processed/2018/municipio_edad_sexo.csv,"[""18-24"", ""25-34"", ""35-44"", ""45-59"", ""60+""]","[""18-24"", ""25-34"", ""35-44"", ""45-59"", ""60+""]",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2018/municipio_edad_sexo.csv,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""SEXO""], ""duplicados_o_nulos"": 0}","{""filas"": 24630, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+LN_igual_SV_NV_NS,datos/processed/2018/municipio_edad_sexo.csv,"""Igualdad exacta en todas las filas""",0,pasa,0,[],Bloquea B3 si falla
+denominador_cero_tasa,datos/processed/2018/municipio_edad_sexo.csv,"""Indefinido (nulo), nunca tasa cero""",130,advertencia,0,"[{""EDOCVE"": ""07"", ""MPIOCVE"": ""086"", ""grupo_edad"": ""18-24"", ""LN"": 697, ""SV"": 0, ""NV"": 0, ""NS"": 697, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""086"", ""grupo_edad"": ""18-24"", ""LN"": 673, ""SV"": 0, ""NV"": 0, ""NS"": 673, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""086"", ""grupo_edad"": ""25-34"", ""LN"": 872, ""SV"": 0, ""NV"": 0, ""NS"": 872, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""086"", ""grupo_edad"": ""25-34"", ""LN"": 980, ""SV"": 0, ""NV"": 0, ""NS"": 980, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""086"", ""grupo_edad"": ""35-44"", ""LN"": 763, ""SV"": 0, ""NV"": 0, ""NS"": 763, ""tasa"": null}]",No bloquea si se conserva nulo y la unidad no se considera completa
+rango_tasa,datos/processed/2018/municipio_edad_sexo.csv,"""[0,100] cuando está definido""",0,pasa,0,[],Bloquea B3 si falla
+denominador_cero_ns_pct,datos/processed/2018/municipio_edad_sexo.csv,"""Indefinido (nulo), nunca tasa cero""",0,pasa,0,[],No bloquea si se conserva nulo y la unidad no se considera completa
+rango_ns_pct,datos/processed/2018/municipio_edad_sexo.csv,"""[0,100] cuando está definido""",0,pasa,0,[],Bloquea B3 si falla
+categorias_SEXO,datos/processed/2018/municipio_edad_sexo.csv,"[""0"", ""1""]","[""0"", ""1""]",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2018/municipio_edad_sexo.csv:marginal_principal:recalculado,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 12315, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2018/municipio_edad_sexo.csv:marginal_principal:guardado,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 12315, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,datos/processed/2018/municipio_edad_sexo.csv:marginal_principal,12315,12315,pasa,0,[],Bloquea B3 si falla
+valor_LN,datos/processed/2018/municipio_edad_sexo.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_SV,datos/processed/2018/municipio_edad_sexo.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NV,datos/processed/2018/municipio_edad_sexo.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NS,datos/processed/2018/municipio_edad_sexo.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+LN_por_sexo,datos/processed/2018/auditoria.json,"{""0"": 42913845, ""1"": 46210152}","{""0"": 42913845, ""1"": 46210152}",pasa,0,[],Bloquea B3 si falla
+esquema,datos/processed/2018/municipio_edad_tipo_seccion.csv,"[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""anio"", ""TIPOSEC"", ""LN"", ""SV"", ""NV"", ""NS""]","[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""TIPOSEC"", ""anio"", ""LN"", ""SV"", ""NV"", ""NS""]",pasa,0,[],Bloquea B3 si falla
+clave_EDOCVE,datos/processed/2018/municipio_edad_tipo_seccion.csv,"""Entero 1..32, representación de ancho 2""",0,pasa,0,[],Bloquea B3 si falla
+clave_MPIOCVE,datos/processed/2018/municipio_edad_tipo_seccion.csv,"""Entero 1..999, representación de ancho 3""",0,pasa,0,[],Bloquea B3 si falla
+conteo_LN,datos/processed/2018/municipio_edad_tipo_seccion.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_SV,datos/processed/2018/municipio_edad_tipo_seccion.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_NV,datos/processed/2018/municipio_edad_tipo_seccion.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_NS,datos/processed/2018/municipio_edad_tipo_seccion.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+anio,datos/processed/2018/municipio_edad_tipo_seccion.csv,2018,"[""2018""]",pasa,0,[],Bloquea B3 si falla
+categorias_edad,datos/processed/2018/municipio_edad_tipo_seccion.csv,"[""18-24"", ""25-34"", ""35-44"", ""45-59"", ""60+""]","[""18-24"", ""25-34"", ""35-44"", ""45-59"", ""60+""]",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2018/municipio_edad_tipo_seccion.csv,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""TIPOSEC""], ""duplicados_o_nulos"": 0}","{""filas"": 28525, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+LN_igual_SV_NV_NS,datos/processed/2018/municipio_edad_tipo_seccion.csv,"""Igualdad exacta en todas las filas""",0,pasa,0,[],Bloquea B3 si falla
+denominador_cero_tasa,datos/processed/2018/municipio_edad_tipo_seccion.csv,"""Indefinido (nulo), nunca tasa cero""",300,advertencia,0,"[{""EDOCVE"": ""07"", ""MPIOCVE"": ""005"", ""grupo_edad"": ""18-24"", ""LN"": 537, ""SV"": 0, ""NV"": 0, ""NS"": 537, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""005"", ""grupo_edad"": ""25-34"", ""LN"": 814, ""SV"": 0, ""NV"": 0, ""NS"": 814, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""005"", ""grupo_edad"": ""35-44"", ""LN"": 604, ""SV"": 0, ""NV"": 0, ""NS"": 604, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""005"", ""grupo_edad"": ""45-59"", ""LN"": 605, ""SV"": 0, ""NV"": 0, ""NS"": 605, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""005"", ""grupo_edad"": ""60+"", ""LN"": 534, ""SV"": 0, ""NV"": 0, ""NS"": 534, ""tasa"": null}]",No bloquea si se conserva nulo y la unidad no se considera completa
+rango_tasa,datos/processed/2018/municipio_edad_tipo_seccion.csv,"""[0,100] cuando está definido""",0,pasa,0,[],Bloquea B3 si falla
+denominador_cero_ns_pct,datos/processed/2018/municipio_edad_tipo_seccion.csv,"""Indefinido (nulo), nunca tasa cero""",0,pasa,0,[],No bloquea si se conserva nulo y la unidad no se considera completa
+rango_ns_pct,datos/processed/2018/municipio_edad_tipo_seccion.csv,"""[0,100] cuando está definido""",0,pasa,0,[],Bloquea B3 si falla
+categorias_TIPOSEC,datos/processed/2018/municipio_edad_tipo_seccion.csv,"[""U"", ""M"", ""R""]","[""M"", ""R"", ""U""]",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2018/municipio_edad_tipo_seccion.csv:marginal_principal:recalculado,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 12315, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2018/municipio_edad_tipo_seccion.csv:marginal_principal:guardado,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 12315, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,datos/processed/2018/municipio_edad_tipo_seccion.csv:marginal_principal,12315,12315,pasa,0,[],Bloquea B3 si falla
+valor_LN,datos/processed/2018/municipio_edad_tipo_seccion.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_SV,datos/processed/2018/municipio_edad_tipo_seccion.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NV,datos/processed/2018/municipio_edad_tipo_seccion.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NS,datos/processed/2018/municipio_edad_tipo_seccion.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+LN_por_tipo_seccion,datos/processed/2018/auditoria.json,"{""M"": 12149928, ""R"": 15647060, ""U"": 61327009}","{""M"": 12149928, ""R"": 15647060, ""U"": 61327009}",pasa,0,[],Bloquea B3 si falla
+esquema,datos/processed/2021/municipio_edad.csv,"[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""anio"", ""LN"", ""SV"", ""NV"", ""NS""]","[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""anio"", ""LN"", ""SV"", ""NV"", ""NS""]",pasa,0,[],Bloquea B3 si falla
+clave_EDOCVE,datos/processed/2021/municipio_edad.csv,"""Entero 1..32, representación de ancho 2""",0,pasa,0,[],Bloquea B3 si falla
+clave_MPIOCVE,datos/processed/2021/municipio_edad.csv,"""Entero 1..999, representación de ancho 3""",0,pasa,0,[],Bloquea B3 si falla
+conteo_LN,datos/processed/2021/municipio_edad.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_SV,datos/processed/2021/municipio_edad.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_NV,datos/processed/2021/municipio_edad.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_NS,datos/processed/2021/municipio_edad.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+anio,datos/processed/2021/municipio_edad.csv,2021,"[""2021""]",pasa,0,[],Bloquea B3 si falla
+categorias_edad,datos/processed/2021/municipio_edad.csv,"[""18-24"", ""25-34"", ""35-44"", ""45-59"", ""60+""]","[""18-24"", ""25-34"", ""35-44"", ""45-59"", ""60+""]",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2021/municipio_edad.csv,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 12340, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+LN_igual_SV_NV_NS,datos/processed/2021/municipio_edad.csv,"""Igualdad exacta en todas las filas""",0,pasa,0,[],Bloquea B3 si falla
+denominador_cero_tasa,datos/processed/2021/municipio_edad.csv,"""Indefinido (nulo), nunca tasa cero""",50,advertencia,0,"[{""EDOCVE"": ""07"", ""MPIOCVE"": ""064"", ""grupo_edad"": ""18-24"", ""LN"": 7538, ""SV"": 0, ""NV"": 0, ""NS"": 7538, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""064"", ""grupo_edad"": ""25-34"", ""LN"": 11114, ""SV"": 0, ""NV"": 0, ""NS"": 11114, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""064"", ""grupo_edad"": ""35-44"", ""LN"": 7513, ""SV"": 0, ""NV"": 0, ""NS"": 7513, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""064"", ""grupo_edad"": ""45-59"", ""LN"": 6828, ""SV"": 0, ""NV"": 0, ""NS"": 6828, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""064"", ""grupo_edad"": ""60+"", ""LN"": 4906, ""SV"": 0, ""NV"": 0, ""NS"": 4906, ""tasa"": null}]",No bloquea si se conserva nulo y la unidad no se considera completa
+rango_tasa,datos/processed/2021/municipio_edad.csv,"""[0,100] cuando está definido""",0,pasa,0,[],Bloquea B3 si falla
+denominador_cero_ns_pct,datos/processed/2021/municipio_edad.csv,"""Indefinido (nulo), nunca tasa cero""",0,pasa,0,[],No bloquea si se conserva nulo y la unidad no se considera completa
+rango_ns_pct,datos/processed/2021/municipio_edad.csv,"""[0,100] cuando está definido""",0,pasa,0,[],Bloquea B3 si falla
+cinco_edades_por_municipio,datos/processed/2021/,5,[5],pasa,0,[],Bloquea B3 si falla
+esquema,datos/processed/2021/municipios_nombres.csv,"[""EDOCVE"", ""MPIOCVE"", ""EDONOM"", ""MPIONOM"", ""nombre_norm""]","[""EDOCVE"", ""MPIOCVE"", ""EDONOM"", ""MPIONOM"", ""nombre_norm""]",pasa,0,[],Bloquea B3 si falla
+clave_EDOCVE,datos/processed/2021/municipios_nombres.csv,"""Entero 1..32, representación de ancho 2""",0,pasa,0,[],Bloquea B3 si falla
+clave_MPIOCVE,datos/processed/2021/municipios_nombres.csv,"""Entero 1..999, representación de ancho 3""",0,pasa,0,[],Bloquea B3 si falla
+nombres_no_nulos,datos/processed/2021/,0,0,pasa,0,[],Bloquea B3 si falla
+normalizacion_independiente,datos/processed/2021/,"""NFKD, sin acentos ni caracteres fuera A-Z0-9""",0,pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2021/municipios_nombres.csv,"{""clave"": [""EDOCVE"", ""MPIOCVE"", ""MPIONOM"", ""nombre_norm""], ""duplicados_o_nulos"": 0}","{""filas"": 2468, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2021/nombres_vs_agregados:recalculado,"{""clave"": [""EDOCVE"", ""MPIOCVE""], ""duplicados_o_nulos"": 0}","{""filas"": 2468, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2021/nombres_vs_agregados:guardado,"{""clave"": [""EDOCVE"", ""MPIOCVE""], ""duplicados_o_nulos"": 0}","{""filas"": 2468, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,datos/processed/2021/nombres_vs_agregados,2468,2468,pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2021/auditoria.json:recalculado,"{""clave"": [""anio""], ""duplicados_o_nulos"": 0}","{""filas"": 1, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2021/auditoria.json:guardado,"{""clave"": [""anio""], ""duplicados_o_nulos"": 0}","{""filas"": 1, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,datos/processed/2021/auditoria.json,1,1,pasa,0,[],Bloquea B3 si falla
+valor_LN,datos/processed/2021/auditoria.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_SV,datos/processed/2021/auditoria.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NV,datos/processed/2021/auditoria.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NS,datos/processed/2021/auditoria.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_municipios,datos/processed/2021/auditoria.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_filas_agregadas,datos/processed/2021/auditoria.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+exclusion_etaria_heredada,datos/processed/2021/auditoria.json,"""No deducir microfilas desde agregados""","{""age_lt18_rows"": 0, ""age_unclassified_rows"": 0}",no comprobado,0,[],No bloquea: metadatos heredados; totales CSV/JSON se contrastan por separado
+metadato_estatal_LN,datos/processed/2021/auditoria.json,93532133,93532133,pasa,0,[],Bloquea B3 si falla
+metadato_estatal_SV,datos/processed/2021/auditoria.json,46389189,46389189,pasa,0,[],Bloquea B3 si falla
+metadato_estatal_NV,datos/processed/2021/auditoria.json,43099624,43099624,pasa,0,[],Bloquea B3 si falla
+metadato_estatal_NS,datos/processed/2021/auditoria.json,4043320,4043320,pasa,0,[],Bloquea B3 si falla
+metadato_estatal_rows,datos/processed/2021/auditoria.json,9430502,9430502,pasa,0,[],Bloquea B3 si falla
+esquema,datos/processed/2021/municipio_edad_sexo.csv,"[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""anio"", ""SEXO"", ""LN"", ""SV"", ""NV"", ""NS""]","[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""SEXO"", ""anio"", ""LN"", ""SV"", ""NV"", ""NS""]",pasa,0,[],Bloquea B3 si falla
+clave_EDOCVE,datos/processed/2021/municipio_edad_sexo.csv,"""Entero 1..32, representación de ancho 2""",0,pasa,0,[],Bloquea B3 si falla
+clave_MPIOCVE,datos/processed/2021/municipio_edad_sexo.csv,"""Entero 1..999, representación de ancho 3""",0,pasa,0,[],Bloquea B3 si falla
+conteo_LN,datos/processed/2021/municipio_edad_sexo.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_SV,datos/processed/2021/municipio_edad_sexo.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_NV,datos/processed/2021/municipio_edad_sexo.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_NS,datos/processed/2021/municipio_edad_sexo.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+anio,datos/processed/2021/municipio_edad_sexo.csv,2021,"[""2021""]",pasa,0,[],Bloquea B3 si falla
+categorias_edad,datos/processed/2021/municipio_edad_sexo.csv,"[""18-24"", ""25-34"", ""35-44"", ""45-59"", ""60+""]","[""18-24"", ""25-34"", ""35-44"", ""45-59"", ""60+""]",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2021/municipio_edad_sexo.csv,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""SEXO""], ""duplicados_o_nulos"": 0}","{""filas"": 24680, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+LN_igual_SV_NV_NS,datos/processed/2021/municipio_edad_sexo.csv,"""Igualdad exacta en todas las filas""",0,pasa,0,[],Bloquea B3 si falla
+denominador_cero_tasa,datos/processed/2021/municipio_edad_sexo.csv,"""Indefinido (nulo), nunca tasa cero""",100,advertencia,0,"[{""EDOCVE"": ""07"", ""MPIOCVE"": ""064"", ""grupo_edad"": ""18-24"", ""LN"": 3879, ""SV"": 0, ""NV"": 0, ""NS"": 3879, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""064"", ""grupo_edad"": ""18-24"", ""LN"": 3659, ""SV"": 0, ""NV"": 0, ""NS"": 3659, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""064"", ""grupo_edad"": ""25-34"", ""LN"": 5534, ""SV"": 0, ""NV"": 0, ""NS"": 5534, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""064"", ""grupo_edad"": ""25-34"", ""LN"": 5580, ""SV"": 0, ""NV"": 0, ""NS"": 5580, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""064"", ""grupo_edad"": ""35-44"", ""LN"": 3775, ""SV"": 0, ""NV"": 0, ""NS"": 3775, ""tasa"": null}]",No bloquea si se conserva nulo y la unidad no se considera completa
+rango_tasa,datos/processed/2021/municipio_edad_sexo.csv,"""[0,100] cuando está definido""",0,pasa,0,[],Bloquea B3 si falla
+denominador_cero_ns_pct,datos/processed/2021/municipio_edad_sexo.csv,"""Indefinido (nulo), nunca tasa cero""",0,pasa,0,[],No bloquea si se conserva nulo y la unidad no se considera completa
+rango_ns_pct,datos/processed/2021/municipio_edad_sexo.csv,"""[0,100] cuando está definido""",0,pasa,0,[],Bloquea B3 si falla
+categorias_SEXO,datos/processed/2021/municipio_edad_sexo.csv,"[""0"", ""1""]","[""0"", ""1""]",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2021/municipio_edad_sexo.csv:marginal_principal:recalculado,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 12340, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2021/municipio_edad_sexo.csv:marginal_principal:guardado,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 12340, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,datos/processed/2021/municipio_edad_sexo.csv:marginal_principal,12340,12340,pasa,0,[],Bloquea B3 si falla
+valor_LN,datos/processed/2021/municipio_edad_sexo.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_SV,datos/processed/2021/municipio_edad_sexo.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NV,datos/processed/2021/municipio_edad_sexo.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NS,datos/processed/2021/municipio_edad_sexo.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+LN_por_sexo,datos/processed/2021/auditoria.json,"{""0"": 45067547, ""1"": 48464586}","{""0"": 45067547, ""1"": 48464586}",pasa,0,[],Bloquea B3 si falla
+esquema,datos/processed/2021/municipio_edad_tipo_seccion.csv,"[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""anio"", ""TIPOSEC"", ""LN"", ""SV"", ""NV"", ""NS""]","[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""TIPOSEC"", ""anio"", ""LN"", ""SV"", ""NV"", ""NS""]",pasa,0,[],Bloquea B3 si falla
+clave_EDOCVE,datos/processed/2021/municipio_edad_tipo_seccion.csv,"""Entero 1..32, representación de ancho 2""",0,pasa,0,[],Bloquea B3 si falla
+clave_MPIOCVE,datos/processed/2021/municipio_edad_tipo_seccion.csv,"""Entero 1..999, representación de ancho 3""",0,pasa,0,[],Bloquea B3 si falla
+conteo_LN,datos/processed/2021/municipio_edad_tipo_seccion.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_SV,datos/processed/2021/municipio_edad_tipo_seccion.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_NV,datos/processed/2021/municipio_edad_tipo_seccion.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_NS,datos/processed/2021/municipio_edad_tipo_seccion.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+anio,datos/processed/2021/municipio_edad_tipo_seccion.csv,2021,"[""2021""]",pasa,0,[],Bloquea B3 si falla
+categorias_edad,datos/processed/2021/municipio_edad_tipo_seccion.csv,"[""18-24"", ""25-34"", ""35-44"", ""45-59"", ""60+""]","[""18-24"", ""25-34"", ""35-44"", ""45-59"", ""60+""]",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2021/municipio_edad_tipo_seccion.csv,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""TIPOSEC""], ""duplicados_o_nulos"": 0}","{""filas"": 28635, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+LN_igual_SV_NV_NS,datos/processed/2021/municipio_edad_tipo_seccion.csv,"""Igualdad exacta en todas las filas""",0,pasa,0,[],Bloquea B3 si falla
+denominador_cero_tasa,datos/processed/2021/municipio_edad_tipo_seccion.csv,"""Indefinido (nulo), nunca tasa cero""",250,advertencia,0,"[{""EDOCVE"": ""07"", ""MPIOCVE"": ""064"", ""grupo_edad"": ""18-24"", ""LN"": 5946, ""SV"": 0, ""NV"": 0, ""NS"": 5946, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""064"", ""grupo_edad"": ""18-24"", ""LN"": 1592, ""SV"": 0, ""NV"": 0, ""NS"": 1592, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""064"", ""grupo_edad"": ""25-34"", ""LN"": 8524, ""SV"": 0, ""NV"": 0, ""NS"": 8524, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""064"", ""grupo_edad"": ""25-34"", ""LN"": 2590, ""SV"": 0, ""NV"": 0, ""NS"": 2590, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""064"", ""grupo_edad"": ""35-44"", ""LN"": 5751, ""SV"": 0, ""NV"": 0, ""NS"": 5751, ""tasa"": null}]",No bloquea si se conserva nulo y la unidad no se considera completa
+rango_tasa,datos/processed/2021/municipio_edad_tipo_seccion.csv,"""[0,100] cuando está definido""",0,pasa,0,[],Bloquea B3 si falla
+denominador_cero_ns_pct,datos/processed/2021/municipio_edad_tipo_seccion.csv,"""Indefinido (nulo), nunca tasa cero""",0,pasa,0,[],No bloquea si se conserva nulo y la unidad no se considera completa
+rango_ns_pct,datos/processed/2021/municipio_edad_tipo_seccion.csv,"""[0,100] cuando está definido""",0,pasa,0,[],Bloquea B3 si falla
+categorias_TIPOSEC,datos/processed/2021/municipio_edad_tipo_seccion.csv,"[""U"", ""M"", ""R""]","[""M"", ""R"", ""U""]",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2021/municipio_edad_tipo_seccion.csv:marginal_principal:recalculado,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 12340, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2021/municipio_edad_tipo_seccion.csv:marginal_principal:guardado,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 12340, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,datos/processed/2021/municipio_edad_tipo_seccion.csv:marginal_principal,12340,12340,pasa,0,[],Bloquea B3 si falla
+valor_LN,datos/processed/2021/municipio_edad_tipo_seccion.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_SV,datos/processed/2021/municipio_edad_tipo_seccion.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NV,datos/processed/2021/municipio_edad_tipo_seccion.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NS,datos/processed/2021/municipio_edad_tipo_seccion.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+LN_por_tipo_seccion,datos/processed/2021/auditoria.json,"{""M"": 12745754, ""R"": 16366852, ""U"": 64419527}","{""M"": 12745754, ""R"": 16366852, ""U"": 64419527}",pasa,0,[],Bloquea B3 si falla
+esquema,datos/processed/2024/municipio_edad.csv,"[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""anio"", ""LN"", ""SV"", ""NV"", ""NS""]","[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""anio"", ""LN"", ""SV"", ""NV"", ""NS""]",pasa,0,[],Bloquea B3 si falla
+clave_EDOCVE,datos/processed/2024/municipio_edad.csv,"""Entero 1..32, representación de ancho 2""",0,pasa,0,[],Bloquea B3 si falla
+clave_MPIOCVE,datos/processed/2024/municipio_edad.csv,"""Entero 1..999, representación de ancho 3""",0,pasa,0,[],Bloquea B3 si falla
+conteo_LN,datos/processed/2024/municipio_edad.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_SV,datos/processed/2024/municipio_edad.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_NV,datos/processed/2024/municipio_edad.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_NS,datos/processed/2024/municipio_edad.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+anio,datos/processed/2024/municipio_edad.csv,2024,"[""2024""]",pasa,0,[],Bloquea B3 si falla
+categorias_edad,datos/processed/2024/municipio_edad.csv,"[""18-24"", ""25-34"", ""35-44"", ""45-59"", ""60+""]","[""18-24"", ""25-34"", ""35-44"", ""45-59"", ""60+""]",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2024/municipio_edad.csv,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 12385, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+LN_igual_SV_NV_NS,datos/processed/2024/municipio_edad.csv,"""Igualdad exacta en todas las filas""",0,pasa,0,[],Bloquea B3 si falla
+denominador_cero_tasa,datos/processed/2024/municipio_edad.csv,"""Indefinido (nulo), nunca tasa cero""",60,advertencia,0,"[{""EDOCVE"": ""07"", ""MPIOCVE"": ""030"", ""grupo_edad"": ""18-24"", ""LN"": 4227, ""SV"": 0, ""NV"": 0, ""NS"": 4227, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""030"", ""grupo_edad"": ""25-34"", ""LN"": 6439, ""SV"": 0, ""NV"": 0, ""NS"": 6439, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""030"", ""grupo_edad"": ""35-44"", ""LN"": 5565, ""SV"": 0, ""NV"": 0, ""NS"": 5565, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""030"", ""grupo_edad"": ""45-59"", ""LN"": 5798, ""SV"": 0, ""NV"": 0, ""NS"": 5798, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""030"", ""grupo_edad"": ""60+"", ""LN"": 4301, ""SV"": 0, ""NV"": 0, ""NS"": 4301, ""tasa"": null}]",No bloquea si se conserva nulo y la unidad no se considera completa
+rango_tasa,datos/processed/2024/municipio_edad.csv,"""[0,100] cuando está definido""",0,pasa,0,[],Bloquea B3 si falla
+denominador_cero_ns_pct,datos/processed/2024/municipio_edad.csv,"""Indefinido (nulo), nunca tasa cero""",0,pasa,0,[],No bloquea si se conserva nulo y la unidad no se considera completa
+rango_ns_pct,datos/processed/2024/municipio_edad.csv,"""[0,100] cuando está definido""",0,pasa,0,[],Bloquea B3 si falla
+cinco_edades_por_municipio,datos/processed/2024/,5,[5],pasa,0,[],Bloquea B3 si falla
+esquema,datos/processed/2024/municipios_nombres.csv,"[""EDOCVE"", ""MPIOCVE"", ""EDONOM"", ""MPIONOM"", ""nombre_norm""]","[""EDOCVE"", ""MPIOCVE"", ""EDONOM"", ""MPIONOM"", ""nombre_norm""]",pasa,0,[],Bloquea B3 si falla
+clave_EDOCVE,datos/processed/2024/municipios_nombres.csv,"""Entero 1..32, representación de ancho 2""",0,pasa,0,[],Bloquea B3 si falla
+clave_MPIOCVE,datos/processed/2024/municipios_nombres.csv,"""Entero 1..999, representación de ancho 3""",0,pasa,0,[],Bloquea B3 si falla
+nombres_no_nulos,datos/processed/2024/,0,0,pasa,0,[],Bloquea B3 si falla
+normalizacion_independiente,datos/processed/2024/,"""NFKD, sin acentos ni caracteres fuera A-Z0-9""",0,pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2024/municipios_nombres.csv,"{""clave"": [""EDOCVE"", ""MPIOCVE"", ""MPIONOM"", ""nombre_norm""], ""duplicados_o_nulos"": 0}","{""filas"": 2477, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2024/nombres_vs_agregados:recalculado,"{""clave"": [""EDOCVE"", ""MPIOCVE""], ""duplicados_o_nulos"": 0}","{""filas"": 2477, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2024/nombres_vs_agregados:guardado,"{""clave"": [""EDOCVE"", ""MPIOCVE""], ""duplicados_o_nulos"": 0}","{""filas"": 2477, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,datos/processed/2024/nombres_vs_agregados,2477,2477,pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2024/auditoria.json:recalculado,"{""clave"": [""anio""], ""duplicados_o_nulos"": 0}","{""filas"": 1, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2024/auditoria.json:guardado,"{""clave"": [""anio""], ""duplicados_o_nulos"": 0}","{""filas"": 1, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,datos/processed/2024/auditoria.json,1,1,pasa,0,[],Bloquea B3 si falla
+valor_LN,datos/processed/2024/auditoria.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_SV,datos/processed/2024/auditoria.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NV,datos/processed/2024/auditoria.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NS,datos/processed/2024/auditoria.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_municipios,datos/processed/2024/auditoria.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_filas_agregadas,datos/processed/2024/auditoria.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+exclusion_etaria_heredada,datos/processed/2024/auditoria.json,"""No deducir microfilas desde agregados""","{""age_lt18_rows"": 0, ""age_unclassified_rows"": 0}",no comprobado,0,[],No bloquea: metadatos heredados; totales CSV/JSON se contrastan por separado
+metadato_estatal_LN,datos/processed/2024/auditoria.json,98330348,98330348,pasa,0,[],Bloquea B3 si falla
+metadato_estatal_SV,datos/processed/2024/auditoria.json,54899228,54899228,pasa,0,[],Bloquea B3 si falla
+metadato_estatal_NV,datos/processed/2024/auditoria.json,37105466,37105466,pasa,0,[],Bloquea B3 si falla
+metadato_estatal_NS,datos/processed/2024/auditoria.json,6325654,6325654,pasa,0,[],Bloquea B3 si falla
+metadato_estatal_rows,datos/processed/2024/auditoria.json,9773730,9773730,pasa,0,[],Bloquea B3 si falla
+esquema,datos/processed/2024/municipio_edad_sexo.csv,"[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""anio"", ""SEXO"", ""LN"", ""SV"", ""NV"", ""NS""]","[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""SEXO"", ""anio"", ""LN"", ""SV"", ""NV"", ""NS""]",pasa,0,[],Bloquea B3 si falla
+clave_EDOCVE,datos/processed/2024/municipio_edad_sexo.csv,"""Entero 1..32, representación de ancho 2""",0,pasa,0,[],Bloquea B3 si falla
+clave_MPIOCVE,datos/processed/2024/municipio_edad_sexo.csv,"""Entero 1..999, representación de ancho 3""",0,pasa,0,[],Bloquea B3 si falla
+conteo_LN,datos/processed/2024/municipio_edad_sexo.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_SV,datos/processed/2024/municipio_edad_sexo.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_NV,datos/processed/2024/municipio_edad_sexo.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_NS,datos/processed/2024/municipio_edad_sexo.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+anio,datos/processed/2024/municipio_edad_sexo.csv,2024,"[""2024""]",pasa,0,[],Bloquea B3 si falla
+categorias_edad,datos/processed/2024/municipio_edad_sexo.csv,"[""18-24"", ""25-34"", ""35-44"", ""45-59"", ""60+""]","[""18-24"", ""25-34"", ""35-44"", ""45-59"", ""60+""]",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2024/municipio_edad_sexo.csv,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""SEXO""], ""duplicados_o_nulos"": 0}","{""filas"": 24848, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+LN_igual_SV_NV_NS,datos/processed/2024/municipio_edad_sexo.csv,"""Igualdad exacta en todas las filas""",0,pasa,0,[],Bloquea B3 si falla
+denominador_cero_tasa,datos/processed/2024/municipio_edad_sexo.csv,"""Indefinido (nulo), nunca tasa cero""",120,advertencia,0,"[{""EDOCVE"": ""07"", ""MPIOCVE"": ""030"", ""grupo_edad"": ""18-24"", ""LN"": 1979, ""SV"": 0, ""NV"": 0, ""NS"": 1979, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""030"", ""grupo_edad"": ""18-24"", ""LN"": 2248, ""SV"": 0, ""NV"": 0, ""NS"": 2248, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""030"", ""grupo_edad"": ""25-34"", ""LN"": 3110, ""SV"": 0, ""NV"": 0, ""NS"": 3110, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""030"", ""grupo_edad"": ""25-34"", ""LN"": 3329, ""SV"": 0, ""NV"": 0, ""NS"": 3329, ""tasa"": null}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""030"", ""grupo_edad"": ""35-44"", ""LN"": 2678, ""SV"": 0, ""NV"": 0, ""NS"": 2678, ""tasa"": null}]",No bloquea si se conserva nulo y la unidad no se considera completa
+rango_tasa,datos/processed/2024/municipio_edad_sexo.csv,"""[0,100] cuando está definido""",0,pasa,0,[],Bloquea B3 si falla
+denominador_cero_ns_pct,datos/processed/2024/municipio_edad_sexo.csv,"""Indefinido (nulo), nunca tasa cero""",0,pasa,0,[],No bloquea si se conserva nulo y la unidad no se considera completa
+rango_ns_pct,datos/processed/2024/municipio_edad_sexo.csv,"""[0,100] cuando está definido""",0,pasa,0,[],Bloquea B3 si falla
+categorias_SEXO,datos/processed/2024/municipio_edad_sexo.csv,"[""0"", ""1"", ""2""]","[""0"", ""1"", ""2""]",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2024/municipio_edad_sexo.csv:marginal_principal:recalculado,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 12385, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2024/municipio_edad_sexo.csv:marginal_principal:guardado,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 12385, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,datos/processed/2024/municipio_edad_sexo.csv:marginal_principal,12385,12385,pasa,0,[],Bloquea B3 si falla
+valor_LN,datos/processed/2024/municipio_edad_sexo.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_SV,datos/processed/2024/municipio_edad_sexo.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NV,datos/processed/2024/municipio_edad_sexo.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NS,datos/processed/2024/municipio_edad_sexo.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+LN_por_sexo,datos/processed/2024/auditoria.json,"{""0"": 47226431, ""1"": 51103812, ""2"": 105}","{""0"": 47226431, ""1"": 51103812, ""2"": 105}",pasa,0,[],Bloquea B3 si falla
+esquema,datos/processed/2024/municipio_edad_tipo_seccion.csv,"[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""anio"", ""TIPOSEC"", ""LN"", ""SV"", ""NV"", ""NS""]","[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""TIPOSEC"", ""anio"", ""LN"", ""SV"", ""NV"", ""NS""]",pasa,0,[],Bloquea B3 si falla
+clave_EDOCVE,datos/processed/2024/municipio_edad_tipo_seccion.csv,"""Entero 1..32, representación de ancho 2""",0,pasa,0,[],Bloquea B3 si falla
+clave_MPIOCVE,datos/processed/2024/municipio_edad_tipo_seccion.csv,"""Entero 1..999, representación de ancho 3""",0,pasa,0,[],Bloquea B3 si falla
+conteo_LN,datos/processed/2024/municipio_edad_tipo_seccion.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_SV,datos/processed/2024/municipio_edad_tipo_seccion.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_NV,datos/processed/2024/municipio_edad_tipo_seccion.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+conteo_NS,datos/processed/2024/municipio_edad_tipo_seccion.csv,"""Finito, entero, no negativo, <=2**53""",0,pasa,0,[],Bloquea B3 si falla
+anio,datos/processed/2024/municipio_edad_tipo_seccion.csv,2024,"[""2024""]",pasa,0,[],Bloquea B3 si falla
+categorias_edad,datos/processed/2024/municipio_edad_tipo_seccion.csv,"[""18-24"", ""25-34"", ""35-44"", ""45-59"", ""60+""]","[""18-24"", ""25-34"", ""35-44"", ""45-59"", ""60+""]",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2024/municipio_edad_tipo_seccion.csv,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""TIPOSEC""], ""duplicados_o_nulos"": 0}","{""filas"": 28770, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+LN_igual_SV_NV_NS,datos/processed/2024/municipio_edad_tipo_seccion.csv,"""Igualdad exacta en todas las filas""",0,pasa,0,[],Bloquea B3 si falla
+denominador_cero_tasa,datos/processed/2024/municipio_edad_tipo_seccion.csv,"""Indefinido (nulo), nunca tasa cero""",275,advertencia,0,"[{""EDOCVE"": ""04"", ""MPIOCVE"": ""013"", ""grupo_edad"": ""18-24"", ""LN"": 131, ""SV"": 0, ""NV"": 0, ""NS"": 131, ""tasa"": null}, {""EDOCVE"": ""04"", ""MPIOCVE"": ""013"", ""grupo_edad"": ""25-34"", ""LN"": 192, ""SV"": 0, ""NV"": 0, ""NS"": 192, ""tasa"": null}, {""EDOCVE"": ""04"", ""MPIOCVE"": ""013"", ""grupo_edad"": ""35-44"", ""LN"": 154, ""SV"": 0, ""NV"": 0, ""NS"": 154, ""tasa"": null}, {""EDOCVE"": ""04"", ""MPIOCVE"": ""013"", ""grupo_edad"": ""45-59"", ""LN"": 240, ""SV"": 0, ""NV"": 0, ""NS"": 240, ""tasa"": null}, {""EDOCVE"": ""04"", ""MPIOCVE"": ""013"", ""grupo_edad"": ""60+"", ""LN"": 156, ""SV"": 0, ""NV"": 0, ""NS"": 156, ""tasa"": null}]",No bloquea si se conserva nulo y la unidad no se considera completa
+rango_tasa,datos/processed/2024/municipio_edad_tipo_seccion.csv,"""[0,100] cuando está definido""",0,pasa,0,[],Bloquea B3 si falla
+denominador_cero_ns_pct,datos/processed/2024/municipio_edad_tipo_seccion.csv,"""Indefinido (nulo), nunca tasa cero""",0,pasa,0,[],No bloquea si se conserva nulo y la unidad no se considera completa
+rango_ns_pct,datos/processed/2024/municipio_edad_tipo_seccion.csv,"""[0,100] cuando está definido""",0,pasa,0,[],Bloquea B3 si falla
+categorias_TIPOSEC,datos/processed/2024/municipio_edad_tipo_seccion.csv,"[""U"", ""M"", ""R""]","[""M"", ""R"", ""U""]",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2024/municipio_edad_tipo_seccion.csv:marginal_principal:recalculado,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 12385, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/2024/municipio_edad_tipo_seccion.csv:marginal_principal:guardado,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 12385, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,datos/processed/2024/municipio_edad_tipo_seccion.csv:marginal_principal,12385,12385,pasa,0,[],Bloquea B3 si falla
+valor_LN,datos/processed/2024/municipio_edad_tipo_seccion.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_SV,datos/processed/2024/municipio_edad_tipo_seccion.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NV,datos/processed/2024/municipio_edad_tipo_seccion.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NS,datos/processed/2024/municipio_edad_tipo_seccion.csv:marginal_principal,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+LN_por_tipo_seccion,datos/processed/2024/auditoria.json,"{""M"": 12822465, ""R"": 17216522, ""U"": 68291361}","{""M"": 12822465, ""R"": 17216522, ""U"": 68291361}",pasa,0,[],Bloquea B3 si falla
+esquema,analisis/reportes/auditoria_resumen.csv,"[""anio"", ""LN"", ""SV"", ""NV"", ""NS"", ""municipios""]","[""anio"", ""original_zip"", ""sha256_zip"", ""csv_estados"", ""filas"", ""municipios"", ""municipio_edad"", ""edad_min"", ""edad_max"", ""LN"", ""SV"", ""NV"", ""NS"", ""count_inconsistent"", ""count_negative"", ""unobserved_rows"", ""LN_zero_rows"", ""age_lt18_rows"", ""age_unclassified_rows""]",pasa,0,[],Bloquea B3 si falla
+unicidad,analisis/reportes/auditoria_resumen.csv:recalculado,"{""clave"": [""anio""], ""duplicados_o_nulos"": 0}","{""filas"": 6, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,analisis/reportes/auditoria_resumen.csv:guardado,"{""clave"": [""anio""], ""duplicados_o_nulos"": 0}","{""filas"": 6, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,analisis/reportes/auditoria_resumen.csv,6,6,pasa,0,[],Bloquea B3 si falla
+valor_LN,analisis/reportes/auditoria_resumen.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_SV,analisis/reportes/auditoria_resumen.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NV,analisis/reportes/auditoria_resumen.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NS,analisis/reportes/auditoria_resumen.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_municipios,analisis/reportes/auditoria_resumen.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_filas_RAW_documentadas_no_verificadas,analisis/reportes/auditoria_resumen.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_filas_agregadas,analisis/reportes/auditoria_resumen.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+esquema,analisis/reportes/resumen_nacional.csv,"[""anio"", ""LN"", ""SV"", ""NV"", ""NS"", ""municipios""]","[""anio"", ""tipo"", ""filas"", ""municipios"", ""LN"", ""SV"", ""NV"", ""NS"", ""participacion_pct"", ""ns_pct"", ""faltantes_DEL""]",pasa,0,[],Bloquea B3 si falla
+unicidad,analisis/reportes/resumen_nacional.csv:recalculado,"{""clave"": [""anio""], ""duplicados_o_nulos"": 0}","{""filas"": 6, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,analisis/reportes/resumen_nacional.csv:guardado,"{""clave"": [""anio""], ""duplicados_o_nulos"": 0}","{""filas"": 6, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,analisis/reportes/resumen_nacional.csv,6,6,pasa,0,[],Bloquea B3 si falla
+valor_LN,analisis/reportes/resumen_nacional.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_SV,analisis/reportes/resumen_nacional.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NV,analisis/reportes/resumen_nacional.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NS,analisis/reportes/resumen_nacional.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_municipios,analisis/reportes/resumen_nacional.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_filas_RAW_documentadas_no_verificadas,analisis/reportes/resumen_nacional.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_participacion_pct,analisis/reportes/resumen_nacional.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_ns_pct,analisis/reportes/resumen_nacional.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 5.551115123125783e-17}",pasa,0,[],Bloquea B3 si falla
+esquema,datos/processed/producto/historico_nacional.csv,"[""anio"", ""LN"", ""SV"", ""NV"", ""NS"", ""municipios""]","[""anio"", ""tipo"", ""filas"", ""municipios"", ""LN"", ""SV"", ""NV"", ""NS"", ""participacion_pct"", ""ns_pct"", ""faltantes_DEL""]",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/producto/historico_nacional.csv:recalculado,"{""clave"": [""anio""], ""duplicados_o_nulos"": 0}","{""filas"": 6, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/producto/historico_nacional.csv:guardado,"{""clave"": [""anio""], ""duplicados_o_nulos"": 0}","{""filas"": 6, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,datos/processed/producto/historico_nacional.csv,6,6,pasa,0,[],Bloquea B3 si falla
+valor_LN,datos/processed/producto/historico_nacional.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_SV,datos/processed/producto/historico_nacional.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NV,datos/processed/producto/historico_nacional.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NS,datos/processed/producto/historico_nacional.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_municipios,datos/processed/producto/historico_nacional.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_filas_RAW_documentadas_no_verificadas,datos/processed/producto/historico_nacional.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_participacion_pct,datos/processed/producto/historico_nacional.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_ns_pct,datos/processed/producto/historico_nacional.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 5.551115123125783e-17}",pasa,0,[],Bloquea B3 si falla
+esquema,analisis/reportes/participacion_por_edad_y_anio.csv,"[""anio"", ""grupo_edad"", ""LN"", ""SV"", ""NV"", ""NS"", ""participacion_pct""]","[""anio"", ""grupo_edad"", ""LN"", ""SV"", ""NV"", ""NS"", ""participacion_pct"", ""ns_pct""]",pasa,0,[],Bloquea B3 si falla
+unicidad,analisis/reportes/participacion_por_edad_y_anio.csv:recalculado,"{""clave"": [""anio"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 30, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,analisis/reportes/participacion_por_edad_y_anio.csv:guardado,"{""clave"": [""anio"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 30, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,analisis/reportes/participacion_por_edad_y_anio.csv,30,30,pasa,0,[],Bloquea B3 si falla
+valor_LN,analisis/reportes/participacion_por_edad_y_anio.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_SV,analisis/reportes/participacion_por_edad_y_anio.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NV,analisis/reportes/participacion_por_edad_y_anio.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NS,analisis/reportes/participacion_por_edad_y_anio.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_participacion_pct,analisis/reportes/participacion_por_edad_y_anio.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 1.4210854715202004e-14}",pasa,0,[],Bloquea B3 si falla
+valor_ns_pct,analisis/reportes/participacion_por_edad_y_anio.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 8.881784197001252e-16}",pasa,0,[],Bloquea B3 si falla
+esquema,analisis/reportes/participacion_por_sexo_y_anio.csv,"[""anio"", ""SEXO"", ""LN"", ""SV"", ""NV"", ""NS"", ""participacion_pct""]","[""anio"", ""SEXO"", ""LN"", ""SV"", ""NV"", ""NS"", ""participacion_pct""]",pasa,0,[],Bloquea B3 si falla
+unicidad,analisis/reportes/participacion_por_sexo_y_anio.csv:recalculado,"{""clave"": [""anio"", ""SEXO""], ""duplicados_o_nulos"": 0}","{""filas"": 13, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,analisis/reportes/participacion_por_sexo_y_anio.csv:guardado,"{""clave"": [""anio"", ""SEXO""], ""duplicados_o_nulos"": 0}","{""filas"": 13, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,analisis/reportes/participacion_por_sexo_y_anio.csv,13,13,pasa,0,[],Bloquea B3 si falla
+valor_LN,analisis/reportes/participacion_por_sexo_y_anio.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_SV,analisis/reportes/participacion_por_sexo_y_anio.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NV,analisis/reportes/participacion_por_sexo_y_anio.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NS,analisis/reportes/participacion_por_sexo_y_anio.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_participacion_pct,analisis/reportes/participacion_por_sexo_y_anio.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 1.4210854715202004e-14}",pasa,0,[],Bloquea B3 si falla
+esquema,analisis/reportes/participacion_por_tipo_seccion_y_anio.csv,"[""anio"", ""TIPOSEC"", ""LN"", ""SV"", ""NV"", ""NS"", ""participacion_pct""]","[""anio"", ""TIPOSEC"", ""LN"", ""SV"", ""NV"", ""NS"", ""participacion_pct""]",pasa,0,[],Bloquea B3 si falla
+unicidad,analisis/reportes/participacion_por_tipo_seccion_y_anio.csv:recalculado,"{""clave"": [""anio"", ""TIPOSEC""], ""duplicados_o_nulos"": 0}","{""filas"": 18, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,analisis/reportes/participacion_por_tipo_seccion_y_anio.csv:guardado,"{""clave"": [""anio"", ""TIPOSEC""], ""duplicados_o_nulos"": 0}","{""filas"": 18, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,analisis/reportes/participacion_por_tipo_seccion_y_anio.csv,18,18,pasa,0,[],Bloquea B3 si falla
+valor_LN,analisis/reportes/participacion_por_tipo_seccion_y_anio.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_SV,analisis/reportes/participacion_por_tipo_seccion_y_anio.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NV,analisis/reportes/participacion_por_tipo_seccion_y_anio.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NS,analisis/reportes/participacion_por_tipo_seccion_y_anio.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_participacion_pct,analisis/reportes/participacion_por_tipo_seccion_y_anio.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 7.105427357601002e-15}",pasa,0,[],Bloquea B3 si falla
+esquema,datos/processed/serie_municipio_edad_2009_2024.csv,"[""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad""]","[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""anio"", ""LN"", ""SV"", ""NV"", ""NS"", ""observados"", ""tasa"", ""ns_pct"", ""variantes_nombre"", ""identidad_estable_conservadora""]",pasa,0,[],Bloquea B3 si falla
+clave_EDOCVE,datos/processed/serie_municipio_edad_2009_2024.csv,"""Entero 1..32, representación de ancho 2""",0,pasa,0,[],Bloquea B3 si falla
+clave_MPIOCVE,datos/processed/serie_municipio_edad_2009_2024.csv,"""Entero 1..999, representación de ancho 3""",0,pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/serie_municipio_edad_2009_2024.csv:recalculado,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 73895, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/serie_municipio_edad_2009_2024.csv:guardado,"{""clave"": [""anio"", ""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 73895, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,datos/processed/serie_municipio_edad_2009_2024.csv,73895,73895,pasa,0,[],Bloquea B3 si falla
+valor_LN,datos/processed/serie_municipio_edad_2009_2024.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_SV,datos/processed/serie_municipio_edad_2009_2024.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NV,datos/processed/serie_municipio_edad_2009_2024.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NS,datos/processed/serie_municipio_edad_2009_2024.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_observados,datos/processed/serie_municipio_edad_2009_2024.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_tasa,datos/processed/serie_municipio_edad_2009_2024.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 2.842170943040401e-14}",pasa,0,[],Bloquea B3 si falla
+valor_ns_pct,datos/processed/serie_municipio_edad_2009_2024.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 2.842170943040401e-14}",pasa,0,[],Bloquea B3 si falla
+valor_variantes_nombre,datos/processed/serie_municipio_edad_2009_2024.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_identidad_estable_conservadora,datos/processed/serie_municipio_edad_2009_2024.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": null}",pasa,0,[],Bloquea B3 si falla
+esquema,datos/processed/matriz_modelo_6_anios.csv,"[""EDOCVE"", ""MPIOCVE"", ""grupo_edad""]","[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""LN_2009"", ""LN_2012"", ""LN_2015"", ""LN_2018"", ""LN_2021"", ""LN_2024"", ""NS_2009"", ""NS_2012"", ""NS_2015"", ""NS_2018"", ""NS_2021"", ""NS_2024"", ""NV_2009"", ""NV_2012"", ""NV_2015"", ""NV_2018"", ""NV_2021"", ""NV_2024"", ""SV_2009"", ""SV_2012"", ""SV_2015"", ""SV_2018"", ""SV_2021"", ""SV_2024"", ""ns_pct_2009"", ""ns_pct_2012"", ""ns_pct_2015"", ""ns_pct_2018"", ""ns_pct_2021"", ""ns_pct_2024"", ""observados_2009"", ""observados_2012"", ""observados_2015"", ""observados_2018"", ""observados_2021"", ""observados_2024"", ""tasa_2009"", ""tasa_2012"", ""tasa_2015"", ""tasa_2018"", ""tasa_2021"", ""tasa_2024"", ""variantes_nombre"", ""identidad_estable_conservadora"", ""completo_6"", ""max_ns_pct"", ""min_observados"", ""apto_modelo"", ""media_presidencial"", ""media_intermedia"", ""brecha_pres_intermedia"", ""cambio_presidencial_pp"", ""cambio_intermedia_pp"", ""curvatura_presidencial_pp"", ""curvatura_intermedia_pp""]",pasa,0,[],Bloquea B3 si falla
+clave_EDOCVE,datos/processed/matriz_modelo_6_anios.csv,"""Entero 1..32, representación de ancho 2""",0,pasa,0,[],Bloquea B3 si falla
+clave_MPIOCVE,datos/processed/matriz_modelo_6_anios.csv,"""Entero 1..999, representación de ancho 3""",0,pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/matriz_modelo_6_anios.csv:recalculado,"{""clave"": [""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 12385, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/matriz_modelo_6_anios.csv:guardado,"{""clave"": [""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 12385, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,datos/processed/matriz_modelo_6_anios.csv,12385,12385,pasa,0,[],Bloquea B3 si falla
+valor_LN_2009,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_SV_2009,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NV_2009,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NS_2009,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_observados_2009,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_tasa_2009,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 1.4210854715202004e-14}",pasa,0,[],Bloquea B3 si falla
+valor_ns_pct_2009,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 2.842170943040401e-14}",pasa,0,[],Bloquea B3 si falla
+valor_LN_2012,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_SV_2012,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NV_2012,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NS_2012,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_observados_2012,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_tasa_2012,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 2.842170943040401e-14}",pasa,0,[],Bloquea B3 si falla
+valor_ns_pct_2012,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 1.4210854715202004e-14}",pasa,0,[],Bloquea B3 si falla
+valor_LN_2015,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_SV_2015,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NV_2015,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NS_2015,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_observados_2015,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_tasa_2015,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 2.842170943040401e-14}",pasa,0,[],Bloquea B3 si falla
+valor_ns_pct_2015,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 1.4210854715202004e-14}",pasa,0,[],Bloquea B3 si falla
+valor_LN_2018,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_SV_2018,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NV_2018,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NS_2018,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_observados_2018,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_tasa_2018,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 2.842170943040401e-14}",pasa,0,[],Bloquea B3 si falla
+valor_ns_pct_2018,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 1.4210854715202004e-14}",pasa,0,[],Bloquea B3 si falla
+valor_LN_2021,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_SV_2021,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NV_2021,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NS_2021,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_observados_2021,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_tasa_2021,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 2.842170943040401e-14}",pasa,0,[],Bloquea B3 si falla
+valor_ns_pct_2021,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 1.4210854715202004e-14}",pasa,0,[],Bloquea B3 si falla
+valor_LN_2024,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_SV_2024,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NV_2024,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_NS_2024,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_observados_2024,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_tasa_2024,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 2.842170943040401e-14}",pasa,0,[],Bloquea B3 si falla
+valor_ns_pct_2024,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 1.4210854715202004e-14}",pasa,0,[],Bloquea B3 si falla
+valor_variantes_nombre,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_identidad_estable_conservadora,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": null}",pasa,0,[],Bloquea B3 si falla
+valor_completo_6,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": null}",pasa,0,[],Bloquea B3 si falla
+valor_min_observados,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_max_ns_pct,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 2.842170943040401e-14}",pasa,0,[],Bloquea B3 si falla
+valor_apto_modelo,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": null}",pasa,0,[],Bloquea B3 si falla
+valor_media_presidencial,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 2.842170943040401e-14}",pasa,0,[],Bloquea B3 si falla
+valor_cambio_presidencial_pp,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 3.019806626980426e-14}",pasa,0,[],Bloquea B3 si falla
+valor_curvatura_presidencial_pp,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 4.27158308724529e-14}",pasa,0,[],Bloquea B3 si falla
+valor_media_intermedia,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 2.842170943040401e-14}",pasa,0,[],Bloquea B3 si falla
+valor_cambio_intermedia_pp,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 3.019806626980426e-14}",pasa,0,[],Bloquea B3 si falla
+valor_curvatura_intermedia_pp,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 3.019806626980426e-14}",pasa,0,[],Bloquea B3 si falla
+valor_brecha_pres_intermedia,datos/processed/matriz_modelo_6_anios.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 4.973799150320701e-14}",pasa,0,[],Bloquea B3 si falla
+esquema,datos/processed/municipios_auditoria_identidad.csv,"[""EDOCVE"", ""MPIOCVE""]","[""EDOCVE"", ""MPIOCVE"", ""variantes_nombre"", ""identidad_estable_conservadora""]",pasa,0,[],Bloquea B3 si falla
+clave_EDOCVE,datos/processed/municipios_auditoria_identidad.csv,"""Entero 1..32, representación de ancho 2""",0,pasa,0,[],Bloquea B3 si falla
+clave_MPIOCVE,datos/processed/municipios_auditoria_identidad.csv,"""Entero 1..999, representación de ancho 3""",0,pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/municipios_auditoria_identidad.csv:recalculado,"{""clave"": [""EDOCVE"", ""MPIOCVE""], ""duplicados_o_nulos"": 0}","{""filas"": 2477, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/municipios_auditoria_identidad.csv:guardado,"{""clave"": [""EDOCVE"", ""MPIOCVE""], ""duplicados_o_nulos"": 0}","{""filas"": 2477, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,datos/processed/municipios_auditoria_identidad.csv,2477,2477,pasa,0,[],Bloquea B3 si falla
+valor_variantes_nombre,datos/processed/municipios_auditoria_identidad.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_identidad_estable_conservadora,datos/processed/municipios_auditoria_identidad.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": null}",pasa,0,[],Bloquea B3 si falla
+esquema,datos/processed/municipios_nombres_historicos.csv,"[""EDOCVE"", ""MPIOCVE"", ""anio"", ""MPIONOM"", ""nombre_norm""]","[""EDOCVE"", ""MPIOCVE"", ""MPIONOM"", ""nombre_norm"", ""anio""]",pasa,0,[],Bloquea B3 si falla
+clave_EDOCVE,datos/processed/municipios_nombres_historicos.csv,"""Entero 1..32, representación de ancho 2""",0,pasa,0,[],Bloquea B3 si falla
+clave_MPIOCVE,datos/processed/municipios_nombres_historicos.csv,"""Entero 1..999, representación de ancho 3""",0,pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/municipios_nombres_historicos.csv:recalculado,"{""clave"": [""EDOCVE"", ""MPIOCVE"", ""anio"", ""MPIONOM"", ""nombre_norm""], ""duplicados_o_nulos"": 0}","{""filas"": 14779, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/municipios_nombres_historicos.csv:guardado,"{""clave"": [""EDOCVE"", ""MPIOCVE"", ""anio"", ""MPIONOM"", ""nombre_norm""], ""duplicados_o_nulos"": 0}","{""filas"": 14779, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,datos/processed/municipios_nombres_historicos.csv,14779,14779,pasa,0,[],Bloquea B3 si falla
+union_exclusiones,panel reconstruido,3844,3844,pasa,0,[],Bloquea B3 si falla
+esquema,analisis/reportes/cobertura_panel.csv,"[""grupo"", ""n""]","[""grupo"", ""n""]",pasa,0,[],Bloquea B3 si falla
+unicidad,cobertura_panel.csv:recalculado,"{""clave"": [""grupo""], ""duplicados_o_nulos"": 0}","{""filas"": 4, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,cobertura_panel.csv:guardado,"{""clave"": [""grupo""], ""duplicados_o_nulos"": 0}","{""filas"": 4, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,cobertura_panel.csv,4,4,pasa,0,[],Bloquea B3 si falla
+valor_n,cobertura_panel.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+esquema,analisis/reportes/causas_exclusion_superpuestas.csv,"[""motivo"", ""n_unidades""]","[""motivo"", ""n_unidades""]",pasa,0,[],Bloquea B3 si falla
+unicidad,causas_exclusion_superpuestas.csv:recalculado,"{""clave"": [""motivo""], ""duplicados_o_nulos"": 0}","{""filas"": 4, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,causas_exclusion_superpuestas.csv:guardado,"{""clave"": [""motivo""], ""duplicados_o_nulos"": 0}","{""filas"": 4, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,causas_exclusion_superpuestas.csv,4,4,pasa,0,[],Bloquea B3 si falla
+valor_n_unidades,causas_exclusion_superpuestas.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+unicidad,resumen_modelado.json:recalculado,"{""clave"": [""universo""], ""duplicados_o_nulos"": 0}","{""filas"": 1, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,resumen_modelado.json:guardado,"{""clave"": [""universo""], ""duplicados_o_nulos"": 0}","{""filas"": 1, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,resumen_modelado.json,1,1,pasa,0,[],Bloquea B3 si falla
+valor_n_panel,resumen_modelado.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_n_completo6,resumen_modelado.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_n_validas,resumen_modelado.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_n_nombre_estable,resumen_modelado.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_n_municipios,resumen_modelado.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_LN_2024_validas,resumen_modelado.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_LN_2024_total_panel,resumen_modelado.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_cobertura_LN_2024_pct,resumen_modelado.json,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+unicidad,metadatos_dashboard.json:recalculado,"{""clave"": [""universo""], ""duplicados_o_nulos"": 0}","{""filas"": 1, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,metadatos_dashboard.json:guardado,"{""clave"": [""universo""], ""duplicados_o_nulos"": 0}","{""filas"": 1, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,metadatos_dashboard.json,1,1,pasa,0,[],Bloquea B3 si falla
+valor_total_unidades_modeladas,metadatos_dashboard.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_total_municipios_modelados,metadatos_dashboard.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_total_unidades_panel,metadatos_dashboard.json,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+unicidad,perfiles.json,"{""clave"": [""perfil_id""], ""duplicados_o_nulos"": 0}","{""filas"": 5, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+total_perfiles_n_unidades,perfiles.json,8541,8541,pasa,0,[],Bloquea B3 si falla
+total_perfiles_lista_nominal_2024,perfiles.json,81666826,81666826,pasa,0,[],Bloquea B3 si falla
+unicidad,perfiles.json vs copia metadatos:recalculado,"{""clave"": [""perfil_id""], ""duplicados_o_nulos"": 0}","{""filas"": 5, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,perfiles.json vs copia metadatos:guardado,"{""clave"": [""perfil_id""], ""duplicados_o_nulos"": 0}","{""filas"": 5, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,perfiles.json vs copia metadatos,5,5,pasa,0,[],Bloquea B3 si falla
+valor_n_unidades,perfiles.json vs copia metadatos,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_lista_nominal_2024,perfiles.json vs copia metadatos,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+esquema,ml/resultados/observaciones_segmentadas.csv,"[""EDOCVE"", ""MPIOCVE"", ""grupo_edad""]","[""EDOCVE"", ""MPIOCVE"", ""grupo_edad"", ""LN_2009"", ""LN_2012"", ""LN_2015"", ""LN_2018"", ""LN_2021"", ""LN_2024"", ""NS_2009"", ""NS_2012"", ""NS_2015"", ""NS_2018"", ""NS_2021"", ""NS_2024"", ""NV_2009"", ""NV_2012"", ""NV_2015"", ""NV_2018"", ""NV_2021"", ""NV_2024"", ""SV_2009"", ""SV_2012"", ""SV_2015"", ""SV_2018"", ""SV_2021"", ""SV_2024"", ""ns_pct_2009"", ""ns_pct_2012"", ""ns_pct_2015"", ""ns_pct_2018"", ""ns_pct_2021"", ""ns_pct_2024"", ""observados_2009"", ""observados_2012"", ""observados_2015"", ""observados_2018"", ""observados_2021"", ""observados_2024"", ""tasa_2009"", ""tasa_2012"", ""tasa_2015"", ""tasa_2018"", ""tasa_2021"", ""tasa_2024"", ""variantes_nombre"", ""identidad_estable_conservadora"", ""completo_6"", ""max_ns_pct"", ""min_observados"", ""apto_modelo"", ""media_presidencial"", ""media_intermedia"", ""brecha_pres_intermedia"", ""cambio_presidencial_pp"", ""cambio_intermedia_pp"", ""curvatura_presidencial_pp"", ""curvatura_intermedia_pp"", ""perfil_id"", ""municipio_identificador"", ""distancia_centroide""]",pasa,0,[],Bloquea B3 si falla
+clave_EDOCVE,ml/resultados/observaciones_segmentadas.csv,"""Entero 1..32, representación de ancho 2""",0,pasa,0,[],Bloquea B3 si falla
+clave_MPIOCVE,ml/resultados/observaciones_segmentadas.csv,"""Entero 1..999, representación de ancho 3""",0,pasa,0,[],Bloquea B3 si falla
+unicidad,ml/resultados/observaciones_segmentadas.csv:recalculado,"{""clave"": [""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 8541, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,ml/resultados/observaciones_segmentadas.csv:guardado,"{""clave"": [""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 8541, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,ml/resultados/observaciones_segmentadas.csv,8541,8541,pasa,0,[],Bloquea B3 si falla
+valor_media_presidencial,ml/resultados/observaciones_segmentadas.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 2.842170943040401e-14}",pasa,0,[],Bloquea B3 si falla
+valor_media_intermedia,ml/resultados/observaciones_segmentadas.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 2.842170943040401e-14}",pasa,0,[],Bloquea B3 si falla
+valor_cambio_presidencial_pp,ml/resultados/observaciones_segmentadas.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 3.019806626980426e-14}",pasa,0,[],Bloquea B3 si falla
+valor_cambio_intermedia_pp,ml/resultados/observaciones_segmentadas.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 3.019806626980426e-14}",pasa,0,[],Bloquea B3 si falla
+valor_brecha_pres_intermedia,ml/resultados/observaciones_segmentadas.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 4.973799150320701e-14}",pasa,0,[],Bloquea B3 si falla
+valor_LN_2024,ml/resultados/observaciones_segmentadas.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_max_ns_pct,ml/resultados/observaciones_segmentadas.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 1.0658141036401503e-14}",pasa,0,[],Bloquea B3 si falla
+valor_tasa_2009,ml/resultados/observaciones_segmentadas.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 1.4210854715202004e-14}",pasa,0,[],Bloquea B3 si falla
+valor_tasa_2012,ml/resultados/observaciones_segmentadas.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 2.842170943040401e-14}",pasa,0,[],Bloquea B3 si falla
+valor_tasa_2015,ml/resultados/observaciones_segmentadas.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 2.842170943040401e-14}",pasa,0,[],Bloquea B3 si falla
+valor_tasa_2018,ml/resultados/observaciones_segmentadas.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 2.842170943040401e-14}",pasa,0,[],Bloquea B3 si falla
+valor_tasa_2021,ml/resultados/observaciones_segmentadas.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 2.842170943040401e-14}",pasa,0,[],Bloquea B3 si falla
+valor_tasa_2024,ml/resultados/observaciones_segmentadas.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 2.842170943040401e-14}",pasa,0,[],Bloquea B3 si falla
+valor_observados_2009,ml/resultados/observaciones_segmentadas.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_observados_2012,ml/resultados/observaciones_segmentadas.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_observados_2015,ml/resultados/observaciones_segmentadas.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_observados_2018,ml/resultados/observaciones_segmentadas.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_observados_2021,ml/resultados/observaciones_segmentadas.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_observados_2024,ml/resultados/observaciones_segmentadas.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+esquema,datos/processed/producto/observaciones_dashboard.csv,"[""EDOCVE"", ""MPIOCVE"", ""grupo_edad""]","[""EDOCVE"", ""MPIOCVE"", ""clave_municipal"", ""EDONOM"", ""MPIONOM"", ""grupo_edad"", ""perfil_id"", ""perfil_nombre"", ""media_presidencial"", ""media_intermedia"", ""cambio_presidencial_pp"", ""cambio_intermedia_pp"", ""brecha_pres_intermedia"", ""distancia_centroide"", ""LN_2024"", ""max_ns_pct"", ""tasa_2009"", ""tasa_2012"", ""tasa_2015"", ""tasa_2018"", ""tasa_2021"", ""tasa_2024"", ""observados_2009"", ""observados_2012"", ""observados_2015"", ""observados_2018"", ""observados_2021"", ""observados_2024""]",pasa,0,[],Bloquea B3 si falla
+clave_EDOCVE,datos/processed/producto/observaciones_dashboard.csv,"""Entero 1..32, representación de ancho 2""",0,pasa,0,[],Bloquea B3 si falla
+clave_MPIOCVE,datos/processed/producto/observaciones_dashboard.csv,"""Entero 1..999, representación de ancho 3""",0,pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/producto/observaciones_dashboard.csv:recalculado,"{""clave"": [""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 8541, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,datos/processed/producto/observaciones_dashboard.csv:guardado,"{""clave"": [""EDOCVE"", ""MPIOCVE"", ""grupo_edad""], ""duplicados_o_nulos"": 0}","{""filas"": 8541, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,datos/processed/producto/observaciones_dashboard.csv,8541,8541,pasa,0,[],Bloquea B3 si falla
+valor_media_presidencial,datos/processed/producto/observaciones_dashboard.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 2.842170943040401e-14}",pasa,0,[],Bloquea B3 si falla
+valor_media_intermedia,datos/processed/producto/observaciones_dashboard.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 2.842170943040401e-14}",pasa,0,[],Bloquea B3 si falla
+valor_cambio_presidencial_pp,datos/processed/producto/observaciones_dashboard.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 3.019806626980426e-14}",pasa,0,[],Bloquea B3 si falla
+valor_cambio_intermedia_pp,datos/processed/producto/observaciones_dashboard.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 3.019806626980426e-14}",pasa,0,[],Bloquea B3 si falla
+valor_brecha_pres_intermedia,datos/processed/producto/observaciones_dashboard.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 4.973799150320701e-14}",pasa,0,[],Bloquea B3 si falla
+valor_LN_2024,datos/processed/producto/observaciones_dashboard.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_max_ns_pct,datos/processed/producto/observaciones_dashboard.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 1.0658141036401503e-14}",pasa,0,[],Bloquea B3 si falla
+valor_tasa_2009,datos/processed/producto/observaciones_dashboard.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 1.4210854715202004e-14}",pasa,0,[],Bloquea B3 si falla
+valor_tasa_2012,datos/processed/producto/observaciones_dashboard.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 2.842170943040401e-14}",pasa,0,[],Bloquea B3 si falla
+valor_tasa_2015,datos/processed/producto/observaciones_dashboard.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 2.842170943040401e-14}",pasa,0,[],Bloquea B3 si falla
+valor_tasa_2018,datos/processed/producto/observaciones_dashboard.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 2.842170943040401e-14}",pasa,0,[],Bloquea B3 si falla
+valor_tasa_2021,datos/processed/producto/observaciones_dashboard.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 2.842170943040401e-14}",pasa,0,[],Bloquea B3 si falla
+valor_tasa_2024,datos/processed/producto/observaciones_dashboard.csv,"{""coincidencia"": ""por clave"", ""atol"": 1e-10, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 2.842170943040401e-14}",pasa,0,[],Bloquea B3 si falla
+valor_observados_2009,datos/processed/producto/observaciones_dashboard.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_observados_2012,datos/processed/producto/observaciones_dashboard.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_observados_2015,datos/processed/producto/observaciones_dashboard.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_observados_2018,datos/processed/producto/observaciones_dashboard.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_observados_2021,datos/processed/producto/observaciones_dashboard.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_observados_2024,datos/processed/producto/observaciones_dashboard.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+esquema,datos/processed/producto/homologacion_municipal_auditoria.csv,"[""EDOCVE"", ""MPIOCVE""]","[""EDOCVE"", ""MPIOCVE"", ""anios_observados"", ""variantes_normalizadas"", ""nombres"", ""EDONOM"", ""MPIONOM"", ""clave_municipal"", ""estatus_administrativo"", ""requiere_revision_territorial"", ""justificacion""]",pasa,0,[],Bloquea B3 si falla
+clave_EDOCVE,datos/processed/producto/homologacion_municipal_auditoria.csv,"""Entero 1..32, representación de ancho 2""",0,pasa,0,[],Bloquea B3 si falla
+clave_MPIOCVE,datos/processed/producto/homologacion_municipal_auditoria.csv,"""Entero 1..999, representación de ancho 3""",0,pasa,0,[],Bloquea B3 si falla
+unicidad,homologacion_municipal_auditoria.csv:recalculado,"{""clave"": [""EDOCVE"", ""MPIOCVE""], ""duplicados_o_nulos"": 0}","{""filas"": 2477, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+unicidad,homologacion_municipal_auditoria.csv:guardado,"{""clave"": [""EDOCVE"", ""MPIOCVE""], ""duplicados_o_nulos"": 0}","{""filas"": 2477, ""duplicados_o_nulos"": 0}",pasa,0,[],Bloquea B3 si falla
+universo,homologacion_municipal_auditoria.csv,2477,2477,pasa,0,[],Bloquea B3 si falla
+valor_anios_observados,homologacion_municipal_auditoria.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_variantes_normalizadas,homologacion_municipal_auditoria.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": 0.0}",pasa,0,[],Bloquea B3 si falla
+valor_nombres,homologacion_municipal_auditoria.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": null}",pasa,0,[],Bloquea B3 si falla
+valor_estatus_administrativo,homologacion_municipal_auditoria.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": null}",pasa,0,[],Bloquea B3 si falla
+valor_requiere_revision_territorial,homologacion_municipal_auditoria.csv,"{""coincidencia"": ""por clave"", ""atol"": 0, ""rtol"": 0}","{""diferencias"": 0, ""max_diferencia_absoluta"": null}",pasa,0,[],Bloquea B3 si falla
+variantes_nominales,municipios procesados,"""Exclusión conservadora sin fuzzy matching""",38,advertencia,0,"[{""EDOCVE"": ""04"", ""MPIOCVE"": ""006"", ""anios_observados"": 6, ""variantes_normalizadas"": 2, ""nombres"": ""Hopelche}én | Hopelchén"", ""estatus_administrativo"": ""revisar_identidad_nominal"", ""requiere_revision_territorial"": true}, {""EDOCVE"": ""04"", ""MPIOCVE"": ""012"", ""anios_observados"": 2, ""variantes_normalizadas"": 2, ""nombres"": ""Dzitbalché | Dzitblache"", ""estatus_administrativo"": ""incompleto_en_serie"", ""requiere_revision_territorial"": true}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""038"", ""anios_observados"": 6, ""variantes_normalizadas"": 2, ""nombres"": ""Huitiupaán | Huitiupán"", ""estatus_administrativo"": ""revisar_identidad_nominal"", ""requiere_revision_territorial"": true}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""114"", ""anios_observados"": 6, ""variantes_normalizadas"": 2, ""nombres"": ""Maravilla Tejenapa | Maravilla Tenejapa"", ""estatus_administrativo"": ""revisar_identidad_nominal"", ""requiere_revision_territorial"": true}, {""EDOCVE"": ""07"", ""MPIOCVE"": ""120"", ""anios_observados"": 3, ""variantes_normalizadas"": 2, ""nombres"": ""Emiliano Zapata | Rincón Chamula San Pedro"", ""estatus_administrativo"": ""incompleto_en_serie"", ""requiere_revision_territorial"": true}]",No bloquea; nombres iguales no certifican fronteras históricas
+denominador_LN_2024,panel vs agregado 2024,98330348,98330348,pasa,0,[],Bloquea B3 si falla
+insumos_y_consumidores_intactos,SHA-256 antes/después,"""Sin cambios durante auditoría""",[],pasa,0,[],Bloquea B3 si falla
+origen_RAW,seis elecciones,"""Premisa aportada por Hiram""","""No se abrieron ni recuperaron RAW""",no comprobado,0,[],No bloquea CAMINO B; no certifica origen oficial ni extracción
+limites_territoriales_y_seleccion,panel,"""Interpretación descriptiva agregada""","""Identidad nominal no prueba geometría; grupos etarios son cortes transversales; cobertura desigual no implica ausencia de sesgo""",advertencia,0,[],No bloquea B3 exploratorio; limita representatividad e interpretación

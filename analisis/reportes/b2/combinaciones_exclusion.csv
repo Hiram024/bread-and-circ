@@ -1,0 +1,17 @@
+faltan_tasas,identidad_inestable,observados_menor_100,ns_mayor_20,faltan_conteos_o_ns,unidades,excluidas
+False,False,False,False,False,8541,False
+False,False,False,True,False,2740,True
+False,False,True,False,False,372,True
+False,False,True,True,False,117,True
+False,True,False,False,False,92,True
+False,True,False,True,False,60,True
+False,True,True,False,False,3,True
+True,False,False,False,True,56,True
+True,False,False,True,True,11,True
+True,False,True,False,True,9,True
+True,False,True,True,False,345,True
+True,False,True,True,True,4,True
+True,True,False,False,True,5,True
+True,True,False,True,True,17,True
+True,True,True,True,False,5,True
+True,True,True,True,True,8,True

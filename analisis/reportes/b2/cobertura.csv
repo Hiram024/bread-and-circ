@@ -1,0 +1,6 @@
+medida,numerador,denominador,porcentaje,universo
+unidades_panel,8541,12385,68.96245458215583,Unión de municipio × edad observada en los seis CSV
+municipios_panel,1825,2477,73.67783609204683,Unión de claves municipales en los seis CSV
+LN_2024_panel,81666826,98330348,83.05353094041729,LN 2024 de unidades del panel
+LN_2024_nacional_procesado,81666826,98330348,83.05353094041729,LN del agregado nacional procesado 2024 (cinco edades)
+municipios_2024,1825,2477,73.67783609204683,Municipios presentes en agregado 2024

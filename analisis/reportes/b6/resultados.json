@@ -1,0 +1,759 @@
+{
+  "fecha": "2026-10-29T09:51:34.410176-07:00",
+  "zona": "America/Tijuana",
+  "base": "c3170d9d95d4eeeb7d22f9a62518f3010b4f28c4",
+  "rama": "feat/analysis-dashboard",
+  "git_status": " M README.md\n M dashboard/static/app.css\n M dashboard/static/app.js\n M docs/00_memoria_tecnica_Hiram.md\n?? analisis/reportes/b6/\n?? docs/15_aceptacion_analitica_B6.md\n?? tests/test_b6_acceptance.py\n",
+  "comando": [
+    "C:\\Users\\Hiram\\Downloads\\bread-and-circ-main\\bread-and-circ-main\\.venv\\Scripts\\python.exe",
+    "analisis\\reportes\\b6\\verificar_trazabilidad.py",
+    "--root",
+    ".",
+    "--out",
+    "analisis/reportes/b6",
+    "--base-url",
+    "http://127.0.0.1:8501"
+  ],
+  "python": "3.11.15",
+  "versiones": {
+    "pandas": "2.3.3",
+    "numpy": "2.4.6",
+    "scikit-learn": "1.8.0",
+    "scipy": "1.17.1",
+    "joblib": "1.6.0"
+  },
+  "package_version": "ccpc-2009-2024-k4-v1",
+  "package_digest": "ae5243026dc27552abec02bafaba94819cb49b8dd6877416b79b188fccde1ed4",
+  "versiones_reportes": {
+    "analisis/reportes/causas_exclusion_superpuestas.csv": "081229d",
+    "analisis/reportes/b2/elegibilidad_y_causas.csv": "a5794fd",
+    "src/analytics.py": "c3170d9"
+  },
+  "fuentes_sha256": {
+    "analisis/reportes/b2/elegibilidad_y_causas.csv": "d307eb6077402ccbd0e5b377142d86667b42776b43176fa284d63b643931d661",
+    "analisis/reportes/b5/fuentes_auditoria.json": "02c26f5bb910ae16bb7a40bcb31d6209006f980dc9198bf5513fd56bfc854b9e",
+    "analisis/reportes/b5/qa_final_state.json": "eb7a73aadedb4f909f442395359a0fa66611f1674adf9cde85474506cf836e6b",
+    "analisis/reportes/b6/verificar_trazabilidad.py": "dd3899ebc5931dc3c84d1bff9defec4253174be2557282abdbdb3b851796e1af",
+    "analisis/reportes/causas_exclusion_superpuestas.csv": "0d550dfb3680871f317f327a9ae5d5e5cc4ca0a3613e14322a145e1966926592",
+    "dashboard/index.html": "48d7771b04089c4ac4cbe42556b88202f37a4cebe1aa64f03936e6437675fd05",
+    "dashboard/static/app.css": "ee21035025620d380715e1900b41176da3266c50fab98bf969d723f8c72a15bc",
+    "dashboard/static/app.js": "c128ec563a521ebfac9ee05c1f46f9e8ded58dc16160f8aa46253eeab27af4f8",
+    "datos/processed/2009/municipio_edad.csv": "3857ef79b8ca21241b1bbab1596c6b08e2432703c597d108d6b3b6291082530e",
+    "datos/processed/2012/municipio_edad.csv": "126fdfb78b95ba534f9041a854feee2aabca201585679eb390d1acc720e29d57",
+    "datos/processed/2015/municipio_edad.csv": "e5424e437e99ccf358a8b61d6ecf750b071060c01fc6354045e906fac20ae888",
+    "datos/processed/2018/municipio_edad.csv": "42b3691af5c582a2de8b7b952c4740d56c48ac02525eebc6dbfa7abce412b97c",
+    "datos/processed/2021/municipio_edad.csv": "77bc9580d1c416214fe35611ebe7b55791416827b9d6b730574f5f968a504eb5",
+    "datos/processed/2024/municipio_edad.csv": "9977aed6acce14823a92d3038a680ad121d5e929538ebae23c14f33b425c36af",
+    "datos/processed/matriz_modelo_6_anios.csv": "5a6602669eb16e80201087b7d6fc0bab79d11e54b7115a007b017795323c6ea5",
+    "datos/processed/producto/ccpc-2009-2024-k4-v1/historico_nacional.csv": "491cbb24811d9d39381f51343d9d7818a7964bf2272b8bcc0d4e802bff8c93bd",
+    "datos/processed/producto/ccpc-2009-2024-k4-v1/homologacion_municipal_auditoria.csv": "da42131b31066c9ade69ff8d3fd5cf4508c473615f9714e1a1db037b91a6a00a",
+    "datos/processed/producto/ccpc-2009-2024-k4-v1/manifest.json": "ae5243026dc27552abec02bafaba94819cb49b8dd6877416b79b188fccde1ed4",
+    "datos/processed/producto/ccpc-2009-2024-k4-v1/metadatos_dashboard.json": "90aaf2f222044c08c6adc4daf184f736918eb7c8e47302f905c556ae2b28cf98",
+    "datos/processed/producto/ccpc-2009-2024-k4-v1/modelo.joblib": "246da2f60bf2d951be8c52368a9ea9730b37e5a1d2a028f07b05b9d3801b3865",
+    "datos/processed/producto/ccpc-2009-2024-k4-v1/observaciones_dashboard.csv": "1d63ae56da9478339879e16e0497cf46c27c3d1994e4a6536ed53b4f2b536d0d",
+    "datos/processed/producto/ccpc-2009-2024-k4-v1/perfiles.json": "e1093aac1e8593d765b6bc9501e67b6b7bbe80ec0e36b63964c14d4392d22ef9",
+    "datos/processed/producto_activo.json": "072651dcdf4af53831ab122efd0eabc14e0f4dfab17dfd9656c6d01fcd45d05f",
+    "src/analytics.py": "29312554cf27a585fa0f1a17f578358401da5e73cffceb259dbdd76037cd83ea",
+    "src/dashboard_api.py": "162692c6273671fcd603d8f2bf3cab65fe2d9f92ab0224caa82e63653b601528",
+    "src/pipeline.py": "d4a63977f8ae716366d18cfd72d31ab3604a724d06156ecf8831355776ccb085",
+    "src/product_contract.py": "818c2ac2c13885cfef9de039dc7bec7eff367c83c03eb3d79d86a474880d46c0",
+    "src/reporting.py": "ae5e0c263cba29289a8c5f9ca0e16ad790168f687f29c40cc71167bfe7830820",
+    "src/validate_processed.py": "f01f3450fd9ddc97c8569d4fa76b62b1d4307a651564a6004295a9cb0b217ad0"
+  },
+  "estados": {
+    "pasa": 135
+  },
+  "anual": [
+    {
+      "anio": 2009,
+      "LN": 77481831,
+      "SV": 33316974,
+      "NV": 42298963,
+      "NS": 1865894,
+      "participacion_pct": 44.06078311242774,
+      "ns_pct": 2.4081697294943893
+    },
+    {
+      "anio": 2012,
+      "LN": 76490962,
+      "SV": 47383154,
+      "NV": 28939159,
+      "NS": 168649,
+      "participacion_pct": 62.08296386405375,
+      "ns_pct": 0.22048225776007366
+    },
+    {
+      "anio": 2015,
+      "LN": 83563462,
+      "SV": 36926612,
+      "NV": 41517874,
+      "NS": 5118976,
+      "participacion_pct": 47.07355976556466,
+      "ns_pct": 6.125854383582145
+    },
+    {
+      "anio": 2018,
+      "LN": 89123997,
+      "SV": 51784399,
+      "NV": 31249856,
+      "NS": 6089742,
+      "participacion_pct": 62.36510341424753,
+      "ns_pct": 6.832886994509458
+    },
+    {
+      "anio": 2021,
+      "LN": 93532133,
+      "SV": 46389189,
+      "NV": 43099624,
+      "NS": 4043320,
+      "participacion_pct": 51.83797554673119,
+      "ns_pct": 4.322920765636768
+    },
+    {
+      "anio": 2024,
+      "LN": 98330348,
+      "SV": 54899228,
+      "NV": 37105466,
+      "NS": 6325654,
+      "participacion_pct": 59.67002944436726,
+      "ns_pct": 6.4330637780311735
+    }
+  ],
+  "reconciliacion": {
+    "incidencias_4": 4820,
+    "incidencias_5": 4930,
+    "excluidas_4": 3844,
+    "excluidas_5": 3844,
+    "causas": {
+      "faltan_tasas": 460,
+      "identidad_inestable": 190,
+      "observados_menor_100": 863,
+      "ns_mayor_20": 3307,
+      "faltan_conteos_o_ns": 110
+    },
+    "missing_y_menor100": 21,
+    "missing_sin_menor100": 89,
+    "no_cumplen_seis_ge100": 952,
+    "celdas_anuales_observados_ausentes": 415,
+    "unidades_observados_ausentes": 110,
+    "unidades_ns_ausente": 110,
+    "faltantes_con_tasas_ausentes": 110,
+    "filas_observados_cero": 365,
+    "unidades_observados_cero": 355,
+    "faltantes_y_observados_cero": 5,
+    "combinaciones_excluidas": 15
+  },
+  "comparacion_claves_falsos_incluidos_excluidos": 0,
+  "paginas": [
+    {
+      "caso": "sin_filtros",
+      "offset": 0,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "1–100 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 100,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "101–200 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 200,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "201–300 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 300,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "301–400 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 400,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "401–500 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 500,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "501–600 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 600,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "601–700 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 700,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "701–800 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 800,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "801–900 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 900,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "901–1000 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 1000,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "1001–1100 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 1100,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "1101–1200 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 1200,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "1201–1300 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 1300,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "1301–1400 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 1400,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "1401–1500 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 1500,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "1501–1600 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 1600,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "1601–1700 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 1700,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "1701–1800 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 1800,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "1801–1900 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 1900,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "1901–2000 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 2000,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "2001–2100 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 2100,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "2101–2200 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 2200,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "2201–2300 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 2300,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "2301–2400 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 2400,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "2401–2500 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 2500,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "2501–2600 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 2600,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "2601–2700 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 2700,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "2701–2800 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 2800,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "2801–2900 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 2900,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "2901–3000 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 3000,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "3001–3100 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 3100,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "3101–3200 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 3200,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "3201–3300 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 3300,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "3301–3400 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 3400,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "3401–3500 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 3500,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "3501–3600 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 3600,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "3601–3700 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 3700,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "3701–3800 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 3800,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "3801–3900 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 3900,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "3901–4000 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 4000,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "4001–4100 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 4100,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "4101–4200 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 4200,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "4201–4300 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 4300,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "4301–4400 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 4400,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "4401–4500 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 4500,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "4501–4600 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 4600,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "4601–4700 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 4700,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "4701–4800 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 4800,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "4801–4900 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 4900,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "4901–5000 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 5000,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "5001–5100 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 5100,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "5101–5200 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 5200,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "5201–5300 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 5300,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "5301–5400 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 5400,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "5401–5500 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 5500,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "5501–5600 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 5600,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "5601–5700 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 5700,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "5701–5800 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 5800,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "5801–5900 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 5900,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "5901–6000 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 6000,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "6001–6100 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 6100,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "6101–6200 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 6200,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "6201–6300 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 6300,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "6301–6400 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 6400,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "6401–6500 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 6500,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "6501–6600 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 6600,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "6601–6700 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 6700,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "6701–6800 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 6800,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "6801–6900 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 6900,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "6901–7000 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 7000,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "7001–7100 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 7100,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "7101–7200 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 7200,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "7201–7300 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 7300,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "7301–7400 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 7400,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "7401–7500 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 7500,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "7501–7600 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 7600,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "7601–7700 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 7700,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "7701–7800 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 7800,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "7801–7900 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 7900,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "7901–8000 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 8000,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "8001–8100 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 8100,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "8101–8200 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 8200,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "8201–8300 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 8300,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "8301–8400 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 8400,
+      "visibles": 100,
+      "total": 8541,
+      "rango": "8401–8500 de 8541"
+    },
+    {
+      "caso": "sin_filtros",
+      "offset": 8500,
+      "visibles": 41,
+      "total": 8541,
+      "rango": "8501–8541 de 8541"
+    },
+    {
+      "caso": "combinado",
+      "offset": 0,
+      "visibles": 5,
+      "total": 5,
+      "rango": "1–5 de 5"
+    }
+  ],
+  "limites": "Matriz numérica API; pantalla/zoom/teclado en QA B6; RAW no revalidados"
+}

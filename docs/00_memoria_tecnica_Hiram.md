@@ -214,3 +214,79 @@ Propuesta de commitB5,no ejecutado: `feat: add question-driven analytics dashboa
 QA inspeccionó visualmente Panorama/Perfiles/Explorador/Auditoría/móvil y un PDFP2real aprobado enSQLite temporal: nombre/tamaño2155/medias/cambios/versión/revisor/limitaciones comprobados;1página sin cortes esenciales. Comprobó teclado/foco, muestras de contraste y rechazo de respuesta antigua/red/nulos/HTML,inferenciay revisión/PDF/digestobsoleto. No es certificación WCAG ni científica. Los25tests previos no se modificaron; se añadieron6grupos B5 con oráculos independientes. Se corrigió el defecto de opciones de entidad detectado por el navegador; los fallos de sincronización del harness quedaron documentados por separado.
 
 Después de incorporar este cierre documental se repite la pasada final sin ediciones concurrentes. Su resultado autoritativo, tiempos, huellas definitivas, cambios durante la pasada y alcance visual quedan en `analisis/reportes/b5/qa_final_resultados.json`, `qa_final_state.json`, `qa_final_pytest.txt`, `qa_final_browser.txt`, `qa_visual_final.json` y `docs/14_QA_B5.md`. No hubo cambios en historial real ni fuentes auditadas. B6 mantiene aceptación conRubén, otros navegadores/sistemas, lector de pantalla/zoom, notebook e informe técnico completo; no se declara completado. B5 sigue sin commit/push/merge/PR, con propuesta en inglés Conventional Commits en README/informe13.
+
+## B6 — aceptación analítica sistemática
+
+B6parte de `c3170d9d95d4eeeb7d22f9a62518f3010b4f28c4`, rama feat/analysis-dashboard, checkout limpio: B5 fue publicado con autorización posterior deHiram. Sus menciones anteriores «local/sin commit» describen el cierre original. B6 añade verificación/documentación y una corrección visual acotada, todavía sin commit/push. No presupone revisión deRubén ni termina B7–B10.
+
+### Protocolo y trazabilidad
+
+Se comprobó que las263huellas de la pasada final B5coincidían antes de editar. Servidor real identificado en127.0.0.1:8501,PID24988al comprobar, mismo paquete `ccpc-2009-2024-k4-v1` y digest `ae5243026dc27552abec02bafaba94819cb49b8dd6877416b79b188fccde1ed4`. HTML/JS/CSSservicios se comparan contra bytes del checkout;no se confunde caché/proceso anterior con versión aceptada. SQLite real ausente y preservado. Entorno Python3.11.15/sklearn1.8.0/NumPy2.4.6/SciPy1.17.1/pandas2.3.3/joblib1.6.0, sin dependencias nuevas ni cambios globales.
+
+Herramienta de lectura `analisis/reportes/b6/verificar_trazabilidad.py`:sin importar transformaciones de pipeline/reporting/analyticspara crear esperados;recalcula razones nacionales desde conteos y features/perfiles desde tasas anuales con asignaciones alineadas por entidad+municipio+edad. Su matriz incluye fuente,versión,universo,fórmula,ponderación,unidad,precisión,endpoint/campo,componente,filtros,esperado,observado,diferencia,tolerancia,estado y efecto de aceptación. La capa de pantalla se revisa además en navegador, no se declara comprobada solo por el CSV.
+
+La matriz contiene135controles numéricos y de claves/versión, no una cuota artificial de calidad. Conteos y claves exactos;float atol1e−10con datos completos, sin redondeo previo. Presentación:porcentajes1decimal y cambios2decimalespp. Salidas:matriz_trazabilidad.csv,reconciliacion_causas.csv,casos_faltantes.csv,resultados.json y verificacion.txt, dentro de analisis/reportes/b6. El informe legible es `docs/15_aceptacion_analitica_B6.md`;dictamen independiente `docs/16_QA_B6.md`.
+
+###4820frentea4930:reconciliación demostrada
+
+|Causa,universo12,385unidades|Reporte histórico cuatro causas|B2/B5 cinco causas|
+|---|---:|---:|
+|Falta alguna tasa|460|460|
+|Identidad nominal inestable|190|190|
+|Existe valor observado<100|863|863|
+|Existe NS>20%|3307|3307|
+|Faltan conteos oNS|No desglosado|110|
+|Incidencias superpuestas|4820|4930|
+|Unión de excluidas únicas|3844|3844|
+
+El reporteoriginal `analisis/reportes/causas_exclusion_superpuestas.csv`,último cambio081229d,suma cuatro flags de `src/reporting.py`;la copia B2de cuatro categorías se conservó para reconciliarlo. B2a5794fdañadió el diagnóstico `faltan_conteos_o_ns` en sus flags por unidad;B5c3170d9expone los cinco. La diferencia es categoría adicional, no110unidades reincorporadas/excluidas de nuevo. Ausencia de desglose histórico no significa cero casos;el CSVcomparativo conserva esa celda vacía.
+
+Los110casos tienenobservados yNSausentes;21tambiénalgún valor presente<100,89no. «Existe algún valor<100»=863;«no cumple seis valores>=100»=863+110−21=952. No son el mismo indicador ni se sustituye uno silenciosamente. Todos los110tambiéncarecen de alguna tasa;ya están en las cuatro causas. La unión sigue3844,y las8541elegibles coinciden exactamente con el snapshot, sin falsos incluidos/excluidos. Se identifican las110claves/años en casos_faltantes.csv. Hay415celdas anuales de observados ausentes;365ceros observados en355unidades y5solapanconausencias:110+355−5=460unidades sin seis tasas. Las causas generan15combinaciones presentes entre excluidas. La suma4930es de incidencias, no personas ni unidades distintas.
+
+### Resultados reutilizables y alcance de selección
+
+Tasas nacionales verificadas desde los seisCSVanuales:44.060783/62.082964/47.073560/62.365103/51.837976/59.670029%en2009/2012/2015/2018/2021/2024. NS/LNtambién se recalcula por año. Se conserva el universo nacional procesado de cinco edades;no se amplía aRAWcertificados. Cambios del mismo tipo:2021−2009=+7.777192ppintermedia;2024−2012=−2.412934pppresidencial, mostrados+7.78/−2.41pp. NSno es abstención ni dato ausente0%.
+
+Coberturas:elegibles8541/12385=68.9624545822%;municipios1825/2477=73.6778360920%;LN2024=81666826/98330348=83.0535309404%. Las medias de perfiles y selección son simples entre unidades,sin peso poblacional. Perfiles1840/2155/2511/2035,mismos nombresB4, y proporciones21.5431/25.2312/29.3994/23.8262%del conjunto elegible. Municipios por perfil se superponen por edad,no se suman como total único.
+
+Se recorren86páginas reales de100hasta8541claves,sin pérdidas/duplicación y con totales/resúmenes completos estables. También estado,perfil,edad,AND,búsqueda literal,vacío y detalle6añosporclave. Estado2/edad18-24tiene5unidades/5municipios,LN446745. B5ya teníafixtures independientes103filas y razón agregada19/110frentemedia simple50%;QAcomprueba vigencia y regresión, sin fabricar nuevas expectativas a partir del mismo helper.
+
+### Defecto encontrado y accesibilidad
+
+El subagente real **qa_b6** conserva propiedad exclusiva de tests/evidenciaQA/informe;el principal corrige producción y documenta. La separación no es certificación externa. Baseline nueva:31passed,1deprecación previa Starlette/httpx,exit0,49.30s. Los tests anteriores permanecen;un grupo B6añade protección de faltantes/bajo100/booleanos y de4820/4930desde panel real y fixture manual. No se cambian filtros ML para aprobarlo.
+
+QAencontró un defecto omitido enB5:Plotlylocal3.3.1ignoraba títulos de ejes como cadena. Las cifras eran correctas pero `_fullLayout...title.text`devolvíaun placeholder sin unidad. El principal cambió cuatro configuraciones a `title:{text:...}`;historyLayoutcomparte solución para nacional y detalle. Las bibliotecas,API,datos y modelos permanecen iguales. La reproducciónfallida se conserva enqa_axis_probe.txty la corrección se verifica en navegador, además de regresión del frontend. Referencias oficiales Plotlytitle.textenREADME/informe15.
+
+El control nativo de captura rechazó continuar por no poder determinar laURLdeChromecon suficiente confianza;no se insistió por esa vía. QAprobó zoom real del navegador mediante preferencias ChromiumenperfilQAtemporal propio y URLconocida, sin alterar perfil del usuario ni simular zoom conviewport/CSS/DSF/CDPpageScale. Nivel log(2)/log(1.2)=3.8017840169;ventana1442×978,100%inner1427/DPR1.25y200%inner713/DPR2.5,visualViewport.scale1/CSSzoom1ambos. El recorrido de cuatro pantallas y teclado se consigna con resultado real enQA16;esta medición preliminar sola no certifica accesibilidad.
+
+Lector de pantalla:no se declara recorrido por encontrar Narrator.exeinstalado. Sin uso real comprobado queda pendiente;no se afirma conformidadWCAGcompleta. Se reutiliza evidencia válidaB5 y se identifican pruebas nuevas necesarias por el cambioJS/zoom/semántica. Las capturas B5anteriores no se presentan como posteriores a la corrección de ejes.
+
+### Pendientes por bloque y entrega
+
+B7:revisión y aceptación conjunta conRubén,no recibida. B8/B10:documento técnico y revisión visual final. B9:preparación/ensayo de presentación. Reproducibilidad/cierre:notebook completo y otros entornos exigidos;Linux/macOS/Docker/otros navegadores no ejecutados enB6. Esta asignación precisa los pendientes históricos que B5agrupaba informalmente como «B6».
+
+Persiste cobertura desigual,clustering exploratorio,sensibilidad,geografía nominal y diagnóstico temporal condicionado;la extracciónRAWconfiable sigue siendo premisa deHiram. Aceptación de software no prueba causalidad,validez sustantiva definitiva ni seguimiento individual.
+
+El README conserva contratosB4/B5 y añadeB6;no hay cambios en sus campos o endpoints. El único cambio funcional es el arreglo de títulos de ejes. Dictamen/pruebasfinales/huellas están enQA16y `analisis/reportes/b6/qa_*`;el cierre formal se añade después de su comprobación sobre estado estable. Propuesta de commit,no ejecutada:`fix: complete analytical acceptance and restore chart and zoom accessibility`.
+
+## Reanudación del29/10/2026 y segundo defecto corregido
+
+Al retomar el checkout seguía en c3170d9con las ediciones locales B6 conservadas. El servidor anterior ya no escuchaba en8501;la primera comprobación devolvióConnectionRefused/WinError10061. Confirmado el puerto libre,se inició `.\.venv\Scripts\python.exe -B -m uvicorn src.dashboard_api:app --host 127.0.0.1 --port 8501`,PID32428al comprobar,sin detener servicios desconocidos. `analisis/reportes/b6/reanudacion.json` registra fecha/zona,salud,mismo paquete/digest y hashes de los bytes servidos HTML/JS/CSS. Se comprobaron170archivos de los prefijos protegidos allí indicados,sin cambios;ese número no sustituye el inventario final QA ni mide calidad. SQLite real sigue ausente.
+
+El último defecto QA anterior era distinto del overflow global:alzoomreal200%el menú sticky de100vhcarecía de scrollvertical propio. Aunque el DOMrecibía foco,Auditoría quedaba entre459.8y527.4conviewportCSSde414dealto;la persona no veía el control. Evidencia original `qa_nav_zoom_probe.json`/PNG. El principal añadió una regla `.sidebar{overflow-y:auto}`;QA exigió que cada uno de los seis botones al recibir foco quede dentro de la vista. Integración posterior:Auditoría200%top173/bottom240.6,dentro414. No se rediseñó navegación ni cambió contrato/modelo/datos.
+
+El navegador volvió a recorrer cuatro pantallas100/200con teclado y títulos/unidades de ejes efectivos. CapturasCDPde sololectura representan el viewportreal;las primeras capturasPlaywrightfullPagecortadas por coordinación de zoom se conservan como fallo del harness,no como imagen válida de aceptación. QA inspeccionó conview_imagelas cuatro vistas finales200%. El rechazo anterior de control nativo se conserva y no se volvió a usar esa vía.
+
+La regresión nueva reutiliza el harness B5 sin modificarlo mediante un wrapper que escribe únicamente enB6:CSVválido/inválido,asincronía/error/nulos/HTML,aprobación/PDF/tokensobsoletos y anchos1440/390pasaron en integración. La suite completa/pasada estable y dictamen formal corresponden aQA16,distintos de estas ejecuciones intermedias. No se declara aprobación deRubén,B7uotrosbloques.
+
+## Cierre B6 — aceptación con advertencias
+
+**B6: COMPLETADO CON ADVERTENCIAS. qa_b6:APROBADO CON ADVERTENCIAS no bloqueantes en integración.** La suite completa posterior a las dos correcciones ejecutó **32passed,1advertencia previa Starlette/httpx,exit0**, sin cambiar los31tests anteriores y con un grupo nuevo B6justificado. La matriz numérica ejecutada devuelve135pasa,0fallas;no cambia elegibilidad ni contrato. Los registros `qa_integration_tests.txt`/`qa_integration_state.json` distinguen este resultado de la pasada final formal posterior al cierre documental.
+
+Navegador real Chrome156:cuatro vistas100/200con zoom real de navegador,teclado,filtros,paginación/detalle,títulos/unidades de ejes y los seis botones del menú enfocados dentro deviewport. Regresión del harness B5contra código actual con salida B6:CSVválido/inválido,asincronía/error/nulos/HTML,revisión/aprobación/PDFy rechazo de versión obsoleta,anchos1440/390,exit0. CeroerroresJS y cero solicitudesexternas durante esos recorridos. Las capturas finales de zoom utilizan CDPsololectura,no una imagen recortada del harness. Datos/modelo/paquete/historial permanecen intactos;no se creóSQLite real.
+
+La pasada formal final se ejecuta después de este cierre documental,con todos los archivos del principal congelados. Sus resultados,comandos,tiempos,huellas del estado exacto y revisión visual autoritativa están en `docs/16_QA_B6.md` y `analisis/reportes/b6/qa_final_resultados.json`, `qa_final_state.json`, `qa_final_pytest.txt`, `qa_final_browser.txt` y `qa_visual_final.json`. El informe QA se excluye de autorreferencia,pero incluye el estado de documentación del principal. Cualquier fallo de esa pasada exige corrección y comprobación correspondiente;no se transforma en éxito por este texto.
+
+Límites no bloqueantes:lector de pantalla no ejecutado,otros navegadores/sistemas no probados,deprecación previa Starlette/httpx y favicon404heredado. Las respuestas422delCSVinválido son negativos esperados. No se afirma conformidadWCAG ni certificación científica del clustering. B7mantiene revisión conjunta conRubén;B8/B10documento técnico/QAvisual final;B9ensayo;reproducibilidad/cierre para notebook y otros entornos requeridos. No se declara su aceptación por asociación.
+
+No se hizo commit,push,merge,PR ni publicación. Propuesta en inglés Conventional Commits:`fix: complete analytical acceptance and restore chart and zoom accessibility`.

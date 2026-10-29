@@ -1,0 +1,22 @@
+{
+  "fecha": "2026-10-29T09:51:55.991852-07:00",
+  "servidor_inicial_reanudacion": "No escuchaba 8501; ConnectionRefused WinError10061, sin detener procesos desconocidos",
+  "comando": ".\\.venv\\Scripts\\python.exe -B -m uvicorn src.dashboard_api:app --host 127.0.0.1 --port 8501",
+  "pid_nuevo": 32428,
+  "health": {
+    "status": "ok",
+    "observaciones": 8541,
+    "perfiles": 4,
+    "package_version": "ccpc-2009-2024-k4-v1",
+    "package_digest": "ae5243026dc27552abec02bafaba94819cb49b8dd6877416b79b188fccde1ed4",
+    "k": 4
+  },
+  "servidos_sha256": {
+    "dashboard/index.html": "48d7771b04089c4ac4cbe42556b88202f37a4cebe1aa64f03936e6437675fd05",
+    "dashboard/static/app.js": "c128ec563a521ebfac9ee05c1f46f9e8ded58dc16160f8aa46253eeab27af4f8",
+    "dashboard/static/app.css": "ee21035025620d380715e1900b41176da3266c50fab98bf969d723f8c72a15bc"
+  },
+  "protected_files": 170,
+  "protected_changed": [],
+  "real_sqlite_exists": false
+}

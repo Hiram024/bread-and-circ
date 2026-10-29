@@ -1,0 +1,28 @@
+[
+  {
+    "factor": 1,
+    "level": 0,
+    "metrics": {
+      "width": 1427,
+      "height": 828,
+      "dpr": 1.25,
+      "outerWidth": 1442,
+      "outerHeight": 978,
+      "visualScale": 1,
+      "cssZoom": "1"
+    }
+  },
+  {
+    "factor": 2,
+    "level": 3.8017840169239308,
+    "metrics": {
+      "width": 713,
+      "height": 414,
+      "dpr": 2.5,
+      "outerWidth": 1442,
+      "outerHeight": 978,
+      "visualScale": 1,
+      "cssZoom": "1"
+    }
+  }
+]

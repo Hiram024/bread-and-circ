@@ -1,0 +1,75 @@
+{
+  "estado_automatizado": "PASA",
+  "controles": [
+    {
+      "control": "pytest",
+      "command": [
+        "C:\\Users\\Hiram\\Downloads\\bread-and-circ-main\\bread-and-circ-main\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp",
+        "C:\\Users\\Hiram\\AppData\\Local\\Temp\\qa-b6-final-frap3634\\pytest",
+        "tests"
+      ],
+      "exit": 0,
+      "seconds": 23.468,
+      "log": "analisis/reportes/b6/qa_final_pytest.txt"
+    },
+    {
+      "control": "traceability",
+      "command": [
+        "C:\\Users\\Hiram\\Downloads\\bread-and-circ-main\\bread-and-circ-main\\.venv\\Scripts\\python.exe",
+        "-B",
+        "C:\\Users\\Hiram\\Downloads\\bread-and-circ-main\\bread-and-circ-main\\analisis\\reportes\\b6\\verificar_trazabilidad.py",
+        "--root",
+        "C:\\Users\\Hiram\\Downloads\\bread-and-circ-main\\bread-and-circ-main",
+        "--out",
+        "C:\\Users\\Hiram\\AppData\\Local\\Temp\\qa-b6-final-frap3634\\traceability",
+        "--base-url",
+        "http://127.0.0.1:8501"
+      ],
+      "exit": 0,
+      "seconds": 6.235,
+      "log": "analisis/reportes/b6/qa_final_traceability.txt"
+    },
+    {
+      "control": "browser",
+      "command": [
+        "C:\\Users\\Hiram\\Downloads\\bread-and-circ-main\\bread-and-circ-main\\.venv\\Scripts\\python.exe",
+        "-B",
+        "C:\\Users\\Hiram\\Downloads\\bread-and-circ-main\\bread-and-circ-main\\analisis\\reportes\\b6\\qa_browser_run.py"
+      ],
+      "exit": 0,
+      "seconds": 21.0,
+      "log": "analisis/reportes/b6/qa_final_browser.txt"
+    },
+    {
+      "control": "diff_check",
+      "command": [
+        "git",
+        "diff",
+        "--check",
+        "--",
+        "dashboard",
+        "src",
+        "tests",
+        "README.md",
+        "docs/00_memoria_tecnica_Hiram.md",
+        "docs/15_aceptacion_analitica_B6.md"
+      ],
+      "exit": 0,
+      "seconds": 0.047,
+      "log": "analisis/reportes/b6/qa_final_diff_check.txt"
+    }
+  ],
+  "archivos_cambiados_durante_pasada": [],
+  "historial_real_sin_cambios": true,
+  "n_hashes": 322,
+  "protected_checked": 222,
+  "protected_changed": [],
+  "visual_review": "Separate manual inspection recorded in qa_visual_final.json, not asserted by this script"
+}

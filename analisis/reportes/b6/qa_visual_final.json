@@ -1,0 +1,14 @@
+{
+  "revisor": "qa_b6",
+  "fecha": "2026-10-29T09:58:20.822456-07:00",
+  "method": "functions.view_image direct inspection of freshly regenerated final CDP native viewport captures at real browser zoom 200% and regular profile screenshot",
+  "result": "PASA",
+  "notes": "Axes/units, periods, negative values and full profile names legible; own sidebar/table scrolling at zoom; screenshots show viewport sections of long pages, not all content at once. No WCAG or screen-reader certification.",
+  "files": {
+    "qa_zoom_200_panorama.png": "ef8834ebe3a4ab3a9deee81294f4ec5965847c906bd5723b6e80b40acf6a1718",
+    "qa_zoom_200_perfiles.png": "25c593e94536ef4e6c0957e60b0d71ffab1b49e69f20f53f69493652f8248dff",
+    "qa_zoom_200_explorador.png": "4ca5090dddafc7840942689ce27e84f3e1645d294fe75d9134429d8a5bd0c16a",
+    "qa_zoom_200_auditoria.png": "8e570de61712558ad3fa3ff0705853bbb3adb68d08246f24a78e9c7ff59c03a1",
+    "qa_perfiles.png": "3ae11d5af0921c30163db017ae4d7aace527776cbec5af5a8fb61506bc5ccdd8"
+  }
+}

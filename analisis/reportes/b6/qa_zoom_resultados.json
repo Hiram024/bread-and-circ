@@ -1,0 +1,352 @@
+{
+  "status": "PASA",
+  "method": "Native Chrome browser zoom persisted in isolated temporary profile, not CSS/pageScale/device-scale/viewport emulation",
+  "results": [
+    {
+      "factor": 1,
+      "level": 0,
+      "before": {
+        "innerWidth": 1427,
+        "innerHeight": 828,
+        "outerWidth": 1442,
+        "outerHeight": 978,
+        "dpr": 1.25,
+        "visualScale": 1,
+        "cssZoom": "1",
+        "scroll": 1412
+      },
+      "navFocus": [
+        {
+          "tab": "resumen",
+          "top": 153.8000030517578,
+          "bottom": 203.8000030517578,
+          "viewport": 828,
+          "outline": "solid"
+        },
+        {
+          "tab": "perfiles",
+          "top": 209.8000030517578,
+          "bottom": 259.8000030517578,
+          "viewport": 828,
+          "outline": "solid"
+        },
+        {
+          "tab": "explorar",
+          "top": 265.8000183105469,
+          "bottom": 315.8000183105469,
+          "viewport": 828,
+          "outline": "solid"
+        },
+        {
+          "tab": "clasificar",
+          "top": 321.8000183105469,
+          "bottom": 371.8000183105469,
+          "viewport": 828,
+          "outline": "solid"
+        },
+        {
+          "tab": "fichas",
+          "top": 377.8000183105469,
+          "bottom": 427.8000183105469,
+          "viewport": 828,
+          "outline": "solid"
+        },
+        {
+          "tab": "auditoria",
+          "top": 433.8000183105469,
+          "bottom": 483.8000183105469,
+          "viewport": 828,
+          "outline": "solid"
+        }
+      ],
+      "steps": [
+        {
+          "screen": "Panorama",
+          "metrics": {
+            "innerWidth": 1427,
+            "innerHeight": 828,
+            "outerWidth": 1442,
+            "outerHeight": 978,
+            "dpr": 1.25,
+            "visualScale": 1,
+            "cssZoom": "1",
+            "scroll": 1412
+          },
+          "chart": {
+            "years": [
+              "2009",
+              "2012",
+              "2015",
+              "2018",
+              "2021",
+              "2024"
+            ],
+            "axis": "Participación (%)",
+            "symbols": [
+              "circle",
+              "diamond"
+            ],
+            "names": [
+              "Presidencial",
+              "Intermedia"
+            ]
+          }
+        },
+        {
+          "screen": "Perfiles",
+          "metrics": {
+            "innerWidth": 1427,
+            "innerHeight": 828,
+            "outerWidth": 1442,
+            "outerHeight": 978,
+            "dpr": 1.25,
+            "visualScale": 1,
+            "cssZoom": "1",
+            "scroll": 1412
+          },
+          "chart": {
+            "axis": "Cambio medio (pp)",
+            "values": [
+              [
+                -7.578960804751601,
+                7.969280217175109,
+                -8.116071120823172,
+                -1.0032821093152735
+              ],
+              [
+                6.377071254945573,
+                28.584605933054327,
+                3.2817191128308987,
+                15.478537315422871
+              ]
+            ],
+            "names": [
+              "Presidencial 2024−2012",
+              "Intermedia 2021−2009"
+            ]
+          }
+        },
+        {
+          "screen": "Explorador",
+          "metrics": {
+            "innerWidth": 1427,
+            "innerHeight": 828,
+            "outerWidth": 1442,
+            "outerHeight": 978,
+            "dpr": 1.25,
+            "visualScale": 1,
+            "cssZoom": "1",
+            "scroll": 1412
+          },
+          "key": "1/1/18-24",
+          "detail": "01-001 · Aguascalientes · 18-24 años",
+          "keyboard_filters": true,
+          "keyboard_clear": true,
+          "keyboard_pagination": true,
+          "keyboard_detail": true,
+          "focus": {
+            "active": true,
+            "outline": "solid"
+          }
+        },
+        {
+          "screen": "Auditoría",
+          "metrics": {
+            "innerWidth": 1427,
+            "innerHeight": 828,
+            "outerWidth": 1442,
+            "outerHeight": 978,
+            "dpr": 1.25,
+            "visualScale": 1,
+            "cssZoom": "1",
+            "scroll": 1412
+          },
+          "keyboard_disclosure": true
+        }
+      ],
+      "page_errors": [],
+      "external_requests": [],
+      "browser": "156.0.8078.48",
+      "preferences_written": {
+        "partition": {
+          "default_zoom_level": {
+            "x": 0
+          }
+        }
+      }
+    },
+    {
+      "factor": 2,
+      "level": 3.8017840169239308,
+      "before": {
+        "innerWidth": 713,
+        "innerHeight": 414,
+        "outerWidth": 1442,
+        "outerHeight": 978,
+        "dpr": 2.5,
+        "visualScale": 1,
+        "cssZoom": "1",
+        "scroll": 706
+      },
+      "navFocus": [
+        {
+          "tab": "resumen",
+          "top": 181.8000030517578,
+          "bottom": 231.40000534057617,
+          "viewport": 414,
+          "outline": "solid"
+        },
+        {
+          "tab": "perfiles",
+          "top": 237.40000915527344,
+          "bottom": 287.0000114440918,
+          "viewport": 414,
+          "outline": "solid"
+        },
+        {
+          "tab": "explorar",
+          "top": 293,
+          "bottom": 342.60000228881836,
+          "viewport": 414,
+          "outline": "solid"
+        },
+        {
+          "tab": "clasificar",
+          "top": 348.6000061035156,
+          "bottom": 398.200008392334,
+          "viewport": 414,
+          "outline": "solid"
+        },
+        {
+          "tab": "fichas",
+          "top": 346.20001220703125,
+          "bottom": 413.80001068115234,
+          "viewport": 414,
+          "outline": "solid"
+        },
+        {
+          "tab": "auditoria",
+          "top": 173,
+          "bottom": 240.5999984741211,
+          "viewport": 414,
+          "outline": "solid"
+        }
+      ],
+      "steps": [
+        {
+          "screen": "Panorama",
+          "metrics": {
+            "innerWidth": 713,
+            "innerHeight": 414,
+            "outerWidth": 1442,
+            "outerHeight": 978,
+            "dpr": 2.5,
+            "visualScale": 1,
+            "cssZoom": "1",
+            "scroll": 706
+          },
+          "chart": {
+            "years": [
+              "2009",
+              "2012",
+              "2015",
+              "2018",
+              "2021",
+              "2024"
+            ],
+            "axis": "Participación (%)",
+            "symbols": [
+              "circle",
+              "diamond"
+            ],
+            "names": [
+              "Presidencial",
+              "Intermedia"
+            ]
+          }
+        },
+        {
+          "screen": "Perfiles",
+          "metrics": {
+            "innerWidth": 713,
+            "innerHeight": 414,
+            "outerWidth": 1442,
+            "outerHeight": 978,
+            "dpr": 2.5,
+            "visualScale": 1,
+            "cssZoom": "1",
+            "scroll": 706
+          },
+          "chart": {
+            "axis": "Cambio medio (pp)",
+            "values": [
+              [
+                -7.578960804751601,
+                7.969280217175109,
+                -8.116071120823172,
+                -1.0032821093152735
+              ],
+              [
+                6.377071254945573,
+                28.584605933054327,
+                3.2817191128308987,
+                15.478537315422871
+              ]
+            ],
+            "names": [
+              "Presidencial 2024−2012",
+              "Intermedia 2021−2009"
+            ]
+          }
+        },
+        {
+          "screen": "Explorador",
+          "metrics": {
+            "innerWidth": 713,
+            "innerHeight": 414,
+            "outerWidth": 1442,
+            "outerHeight": 978,
+            "dpr": 2.5,
+            "visualScale": 1,
+            "cssZoom": "1",
+            "scroll": 706
+          },
+          "key": "1/1/18-24",
+          "detail": "01-001 · Aguascalientes · 18-24 años",
+          "keyboard_filters": true,
+          "keyboard_clear": true,
+          "keyboard_pagination": true,
+          "keyboard_detail": true,
+          "focus": {
+            "active": true,
+            "outline": "solid"
+          }
+        },
+        {
+          "screen": "Auditoría",
+          "metrics": {
+            "innerWidth": 713,
+            "innerHeight": 414,
+            "outerWidth": 1442,
+            "outerHeight": 978,
+            "dpr": 2.5,
+            "visualScale": 1,
+            "cssZoom": "1",
+            "scroll": 706
+          },
+          "keyboard_disclosure": true
+        }
+      ],
+      "page_errors": [],
+      "external_requests": [],
+      "browser": "156.0.8078.48",
+      "preferences_written": {
+        "partition": {
+          "default_zoom_level": {
+            "x": 3.8017840169239308
+          }
+        }
+      }
+    }
+  ]
+}

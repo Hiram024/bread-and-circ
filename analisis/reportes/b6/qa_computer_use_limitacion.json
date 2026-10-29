@@ -1,0 +1,15 @@
+{
+  "fecha": "2026-10-28T23:09:33.358748-07:00",
+  "fase": "Initial native UI route stopped before any zoom input",
+  "tool": "@oai/sky get_window_state",
+  "result": "no comprobado by native route",
+  "message": "Computer Use has been stopped for this turn because it could not determine the current browser URL on Windows with enough confidence to enforce policy. Stop your work and send a final message noting why Computer Use ended.",
+  "action_taken": "Stopped native Computer Use; reported limitation and finalized the first phase. New parent-authorized phase uses only CLI Chrome with isolated temporary profile preferences, never CUA again.",
+  "application_defect": false,
+  "alternative": "ChromeZoomLevelPrefs default_zoom_level.x=log(2)/log(1.2); initial probe records actual renderer zoom",
+  "references": [
+    "https://raw.githubusercontent.com/chromium/chromium/main/chrome/browser/ui/zoom/chrome_zoom_level_prefs.cc",
+    "https://raw.githubusercontent.com/chromium/chromium/main/third_party/blink/common/page/page_zoom.cc",
+    "https://chromium.googlesource.com/chromium/src/+/HEAD/chrome/browser/profiles/host_zoom_map_browsertest.cc"
+  ]
+}

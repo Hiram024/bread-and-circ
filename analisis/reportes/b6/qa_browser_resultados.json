@@ -1,0 +1,274 @@
+{
+  "status": "PASA",
+  "browser": "156.0.8078.48",
+  "base": "http://127.0.0.1:53891/",
+  "real_browser": true,
+  "package_digest": "ae5243026dc27552abec02bafaba94819cb49b8dd6877416b79b188fccde1ed4",
+  "national_values": true,
+  "profiles_names_sizes": true,
+  "pagination_all_universe": true,
+  "detail_key_and_years": true,
+  "filters_and_clear": true,
+  "stale_response_ignored": true,
+  "network_error_clears_results": true,
+  "null_is_not_zero": true,
+  "html_escaped": true,
+  "audit_denominators": true,
+  "documentation_links": true,
+  "valid_csv": true,
+  "invalid_csv": true,
+  "draft_invalidated": true,
+  "approval_status": 200,
+  "pdf_status": 200,
+  "stale_version_status": 409,
+  "widths": [
+    {
+      "tab": "resumen",
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "tab": "perfiles",
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "tab": "explorar",
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "tab": "auditoria",
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "tab": "resumen",
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "tab": "perfiles",
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "tab": "explorar",
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "tab": "auditoria",
+      "width": 390,
+      "scroll": 390
+    }
+  ],
+  "contrasts": [
+    {
+      "tab": "resumen",
+      "samples": [
+        {
+          "text": "¿Qué ocurrió entre 2009 y 2024? Panorama nacional procesado de cinco edades. No ",
+          "foreground": "rgb(98, 87, 111)",
+          "background": "rgb(247, 245, 251)",
+          "ratio": 6.236457761423075
+        },
+        {
+          "text": "Unión de municipio × edad en seis años",
+          "foreground": "rgb(98, 87, 111)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 6.747743464855432
+        },
+        {
+          "text": "Subconjunto modelado del panel",
+          "foreground": "rgb(98, 87, 111)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 6.747743464855432
+        },
+        {
+          "text": "Al menos una edad elegible",
+          "foreground": "rgb(98, 87, 111)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 6.747743464855432
+        },
+        {
+          "text": "Elegibles / nacional procesado de cinco edades",
+          "foreground": "rgb(98, 87, 111)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 6.747743464855432
+        },
+        {
+          "text": "EVOLUCIÓN NACIONAL",
+          "foreground": "rgb(117, 83, 140)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 6.227067151309081
+        },
+        {
+          "text": "6 elecciones",
+          "foreground": "rgb(121, 92, 158)",
+          "background": "rgb(245, 240, 252)",
+          "ratio": 4.886470805734947
+        },
+        {
+          "text": "100 × suma(SV) / suma(SV + NV): participación entre registros con dato observado",
+          "foreground": "rgb(98, 87, 111)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 6.747743464855432
+        },
+        {
+          "text": "CONJUNTO MODELADO",
+          "foreground": "rgb(117, 83, 140)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 6.227067151309081
+        },
+        {
+          "text": "K-Means · k=4",
+          "foreground": "rgb(121, 92, 158)",
+          "background": "rgb(245, 240, 252)",
+          "ratio": 4.886470805734947
+        },
+        {
+          "text": "Unidades municipio × edad elegibles. No es la distribución de ciudadanos de todo",
+          "foreground": "rgb(98, 87, 111)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 6.747743464855432
+        },
+        {
+          "text": "Modelo del conjunto elegible: 4 variables, escalador estándar y 4 perfiles. La c",
+          "foreground": "rgb(98, 87, 111)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 6.747743464855432
+        },
+        {
+          "text": "Elegibilidad: seis tasas válidas, identidad nominal estable, al menos 100 observ",
+          "foreground": "rgb(98, 87, 111)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 6.747743464855432
+        }
+      ]
+    },
+    {
+      "tab": "perfiles",
+      "samples": [
+        {
+          "text": "¿QUÉ DISTINGUE A LOS GRUPOS?",
+          "foreground": "rgb(117, 83, 140)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 6.227067151309081
+        },
+        {
+          "text": "4 perfiles exploratorios",
+          "foreground": "rgb(121, 92, 158)",
+          "background": "rgb(245, 240, 252)",
+          "ratio": 4.886470805734947
+        },
+        {
+          "text": "Patrón medio del grupo: no caracteriza a cada unidad o persona, ni certifica rep",
+          "foreground": "rgb(98, 87, 111)",
+          "background": "rgb(252, 251, 254)",
+          "ratio": 6.545026114661583
+        },
+        {
+          "text": "Patrón medio del grupo: no caracteriza a cada unidad o persona, ni certifica rep",
+          "foreground": "rgb(98, 87, 111)",
+          "background": "rgb(252, 251, 254)",
+          "ratio": 6.545026114661583
+        },
+        {
+          "text": "Patrón medio del grupo: no caracteriza a cada unidad o persona, ni certifica rep",
+          "foreground": "rgb(98, 87, 111)",
+          "background": "rgb(252, 251, 254)",
+          "ratio": 6.545026114661583
+        },
+        {
+          "text": "Patrón medio del grupo: no caracteriza a cada unidad o persona, ni certifica rep",
+          "foreground": "rgb(98, 87, 111)",
+          "background": "rgb(252, 251, 254)",
+          "ratio": 6.545026114661583
+        },
+        {
+          "text": "Presidencial: promedio 2012/2018/2024. Intermedia: promedio 2009/2015/2021. Medi",
+          "foreground": "rgb(98, 87, 111)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 6.747743464855432
+        },
+        {
+          "text": "El cambio es una diferencia en puntos porcentuales (pp), no un cambio porcentual",
+          "foreground": "rgb(98, 87, 111)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 6.747743464855432
+        }
+      ]
+    },
+    {
+      "tab": "explorar",
+      "samples": [
+        {
+          "text": "¿DÓNDE APARECEN LOS PATRONES?",
+          "foreground": "rgb(117, 83, 140)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 6.227067151309081
+        },
+        {
+          "text": "2,035 unidades",
+          "foreground": "rgb(121, 92, 158)",
+          "background": "rgb(245, 240, 252)",
+          "ratio": 4.886470805734947
+        },
+        {
+          "text": "EntidadTodas las entidadesAGUASCALIENTESBAJA CALIFORNIABAJA CALIFORNIA SURCAMPEC",
+          "foreground": "rgb(98, 87, 111)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 6.747743464855432
+        },
+        {
+          "text": "PerfilTodos los perfilesP1: Menor participación media; descenso presidencialP2: ",
+          "foreground": "rgb(98, 87, 111)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 6.747743464855432
+        },
+        {
+          "text": "EdadTodas las edades18-2425-3435-4445-5960+",
+          "foreground": "rgb(98, 87, 111)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 6.747743464855432
+        },
+        {
+          "text": "Buscar municipio",
+          "foreground": "rgb(98, 87, 111)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 6.747743464855432
+        }
+      ]
+    },
+    {
+      "tab": "auditoria",
+      "samples": [
+        {
+          "text": "¿QUÉ COBERTURA Y LÍMITES TIENEN LOS RESULTADOS?",
+          "foreground": "rgb(117, 83, 140)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 6.227067151309081
+        }
+      ]
+    }
+  ],
+  "keyboard_focus": {
+    "active": true,
+    "outline": "solid",
+    "shadow": "rgb(245, 237, 250) 0px 0px 0px 3px"
+  },
+  "page_errors": [],
+  "console_errors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 422 (Unprocessable Entity)"
+  ],
+  "http_errors": [
+    {
+      "path": "/api/classify",
+      "status": 422,
+      "method": "POST"
+    }
+  ],
+  "external_requests": []
+}

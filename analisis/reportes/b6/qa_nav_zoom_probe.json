@@ -1,0 +1,41 @@
+{
+  "height": 414,
+  "nav": [
+    {
+      "text": "▦ Panorama",
+      "top": 181.8000030517578,
+      "bottom": 231.40000534057617,
+      "focused": false
+    },
+    {
+      "text": "◫ Perfiles",
+      "top": 237.40000915527344,
+      "bottom": 287.0000114440918,
+      "focused": false
+    },
+    {
+      "text": "◎ Explorador",
+      "top": 293,
+      "bottom": 342.60000228881836,
+      "focused": false
+    },
+    {
+      "text": "⇧ Clasificar CSV",
+      "top": 348.6000061035156,
+      "bottom": 398.200008392334,
+      "focused": false
+    },
+    {
+      "text": "▤ Fichas educativas",
+      "top": 404.20001220703125,
+      "bottom": 453.8000144958496,
+      "focused": false
+    },
+    {
+      "text": "◇ Cobertura y límites",
+      "top": 459.8000183105469,
+      "bottom": 527.400016784668,
+      "focused": true
+    }
+  ]
+}

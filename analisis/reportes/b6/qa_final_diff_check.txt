@@ -1,0 +1,2 @@
+Command: git diff --check -- dashboard src tests README.md docs/00_memoria_tecnica_Hiram.md docs/15_aceptacion_analitica_B6.md
+Exit: 0

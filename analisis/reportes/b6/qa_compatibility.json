@@ -1,0 +1,16 @@
+{
+  "old_test_files_unchanged": [
+    "tests/test_b4_integration.py",
+    "tests/test_b5_analytics.py",
+    "tests/test_dashboard.py",
+    "tests/test_evaluate_clustering.py",
+    "tests/test_metrics.py",
+    "tests/test_validate_processed.py"
+  ],
+  "api_byte_semantics_unchanged": true,
+  "education_unchanged": true,
+  "b4_csv_draft_approval_functions_unchanged": true,
+  "real_db_exists": false,
+  "final_hashes_rechecked": 322,
+  "changed": []
+}

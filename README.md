@@ -81,7 +81,7 @@ Hiram adoptó localmente el candidato B3 **K-Means k=4, StandardScaler, n_init=3
 
 Versión activa: **`ccpc-2009-2024-k4-v1`**. Digest del paquete: `ae5243026dc27552abec02bafaba94819cb49b8dd6877416b79b188fccde1ed4`. `/health`, resumen, CSV, borradores y PDF permiten identificarla. Las cuatro estadísticas de perfiles se recalcularon desde las asignaciones, sin copiar filas del anterior k5 por posición.
 
-B4 fue publicado con autorización de Hiram en **`7e43a2d`** sobre `feat/analysis-dashboard`; B2 y B3 están en `a5794fd` y `6222f79`. **B5 permanece local y sin commit/push:** hacer pull aún no incorpora sus mejoras. El estado de QA B4 y sus comandos se documentan en [docs/12_QA_B4.md](docs/12_QA_B4.md); la memoria acumulativa es [docs/00_memoria_tecnica_Hiram.md](docs/00_memoria_tecnica_Hiram.md).
+B4 fue publicado con autorización de Hiram en **`7e43a2d`** sobre `feat/analysis-dashboard`; B2 y B3 están en `a5794fd` y `6222f79`. **B5 fue publicado con autorización de Hiram en `c3170d9`. B6 permanece local sin commit/push:** hacer pull aún no incorpora la aceptación B6. El estado de QA B4 y sus comandos se documentan en [docs/12_QA_B4.md](docs/12_QA_B4.md); la memoria acumulativa es [docs/00_memoria_tecnica_Hiram.md](docs/00_memoria_tecnica_Hiram.md).
 
 ### Dónde vive cada decisión
 
@@ -305,4 +305,40 @@ $qaB5Temp = Join-Path $env:TEMP ('ccpc-b5-tests-' + [guid]::NewGuid().ToString('
 & .\.venv\Scripts\python.exe -B analisis\reportes\b5\qa_browser_run.py
 ```
 
-El segundo comando requiere las herramientas externas de QA descritas en el informe; no son dependencias de app. Las pruebas no usan ni limpian el historial SQLite real. Los resultados finales y límites se leen en el informe QA, sin confundirlos con la referencia histórica de25testsB4. B6 conserva revisión en el entorno de demo de Rubén, otros navegadores/sistemas, lector de pantalla, notebook completo e informe técnico visual completo. No se marca B6 terminado por haber probado B5. Las modificaciones de B5 siguen sin publicar hasta autorización expresa.
+El segundo comando requiere las herramientas externas de QA descritas en el informe; no son dependencias de app. Las pruebas no usan ni limpian el historial SQLite real. Los resultados finales y límites se leen en el informe QA, sin confundirlos con la referencia histórica de25testsB4. Al cerrar B5 esos controles quedaron pendientes. B6 ejecuta aceptación analítica/zoom/teclado en el entorno local; B7 conserva la revisión conjunta con Rubén. Otros navegadores/sistemas y notebook pertenecen a compatibilidad/reproducibilidad, y el informe técnico visual completo a B8/B10. B5 fue publicado en `c3170d9`; B6 aún no.
+
+## Aceptación analítica — B6, camino B
+
+**B6: COMPLETADO CON ADVERTENCIAS. QA independiente: APROBADO CON ADVERTENCIAS no bloqueantes.** Resultado autoritativo: [aceptación B6](docs/15_aceptacion_analitica_B6.md) y [dictamen qa_b6](docs/16_QA_B6.md). B6 parte deB5publicado `c3170d9`; sus propias modificaciones siguen locales sin commit/push. Hiram implementa correcciones acotadas/documentación; no se asume aceptación deRubén.
+
+Contrato B4/B5 **sin cambios**:mismos endpoints,campos,paginación,filtros,paquete,nombres,modelo y aprobación vinculada a versión/contenido. Corrección de presentación en `dashboard/static/app.js`:la versión Plotly3.3.1local ignoraba `axis.title` como cadena;se cambia a `{text:...}` en historia nacional/detalle,distribución,medias y cambios. Se comprobarán los títulos efectivamente renderizados, no solo strings del código. Referencias oficiales:[ejeY](https://plotly.com/javascript/reference/layout/yaxis/#layout-yaxis-title-text) y [ejeX](https://plotly.com/javascript/reference/layout/xaxis/#layout-xaxis-title-text). No se actualizó Plotly ni se añadieron dependencias. Además, `app.css` permite desplazamiento vertical propio del menú (`.sidebar{overflow-y:auto}`): al zoom200% los botones inferiores antes quedaban fuera de la ventana aun recibiendo foco. QA comprobó nuevamente que los seis controles enfocados entren en la vista. Recargar la página para obtener el JS/CSS actual.
+
+Reconciliación:el reporte histórico de cuatro causas suma4820incidencias;la evidencia B2/B5 de cinco causas suma4930porque añade110por conteos/NSausentes. Las110ya están excluidas por otras causas;la unión continúa3844y las8541elegibles coinciden por clave. «Existe observado<100» cuenta863;«no cumple seis observados>=100» cuenta952porque incluye faltantes (110con ausencias,21también<100). No se redefine una causa histórica ni se confunde ausencia de desglose con cero. Tabla/versiones/fórmulas y casos identificables en el informe15 y `analisis/reportes/b6/reconciliacion_causas.csv`/`casos_faltantes.csv`.
+
+La matriz `analisis/reportes/b6/matriz_trazabilidad.csv` une fuente,universo,fórmula,ponderación,unidad,precisión,endpoint/campo,componente,filtros,esperado independiente,observado,diferencia/tolerancia y estado. Las tasas se recalculan de los seis CSVanuales;los perfiles desde esas tasas y asignaciones por clave. La capa de pantalla requiere además la evidencia del navegador deqa_b6;el CSVnumérico no la sustituye.
+
+Comprobación de lectura con la app local ejecutándose:
+
+```powershell
+& .\.venv\Scripts\python.exe -B analisis\reportes\b6\verificar_trazabilidad.py --root . --out analisis/reportes/b6 --base-url http://127.0.0.1:8501
+$qaB6Temp = Join-Path $env:TEMP ('ccpc-b6-tests-' + [guid]::NewGuid().ToString('N'))
+& .\.venv\Scripts\python.exe -B -m pytest -q -p no:cacheprovider --basetemp $qaB6Temp tests
+```
+
+El verificador solo haceGET/lecturas y escribe su evidencia;no entrena ni regenera paquetes. Código distinto de0indica discrepancia/fallo;el JSONregistra fecha/zona,base,versiones,comando y hashes. Arranque manual si fuera necesario:`.\.venv\Scripts\python.exe -B -m uvicorn src.dashboard_api:app --host 127.0.0.1 --port 8501`;no iniciarlo encima de otro proceso del mismo puerto. Herramientas/ejecuciones de Chrome y zoom real200%,teclado y límites de lector de pantalla se describen enQA16;no se presentan cambios deviewport como zoom.
+
+Pendientes separados:B7revisión y aceptación conjunta conRubén;B8/B10documento técnico y QAvisual final;B9ensayo de presentación;reproducibilidad/cierre para notebook y otros entornos requeridos. B6no exige aprobación deRubén para cerrar ni termina esos bloques. Lector de pantalla no probado,otros navegadores/sistemas y límites metodológicos se registran sin declarar conformidadWCAG ni validez científica definitiva.
+
+Propuesta de commit B6,no ejecutado:`fix: complete analytical acceptance and restore chart and zoom accessibility`.
+
+## Cierre B6 — aceptación con advertencias
+
+**B6: COMPLETADO CON ADVERTENCIAS. qa_b6:APROBADO CON ADVERTENCIAS no bloqueantes en integración.** La suite completa posterior a las dos correcciones ejecutó **32passed,1advertencia previa Starlette/httpx,exit0**, sin cambiar los31tests anteriores y con un grupo nuevo B6justificado. La matriz numérica ejecutada devuelve135pasa,0fallas;no cambia elegibilidad ni contrato. Los registros `qa_integration_tests.txt`/`qa_integration_state.json` distinguen este resultado de la pasada final formal posterior al cierre documental.
+
+Navegador real Chrome156:cuatro vistas100/200con zoom real de navegador,teclado,filtros,paginación/detalle,títulos/unidades de ejes y los seis botones del menú enfocados dentro deviewport. Regresión del harness B5contra código actual con salida B6:CSVválido/inválido,asincronía/error/nulos/HTML,revisión/aprobación/PDFy rechazo de versión obsoleta,anchos1440/390,exit0. CeroerroresJS y cero solicitudesexternas durante esos recorridos. Las capturas finales de zoom utilizan CDPsololectura,no una imagen recortada del harness. Datos/modelo/paquete/historial permanecen intactos;no se creóSQLite real.
+
+La pasada formal final se ejecuta después de este cierre documental,con todos los archivos del principal congelados. Sus resultados,comandos,tiempos,huellas del estado exacto y revisión visual autoritativa están en `docs/16_QA_B6.md` y `analisis/reportes/b6/qa_final_resultados.json`, `qa_final_state.json`, `qa_final_pytest.txt`, `qa_final_browser.txt` y `qa_visual_final.json`. El informe QA se excluye de autorreferencia,pero incluye el estado de documentación del principal. Cualquier fallo de esa pasada exige corrección y comprobación correspondiente;no se transforma en éxito por este texto.
+
+Límites no bloqueantes:lector de pantalla no ejecutado,otros navegadores/sistemas no probados,deprecación previa Starlette/httpx y favicon404heredado. Las respuestas422delCSVinválido son negativos esperados. No se afirma conformidadWCAG ni certificación científica del clustering. B7mantiene revisión conjunta conRubén;B8/B10documento técnico/QAvisual final;B9ensayo;reproducibilidad/cierre para notebook y otros entornos requeridos. No se declara su aceptación por asociación.
+
+No se hizo commit,push,merge,PR ni publicación. Propuesta en inglés Conventional Commits:`fix: complete analytical acceptance and restore chart and zoom accessibility`.

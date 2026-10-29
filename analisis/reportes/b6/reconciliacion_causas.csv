@@ -1,0 +1,6 @@
+causa,descripcion,anterior_4_categorias,vigente_5_categorias,diferencia,incidencias_adicionales_reportadas,universo,formula,contexto
+faltan_tasas,Falta al menos una tasa,460.0,460,0.0,0,12385,no todas las seis tasas finitas,Misma categoría y conteo
+identidad_inestable,Nombre municipal inconsistente,190.0,190,0.0,0,12385,no identidad nominal estable,Misma categoría y conteo
+observados_menor_100,<100 observados en alguna elección,863.0,863,0.0,0,12385,existe valor presente <100; NaN no cumple <100,Misma categoría y conteo
+ns_mayor_20,NS >20% en alguna elección,3307.0,3307,0.0,0,12385,existe NS presente >20,Misma categoría y conteo
+faltan_conteos_o_ns,Faltan conteos o NS,,110,,110,12385,existe observados o NS ausente en al menos un año,Categoría diagnóstica añadida en B2; no cambia elegibilidad

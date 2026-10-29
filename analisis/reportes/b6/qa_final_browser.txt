@@ -1,0 +1,4 @@
+Command: C:\Users\Hiram\Downloads\bread-and-circ-main\bread-and-circ-main\.venv\Scripts\python.exe -B C:\Users\Hiram\Downloads\bread-and-circ-main\bread-and-circ-main\analisis\reportes\b6\qa_browser_run.py
+Exit: 0
+zoom: exit 0; C:\Users\Hiram\Downloads\bread-and-circ-main\bread-and-circ-main\analisis\reportes\b6\qa_zoom_transcript.txt
+regression: exit 0; C:\Users\Hiram\Downloads\bread-and-circ-main\bread-and-circ-main\analisis\reportes\b6\qa_regression_transcript.txt

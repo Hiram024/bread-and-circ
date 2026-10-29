@@ -69,7 +69,6 @@ hackathon_ine_proyecto/
 3. `docs/03_model_card.md` — model card **histórica k5**; descriptor del activo y memoria técnica documentan B4.
 4. `docs/06_producto_dashboard.md` — contrato **histórico**; el contrato efectivo B4 está en este README.
 5. `docs/07_homologacion_territorial.md` — pendientes cartográficos.
-6. `docs/08_entrega_y_siguientes_pasos.md` — manual histórico anterior a B4; no usar para reemplazar el contrato actual.
 
 **Fuentes:** <https://ine.mx/transparencia/datos-abiertos/visualizacion-datos/conteos-censales-participacion/> y la convocatoria incluida en `docs/referencias/`.
 

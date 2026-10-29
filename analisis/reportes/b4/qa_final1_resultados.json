@@ -1,0 +1,42 @@
+{
+  "controles": [
+    {
+      "control": "pytest",
+      "comando": [
+        "C:\\Users\\Hiram\\Downloads\\bread-and-circ-main\\bread-and-circ-main\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp",
+        "C:\\Users\\Hiram\\AppData\\Local\\Temp\\qa-b4-final-e1bd87574634485b8c41d1bf5ec6f88f",
+        "tests"
+      ],
+      "exit": 0
+    },
+    {
+      "control": "pdf",
+      "comando": [
+        "C:\\Users\\Hiram\\Downloads\\bread-and-circ-main\\bread-and-circ-main\\.venv\\Scripts\\python.exe",
+        "-B",
+        "C:\\Users\\Hiram\\Downloads\\bread-and-circ-main\\bread-and-circ-main\\analisis\\reportes\\b4\\qa_pdf_review.py"
+      ],
+      "exit": 0
+    },
+    {
+      "control": "browser",
+      "comando": [
+        "C:\\Users\\Hiram\\Downloads\\bread-and-circ-main\\bread-and-circ-main\\.venv\\Scripts\\python.exe",
+        "-B",
+        "C:\\Users\\Hiram\\Downloads\\bread-and-circ-main\\bread-and-circ-main\\analisis\\reportes\\b4\\qa_browser_run.py"
+      ],
+      "exit": 0
+    }
+  ],
+  "archivos_cambiados_durante_pasada": [],
+  "historial_real_sin_cambios": true,
+  "revision_visual": "Pendiente de inspección qa_b4 de los renders finales",
+  "estado_automatizado": "PASA"
+}

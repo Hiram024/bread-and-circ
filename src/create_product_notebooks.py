@@ -21,8 +21,9 @@ make('05 · Auditoría de identidad municipal',[
 ('code','''from pathlib import Path
 import pandas as pd
 import matplotlib.pyplot as plt
-p=Path('datos/processed/producto')
-a=pd.read_csv(p/'homologacion_municipal_auditoria.csv')
+from src.product_contract import load_active
+package=load_active(Path('.'))
+a=package['territory_audit']
 a.estatus_administrativo.value_counts()'''),
 ('code','''counts=a.estatus_administrativo.value_counts().sort_values()
 fig,ax=plt.subplots(figsize=(9,4));counts.plot.barh(ax=ax);ax.set_title('Claves municipales según auditoría administrativa');ax.set_xlabel('Municipios');ax.grid(axis='x',alpha=.2);plt.tight_layout();plt.show()'''),
@@ -40,10 +41,11 @@ make('06 · Consolidación de perfiles y fichas',[
 ('code','''import json
 import pandas as pd
 from pathlib import Path
-p=Path('datos/processed/producto')
-profiles=pd.DataFrame(json.loads((p/'perfiles.json').read_text()))
+from src.product_contract import load_active
+package=load_active(Path('.'))
+profiles=pd.DataFrame(package['profiles'].values())
 profiles[['perfil_id','nombre','n_unidades','media_presidencial','media_intermedia','cambio_presidencial_pp','cambio_intermedia_pp']]'''),
-('md','## Distribución y medidas descriptivas\nLos promedios de cada perfil son **no ponderados**. K-Means tiene cinco clusters exploratorios; k=4 obtiene mejor silhouette.'),
+('md','## Distribución y medidas descriptivas\nLos promedios son **no ponderados**. La versión activa, cantidad y nombres se leen del paquete; B3 documenta la comparación histórica 4/5/6.'),
 ('code','''import matplotlib.pyplot as plt
 fig,ax=plt.subplots(figsize=(9,4));
 x=profiles.perfil_id.to_numpy();ax.bar(x-.16,profiles.media_presidencial,width=.32,label='Presidenciales');ax.bar(x+.16,profiles.media_intermedia,width=.32,label='Intermedias');ax.set_xticks(x);ax.set_xlabel('Perfil estadístico');ax.set_ylabel('Participación media (%)');ax.legend();plt.tight_layout();plt.show()'''),
@@ -54,7 +56,7 @@ classified=classify_dataframe(sample)
 classified[['unidad_id','perfil_id','perfil_nombre','distancia_centroide']]'''),
 ('md','## Flujo editorial asistido (determinista)\nLos módulos funcionan como agentes especializados de datos, redacción y verificación; la aprobación humana se realiza aparte en la interfaz. No hay IA generativa externa en esta versión.'),
 ('code','''from src.education import build_draft,pdf_for_draft
-item=build_draft(profiles.iloc[0].to_dict())
+item=build_draft(profiles.iloc[0].to_dict(),package['package_digest'])
 print('validación:',item['validation'])
 print('requiere aprobación humana:',item['requires_human_approval'])
 print(item['draft']['resumen'])

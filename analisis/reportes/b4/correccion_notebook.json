@@ -1,0 +1,13 @@
+{
+  "archivo": "ml/notebooks/06_producto_inferencia_y_fichas.ipynb",
+  "antes_sha256": "78dfd53df3d76d567d4269149fc1597612aefaa2621753a36419686bc4e502f0",
+  "despues_sha256": "a123f928060c1edf57991cb44946a027c902389fd4d135cbf696bdde91e81041",
+  "CRLF_antes": 165,
+  "CRLF_despues": 0,
+  "cambios": [
+    "LF explicito",
+    "unicode correcto",
+    "metadata de ejecucion antigua retirada"
+  ],
+  "notebook_re_ejecutado": false
+}

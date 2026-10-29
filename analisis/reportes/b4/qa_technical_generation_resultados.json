@@ -1,0 +1,9 @@
+{
+  "exit": 0,
+  "paginas": 10,
+  "version_y_cuatro_perfiles_verificados": true,
+  "renders": [
+    "qa_technical_section8_page8.png"
+  ],
+  "alcance_visual": "Sección8; informe técnico completo aún requiere QA editorial antes de entrega"
+}

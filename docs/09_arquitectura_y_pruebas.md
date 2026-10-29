@@ -1,5 +1,7 @@
 # Decisiones de arquitectura del MVP
 
+> Documento histórico anterior a la adopción B4. Se conserva como referencia; sus menciones a k5, rutas o aprobación no describen el activo actual. Consulte el [contrato vigente del README](../README.md#contrato-de-integración-para-rubén--b4), el descriptor activo y la [memoria de Hiram](00_memoria_tecnica_Hiram.md).
+
 ## Componentes
 
 ```mermaid

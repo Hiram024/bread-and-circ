@@ -1,10 +1,12 @@
 # Hackathon INE — Plataforma de perfiles estadísticos de participación (Reto 1)
 
-**Aplicación local lista para ejecutar + seis bases CCPC originales + análisis histórico + modelo no supervisado exploratorio + fichas educativas neutrales.** No es una herramienta oficial del INE.
+**Aplicación local con cuatro perfiles adoptados en B4, análisis histórico y fichas educativas neutrales.** No es una herramienta oficial del INE. La extracción RAW confiable fue confirmada por Hiram; B2/B3/B4 no la certifican nuevamente.
+
+Entrada para integrar: [Contrato de integración para Rubén — B4](#contrato-de-integración-para-rubén--b4). Historia y material del informe final: [memoria técnica de Hiram](docs/00_memoria_tecnica_Hiram.md).
 
 ## Arranque inmediato en VS Code
 
-**Requisito:** Python 3.11 (Windows, macOS o Linux). Usa un navegador moderno.
+**Requisito:** CPython 3.11 y las versiones de `requirements-app.txt`; entorno comprobado Windows/Python 3.11.15. Usa un navegador moderno.
 
 - **Windows:** ejecuta `run.bat`.
 - **macOS/Linux:** ejecuta `./run.sh`.
@@ -12,7 +14,7 @@
 
 Abre **http://127.0.0.1:8501**. La primera ejecución instala dependencias desde PyPI; una vez instaladas, la aplicación no depende de servicios externos. `run.*` no cambia ni recalcula las fuentes originales.
 
-Para revisar notebooks o rehacer análisis completo instala también `pip install -r requirements.txt` y ejecuta `python -m pytest -q tests`. El procesamiento original desde los seis ZIP es `python -m src.pipeline --root .` y el entrenamiento `python -m src.modeling --root .`; **no** es necesario para operar el dashboard preconstruido.
+Para desarrollo/pruebas instala `pip install -r requirements-b3.txt` en el entorno aislado: incluye app compatible, pytest y httpx. Los notebooks/análisis adicionales usan `requirements.txt`. `src.pipeline` y `src.modeling` son rutas históricas que pueden sobrescribir resultados o entrenar; **no se ejecutan para preparar ni arrancar B4**.
 
 ## Lo que contiene
 
@@ -23,10 +25,10 @@ desde un entorno con las dependencias instaladas; conserva los insumos y no entr
 
 - **6 elecciones** (2009, 2012, 2015, 2018, 2021, 2024); 54,872,712 registros RAW documentados por la extracción anterior y 73,895 filas municipio × edad verificadas en B2. B2 no recontó los RAW.
 - **Panel:** 12,385 unidades municipio × grupo de edad; **8,541 aptas** para clustering exploratorio; **1,825 municipios**.
-- **5 perfiles experimentales** con etiquetas y estadísticos, `StandardScaler` + K-Means, comparación contra 4 y 6 clusters y otros algoritmos.
+- **4 perfiles activos**, `StandardScaler` + K-Means; B3 conserva por separado la comparación 4/5/6 y la referencia anterior k=5.
 - **Dashboard local** con gráficos, filtros, auditoría municipal, clasificación por CSV y fichas PDF con revisión humana.
-- **6 notebooks** organizados en auditoría, historia, territorios, modelo, producto y fichas.
-- **6 ZIP de datos RAW** originales intactos, separados por año, más datos procesados por año y derivados.
+- **6 notebooks** de auditoría, historia, territorios, modelo y producto; el notebook de producto se adaptó a B4 y sus salidas anteriores se retiraron, sin presentarlo como reejecutado.
+- CSV procesados de seis años y evidencia de extracción anterior. La operación B4 no necesita recuperar ZIP RAW.
 
 ## Estructura resumida
 
@@ -39,9 +41,9 @@ hackathon_ine_proyecto/
 ├── analisis/notebooks/          # EDA y análisis territorial
 ├── ml/notebooks/, modelos/, resultados/
 ├── datos/raw/{2009,2012,...,2024}/  # ZIP oficiales intactos
-├── datos/processed/{año}/, producto/ # panel, perfiles, auditoría
+├── datos/processed/{año}/, producto/ # panel y paquetes; producto_activo.json apunta al activo
 ├── samples/                     # CSV sintético listo para probar
-├── entregables/fichas/          # 5 PDF de muestra no aprobados
+├── entregables/fichas/{versión}/ # borradores; no reemplazan aprobaciones
 ├── docs/                        # metodología, decisiones y próximos pasos
 └── tests/                       # controles automatizados
 ```
@@ -54,19 +56,187 @@ hackathon_ine_proyecto/
 
 - Datos **agregados**, no ciudadanos identificables. Los grupos de edad de cada elección no siguen a las mismas personas.
 - Los nombres/IDs municipales son un filtro conservador, **no** una correspondencia histórica cartográfica verificada. Ver `docs/07_homologacion_territorial.md`.
-- K-Means k=4 tiene mayor silhouette que k=5: los cinco grupos son útiles para demostrar el Reto 1, no una decisión científicamente inmutable.
+- B3 seleccionó cuatro por separación, tamaños e interpretación; cinco tuvo algo más de estabilidad entre semillas. La solución sigue siendo exploratoria y sensible a decisiones de calidad/escalado.
 - El ingreso CSV requiere seis tasas históricas y calidad comparable. No permite clasificar datos nuevos de un único año ni reentrenar sin rehacer el análisis.
 - No hay autenticación; ejecutar únicamente en `127.0.0.1`, **no publicar directamente en internet**.
-- Las cinco fichas de ejemplo son **BORRADORES NO APROBADOS**; para obtener un PDF revisado usar la interfaz y aprobación humana.
+- Las fichas de ejemplo son **BORRADORES NO APROBADOS**; para obtener un PDF revisado usar la interfaz y aprobación humana vinculada al contenido y versión.
 - No produce mensajes partidistas, recomendaciones persuasivas a segmentos demográficos ni marketing político personalizado.
 
 ## Documentación principal
 
-1. `analisis/reportes/RESUMEN_EJECUTIVO.md` — análisis histórico.
-2. `docs/02_decisiones_metodologicas.md` — elecciones, filtros y modelo.
-3. `docs/03_model_card.md` — métricas y riesgos de clustering.
-4. `docs/06_producto_dashboard.md` — rutas y contrato CSV.
+1. `analisis/reportes/RESUMEN_EJECUTIVO.md` — análisis histórico, anterior a adopción B4.
+2. `docs/02_decisiones_metodologicas.md` — metodología histórica; selección vigente en B3 y adopción en este README.
+3. `docs/03_model_card.md` — model card **histórica k5**; descriptor del activo y memoria técnica documentan B4.
+4. `docs/06_producto_dashboard.md` — contrato **histórico**; el contrato efectivo B4 está en este README.
 5. `docs/07_homologacion_territorial.md` — pendientes cartográficos.
-6. `docs/08_entrega_y_siguientes_pasos.md` — manual de demo y entrega.
+6. `docs/08_entrega_y_siguientes_pasos.md` — manual histórico anterior a B4; no usar para reemplazar el contrato actual.
 
 **Fuentes:** <https://ine.mx/transparencia/datos-abiertos/visualizacion-datos/conteos-censales-participacion/> y la convocatoria incluida en `docs/referencias/`.
+
+## Contrato de integración para Rubén — B4
+
+### Decisión, estado y versión
+
+Hiram adoptó localmente el candidato B3 **K-Means k=4, StandardScaler, n_init=30, semilla42**, con las mismas cuatro variables, población y filtros. Esta es una decisión implementada de Hiram para integrar el trabajo; **no afirma aprobación de Rubén**. El reparto sigue siendo datos/modelo/analítica para Hiram y agentes/clasificación/aprobación/PDF para Rubén.
+
+Versión activa: **`ccpc-2009-2024-k4-v1`**. Digest del paquete: `ae5243026dc27552abec02bafaba94819cb49b8dd6877416b79b188fccde1ed4`. `/health`, resumen, CSV, borradores y PDF permiten identificarla. Las cuatro estadísticas de perfiles se recalcularon desde las asignaciones, sin copiar filas del anterior k5 por posición.
+
+La entrega B4 de esta ejecución está **local y sin commit/push**: hacer pull todavía no trae estos cambios. B2 y B3 sí fueron publicados previamente (`a5794fd` y `6222f79`). El estado de QA y sus comandos se documentan en [docs/12_QA_B4.md](docs/12_QA_B4.md); la memoria acumulativa es [docs/00_memoria_tecnica_Hiram.md](docs/00_memoria_tecnica_Hiram.md).
+
+### Dónde vive cada decisión
+
+| Dato/configuración | Campo/símbolo y fuente autoritativa | Consumidores / forma de cambiar |
+|---|---|---|
+| Referencia activa | `datos/processed/producto_activo.json`: `manifest`, `sha256`; ubicación `POINTER` en `src/product_contract.py` | `load_active(root)` carga un único snapshot validado. Preparar primero, detener servidor, activar con el comando inferior y reiniciar. No editar un archivo de datos suelto. |
+| Identidad, k, features/orden, años, filtros, compatibilidad y archivos | `datos/processed/producto/ccpc-2009-2024-k4-v1/manifest.json` | Descriptor inmutable generado por `src.prepare_product`; valida hashes y coherencia antes de exponer el paquete. `VERSION` solo es el valor inicial del constructor; el runtime lee el descriptor. |
+| Modelo/escalador/mapeo | Entrada `files.artifact` del descriptor; bundle `model`, `scaler`, `features`, `k`, `label_mapping`, `filters` | API/CSV. El builder copia el candidato B3 comprobado; no entrena. Cambiarlo requiere evaluación nueva y una versión coherente. |
+| Nombres y estadísticas activas | Entrada `files.profiles`, campos de `perfiles.json` | Consulta, UI, agentes y PDF. Se generan desde B3 y se verifican contra observaciones/modelo; no se mantienen listas `LABELS` paralelas. Renombrar requiere nuevo paquete/revisión. |
+| Asignaciones y municipio/edad | Entrada `files.observations`, `observaciones_dashboard.csv` | Filtros/API; unicidad entidad+municipio+edad, predicciones reconciliadas por clave con B3. |
+| Resumen/serie nacional/auditoría | Entradas `files.metadata`, `files.national`, `files.territory_audit` | `metadata()` y vistas. Las copias derivadas de k/version/perfiles se generan y validan, no se editan manualmente. |
+| Fórmulas de inferencia | `src/dashboard_api.py:classify_dataframe`, orden `FEATS` de `src/modeling.py` contrastado contra descriptor/bundle | Seis tasas → cuatro features. Identificadores, edad, nombre y sexo no entran al modelo. Cambios de fórmulas requieren volver a evaluar, no editar una variable y seguir. |
+| Textos educativos | `src/education.py:data_agent`, `narrative_agent`, `verification_agent` | `build_draft(profile, package_digest)`. k/nombre/versión vienen del perfil activo. Cambiar texto cambia el digest del borrador e invalida revisión anterior. |
+| Persistencia | `src/dashboard_api.py:DB_PATH`; por defecto `entregables/revision_local.sqlite3`; env `CCPC_REVIEW_DB` solo para aislamiento/ruta explícita | Historial local, sin publicación. Migración aditiva y respaldo SQLite antes de cambiar esquema anterior. No borrar para obtener tests verdes. |
+| Entorno y arranque | `requirements-app.txt`, `run.bat`, `run.sh`; versiones efectivas en B3 lock y QA B4 | Bibliotecas matemáticas fijadas al entorno1.8.0; tests en `.venv`. El loader rechaza versión incompatible, no silencia warnings. |
+
+La autoridad de ejecución es el snapshot señalado por el descriptor. Los archivos k5 que siguen directamente en `datos/processed/producto/` son **referencia histórica**, no el activo. No consumirlos por una ruta antigua. Para Python:
+
+```python
+from pathlib import Path
+from src.product_contract import load_active
+p = load_active(Path('.'))
+print(p['package_version'], p['manifest']['k'])
+profiles = p['profiles']   # dict por perfil_id
+observations = p['data']  # DataFrame del mismo paquete
+bundle = p['artifact']    # escalador/modelo/mapeo del mismo paquete
+```
+
+El loader comprueba entorno, SHA-256, IDs, predicciones de todas las filas y estadísticas. `dashboard_api.package()` lo cachea **una vez**: cambiar el puntero no invalida mágicamente el proceso ni `lru_cache`. No hay selector de modelos ni recarga parcial de archivos.
+
+### Datos y unidades del contrato
+
+| Campo | Tipo / obligatoriedad | Significado y ejemplo real comprobado |
+|---|---|---|
+| `perfil_id` | entero requerido; 1–4 en esta versión | ID local del perfil. Perfil1 tiene 1,840 unidades; no significa que un ID1 futuro o anterior sea la misma población. |
+| `nombre` / `perfil_nombre` | texto requerido | Nombre descriptivo del perfil / copia derivada en observaciones y CSV. No atribuye motivaciones individuales. |
+| `package_version` | texto requerido | `ccpc-2009-2024-k4-v1`, fijo para ese contenido; nunca timestamp nuevo al arrancar. |
+| `package_digest` | SHA-256 hexadecimal, 64 caracteres | Identifica bytes del descriptor, que enlaza hashes de los archivos; aparece en metadatos/CSV/borrador. No certifica origen oficial. |
+| `n_unidades` | entero requerido | 1,840 en perfil1; filas municipio×edad, no ciudadanos. |
+| `municipios` | entero requerido | 837 en perfil1; municipios pueden aparecer en varios perfiles por edades, no sumar entre perfiles. |
+| `lista_nominal_2024` | entero requerido | LN 2024 sumada; 27,693,625 en perfil1. |
+| `porcentaje_unidades` | número requerido, % | 21.543144830816065 en perfil1; denominador8,541 unidades elegibles. |
+| `edad_predominante` | texto requerido | `18-24` para perfil1; descriptor agregado, no feature. |
+| `media_presidencial`, `media_intermedia` | números requeridos, % escala0–100 | Medias simples de tasas; perfil1: 48.44176823940163 y 35.72189919163344. No se ponderan por LN. |
+| `cambio_presidencial_pp`, `cambio_intermedia_pp` | números requeridos, pp | Diferencias entre extremos del mismo tipo; perfil1: −7.578960804751601 y +6.377071254945573. |
+| `brecha_pres_intermedia` | número requerido, pp | Diferencia de medias; perfil1: 12.71986904776819. Descriptiva, **no quinta feature**. |
+| `EDOCVE`, `MPIOCVE`, `grupo_edad` | clave compuesta requerida en observaciones | Entidad+municipio+edad, nunca municipio solo ni unión por nombre. `clave_municipal` preserva representación `01-001`. |
+| `distancia_centroide` | número derivado no negativo | Distancia en espacio escalado, no probabilidad ni confianza de predicción individual. |
+
+Nombres/IDs y tamaños activos:
+
+| ID | Nombre | Unidades |
+|---|---|---:|
+| 1 | Menor participación media; descenso presidencial | 1,840 |
+| 2 | Crecimiento medio en ambos tipos de elección | 2,155 |
+| 3 | Participación media; descenso presidencial | 2,511 |
+| 4 | Mayor participación media; cambio presidencial cercano a cero | 2,035 |
+
+La correspondencia [B3 activo5/candidato4](ml/resultados/b3/correspondencia_activo_candidato.csv) no es un simple renombre: antiguo1→nuevo1 conserva1,351/1,366; antiguo3→nuevo3,1,940/1,964; antiguo4→nuevo2,1,184/1,259; antiguo5→nuevo4,1,941/2,080. Antiguo2 se reparte principalmente479/942/446 entre nuevos1/2/3. ARI=0.636450 mide similitud de particiones, **no porcentaje de coincidencia**.
+
+### Features y clasificación CSV
+
+Orden inmutable del vector: `media_presidencial`, `media_intermedia`, `cambio_presidencial_pp`, `cambio_intermedia_pp`.
+
+1. `(tasa_2012 + tasa_2018 + tasa_2024) / 3`, %.
+2. `(tasa_2009 + tasa_2015 + tasa_2021) / 3`, %.
+3. `tasa_2024 - tasa_2012`, pp.
+4. `tasa_2021 - tasa_2009`, pp.
+
+`POST /api/classify`: multipart, campo `file`, extensión `.csv`. Requiere `tasa_Y`, `observados_Y`, `ns_pct_Y` para **cada** Y=2009/2012/2015/2018/2021/2024. Valores finitos/no nulos; tasas0–100, observados enteros≥100, NS0–20%. De1 a5,000 filas, máximo2,000,000 bytes. `unidad_id` y `grupo_edad` son columnas descriptivas opcionales para el CSV de inferencia; no se incorporan al vector ni se acredita equivalencia territorial de datos nuevos por recibirlas.
+
+Respuesta CSV conserva entradas y agrega las cuatro features, `perfil_id`, `perfil_nombre`, `package_version`, `package_digest`, `distancia_centroide`, `nota`. Cabeceras `X-Row-Count` y `X-Package-Version`. Texto aportado por usuario se protege contra fórmulas de hoja de cálculo. Archivo no se guarda ni se usa para entrenar.
+
+Ejemplo real de `/api/template`: tasas `[43.5,61,45.5,63,52,60]` en orden de años, observados300 y NS5% en todos. Se obtuvo vector `[61.333333333333336,47,-1,8.5]`, perfil3 `Participación media; descenso presidencial`, distancia1.0383266279127885, versión actual. Evidencia completa: `analisis/reportes/b4/ejemplos_contrato.json`.
+
+Errores: extensión400, tamaño413; columnas/años/valores/filas inválidos422. `/api/observations?perfil=5` y `/api/draft/5` devuelven404: no se ofrece un quinto perfil inexistente.
+
+### Borrador, confirmación y PDF
+
+`GET /api/draft/{id}` conserva `facts`, `draft`, `validation`, `agent_steps`, `requires_human_approval=true`, `automated_publication=false`; añade `package_version`, `package_digest`, `draft_digest`. El digest canónico incluye ID, versión/digest del paquete, facts y draft; excluye `validation.checked_at`, que cambia en cada verificación y no es contenido revisado.
+
+`POST /api/approve` requiere JSON:
+
+```json
+{
+  "profile_id": 1,
+  "reviewer": "Nombre de quien realmente revisa",
+  "confirmed": true,
+  "package_version": "ccpc-2009-2024-k4-v1",
+  "package_digest": "ae5243026dc27552abec02bafaba94819cb49b8dd6877416b79b188fccde1ed4",
+  "draft_digest": "5523c0c8d4bb5b6d21102f945bc43ad0f509e24b026cb6e3d99b6f7ecd6bea23"
+}
+```
+
+Es el token real observado para el borrador1 en esta entrega; **el cliente debe usar los tokens del borrador que acaba de mostrar**, no copiar permanentemente este ejemplo ni enviar confirmed=true sin revisión humana. Revisor≥3 caracteres tras quitar espacios. Falta de confirmación400; token/versión/contenido o perfil mostrado distinto409; esquema incompleto422. La UI invalida el borrador y desmarca revisión al cambiar perfil. La API comprueba los tokens otra vez; no confía solo en la interfaz.
+
+Una respuesta aprobada incluye `approval_id`, `profile_id`, `reviewer`, `reviewed_at`, `package_version`, `draft_digest`, `download_url`. `GET /api/approved-pdf/{approval_id}` solo regenera si paquete y contenido siguen coincidiendo; PDF incluye versión, datos, revisor/fecha y digest. Se revisó texto y legibilidad, no solo `%PDF-`.
+
+**Política histórica mínima, sin snapshots inventadas:** las aprobaciones anteriores sin versión quedan heredadas/no verificables y exportar su PDF devuelve409 explicativo. Las nuevas también se bloquean si cambia paquete o texto; se conserva la fila y se exige nueva revisión, sin regenerar estadísticas nuevas bajo aprobación vieja. No hay selector histórico ni reimpresión de contenido antiguo sin snapshot suficiente. Una migración aditiva agrega `package_version`/`package_digest`, con backup consistente `.pre-b4-*.bak` y ejecución repetible. Las filas viejas no se asignan automáticamente a k4. En esta laptop no había SQLite real al inicio de B4; se probó migración con bases temporales antiguas y nuevas.
+
+### Arranque, preparación y cambios controlados
+
+Windows: `run.bat` desde la raíz instala requirements compatibles en `.venv` y arranca únicamente localhost8501. Se comprobó ese comando real. Si no hay entorno, usa CPython3.11 mediante `py -3.11` o el CPython administrado que ya exista; no uses el Python MSYS2 como sustituto del CPython Windows. En VS Code selecciona `.venv/Scripts/python.exe`.
+
+```powershell
+# Instalación de operación; para tests instalar requirements-b3.txt en vez de app únicamente.
+& .\.venv\Scripts\python.exe -m pip install -r requirements-app.txt
+# Preparar y validar: NO activa, NO entrena.
+& .\.venv\Scripts\python.exe -B -m src.prepare_product --root .
+# Detener servidor conocido con Ctrl+C antes de adoptar; luego cambiar solo referencia validada.
+& .\.venv\Scripts\python.exe -B -m src.prepare_product --root . --activate
+cmd /c run.bat
+```
+
+Arranque manual equivalente: `& .\.venv\Scripts\python.exe -B -m uvicorn src.dashboard_api:app --host 127.0.0.1 --port 8501`. macOS/Linux usa Python3.11 y `run.sh`; Docker sigue instalando requirements compatibles, pero esas alternativas no se ejecutaron en esta laptop Windows.
+
+Si regeneras sin cambios, el paquete existente se verifica y conserva. Si los bytes cambiaran con la misma identidad, la preparación rechaza la operación. Para **renombrar**: crea un JSON de cuatro objetos `{ "perfil_id": 1, "nombre": "..." }` (IDs completos/únicos), y prepara una identidad nueva, sin tocar los archivos históricos B3:
+
+```powershell
+& .\.venv\Scripts\python.exe -B -m src.prepare_product --root . --version ccpc-2009-2024-k4-v2 --names ruta/nombres_v2.json
+# Revisar paquete y pruebas antes de repetir el mismo comando con --activate y reiniciar.
+```
+
+Clasificación de cambios:
+
+- **Nombre:** editar el JSON de nombres de la nueva entrega; regenerar perfiles/observaciones/metadatos/manifest y usar nueva versión. No reutilizar confirmaciones o PDFs antiguos.
+- **Texto educativo:** editar `narrative_agent` y repetir verificación negativa, borradores, tokens/PDF y QA visual. El digest cambia aunque no cambie la geometría del modelo; exige nueva revisión. Documentar la revisión del código.
+- **Rutas/metadatos:** modificar el constructor y generar/verificar una versión coherente, no apuntar el modelo nuevo a perfiles viejos. No mantener rutas activas paralelas en API/notebook.
+- **Modelo/k, features/orden, escalado o filtros:** requiere evaluación/entrenamiento acordado y nueva entrega integral. No basta editar `k` o un umbral del manifest; el loader rechaza discrepancias. `prepare_product` B4 no entrena ni adopta candidatos distintos del B3 comprobado.
+
+`python -m src.build_delivery` exporta únicamente borradores del activo a `entregables/fichas/{package_version}/`. `src.technical_report` lee perfiles activos y separa resultados históricos; el informe final completo se revalidará antes de entrega. El generador histórico `src.generate_docs` se niega a sobrescribir README/model card cuando existe el puntero B4. Los notebooks históricos conservan su significado; el06 de producto lee `load_active` y quedó explícitamente sin salidas ejecutadas de B4.
+
+Pruebas completas, sin seleccionar solo las nuevas:
+
+```powershell
+$qaTemp = Join-Path $env:TEMP ('ccpc-tests-' + [guid]::NewGuid().ToString('N'))
+& .\.venv\Scripts\python.exe -B -m pytest -q -p no:cacheprovider --basetemp $qaTemp tests
+Invoke-RestMethod http://127.0.0.1:8501/health
+```
+
+Los tests usan SQLite temporal, nunca el historial real. Para un servidor QA separado puede fijarse `CCPC_REVIEW_DB` a un archivo temporal y otro puerto. Scripts/comandos de navegador y PDF están en el informe QA; PDFium es una herramienta temporal de QA, no dependencia de la app. `.gitattributes` evita conversiones Git LF/CRLF que invaliden hashes del paquete/evidencias después de pull; no ejecutar renormalizaciones indiscriminadas sobre datos auditados.
+
+### Recuperación y checklist después de pull
+
+Referencia anterior recuperable: commit `6222f79dadc51f35735fbffd0c92425f8e2673cb`, artefacto `ml/modelos/kmeans5_exploratorio.joblib` (SHA256 `af0a33a52e75dc5370844c799cb347a7c276491ed938f0fa11f396f316741a98`) y CSV/JSON k5 originales directamente en `datos/processed/producto/`. Se preservaron, no se crearon copias repetidas del paquete histórico.
+
+Para comprobar o recuperar la referencia, exportar **ese commit completo con `git archive` a un directorio temporal nuevo**, usar Python/sklearn compatibles y arrancar la app anterior en puerto distinto y con historial temporal. Se probó esa recuperación real. No cambiar solo la ruta al modelo k5 dentro del runtime B4 ni hacer reset/clean/checkout forzado sobre trabajo pendiente. Para volver operacionalmente, detener el servidor, operar desde la copia completa recuperada con sus metadatos coherentes y conservar aparte SQLite/evidencia; sus aprobaciones no se trasladan automáticamente entre versiones. No borrar filas para volver atrás.
+
+Después de la publicación autorizada y pull, Rubén debe:
+
+1. Confirmar rama, versión esperada, estado Git y dependencias del entorno aislado.
+2. Consultar `/health`: k4, 8,541 observaciones, versión/digest anteriores; revisar cuatro opciones y sus nombres.
+3. Ejecutar suite completa y comparar el CSV de ejemplo con el modelo real.
+4. Mostrar/revisar borrador nuevo y enviar su token; probar rechazo al cambiar selección/contenido. Usar DB temporal para el ensayo, no crear aprobaciones ficticias reales.
+5. Revisar PDF con versión, cifras, revisor/digest y confirmar política de heredados; consultar informe QA.
+6. Coordinar cualquier modificación de contrato con Hiram. El contrato ya está implementado localmente, pero no se presume que Rubén haya aprobado estas decisiones.
+
+Quedan límites de separación moderada, sensibilidad, selección territorial/etaria desigual y geografía nominal. El diagnóstico temporal previo es retrospectivo condicionado a elegibilidad de seis años, no validación temporal independiente. B5 visual, despliegue, autenticación, cartografía y modelos nuevos quedan fuera de B4.

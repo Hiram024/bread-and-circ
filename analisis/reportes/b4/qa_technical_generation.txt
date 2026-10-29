@@ -1,0 +1,4 @@
+Command: C:\Users\Hiram\Downloads\bread-and-circ-main\bread-and-circ-main\.venv\Scripts\python.exe -B -m src.technical_report
+Isolated cwd: C:\Users\Hiram\AppData\Local\Temp\qa-b4-technical-aaxiwqwp
+Exit: 0
+DOCUMENTO C:\Users\Hiram\AppData\Local\Temp\qa-b4-technical-aaxiwqwp\entregables\reportes\ccpc-2009-2024-k4-v1\documento_tecnico_reto1.pdf 61931

@@ -1,0 +1,31 @@
+{
+  "fecha": "2026-10-28T21:35:44.848712-07:00",
+  "base": "6222f79dadc51f35735fbffd0c92425f8e2673cb",
+  "version_activada": "ccpc-2009-2024-k4-v1",
+  "package_digest": "ae5243026dc27552abec02bafaba94819cb49b8dd6877416b79b188fccde1ed4",
+  "health_HTTP_8501": {
+    "status": "ok",
+    "observaciones": 8541,
+    "perfiles": 4,
+    "package_version": "ccpc-2009-2024-k4-v1",
+    "package_digest": "ae5243026dc27552abec02bafaba94819cb49b8dd6877416b79b188fccde1ed4",
+    "k": 4
+  },
+  "proceso_anterior": 42180,
+  "recarga": "Servidor anterior identificado por comando y sesi?n25888, detenido mediante Ctrl+C; nuevo servidor .venv sin --reload",
+  "incidencias": [
+    "Stop-Process emiti? NullReferenceException; el primer nuevo arranque fall? con puerto ocupado. Se corrigi? deteniendo la sesi?n conocida y se repiti? arranque exitosamente."
+  ],
+  "referencia_anterior": {
+    "git_commit": "6222f79dadc51f35735fbffd0c92425f8e2673cb",
+    "artefacto": "ml/modelos/kmeans5_exploratorio.joblib",
+    "sha256": "af0a33a52e75dc5370844c799cb347a7c276491ed938f0fa11f396f316741a98",
+    "producto": "datos/processed/producto (archivos k5 originales conservados)"
+  },
+  "SQLite_usuario_existia_al_inicio": false,
+  "SQLite_usuario_existe_ahora": false,
+  "proceso_intermedio": 16972,
+  "proceso_nuevo": 45128,
+  "arranque_final_comprobado": "cmd /c run.bat; instalador requirements-app satisfecho; uvicorn en .venv",
+  "sesion_servidor_final": 41542
+}

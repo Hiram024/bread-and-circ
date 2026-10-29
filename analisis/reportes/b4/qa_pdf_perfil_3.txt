@@ -1,0 +1,24 @@
+Ficha descriptiva · Perfil 3
+Participación media; descenso presidencial
+Versión del paquete: ccpc-2009-2024-k4-v1
+Descripción estadística
+Este grupo estadístico comprende 2,511 unidades municipio × edad. En las elecciones presidenciales presenta una
+participación media de 64.1%, mientras que en las intermedias la media es de 55.8%.
+Evolución electoral
+Entre 2012 y 2024 el cambio presidencial es de -8.1 puntos porcentuales; entre 2009 y 2021 el cambio de elecciones
+intermedias es de +3.3 puntos.
+Material educativo neutral
+La participación electoral es un indicador colectivo que puede consultarse en los datos públicos del INE. Las cifras
+cambian entre elecciones y territorios. Para interpretar una tendencia es necesario distinguir elecciones
+presidenciales e intermedias.
+Método
+Agrupación estadística exploratoria mediante K-Means con 4 clusters, basada en tasas agregadas y su evolución
+entre tipos de elección. Las medias mostradas son no ponderadas.
+Limitaciones
+No permite identificar, predecir ni describir el voto de una persona. Los grupos de edad son cortes transversales, no
+cohortes de ciudadanos rastreados. No se ha acreditado la equivalencia cartográfica histórica mediante un crosswalk
+oficial.
+Fuente: Conteos Censales de Participación Ciudadana, INE, elecciones 2009–2024
+Revisión humana: QA_B4_REVISOR_TEMPORAL · 2026-10-29T05:00:33.856661+00:00
+Digest del contenido revisado: 0e196a6329070940a92d5904b22719182c8ed98414ff10282a33566e74499973
+La aprobación de esta ficha no autoriza difusión automatizada.

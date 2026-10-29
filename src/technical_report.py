@@ -1,7 +1,7 @@
 """Produce the contest's 8-12-page technical document from verified project results."""
 from pathlib import Path
-import json
 import pandas as pd
+from .product_contract import load_active
 from reportlab.platypus import SimpleDocTemplate,Paragraph,Spacer,Table,TableStyle,PageBreak,Image
 from reportlab.lib.pagesizes import A4
 from reportlab.lib import colors
@@ -11,7 +11,7 @@ from reportlab.lib.units import cm
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 
-ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'entregables/reportes/documento_tecnico_reto1_10_paginas.pdf'
+ROOT=Path(__file__).resolve().parents[1]
 font='/usr/share/fonts/truetype/liberation2/LiberationSans-Regular.ttf'
 bold='/usr/share/fonts/truetype/liberation2/LiberationSans-Bold.ttf'
 if Path(font).exists():
@@ -41,20 +41,21 @@ def img(path,maxw=15.0,maxh=7.2):
     im=Image(str(ROOT/path));w,h=im.imageWidth,im.imageHeight
     sc=min(maxw*cm/w,maxh*cm/h);im.drawWidth=w*sc;im.drawHeight=h*sc;story.append(im)
 
-profiles=json.loads((ROOT/'datos/processed/producto/perfiles.json').read_text())
+package=load_active(ROOT)
+profiles=list(package['profiles'].values())
+OUT=ROOT/'entregables/reportes'/package['package_version']/'documento_tecnico_reto1.pdf'
 comparison=pd.read_csv(ROOT/'ml/resultados/comparacion_modelos.csv')
-meta=json.loads((ROOT/'ml/resultados/resumen_modelado.json').read_text())
 summary=pd.read_csv(ROOT/'analisis/reportes/resumen_nacional.csv')
 section('1','Objetivo y síntesis ejecutiva')
 txt('<b>Hackathon INE / Reto 1: Perfiles ciudadanos de participación.</b> Propuesta técnica de segmentación estadística no supervisada a partir de los Conteos Censales de Participación Ciudadana (CCPC) de 2009, 2012, 2015, 2018, 2021 y 2024.',
-    'El producto integra análisis descriptivo de datos electorales agregados, cinco perfiles exploratorios sobre unidades <b>municipio × grupo de edad</b>, un dashboard local interactivo, un clasificador de nuevas observaciones compatibles y fichas educativas neutrales sometidas a revisión humana.',
+    f'El producto integra análisis descriptivo de datos electorales agregados, {package["manifest"]["k"]} perfiles exploratorios de la versión {package["package_version"]} sobre unidades <b>municipio × grupo de edad</b>, un dashboard local interactivo, un clasificador de nuevas observaciones compatibles y fichas educativas neutrales sometidas a revisión humana.',
     '<b>Alcance:</b> los perfiles representan agrupaciones de estadísticas poblacionales, no tipos de personas observadas individualmente. El proyecto no utiliza información personal ni estima el comportamiento de voto individual.')
 story.append(S('Conclusión del análisis'))
-txt('El pipeline auditó 54,872,712 filas originales y produjo un panel de 12,385 unidades, de las cuales 8,541 cumplen simultáneamente los filtros de elegibilidad. En esta muestra, K-Means con cuatro clusters obtiene silhouette 0.247; se presentan cinco clusters por interpretabilidad y requerimientos del reto, con silhouette 0.232.',
+txt('La extracción anterior documentó 54,872,712 registros RAW. B2 comprobó los procesados y confirmó un panel de 12,385 unidades, de las cuales 8,541 cumplen los filtros de elegibilidad. B3 comparó k=4/5/6 bajo protocolo común; B4 adopta localmente el candidato de cuatro perfiles, con silhouette 0.247/0.252 en dos muestras fijadas.',
     'La correspondencia histórica de límites municipales todavía no está certificada. El modelo debe considerarse demostración metodológica, no clasificación institucional lista para aplicación operacional.')
 section('2','Fuentes, unidades y variables')
-txt('La plataforma del Instituto Nacional Electoral proporciona seis bases federales. Cada año se procesaron 32 CSV estatales originales, conservando los archivos ZIP y su huella SHA-256. Las columnas compartidas incluyen entidad y municipio, sección, sexo, edad, lista nominal (LN), sufragó (SV), no votó (NV) y no especificado (NS).')
-table([['Año','Tipo','Filas procesadas','Participación']]+[[r.anio,r.tipo,f'{r.filas:,}',f'{r.participacion_pct:.1f}%'] for r in summary.itertuples()], [2*cm,3*cm,4*cm,4*cm])
+txt('La extracción anterior del equipo documentó seis bases federales y 32 CSV estatales originales por año, con hashes de ZIP. B2 comprobó los CSV procesados, sin revalidar RAW. Las columnas compartidas incluyen entidad y municipio, sección, sexo, edad, lista nominal (LN), sufragó (SV), no votó (NV) y no especificado (NS).')
+table([['Año','Tipo','Microfilas documentadas','Participación']]+[[r.anio,r.tipo,f'{r.filas:,}',f'{r.participacion_pct:.1f}%'] for r in summary.itertuples()], [2*cm,3*cm,4*cm,4*cm])
 txt('Se construyeron cinco intervalos de edad (18–24, 25–34, 35–44, 45–59, 60+). Cada fila analítica representa una agrupación de conteos en un municipio, grupo etario y año. No es un panel de seguimiento de individuos a lo largo del tiempo.')
 section('3','Controles de calidad y tasas')
 txt('El barrido total verificó <b>LN = SV + NV + NS</b> y ausencia de conteos negativos para los seis años. La proporción NS y la cobertura electoral cambian entre procesos; por eso se reportan separadamente los registros con estado conocido y los no especificados.',
@@ -80,12 +81,12 @@ txt('Se comparan los procesos presidenciales (2012, 2018, 2024) con las eleccion
     'No se emplean la entidad, el sexo o la edad como variables para inferir afinidades individuales; se conservan solo como descriptores agregados para investigar distribución y cobertura. El modelo no posee una exactitud supervisada.')
 section('7','Comparación y robustez del modelo')
 table([['Modelo','k','Silhouette','Davies–Bouldin']]+[[r.algoritmo,r.k,f'{r.silhouette_muestra_2000:.3f}',f'{r.davies_bouldin:.3f}'] for r in comparison.sort_values('silhouette_muestra_2000',ascending=False).head(7).itertuples()], [5*cm,1.2*cm,3.2*cm,4*cm])
-txt('K-Means con k=4 lidera la separación según silhouette (0.247). K-Means con k=5 registra 0.232 y k=6 registra 0.222. Se utiliza cinco en el prototipo porque ayuda a elaborar cinco fichas diferenciadas y es suficientemente estable entre inicializaciones; no se declara óptimo absoluto.',
-    'Para k=5, el índice ARI entre semillas es aproximadamente 0.974; la comparación StandardScaler frente a RobustScaler genera ARI cercano a 0.794. Esto indica sensibilidad a decisiones metodológicas, por lo que las etiquetas son exploratorias. Una prueba de clasificación derivada de 2009–2021 permite estudiar por separado los resultados de 2024 sin incorporarlos al ajuste.')
-section('8','Cinco perfiles y su caracterización')
+txt('La comparación histórica de la tabla anterior usa n_init=20 y no se mezcla con B3. B3 fijó n_init=30 y seleccionó cuatro perfiles: mejor separación observada en ambas muestras y tamaños equilibrados. Cinco tuvo ligeramente mayor estabilidad entre semillas; no se afirma que cuatro gane todos los criterios ni sea el número verdadero de grupos.',
+    'En B3, k4 obtuvo ARI medio entre semillas 0.9633; sensibilidad RobustScaler 0.8690 y NS10 0.8428 sobre 5,671 unidades comunes. El diagnóstico temporal anterior ajustó features 2009–2021, pero seleccionó unidades por elegibilidad de seis años incluida 2024: es retrospectivo condicionado, no validación temporal independiente.')
+section('8',f'{package["manifest"]["k"]} perfiles activos y su caracterización')
 table([['Perfil','Unidades','Presidencial','Intermedia']]+[[f'{p["perfil_id"]}. {p["nombre"]}',f'{p["n_unidades"]:,}',f'{p["media_presidencial"]:.1f}%',f'{p["media_intermedia"]:.1f}%'] for p in profiles],[6.7*cm,2.0*cm,2.6*cm,2.6*cm])
 txt('Las tasas se expresan como <b>medias no ponderadas de las unidades</b>; una unidad rural pequeña y una urbana grande cuentan igual en la media del perfil. No deben interpretarse como porcentajes representativos de todas las personas que integran el cluster.',
-    'El perfil 1 exhibe nivel bajo y descenso presidencial; el 2 presenta un aumento importante en elecciones intermedias desde una base media-baja. El 3 conserva una participación media-alta con retroceso presidencial. El 4 refleja cambios intermedios muy marcados, y el 5 muestra niveles altos en ambos tipos de elección.',
+    f'Los nombres y estadísticas de la tabla proceden del paquete {package["package_version"]}. Sus IDs son locales a esa entrega y no se interpretan como equivalencias por posición con la referencia histórica de B3. La comparación entre versiones requiere el cruce de asignaciones por clave.',
     'Las fichas de perfil incluyen magnitudes, fuente, definición metodológica y limitaciones. Cualquier interpretación causal requiere estudios adicionales, no solo clustering de conteos agregados.')
 section('9','Interfaz, fichas y trabajo institucional')
 txt('El dashboard local ofrece gráficos de evolución nacional, distribución y comparación de los perfiles, filtros de entidad/municipio/grupo de edad, inspección de la auditoría territorial y clasificación de nuevos CSV con la misma estructura temporal de seis elecciones.',
@@ -95,8 +96,8 @@ story.append(S('Qué requiere un despliegue real'))
 txt('Control de usuarios y roles, auditorías de modificaciones, cifrado, alojamiento institucional, estrategia de actualización de datos, validación del modelo sobre cartografía oficial y evaluación de accesibilidad y seguridad. El prototipo está diseñado para localhost.')
 section('10','Limitaciones, conclusiones y bibliografía')
 txt('<b>Limitaciones:</b> la homogeneidad territorial no está certificada; las tasas no son historiales de las mismas personas; seis eventos son pocos puntos temporales; el clustering no demuestra causas, preferencias electorales ni propensiones individuales; el modelo no puede procesar un año futuro aislado sin cambiar features y reentrenar.',
-    '<b>Recomendación:</b> presentar cinco perfiles como hallazgo estadístico exploratorio, acompañarlos con visualizaciones y registrar la incertidumbre. El siguiente paso científico es certificar el cruce cartográfico histórico, recalcular la matriz, revisar posibles sesgos de selección y verificar la estabilidad de perfiles. El siguiente paso de desarrollo es ejecutar y revisar la app en VS Code.',
-    '<b>Reproducibilidad:</b> el paquete incluye seis ZIP originales, diccionarios de datos, procesamiento por año, notebooks ejecutados, artefacto ML, pruebas unitarias y manifest SHA-256.')
+    '<b>Recomendación:</b> presentar la versión activa de perfiles como descripción estadística exploratoria y registrar incertidumbre. La certificación cartográfica y revisión de sesgo siguen pendientes; no se infiere causalidad ni comportamiento individual.',
+    '<b>Reproducibilidad:</b> B4 conserva los procesados auditados y la evidencia histórica, y enlaza modelo, observaciones, perfiles y metadatos mediante su descriptor y hashes. El notebook de producto fue adaptado sin atribuirle una reejecución completa en B4. La documentación anterior de RAW no equivale a una verificación nueva de sus ZIP.')
 story.append(S('Referencias principales'))
 for r in [
 'INE, Conteos Censales de Participación Ciudadana 2009–2024: ine.mx/transparencia/datos-abiertos/visualizacion-datos/conteos-censales-participacion/',

@@ -6,4 +6,5 @@ __pycache__/
 .DS_Store
 # When using Git, manage official datasets with Git LFS or outside of the repository.
 entregables/revision_local.sqlite3
+entregables/revision_local.sqlite3.*
 .env

@@ -1,0 +1,34 @@
+Command: C:\Users\Hiram\Downloads\bread-and-circ-main\bread-and-circ-main\.venv\Scripts\python.exe -B C:\Users\Hiram\Downloads\bread-and-circ-main\bread-and-circ-main\analisis\reportes\b4\qa_browser_run.py
+Exit: 0
+Server command: C:\Users\Hiram\Downloads\bread-and-circ-main\bread-and-circ-main\.venv\Scripts\python.exe -B -m uvicorn src.dashboard_api:app --host 127.0.0.1 --port 51200
+Browser command: C:\Users\Hiram\AppData\Local\ms-playwright-go\1.57.0\node.exe C:\Users\Hiram\Downloads\bread-and-circ-main\bread-and-circ-main\analisis\reportes\b4\qa_browser.cjs http://127.0.0.1:51200/
+Exit: 0
+{
+  "browser": "156.0.8078.48",
+  "base": "http://127.0.0.1:51200/",
+  "options": [
+    {
+      "value": "1",
+      "text": "Perfil 1 — Menor participación media; descenso presidencial"
+    },
+    {
+      "value": "2",
+      "text": "Perfil 2 — Crecimiento medio en ambos tipos de elección"
+    },
+    {
+      "value": "3",
+      "text": "Perfil 3 — Participación media; descenso presidencial"
+    },
+    {
+      "value": "4",
+      "text": "Perfil 4 — Mayor participación media; cambio presidencial cercano a cero"
+    }
+  ],
+  "real_browser": true,
+  "query_filter": true,
+  "selection_change_invalidated": true,
+  "approval_status": 200,
+  "pdf_status": 200,
+  "page_errors": []
+}
+

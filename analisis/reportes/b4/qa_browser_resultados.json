@@ -1,0 +1,28 @@
+{
+  "browser": "156.0.8078.48",
+  "base": "http://127.0.0.1:65301/",
+  "options": [
+    {
+      "value": "1",
+      "text": "Perfil 1 — Menor participación media; descenso presidencial"
+    },
+    {
+      "value": "2",
+      "text": "Perfil 2 — Crecimiento medio en ambos tipos de elección"
+    },
+    {
+      "value": "3",
+      "text": "Perfil 3 — Participación media; descenso presidencial"
+    },
+    {
+      "value": "4",
+      "text": "Perfil 4 — Mayor participación media; cambio presidencial cercano a cero"
+    }
+  ],
+  "real_browser": true,
+  "query_filter": true,
+  "selection_change_invalidated": true,
+  "approval_status": 200,
+  "pdf_status": 200,
+  "page_errors": []
+}

@@ -1,0 +1,3 @@
+Command: C:\Users\Hiram\AppData\Local\Temp\qa-b4-clean-env-0zcpwohc\venv\Scripts\python.exe -B analisis/reportes/b4/qa_clean_runtime.py
+Exit: 0
+{"health": {"status": "ok", "observaciones": 8541, "perfiles": 4, "package_version": "ccpc-2009-2024-k4-v1", "package_digest": "ae5243026dc27552abec02bafaba94819cb49b8dd6877416b79b188fccde1ed4", "k": 4}, "queried_rows": 3, "classified_profile": 3, "versions": {"numpy": "2.4.6", "pandas": "2.3.3", "scipy": "1.17.1", "scikit-learn": "1.8.0", "joblib": "1.6.0", "threadpoolctl": "3.7.0", "fastapi": "0.162.0", "reportlab": "4.5.1"}}

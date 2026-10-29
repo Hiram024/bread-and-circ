@@ -1,0 +1,6 @@
+# Byte-stable fingerprints and package manifests across Windows/Linux checkouts.
+* text=auto eol=lf
+datos/processed/** -text whitespace=cr-at-eol
+ml/** -text whitespace=cr-at-eol
+analisis/reportes/** -text whitespace=cr-at-eol
+run.bat text eol=crlf

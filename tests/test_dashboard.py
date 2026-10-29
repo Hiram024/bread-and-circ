@@ -8,7 +8,8 @@ client=TestClient(app)
 def test_status_and_summary():
     assert client.get('/health').json()['observaciones']==8541
     s=client.get('/api/summary').json()
-    assert len(s['perfiles'])==5 and len(s['historico'])==6
+    assert len(s['perfiles'])==4 and len(s['historico'])==6
+    assert {p['perfil_id']: p['n_unidades'] for p in s['perfiles']} == {1:1840,2:2155,3:2511,4:2035}
 
 def test_territory_and_filters():
     r=client.get('/api/observations',params={'perfil':1,'limit':5}).json()
@@ -21,7 +22,7 @@ def test_input_validation_and_classification():
     one={'unidad_id':'solo_agregados'}
     for y,v in zip(years,[45,61,43,62,50,59]):
         one.update({f'tasa_{y}':v,f'observados_{y}':500,f'ns_pct_{y}':4})
-    x=classify_dataframe(pd.DataFrame([one]));assert int(x.perfil_id.iloc[0]) in range(1,6)
+    x=classify_dataframe(pd.DataFrame([one]));assert int(x.perfil_id.iloc[0]) in range(1,5)
     r=client.post('/api/classify',files={'file':('example.csv',pd.DataFrame([one]).to_csv(index=False),'text/csv')})
     assert r.status_code==200 and b'perfil_nombre' in r.content
     one['tasa_2009']=101
@@ -35,7 +36,10 @@ def test_education_validation_and_pdf():
         assert d['requires_human_approval']
         b=pdf_for_draft(d,'Revisor de prueba','2026-10-27')
         assert b.startswith(b'%PDF-')
-    assert client.post('/api/approve',json={'profile_id':1,'reviewer':'Test Reviewer','confirmed':False}).status_code==400
+    shown=client.get('/api/draft/1').json()
+    assert client.post('/api/approve',json={'profile_id':1,'reviewer':'Test Reviewer','confirmed':False,
+        'package_version':shown['package_version'],'package_digest':shown['package_digest'],
+        'draft_digest':shown['draft_digest']}).status_code==400
 
 def test_home():
     assert client.get('/').status_code==200

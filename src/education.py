@@ -16,6 +16,7 @@ from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, Tabl
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from pathlib import Path
+from .product_contract import digest
 
 FONT_PATH=Path('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf')
 if FONT_PATH.exists():
@@ -25,9 +26,10 @@ FONT='DejaVuINE' if 'DejaVuINE' in pdfmetrics.getRegisteredFontNames() else 'Hel
 
 def data_agent(profile:dict)->dict:
     required=('perfil_id','nombre','n_unidades','media_presidencial','media_intermedia',
-        'cambio_presidencial_pp','cambio_intermedia_pp')
+        'cambio_presidencial_pp','cambio_intermedia_pp','package_version','k')
     if not all(k in profile for k in required):raise ValueError('Perfil incompleto')
     return {'perfil_id':int(profile['perfil_id']),'nombre':str(profile['nombre']),
+            'package_version':profile['package_version'],'k':int(profile['k']),
             'unidades':int(profile['n_unidades']),
             'participacion_presidencial':round(float(profile['media_presidencial']),1),
             'participacion_intermedia':round(float(profile['media_intermedia']),1),
@@ -48,19 +50,21 @@ def narrative_agent(facts:dict)->dict:
             'contenido_educativo':('La participación electoral es un indicador colectivo que puede consultarse '
                  'en los datos públicos del INE. Las cifras cambian entre elecciones y territorios. '
                  'Para interpretar una tendencia es necesario distinguir elecciones presidenciales e intermedias.'),
-            'metodologia':('Agrupación estadística exploratoria mediante K-Means con cinco clusters, basada en '
+            'metodologia':(f'Agrupación estadística exploratoria mediante K-Means con {p["k"]} clusters, basada en '
                  'tasas agregadas y su evolución entre tipos de elección. Las medias mostradas son no ponderadas.'),
             'limitaciones':('No permite identificar, predecir ni describir el voto de una persona. '
                  'Los grupos de edad son cortes transversales, no cohortes de ciudadanos rastreados. '
                  'No se ha acreditado la equivalencia cartográfica histórica mediante un crosswalk oficial.'),
-            'fuente':p['fuente'],'estado':'BORRADOR_PENDIENTE_REVISION'}
+            'fuente':p['fuente'],'package_version':p['package_version'],'estado':'BORRADOR_PENDIENTE_REVISION'}
 
 def verification_agent(facts:dict,draft:dict)->dict:
     check=(f'{facts["unidades"]:,}' in draft['resumen'] and
            f'{facts["participacion_presidencial"]:.1f}%' in draft['resumen'] and
            f'{facts["participacion_intermedia"]:.1f}%' in draft['resumen'] and
            f'{facts["cambio_presidencial"]:+.1f}' in draft['evolucion'] and
-           f'{facts["cambio_intermedia"]:+.1f}' in draft['evolucion'])
+           f'{facts["cambio_intermedia"]:+.1f}' in draft['evolucion'] and
+           draft['package_version']==facts['package_version'] and
+           f'{facts["k"]} clusters' in draft['metodologia'] and draft['subtitulo']==facts['nombre'])
     text=' '.join(str(v) for v in draft.values()).lower()
     forbidden=('vota por','voten por','apoya al partido','apoye al partido','convencer al elector')
     if any(x in text for x in forbidden):check=False
@@ -69,12 +73,20 @@ def verification_agent(facts:dict,draft:dict)->dict:
              'sin exhortación partidista o persuasión demográfica'],
             'checked_at':datetime.now(timezone.utc).isoformat()}
 
-def build_draft(profile:dict)->dict:
+def draft_digest(item:dict)->str:
+    # checked_at is execution evidence, not part of the content the person reviewed.
+    return digest({k:item[k] for k in ['perfil_id','package_version','package_digest','facts','draft']})
+
+
+def build_draft(profile:dict, package_digest:str='')->dict:
     facts=data_agent(profile);draft=narrative_agent(facts);v=verification_agent(facts,draft)
     if not v['passed']:raise ValueError('Error en validación interna de la ficha')
-    return {'perfil_id':facts['perfil_id'],'facts':facts,'draft':draft,'validation':v,
+    item={'perfil_id':facts['perfil_id'],'facts':facts,'draft':draft,'validation':v,
+            'package_version':facts['package_version'],'package_digest':package_digest,
             'requires_human_approval':True,'automated_publication':False,
             'agent_steps':['data_agent','narrative_agent','verification_agent','human_review']}
+    item['draft_digest']=draft_digest(item)
+    return item
 
 def pdf_for_draft(item:dict, reviewer:str, when:str)->bytes:
     if not reviewer.strip():raise ValueError('Revisor requerido')
@@ -87,12 +99,14 @@ def pdf_for_draft(item:dict, reviewer:str, when:str)->bytes:
     styles.add(ParagraphStyle(name='INE_sub',parent=styles['Heading2'],fontName=FONT,fontSize=11,leading=16,
        textColor=colors.HexColor('#623cad'),spaceBefore=10,spaceAfter=6))
     d=item['draft']; f=item['facts']
-    story=[Paragraph(escape(d['titulo']),styles['INE_H']),Paragraph(escape(d['subtitulo']),styles['INE_sub'])]
+    story=[Paragraph(escape(d['titulo']),styles['INE_H']),Paragraph(escape(d['subtitulo']),styles['INE_sub']),
+           Paragraph(escape(f'Versión del paquete: {item["package_version"]}'),styles['INE_P'])]
     for heading,key in [('Descripción estadística','resumen'),('Evolución electoral','evolucion'),
                         ('Material educativo neutral','contenido_educativo'),('Método','metodologia'),('Limitaciones','limitaciones')]:
         story.extend([Paragraph(heading,styles['INE_sub']),Paragraph(escape(d[key]),styles['INE_P'])])
     story.append(Spacer(1,0.3*cm))
     for msg in [f'Fuente: {f["fuente"]}',f'Revisión humana: {reviewer} · {when}',
+                f'Digest del contenido revisado: {item["draft_digest"]}',
                 'La aprobación de esta ficha no autoriza difusión automatizada.']:
         story.append(Paragraph(escape(msg),styles['INE_P']))
     pdf.build(story)

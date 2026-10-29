@@ -1,0 +1,33 @@
+{
+  "fecha": "2026-10-28T22:01:43.947727-07:00",
+  "revisor": "qa_b4",
+  "herramienta": "functions.view_image",
+  "resultado": "Sin cortes, solapamientos ni pérdida de legibilidad observados",
+  "imagenes": [
+    {
+      "archivo": "qa_pdf_perfil_1_pagina_1.png",
+      "sha256": "8c93445de44a292a0f17b4265c23d5b77d35b3c7e7f19d818c80121bf735e9e3"
+    },
+    {
+      "archivo": "qa_pdf_perfil_2_pagina_1.png",
+      "sha256": "e5e76b690285c3718a8ac5f5a00d0184f594dcce54cde16ad012036d614842b1"
+    },
+    {
+      "archivo": "qa_pdf_perfil_3_pagina_1.png",
+      "sha256": "025db4de18d54dcb5ca83ba14470ef1dfc9232f2b94807c02bf32f8cecb8c9a3"
+    },
+    {
+      "archivo": "qa_pdf_perfil_4_pagina_1.png",
+      "sha256": "026e0a977fa268f43ec6d2fcbabae7418fec558d272e2e3f0878b9aa9ef901bb"
+    },
+    {
+      "archivo": "qa_browser.png",
+      "sha256": "066062631b0b658b19d3e9efc9c4127592bf69d9ceaeb9e5d935b67b50da68d2"
+    },
+    {
+      "archivo": "qa_technical_section8_page8.png",
+      "sha256": "54ea816aa92d9842bd4c970cfad3695310f9d97ba84b147bad0e7f49ec61283f"
+    }
+  ],
+  "alcance_informe_tecnico": "Solo página8 revisada visualmente; texto de10páginas extraído, no certificación editorial completa"
+}

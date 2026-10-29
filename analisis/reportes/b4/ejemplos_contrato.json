@@ -1,0 +1,65 @@
+{
+  "health": {
+    "status": "ok",
+    "observaciones": 8541,
+    "perfiles": 4,
+    "package_version": "ccpc-2009-2024-k4-v1",
+    "package_digest": "ae5243026dc27552abec02bafaba94819cb49b8dd6877416b79b188fccde1ed4",
+    "k": 4
+  },
+  "draft_1": {
+    "perfil_id": 1,
+    "facts": {
+      "perfil_id": 1,
+      "nombre": "Menor participación media; descenso presidencial",
+      "package_version": "ccpc-2009-2024-k4-v1",
+      "k": 4,
+      "unidades": 1840,
+      "participacion_presidencial": 48.4,
+      "participacion_intermedia": 35.7,
+      "cambio_presidencial": -7.6,
+      "cambio_intermedia": 6.4,
+      "fuente": "Conteos Censales de Participación Ciudadana, INE, elecciones 2009–2024",
+      "granularidad": "Municipio × grupo de edad (agregados, sin datos personales)"
+    },
+    "draft": {
+      "titulo": "Ficha descriptiva · Perfil 1",
+      "subtitulo": "Menor participación media; descenso presidencial",
+      "resumen": "Este grupo estadístico comprende 1,840 unidades municipio × edad. En las elecciones presidenciales presenta una participación media de 48.4%, mientras que en las intermedias la media es de 35.7%.",
+      "evolucion": "Entre 2012 y 2024 el cambio presidencial es de -7.6 puntos porcentuales; entre 2009 y 2021 el cambio de elecciones intermedias es de +6.4 puntos.",
+      "contenido_educativo": "La participación electoral es un indicador colectivo que puede consultarse en los datos públicos del INE. Las cifras cambian entre elecciones y territorios. Para interpretar una tendencia es necesario distinguir elecciones presidenciales e intermedias.",
+      "metodologia": "Agrupación estadística exploratoria mediante K-Means con 4 clusters, basada en tasas agregadas y su evolución entre tipos de elección. Las medias mostradas son no ponderadas.",
+      "limitaciones": "No permite identificar, predecir ni describir el voto de una persona. Los grupos de edad son cortes transversales, no cohortes de ciudadanos rastreados. No se ha acreditado la equivalencia cartográfica histórica mediante un crosswalk oficial.",
+      "fuente": "Conteos Censales de Participación Ciudadana, INE, elecciones 2009–2024",
+      "package_version": "ccpc-2009-2024-k4-v1",
+      "estado": "BORRADOR_PENDIENTE_REVISION"
+    },
+    "validation": {
+      "passed": true,
+      "checks": [
+        "cifras respaldadas por perfil",
+        "sin afirmaciones sobre comportamiento individual",
+        "sin exhortación partidista o persuasión demográfica"
+      ],
+      "checked_at": "2026-10-29T04:38:32.981215+00:00"
+    },
+    "package_version": "ccpc-2009-2024-k4-v1",
+    "package_digest": "ae5243026dc27552abec02bafaba94819cb49b8dd6877416b79b188fccde1ed4",
+    "requires_human_approval": true,
+    "automated_publication": false,
+    "agent_steps": [
+      "data_agent",
+      "narrative_agent",
+      "verification_agent",
+      "human_review"
+    ],
+    "draft_digest": "5523c0c8d4bb5b6d21102f945bc43ad0f509e24b026cb6e3d99b6f7ecd6bea23"
+  },
+  "template_csv": "unidad_id,grupo_edad,tasa_2009,tasa_2012,tasa_2015,tasa_2018,tasa_2021,tasa_2024,observados_2009,observados_2012,observados_2015,observados_2018,observados_2021,observados_2024,ns_pct_2009,ns_pct_2012,ns_pct_2015,ns_pct_2018,ns_pct_2021,ns_pct_2024\r\nEJEMPLO_AGREGADO,25-34,43.5,61.0,45.5,63.0,52.0,60.0,300,300,300,300,300,300,5,5,5,5,5,5\r\n",
+  "classification_csv": "unidad_id,grupo_edad,tasa_2009,tasa_2012,tasa_2015,tasa_2018,tasa_2021,tasa_2024,observados_2009,observados_2012,observados_2015,observados_2018,observados_2021,observados_2024,ns_pct_2009,ns_pct_2012,ns_pct_2015,ns_pct_2018,ns_pct_2021,ns_pct_2024,media_presidencial,media_intermedia,cambio_presidencial_pp,cambio_intermedia_pp,perfil_id,perfil_nombre,package_version,package_digest,distancia_centroide,nota\r\nEJEMPLO_AGREGADO,25-34,43.5,61.0,45.5,63.0,52.0,60.0,300,300,300,300,300,300,5,5,5,5,5,5,61.333333333333336,47.0,-1.0,8.5,3,Participación media; descenso presidencial,ccpc-2009-2024-k4-v1,ae5243026dc27552abec02bafaba94819cb49b8dd6877416b79b188fccde1ed4,1.0383266279127885,Asignación estadística exploratoria de unidad agregada; no clasificación individual\r\n",
+  "headers": {
+    "X-Package-Version": "ccpc-2009-2024-k4-v1",
+    "X-Row-Count": "1"
+  },
+  "nota": "Ejemplos reales de consulta/clasificaci?n; no se cre? aprobaci?n en historial del usuario."
+}

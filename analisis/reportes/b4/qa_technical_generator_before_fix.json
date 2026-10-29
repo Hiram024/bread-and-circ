@@ -1,0 +1,21 @@
+{
+  "sha256": "9e3db4fbee6361a42cc24d1b90af74b2b92f6a42e9a3f4bdbf7f9acde331b8f0",
+  "hits": [
+    {
+      "line": 59,
+      "text": "txt('La plataforma del Instituto Nacional Electoral proporciona seis bases federales. Cada año se procesaron 32 CSV estatales originales, conservando los archivos ZIP y su huella SHA-256. Las columnas compartidas incluyen entidad y municipio, sección, sexo, edad, lista nominal (LN), sufragó (SV), no votó (NV) y no especificado (NS).')"
+    },
+    {
+      "line": 78,
+      "text": "txt('El ZIP entrega el panel largo, una matriz ancha de seis años, los flags de elegibilidad, la tabla de auditoría municipal, observaciones segmentadas y los reportes de sensibilidad. Se preservan las fuentes originales para rehacer cálculos y verificar su procedencia.')"
+    },
+    {
+      "line": 88,
+      "text": "section('8','Cinco perfiles y su caracterización')"
+    },
+    {
+      "line": 102,
+      "text": "    '<b>Reproducibilidad:</b> el paquete incluye seis ZIP originales, diccionarios de datos, procesamiento por año, notebooks ejecutados, artefacto ML, pruebas unitarias y manifest SHA-256.')"
+    }
+  ]
+}

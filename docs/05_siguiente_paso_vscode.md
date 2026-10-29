@@ -1,5 +1,7 @@
 # 05 — ¿Continuar aquí o pasar a VS Code?
 
+> Documento histórico anterior a la adopción B4. Se conserva como referencia; sus menciones a k5, rutas o aprobación no describen el activo actual. Consulte el [contrato vigente del README](../README.md#contrato-de-integración-para-rubén--b4), el descriptor activo y la [memoria de Hiram](00_memoria_tecnica_Hiram.md).
+
 ## Estado de cierre de fase
 
 **Sí se puede pasar a VS Code** para ingeniería del MVP: ya existen datos raw versionados, ETL reproducible, matriz histórica, análisis, comparativa ML, artefacto de modelo, notebooks y pruebas. No conviene volver a investigar a ciegas desde cero.

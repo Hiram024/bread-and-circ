@@ -1,5 +1,7 @@
 # Dashboard funcional — alcance y endpoints
 
+> Documento histórico anterior a la adopción B4. Se conserva como referencia; sus menciones a k5, rutas o aprobación no describen el activo actual. Consulte el [contrato vigente del README](../README.md#contrato-de-integración-para-rubén--b4), el descriptor activo y la [memoria de Hiram](00_memoria_tecnica_Hiram.md).
+
 ## Visión
 
 Aplicación FastAPI con interfaz HTML/CSS/JavaScript y gráficos Plotly distribuidos localmente. Funciona en `localhost:8501` sin cuenta, internet o clave API. Incluye exploración de participación nacional y perfiles, filtros de entidad/municipio/edad, clasificador de nuevos **agregados compatibles**, auditoría territorial, generación y aprobación local de fichas PDF.

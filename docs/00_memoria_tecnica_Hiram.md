@@ -1,0 +1,152 @@
+# Memoria técnica acumulativa de Hiram — Hackathon INE, Reto 1
+
+Este documento reúne decisiones, trabajo realizado y material reutilizable para el informe final. **No sustituye las tablas de evidencia ni certifica el origen RAW.** Fecha de cierre del bloque B4: 28/10/2026, zona America/Tijuana; los timestamps y hashes de cada ejecución están en sus reportes. La historia conserva la referencia k5: no se reescribe como si siempre hubieran existido cuatro perfiles.
+
+## Objetivo, contribuciones y alcance
+
+El proyecto describe perfiles estadísticos de participación electoral en agregados municipio × grupo de edad para seis elecciones federales. No identifica ciudadanos, no estima intención de voto individual y no interpreta agrupaciones como causas o tipos esenciales de personas.
+
+Según el contexto aportado por Hiram, **la base previa fue aportada por Rubén**: pipeline, aplicación, modelos/fichas iniciales y documentación preceden a estos bloques. Esta memoria no atribuye todo el proyecto a Hiram. El reparto acordado es datos, modelo y vistas analíticas para Hiram; agentes, clasificación CSV, aprobación y PDF para Rubén. B4 autoriza a Hiram a hacer ajustes mínimos de integración en esas piezas y a implementar decisiones de contrato, **sin afirmar que Rubén las aprobó**. No se enviaron mensajes a terceros.
+
+El trabajo documentado de Hiram comprende ejecución/preparación de B1, auditoría independiente B2, comparación controlada B3 y adopción local B4, con QA delegado exclusivamente a pruebas. No se hizo B5 visual ni despliegue.
+
+## Fuentes, unidad y preparación
+
+Fuente declarada: Conteos Censales de Participación Ciudadana (CCPC) del INE, 2009, 2012, 2015, 2018, 2021, 2024. La extracción original confiable fue confirmada por Hiram. Los 54,872,712 microregistros, incidencias, diccionarios y hashes de ZIP descritos por la extracción anterior son **evidencia heredada**, no un recuento RAW nuevo de B2/B3/B4.
+
+La clave nacional es `(EDOCVE, MPIOCVE)`; MPIOCVE solo no identifica un municipio nacionalmente. La unidad analítica agrega esa clave con edad: 18–24, 25–34, 35–44, 45–59 y 60+. La serie añade año. No se une por nombre ni se reincorporan unidades por similitud ortográfica.
+
+- `LN = SV + NV + NS`; observados=`SV+NV`.
+- Participación observada=`100*SV/(SV+NV)`, excluyendo NS del denominador. NS no se convierte en abstención.
+- `ns_pct=100*NS/LN`. Denominadores cero producen tasa indefinida, no cero.
+- Elegibilidad: seis tasas válidas, identidad nominal estable, observados≥100 y NS≤20% en cada año. Se comprueban ausencias antes de mínimos/máximos.
+- Identidad nominal es un filtro conservador: nombres iguales no acreditan geometría histórica. Los grupos etarios son cortes transversales, no cohortes rastreadas.
+
+Presidenciales: 2012/2018/2024; intermedias: 2009/2015/2021. El vector, sin pesos poblacionales, contiene en ese orden: media presidencial; media intermedia; tasa2024−tasa2012; tasa2021−tasa2009. Las dos medias se expresan en % y los cambios en pp. Brecha y curvaturas son descriptivos, no nuevas features.
+
+## Registro de bloques y procedencia de resultados
+
+| Bloque | Estado/resultado | Versión, fecha y evidencia |
+|---|---|---|
+| B1 | Entorno, ejecución inicial, recuperación del historial Git de la copia local y rama de trabajo. Aplicación inicial k5 ejecutada sin cambiar sus datos. | Resultado de la sesión anterior comunicado; B4 verificó checkout efectivo, entorno y servicio antes de adoptar. No es auditoría RAW ni autoría de la base. |
+| B2 | APTO CON ADVERTENCIAS, sin diferencias materiales de procesados/elegibilidad. | Ejecutado sobre eee428e; publicado en a5794fd. `src/validate_processed.py`, `docs/10_auditoria_procesados_B2.md`, `analisis/reportes/b2/`. |
+| B3 | APTO PARA B4 CON ADVERTENCIAS; seleccionó k4 entre4/5/6 sin conservar cinco por defecto. | Ejecutado sobre a5794fd; publicado en6222f79. `src/evaluate_clustering.py`, `docs/11_evaluacion_modelo_B3.md`, `ml/resultados/b3/`. |
+| B4 | Paquete preparado, validado y **activado localmente**: ccpc-2009-2024-k4-v1. Contrato, README y memoria implementados. | Base6222f79; cambios B4 sin commit. QA independiente y su veredicto final: `docs/12_QA_B4.md`, `analisis/reportes/b4/`. La activación no autoriza publicación. |
+
+Al inicio de B4 el checkout estaba limpio en `6222f79dadc51f35735fbffd0c92425f8e2673cb`, rama feat/analysis-dashboard y remoto Hiram024/bread-and-circ. Se verificaron las 89 huellas B2 y los 131 originales inventariados por B3 **antes de editar**. Los datos procesados auditados, evidencia B2/B3, referencia k5 y candidato B3 permanecen intactos. Cambios posteriores de código/documentación de integración son deliberados y están delimitados en el diff B4; no se presentan como código del SHA base.
+
+## B2 — datos, exclusiones y selección
+
+Se contaron completamente seis agregados principales y doce secundarios sexo/tipo de sección. Se reconstruyeron serie y panel en ubicación separada, sin llamar a la transformación que se verificaba, sin pivot `first` para resolver ambigüedades y sin sobrescribir originales. Los conteos nacionales se reconciliaron contra auditorías/reportes y copias del producto; no se usaron medias municipales simples como tasa nacional.
+
+| Medida comprobada en B2 | Resultado |
+|---|---:|
+| Filas anuales de serie | 73,895 |
+| Unidades distintas del panel | 12,385 |
+| Con seis tasas válidas | 11,925 |
+| Elegibles | 8,541 |
+| Excluidas únicas | 3,844 |
+| Municipios representados | 1,825 de2,477 |
+| Cobertura de unidades | 68.9624546% |
+| Cobertura municipal | 73.6778361% |
+| LN2024 elegible / nacional procesada | 81,666,826 / 98,330,348 =83.0535309% |
+
+La igualdad del denominador LN del panel y del agregado nacional procesado2024 se demostró en B2. No implica cotejo nuevo con un denominador externo oficial.
+
+Causas superpuestas: falta de tasa460; identidad nominal190 unidades/38 claves; observados<100 en algún año863; NS>20% en algún año3,307. Hay110 unidades con años de conteos/NS ausentes, contenidas en las tasas incompletas. No se suman causas: la unión es3,844. Las780 celdas unidad-año sin tasa son415 ausencias y365 presentes con cero observados, no780 unidades distintas.
+
+Oaxaca concentra1,207 exclusiones (31.40% de los excluidos), y Sinaloa/Sonora pierden alrededor de60% de sus unidades. Edad18–24 pierde32.74% frente a29.23% en60+. En2024, NS ponderado por LN es5.0123% entre incluidos y13.3964% entre excluidos. La cercanía de medias simples de participación no prueba ausencia de sesgo. Los valores y todos los grupos se conservan en `seleccion_entidad.csv`, `seleccion_edad.csv`, `seleccion_anual.csv` y cruces de B2.
+
+B4 no repitió esa auditoría: comprobó la vigencia de sus entradas mediante hashes, y reconstruyó únicamente las salidas de producto requeridas para adoptar B3.
+
+## B3 — comparación controlada y decisión
+
+Quince ajustes principales, K-Means k4/5/6, StandardScaler, n_init30, init k-means++, max_iter300, tol1e-4, lloyd. Semillas7/21/42/64/98; referencia42 fijada antes de comparar. Dos muestras comunes de2,000, semillas64/2026; ajuste sobre todas las8,541. Las muestras comparten474 claves, no constituyen intervalo de confianza. La receta histórica de comparación n_init20 no se mezcló con n_init30.
+
+| k | Silhouette64 /2026, seed42 | DB seed42 | ARI semillas media [mín., máx.] |
+|---|---|---:|---|
+| 4 | 0.247070 /0.251644 | 1.186598 | 0.963304 [0.928580,0.987496] |
+| 5 | 0.232284 /0.238248 | 1.217939 | 0.970438 [0.953057,0.985856] |
+| 6 | 0.222114 /0.228712 | 1.210639 | 0.822530 [0.704082,0.996685] |
+
+k4 tuvo mayor separación en ambas muestras y cinco semillas, tamaños equilibrados y patrones interpretables. **k5 tuvo algo más de estabilidad entre semillas**, un refinamiento plausible, pero peor separación/sensibilidad al escalador. k6 mostró particiones alternativas y mediana ARI0.710704. No se usó una suma ponderada de métricas ni se cambiaron semillas para favorecer un resultado.
+
+Sensibilidad k4: ARI RobustScaler0.869001 en8,541; NS10=0.842758 en5,671 comunes. NS10 reajustó escalador/modelo sobre el subconjunto:1,273 municipios, LN56,895,504/98,330,348 =57.8616%. No se modificó el filtro principal. No se hizo remuestreo municipal: estabilidad de inicialización no demuestra estabilidad al remuestreo.
+
+La advertencia sklearn1.8.0/1.9.1 se resolvió para B3 en .venv aislado1.8.0. Referencia antigua:8,541 predicciones por clave coincidentes. Repetir su receta k5 n_init30 produjo ARI1 y diferencias cero en escalador/centroides. No se infirió equivalencia solo porque joblib.load funcionara.
+
+El eta²0.543666 de la evaluación temporal antigua fue **leído como evidencia histórica**, no recalculado en B3/B4. Aunque sus features de ajuste terminaban en2021, su selección de unidades dependía de elegibilidad/calidad en seis años incluida2024. Es un diagnóstico retrospectivo condicionado, no validación temporal completamente independiente, prospectiva ni causal.
+
+## B4 — paquete, contrato y operación
+
+Paquete activo: `datos/processed/producto/ccpc-2009-2024-k4-v1/manifest.json`; puntero único `datos/processed/producto_activo.json`; implementación `src/product_contract.py`. Digest `ae5243026dc27552abec02bafaba94819cb49b8dd6877416b79b188fccde1ed4`.
+
+Contiene modelo/escalador/mapeo copiados del candidato B3 comprobado; perfiles, observaciones, metadatos, histórico nacional y auditoría territorial enlazados por SHA256. `load_active` valida entorno, contenido y coherencia de todas las asignaciones/estadísticas antes de ofrecer un snapshot. No hay selector operativo, registro de modelos, servicios nuevos ni entrenamiento B4.
+
+`src.prepare_product` prepara en temporal dentro del directorio de producto, valida, instala una carpeta inmutable y solo con `--activate` reemplaza el puntero. No puede reutilizar la identidad para otros bytes. Renombrar requiere JSON de IDs/nombres completos/únicos y nueva versión; no editar a mano perfiles estadísticos de B3. Las copias de metadatos se generan, no se mantienen listas de nombres en cada consumidor.
+
+Tabla final reutilizable; medias simples entre unidades y cambios en pp:
+
+| ID | Nombre adoptado por Hiram | Unidades | Presidencial | Intermedia | Δ presidencial | Δ intermedia |
+|---|---|---:|---:|---:|---:|---:|
+| 1 | Menor participación media; descenso presidencial | 1,840 | 48.4418% | 35.7219% | −7.5790 | +6.3771 |
+| 2 | Crecimiento medio en ambos tipos de elección | 2,155 | 64.5437% | 49.2185% | +7.9693 | +28.5846 |
+| 3 | Participación media; descenso presidencial | 2,511 | 64.1276% | 55.7941% | −8.1161 | +3.2817 |
+| 4 | Mayor participación media; cambio presidencial cercano a cero | 2,035 | 78.1001% | 69.5572% | −1.0033 | +15.4785 |
+
+Los IQR se conservan en B3; por ejemplo Δpresidencial p25–p75: P1−12.70..−2.36; P2+2.82..+11.86; P3−12.26..−3.23; P4−4.88..+3.38. La dispersión y solapamiento impiden atribuir los promedios a cada unidad o persona.
+
+No hay equivalencia automática de IDs entre versiones. Cruce activo anterior5/nuevo4, ARI0.636450: antiguo2 se redistribuye principalmente479/942/446 entre nuevos1/2/3. Emparejamiento máximo75.1200% no equivale al ARI ni a exactitud contra clases verdaderas. Ver `ml/resultados/b3/correspondencia_activo_candidato.csv`.
+
+La API de consulta, clasificación, agentes, revisión y PDF usa el mismo paquete. CSV conserva seis tasas, observados y NS por año; valores finitos, rango0–100, observados enteros≥100 y NS≤20%, máximo5,000 filas/2MB. No almacena el CSV ni entrena. La UI deriva cuatro opciones/nombres y muestra versión; no hay B5 visual.
+
+### Confirmación e historial
+
+`GET /api/draft/{id}` devuelve paquete/digest de contenido. `POST /api/approve` exige `profile_id`, revisor, confirmed y los tres tokens `package_version`, `package_digest`, `draft_digest` del borrador mostrado. El digest incluye facts/texto/ID/versión, no timestamps variables de verificación. Cambiar perfil invalida revisión en UI y servidor; cambiar texto o versión produce rechazo409.
+
+SQLite agrega dos columnas, conserva digest y filas anteriores, y respalda mediante Connection.backup antes de migrar esquema antiguo. Las filas sin versión son heredadas/no verificables. Sin una snapshot histórica suficiente no se inventa su contenido ni se regeneran estadísticas nuevas: exportar PDF exige mismo paquete y digest actual o devuelve409. Se conserva el historial y se pide nueva revisión. La aprobación local no es una aprobación institucional ni autoriza difusión automática.
+
+No existía SQLite de usuario al inicio de B4; el bloque no creó aprobaciones ficticias en esa ruta. Nuevas/antiguas bases, backups y migraciones repetidas se probaron en temporales. El artefacto k5 y su producto original se conservaron y son recuperables con el commit completo6222f79 en un temporal, sin reset/clean, sin selector y sin borrar historial.
+
+### Entorno, proceso y recuperación
+
+Operación comprobada Windows/CPython3.11.15, sklearn1.8.0, NumPy2.4.6, SciPy1.17.1, pandas2.3.3, joblib1.6.0 y threadpoolctl3.7.0. Los requirements de app fijan las bibliotecas matemáticas; los de análisis/B3 mantienen compatibilidad. No se modificó Python global. Linux/Docker permanecen alternativas no ejecutadas en esta sesión.
+
+El proceso anterior en8501 mantenía k5 en memoria. Se identificó su comando y se detuvo la sesión conocida; el nuevo proceso se inició con .venv y se verificó `/health` k4/8,541/versión/digest correctos. Se repitió arranque con el comando real `cmd /c run.bat`. Un intento inicial Stop-Process emitió error y el primer arranque encontró puerto ocupado; se corrigió deteniendo la sesión anterior, sin matar servicios desconocidos. Evidencia: `analisis/reportes/b4/activacion.json`.
+
+`.gitattributes` preserva bytes de datos/evidencias/paquetes y LF del código/documentos para evitar roturas de hashes tras pull en Windows. QA probó roundtrip Git temporal con core.autocrlf=true sin commits y recargó el paquete resultante. El puntero no limpia cachés de procesos: hay que detener/reiniciar como indica README.
+
+## QA y evidencia real
+
+Subagente realmente utilizado: **qa_b4**, dedicado a pruebas/evidencia; el principal conserva responsabilidad de implementación. QA fue separado por archivos: tests/informe QA pertenecieron al tester, producción/documentación al principal. La independencia es de responsabilidad en este trabajo, no certificación externa.
+
+- Baseline anterior a cambios: suite completa16 aprobadas, una deprecación Starlette/httpx, exit0.
+- Primera integración: suite completa23 aprobadas, misma advertencia, exit0; controles adicionales de nombres duplicados y Git roundtrip también se ejecutaron.
+- Navegador real Chrome/Playwright en puerto y SQLite temporales: cuatro opciones/nombres, filtroP4, invalidación de revisión al cambiar perfil, aprobación y descarga PDF, sin page_errors.
+- Cuatro PDFs desde aprobaciones temporales reales: texto extraído con PDFium y páginas renderizadas/revisadas visualmente, sin cortes ni solapes. No se confunde el prefijo PDF con revisión de contenido.
+- Instalación limpia temporal de requirements-app: carga del paquete, salud, consulta e inferencia reales; no se alteró .venv de usuario para simularlo.
+- Negativos: hash adulterado, estadísticas adulteradas incluso recalculando hashes, tokens/contenido incompatibles, CSV inválido, historial heredado y salida a versión duplicada. No se adulteró producción ni se eliminaron aserciones.
+- La **pasada final completa**, comandos, exit codes, archivos/hashes de estado estable, limitaciones y veredicto del tester se registran en [docs/12_QA_B4.md](12_QA_B4.md) y `analisis/reportes/b4/qa_*`. Esa referencia es la evidencia autoritativa del cierre de QA.
+
+Las expectativas antiguas de cinco en `tests/test_dashboard.py` se actualizaron justificadamente a cuatro y tamaños B3, preservando seis años, controles negativos y rechazo de confirmación. No se modificaron los tests B2/B3 para ocultar fallos. Fallos de harness por stderr/encoding/comillas se distinguieron de resultados de producción y se corrigieron; no se presentaron pruebas no ejecutadas como aprobadas.
+
+Comando reproducible de suite completa:
+
+```powershell
+$qaTemp = Join-Path $env:TEMP ('ccpc-tests-' + [guid]::NewGuid().ToString('N'))
+& .\.venv\Scripts\python.exe -B -m pytest -q -p no:cacheprovider --basetemp $qaTemp tests
+```
+
+Para regenerar producto sin entrenar: `& .\.venv\Scripts\python.exe -B -m src.prepare_product --root .`; activar solo después de revisar/validar y con el servidor detenido, añadiendo `--activate`, luego `cmd /c run.bat`. La especificación de campos y ejemplos reales está en la sección B4 del README. El notebook06 de producto fue adaptado y sus outputs antiguos retirados; **no se declara ejecutado completo en B4**. El documento técnico PDF completo de entrega requiere render/QA propios antes de presentarlo como final.
+
+## Límites, pendientes y material de entrega
+
+Persisten separación moderada, sensibilidad, cobertura desigual, territorio nominal, calidad NS potencialmente selectiva y diagnóstico temporal condicionado. No hay etiquetas verdaderas, validación causal, predicción individual ni garantía de representatividad nacional plena. La cobertura83.0535% no es precisión del modelo.
+
+B4 implementa decisiones de Hiram para Rubén; la revisión de Rubén no se presupone. Tras publicación autorizada deberá leer README, confirmar versión/entorno, probar contrato y revisar política editorial/histórica. Quedan B5 visual si se solicita, documentación final del hackathon con revisión de tablas/figuras, posibles sensibilidades adicionales y eventual cartografía certificada. Autenticación, despliegue y generación externa de agentes están fuera de este bloque.
+
+Tablas reutilizables: totales anuales/exclusiones/cobertura B2; comparación, estabilidad, sensibilidad, cruces e IQR B3; perfiles/observaciones/versionado activos B4. Figuras previas en `analisis/figuras` pueden ser históricas k5: deben identificarse o regenerarse de forma controlada antes de usarse como figuras actuales. No se inventaron gráficos ni resultados para llenar apartados.
+
+Fuentes/evidencia: [B2](10_auditoria_procesados_B2.md), [B3](11_evaluacion_modelo_B3.md), [QA B4](12_QA_B4.md), README raíz, `analisis/reportes/b2/`, `ml/resultados/b3/`, `analisis/reportes/b4/`, paquete activo y scripts citados. Referencias primarias consultadas para B4: [compatibilidad de persistencia sklearn1.8](https://scikit-learn.org/1.8/model_persistence.html#security-maintainability-limitations), [backup SQLite](https://docs.python.org/3.11/library/sqlite3.html#sqlite3.Connection.backup), [reemplazo de referencia os.replace](https://docs.python.org/3.11/library/os.html#os.replace). Fuente institucional declarada: [CCPC INE](https://ine.mx/transparencia/datos-abiertos/visualizacion-datos/conteos-censales-participacion/); no se reauditaron RAW ni mapas institucionales.
+
+B4 queda sin commit/push/merge/PR hasta autorización expresa. Propuesta: `feat: adopt versioned four-profile package and bind approvals to reviewed content`.

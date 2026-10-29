@@ -1,0 +1,42 @@
+[
+  {
+    "perfil_id": 1,
+    "paginas": 1,
+    "pdf": "qa_pdf_perfil_1.pdf",
+    "renders": [
+      "qa_pdf_perfil_1_pagina_1.png"
+    ],
+    "texto_y_cifras_verificados": true,
+    "revision_visual": "Inspeccionada por qa_b4 con view_image; legible sin cortes/solapes"
+  },
+  {
+    "perfil_id": 2,
+    "paginas": 1,
+    "pdf": "qa_pdf_perfil_2.pdf",
+    "renders": [
+      "qa_pdf_perfil_2_pagina_1.png"
+    ],
+    "texto_y_cifras_verificados": true,
+    "revision_visual": "Inspeccionada por qa_b4 con view_image; legible sin cortes/solapes"
+  },
+  {
+    "perfil_id": 3,
+    "paginas": 1,
+    "pdf": "qa_pdf_perfil_3.pdf",
+    "renders": [
+      "qa_pdf_perfil_3_pagina_1.png"
+    ],
+    "texto_y_cifras_verificados": true,
+    "revision_visual": "Inspeccionada por qa_b4 con view_image; legible sin cortes/solapes"
+  },
+  {
+    "perfil_id": 4,
+    "paginas": 1,
+    "pdf": "qa_pdf_perfil_4.pdf",
+    "renders": [
+      "qa_pdf_perfil_4_pagina_1.png"
+    ],
+    "texto_y_cifras_verificados": true,
+    "revision_visual": "Inspeccionada por qa_b4 con view_image; legible sin cortes/solapes"
+  }
+]

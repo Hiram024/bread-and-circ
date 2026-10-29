@@ -1,0 +1,8 @@
+{
+  "notebook_CRLF": 0,
+  "outputs_y_execution_antiguos_retirados": true,
+  "sin_ejecucion_notebook_completa": true,
+  "legitimate_CRLF_exit": 0,
+  "trailing_space_exit": 2,
+  "trailing_space_evidence": "datos/processed/probe.csv:1: trailing whitespace.\n+a,b \n"
+}

@@ -1,5 +1,7 @@
 # Guía de entrega — decisión VS Code y siguiente fase
 
+> Documento histórico anterior a la adopción B4. Se conserva como referencia; sus menciones a k5, rutas o aprobación no describen el activo actual. Consulte el [contrato vigente del README](../README.md#contrato-de-integración-para-rubén--b4), el descriptor activo y la [memoria de Hiram](00_memoria_tecnica_Hiram.md).
+
 ## Estado de la entrega
 
 **Preparado y ejecutable:** lectura de resultados oficiales 2009–2024, notebooks originales (4) y de producto (2), agregaciones procesadas, cinco perfiles estadísticos exploratorios, comparación y estabilidad del clustering, modelo `joblib`, interfaz web, filtros, importador CSV válido, fichas PDF de demostración, flujo automatizado de validación y aprobación humana local, pruebas API.

@@ -1,47 +1,71 @@
 """FastAPI dashboard for aggregate CCPC profiles. Start: uvicorn src.dashboard_api:app --port 8501"""
 from __future__ import annotations
-import io,json,sqlite3,math
+import io,os,sqlite3
+from contextlib import asynccontextmanager,closing
 from datetime import datetime,timezone
 from functools import lru_cache
 from pathlib import Path
 from typing import Optional
-import joblib,numpy as np,pandas as pd
+from threading import Lock
+import numpy as np,pandas as pd
 from fastapi import FastAPI,UploadFile,File,HTTPException,Query
 from fastapi.responses import FileResponse,JSONResponse,Response
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel,Field
 from .education import build_draft,pdf_for_draft
+from .product_contract import load_active, FEATS, YEARS
 
 ROOT=Path(__file__).resolve().parents[1]
 PRODUCT=ROOT/'datos/processed/producto'
-YEARS=(2009,2012,2015,2018,2021,2024)
-FEATS=['media_presidencial','media_intermedia','cambio_presidencial_pp','cambio_intermedia_pp']
-app=FastAPI(title='Hackathon INE — Perfiles estadísticos',version='1.0.0')
+DB_PATH=Path(os.environ.get('CCPC_REVIEW_DB',str(ROOT/'entregables/revision_local.sqlite3')))
+DB_SCHEMA_LOCK=Lock()
+
+@asynccontextmanager
+async def lifespan(app):
+    package()
+    yield
+
+app=FastAPI(title='Hackathon INE — Perfiles estadísticos',version='1.1.0',lifespan=lifespan)
 app.mount('/static',StaticFiles(directory=str(ROOT/'dashboard/static')),name='static')
 
 @lru_cache(maxsize=1)
-def data():return pd.read_csv(PRODUCT/'observaciones_dashboard.csv',dtype={'grupo_edad':'string'})
-@lru_cache(maxsize=1)
-def profiles():return {int(p['perfil_id']):p for p in json.loads((PRODUCT/'perfiles.json').read_text())}
-@lru_cache(maxsize=1)
-def metadata():return json.loads((PRODUCT/'metadatos_dashboard.json').read_text())
-@lru_cache(maxsize=1)
-def artifact():return joblib.load(ROOT/'ml/modelos/kmeans5_exploratorio.joblib')  # local trusted file only
+def package():return load_active(ROOT)
+
+def data():return package()['data']
+def profiles():return package()['profiles']
+def metadata():return package()['metadata']
+def artifact():return package()['artifact']
 
 def db_conn():
-    fn=ROOT/'entregables'/'revision_local.sqlite3'
-    db=sqlite3.connect(fn);db.execute('''CREATE TABLE IF NOT EXISTS approvals
-      (id INTEGER PRIMARY KEY AUTOINCREMENT, perfil_id INTEGER NOT NULL, reviewer TEXT NOT NULL,
-       reviewed_at TEXT NOT NULL, digest TEXT NOT NULL)''')
-    return db
+    path=Path(DB_PATH);path.parent.mkdir(parents=True,exist_ok=True)
+    with DB_SCHEMA_LOCK:
+        db=sqlite3.connect(path)
+        try:
+            columns={row[1] for row in db.execute('PRAGMA table_info(approvals)')}
+            additions=['package_version','package_digest']
+            if columns and any(c not in columns for c in additions):
+                backup=path.with_name(path.name+'.pre-b4-'+datetime.now(timezone.utc).strftime('%Y%m%d%H%M%S%f')+'.bak')
+                with closing(sqlite3.connect(backup)) as target:db.backup(target)
+            with db:
+                db.execute('''CREATE TABLE IF NOT EXISTS approvals
+                  (id INTEGER PRIMARY KEY AUTOINCREMENT, perfil_id INTEGER NOT NULL, reviewer TEXT NOT NULL,
+                   reviewed_at TEXT NOT NULL, digest TEXT NOT NULL, package_version TEXT, package_digest TEXT)''')
+                if columns:
+                    for column in additions:
+                        if column not in columns:db.execute(f'ALTER TABLE approvals ADD COLUMN {column} TEXT')
+            return db
+        except (sqlite3.Error,OSError):
+            db.close()
+            raise
 
 @app.get('/')
 def home():return FileResponse(ROOT/'dashboard/index.html',media_type='text/html')
 @app.get('/health')
-def health():return {'status':'ok','observaciones':len(data()),'perfiles':len(profiles())}
+def health():return {'status':'ok','observaciones':len(data()),'perfiles':len(profiles()),
+                    'package_version':package()['package_version'],'package_digest':package()['package_digest'],'k':package()['manifest']['k']}
 @app.get('/api/summary')
 def summary():
-    national=pd.read_csv(PRODUCT/'historico_nacional.csv')
+    national=package()['national']
     return {'meta':metadata(),'historico':national.replace({np.nan:None}).to_dict('records'),'perfiles':list(profiles().values())}
 @app.get('/api/profiles')
 def get_profiles():return list(profiles().values())
@@ -50,19 +74,22 @@ def observations(estado:Optional[int]=None,perfil:Optional[int]=None,edad:Option
                  q:str='',limit:int=Query(100,ge=1,le=500),offset:int=Query(0,ge=0)):
     frame=data()
     if estado is not None:frame=frame[frame.EDOCVE.eq(estado)]
-    if perfil is not None:frame=frame[frame.perfil_id.eq(perfil)]
+    if perfil is not None:
+        if perfil not in profiles():raise HTTPException(404,'Perfil no existe en el paquete activo')
+        frame=frame[frame.perfil_id.eq(perfil)]
     if edad:frame=frame[frame.grupo_edad.eq(edad)]
     if q:frame=frame[frame.MPIONOM.str.contains(q,case=False,na=False,regex=False)]
     out=frame.iloc[offset:offset+limit].copy()
-    fields=['clave_municipal','EDONOM','MPIONOM','grupo_edad','perfil_id','perfil_nombre','media_presidencial',
+    fields=['clave_municipal','EDONOM','MPIONOM','grupo_edad','perfil_id','perfil_nombre','package_version','media_presidencial',
             'media_intermedia','cambio_presidencial_pp','cambio_intermedia_pp',*[f'tasa_{y}' for y in YEARS]]
-    return {'total':len(frame),'items':out[fields].replace({np.nan:None}).to_dict('records')}
+    return {'total':len(frame),'package_version':package()['package_version'],
+            'items':out[fields].replace({np.nan:None}).to_dict('records')}
 @app.get('/api/states')
 def states():
     return data()[['EDOCVE','EDONOM']].drop_duplicates().sort_values('EDONOM').to_dict('records')
 @app.get('/api/territory-audit')
 def territory_audit():
-    frame=pd.read_csv(PRODUCT/'homologacion_municipal_auditoria.csv')
+    frame=package()['territory_audit']
     return {'total':len(frame),'estados':frame.estatus_administrativo.value_counts().to_dict(),
             'examples':frame[frame.estatus_administrativo.ne('estable_por_nombre_y_clave')][
               ['clave_municipal','MPIONOM','estatus_administrativo','nombres']].head(50).to_dict('records'),
@@ -91,10 +118,12 @@ def classify_dataframe(incoming:pd.DataFrame):
             raise ValueError(f'Valores faltantes/no numéricos en {c}')
     t=x[[f'tasa_{y}' for y in YEARS]]
     if (t.lt(0)|t.gt(100)).any().any():raise ValueError('Tasas fuera del rango 0–100')
-    if (x[[f'observados_{y}' for y in YEARS]]<100).any().any():
-        raise ValueError('Los observados deben ser al menos 100 por elección')
+    observed=x[[f'observados_{y}' for y in YEARS]]
+    filters=package()['manifest']['filters']
+    if observed.lt(filters['min_observados_por_anio']).any().any() or observed.mod(1).ne(0).any().any():
+        raise ValueError('Los observados deben ser conteos enteros de al menos 100 por elección')
     ns=x[[f'ns_pct_{y}' for y in YEARS]]
-    if (ns.lt(0)|ns.gt(20)).any().any():raise ValueError('NS debe estar en [0,20]% por elección')
+    if (ns.lt(0)|ns.gt(filters['max_ns_pct'])).any().any():raise ValueError('NS debe estar en [0,20]% por elección')
     # Exactly the same feature engineering used in the model, unweighted by population.
     x['media_presidencial']=x[['tasa_2012','tasa_2018','tasa_2024']].mean(axis=1)
     x['media_intermedia']=x[['tasa_2009','tasa_2015','tasa_2021']].mean(axis=1)
@@ -105,6 +134,8 @@ def classify_dataframe(incoming:pd.DataFrame):
     ids=bundle['model'].predict(z)
     x['perfil_id']=[bundle['label_mapping'][int(i)] for i in ids]
     x['perfil_nombre']=x.perfil_id.map({pid:p['nombre'] for pid,p in profiles().items()})
+    x['package_version']=package()['package_version']
+    x['package_digest']=package()['package_digest']
     x['distancia_centroide']=np.linalg.norm(z-bundle['model'].cluster_centers_[ids],axis=1)
     x['nota']='Asignación estadística exploratoria de unidad agregada; no clasificación individual'
     return x
@@ -122,45 +153,55 @@ async def classify(file:UploadFile=File(...)):
         x[col]=x[col].astype(str).map(lambda v: "'"+v if v.startswith(('=','+','-','@')) else v)
     return Response(x.to_csv(index=False),media_type='text/csv',headers={
         'Content-Disposition':'attachment; filename=clasificacion_agregada.csv',
-        'X-Row-Count':str(len(x))})
+        'X-Row-Count':str(len(x)),'X-Package-Version':package()['package_version']})
 
 @app.get('/api/draft/{profile_id}')
 def draft(profile_id:int):
     profile=profiles().get(profile_id)
     if profile is None:raise HTTPException(404,'Perfil no existe')
-    return build_draft(profile)
+    return build_draft(profile,package()['package_digest'])
 
 class ApprovalRequest(BaseModel):
-    profile_id:int=Field(ge=1,le=6)
+    profile_id:int=Field(ge=1)
     reviewer:str=Field(min_length=3,max_length=100)
     confirmed:bool
+    package_version:str=Field(min_length=1,max_length=120)
+    package_digest:str=Field(pattern=r'^[0-9a-f]{64}$')
+    draft_digest:str=Field(pattern=r'^[0-9a-f]{64}$')
 
 @app.post('/api/approve')
 def approve(payload:ApprovalRequest):
     if not payload.confirmed:raise HTTPException(400,'Debe confirmar la revisión manual')
+    if len(payload.reviewer.strip())<3:raise HTTPException(400,'Revisor requerido: mínimo 3 caracteres no vacíos')
     profile=profiles().get(payload.profile_id)
     if profile is None:raise HTTPException(404,'Perfil no existe')
-    import hashlib
-    bundle=build_draft(profile)
-    digest=hashlib.sha256(json.dumps(bundle['draft'],sort_keys=True).encode()).hexdigest()
+    bundle=build_draft(profile,package()['package_digest'])
+    if (payload.package_version!=bundle['package_version'] or payload.package_digest!=bundle['package_digest'] or
+            payload.draft_digest!=bundle['draft_digest']):
+        raise HTTPException(409,'El borrador, perfil o versión cambió; genere la ficha y vuelva a revisarla')
     ts=datetime.now(timezone.utc).isoformat()
-    with db_conn() as db:
-        cur=db.execute('INSERT INTO approvals (perfil_id,reviewer,reviewed_at,digest) VALUES (?,?,?,?)',
-                       (payload.profile_id,payload.reviewer.strip(),ts,digest))
+    with closing(db_conn()) as db,db:
+        cur=db.execute('INSERT INTO approvals (perfil_id,reviewer,reviewed_at,digest,package_version,package_digest) VALUES (?,?,?,?,?,?)',
+                       (payload.profile_id,payload.reviewer.strip(),ts,bundle['draft_digest'],bundle['package_version'],bundle['package_digest']))
         aid=cur.lastrowid
     return {'approval_id':aid,'profile_id':payload.profile_id,'reviewer':payload.reviewer.strip(),
             'reviewed_at':ts,'download_url':f'/api/approved-pdf/{aid}',
+            'package_version':bundle['package_version'],'draft_digest':bundle['draft_digest'],
             'note':'Aprobación local de ficha, sin envío ni publicación.'}
 
 @app.get('/api/approved-pdf/{approval_id}')
 def approved_pdf(approval_id:int):
-    with db_conn() as db:
-        row=db.execute('SELECT perfil_id,reviewer,reviewed_at,digest FROM approvals WHERE id=?',(approval_id,)).fetchone()
+    with closing(db_conn()) as db:
+        row=db.execute('SELECT perfil_id,reviewer,reviewed_at,digest,package_version,package_digest FROM approvals WHERE id=?',(approval_id,)).fetchone()
     if row is None:raise HTTPException(404,'Aprobación no existe')
-    import hashlib
-    profile=profiles().get(row[0]);item=build_draft(profile)
-    digest=hashlib.sha256(json.dumps(item['draft'],sort_keys=True).encode()).hexdigest()
-    if digest!=row[3]:raise HTTPException(409,'El contenido cambió; requiere revisión nueva')
+    if not row[4] or not row[5]:
+        raise HTTPException(409,'Aprobación heredada sin versión verificable; registro conservado, requiere revisión nueva')
+    if row[4]!=package()['package_version'] or row[5]!=package()['package_digest']:
+        raise HTTPException(409,'La aprobación pertenece a otro paquete; registro conservado, requiere revisión nueva')
+    profile=profiles().get(row[0])
+    if profile is None:raise HTTPException(409,'El perfil aprobado no existe en este paquete')
+    item=build_draft(profile,package()['package_digest'])
+    if item['draft_digest']!=row[3]:raise HTTPException(409,'El contenido cambió; requiere revisión nueva')
     payload=pdf_for_draft(item,row[1],row[2])
     return Response(payload,media_type='application/pdf',headers={
         'Content-Disposition':f'attachment; filename=ficha_perfil_{row[0]}.pdf'})

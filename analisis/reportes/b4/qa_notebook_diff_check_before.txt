@@ -1,0 +1,331 @@
+Exit: 2
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:1: trailing whitespace.
++{
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:2: trailing whitespace.
++ "cells": [
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:3: trailing whitespace.
++  {
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:4: trailing whitespace.
++   "cell_type": "markdown",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:5: trailing whitespace.
++   "id": "6365c2d0",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:6: trailing whitespace.
++   "metadata": {},
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:7: trailing whitespace.
++   "source": [
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:8: trailing whitespace.
++    "# 06 · Consolidación de perfiles y fichas\n",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:9: trailing whitespace.
++    "\n",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:10: trailing whitespace.
++    "**Fuente:** INE CCPC 2009–2024, bases adjuntas. No hay datos personales.",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:11: trailing whitespace.
++    "\n\nB4: adaptado al contrato activo; salidas anteriores retiradas para no presentar cinco perfiles como actuales. Este notebook no se ha reejecutado en B4.\n"
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:12: trailing whitespace.
++   ]
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:13: trailing whitespace.
++  },
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:14: trailing whitespace.
++  {
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:15: trailing whitespace.
++   "cell_type": "markdown",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:16: trailing whitespace.
++   "id": "27a16373",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:17: trailing whitespace.
++   "metadata": {},
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:18: trailing whitespace.
++   "source": [
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:19: trailing whitespace.
++    "## Propósito\n",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:20: trailing whitespace.
++    "Validar los resultados visibles por el dashboard y probar el flujo de creación de una ficha educativa sin datos personales ni difusión automatizada."
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:21: trailing whitespace.
++   ]
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:22: trailing whitespace.
++  },
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:23: trailing whitespace.
++  {
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:24: trailing whitespace.
++   "cell_type": "code",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:25: trailing whitespace.
++   "execution_count": null,
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:26: trailing whitespace.
++   "id": "66b81b7d",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:27: trailing whitespace.
++   "metadata": {
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:28: trailing whitespace.
++    "execution": {
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:29: trailing whitespace.
++     "iopub.execute_input": "2026-10-28T03:57:24.183682Z",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:30: trailing whitespace.
++     "iopub.status.busy": "2026-10-28T03:57:24.183542Z",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:31: trailing whitespace.
++     "iopub.status.idle": "2026-10-28T03:57:24.198801Z",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:32: trailing whitespace.
++     "shell.execute_reply": "2026-10-28T03:57:24.198284Z"
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:33: trailing whitespace.
++    }
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:34: trailing whitespace.
++   },
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:35: trailing whitespace.
++   "outputs": [],
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:36: trailing whitespace.
++   "source": [
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:37: trailing whitespace.
++    "import json\n",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:38: trailing whitespace.
++    "import pandas as pd\n",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:39: trailing whitespace.
++    "from pathlib import Path\n",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:40: trailing whitespace.
++    "from src.product_contract import load_active\n",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:41: trailing whitespace.
++    "package=load_active(Path('.'))\n",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:42: trailing whitespace.
++    "profiles=pd.DataFrame(package['profiles'].values())\n",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:43: trailing whitespace.
++    "profiles[['perfil_id','nombre','n_unidades','media_presidencial','media_intermedia','cambio_presidencial_pp','cambio_intermedia_pp']]"
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:44: trailing whitespace.
++   ]
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:45: trailing whitespace.
++  },
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:46: trailing whitespace.
++  {
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:47: trailing whitespace.
++   "cell_type": "markdown",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:48: trailing whitespace.
++   "id": "5a977652",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:49: trailing whitespace.
++   "metadata": {},
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:50: trailing whitespace.
++   "source": [
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:51: trailing whitespace.
++    "## Distribución y medidas descriptivas\n",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:52: trailing whitespace.
++    "Los promedios de cada perfil son **no ponderados**. El n?mero y nombres se leen del paquete activo; B3 conserva la comparaci?n hist?rica 4/5/6."
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:53: trailing whitespace.
++   ]
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:54: trailing whitespace.
++  },
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:55: trailing whitespace.
++  {
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:56: trailing whitespace.
++   "cell_type": "code",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:57: trailing whitespace.
++   "execution_count": null,
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:58: trailing whitespace.
++   "id": "aef995b5",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:59: trailing whitespace.
++   "metadata": {
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:60: trailing whitespace.
++    "execution": {
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:61: trailing whitespace.
++     "iopub.execute_input": "2026-10-28T03:57:24.200482Z",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:62: trailing whitespace.
++     "iopub.status.busy": "2026-10-28T03:57:24.200370Z",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:63: trailing whitespace.
++     "iopub.status.idle": "2026-10-28T03:57:24.632691Z",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:64: trailing whitespace.
++     "shell.execute_reply": "2026-10-28T03:57:24.632029Z"
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:65: trailing whitespace.
++    }
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:66: trailing whitespace.
++   },
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:67: trailing whitespace.
++   "outputs": [],
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:68: trailing whitespace.
++   "source": [
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:69: trailing whitespace.
++    "import matplotlib.pyplot as plt\n",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:70: trailing whitespace.
++    "fig,ax=plt.subplots(figsize=(9,4));\n",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:71: trailing whitespace.
++    "x=profiles.perfil_id.to_numpy();ax.bar(x-.16,profiles.media_presidencial,width=.32,label='Presidenciales');ax.bar(x+.16,profiles.media_intermedia,width=.32,label='Intermedias');ax.set_xticks(x);ax.set_xlabel('Perfil estadístico');ax.set_ylabel('Participación media (%)');ax.legend();plt.tight_layout();plt.show()"
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:72: trailing whitespace.
++   ]
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:73: trailing whitespace.
++  },
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:74: trailing whitespace.
++  {
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:75: trailing whitespace.
++   "cell_type": "markdown",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:76: trailing whitespace.
++   "id": "47542476",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:77: trailing whitespace.
++   "metadata": {},
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:78: trailing whitespace.
++   "source": [
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:79: trailing whitespace.
++    "## Inferencia en CSV agregado\n",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:80: trailing whitespace.
++    "Solo observaciones con tasas, observados y NS para los **seis años**. Datos futuros aislados no son compatibles con este modelo."
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:81: trailing whitespace.
++   ]
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:82: trailing whitespace.
++  },
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:83: trailing whitespace.
++  {
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:84: trailing whitespace.
++   "cell_type": "code",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:85: trailing whitespace.
++   "execution_count": null,
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:86: trailing whitespace.
++   "id": "e007d539",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:87: trailing whitespace.
++   "metadata": {
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:88: trailing whitespace.
++    "execution": {
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:89: trailing whitespace.
++     "iopub.execute_input": "2026-10-28T03:57:24.634125Z",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:90: trailing whitespace.
++     "iopub.status.busy": "2026-10-28T03:57:24.633837Z",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:91: trailing whitespace.
++     "iopub.status.idle": "2026-10-28T03:57:25.929007Z",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:92: trailing whitespace.
++     "shell.execute_reply": "2026-10-28T03:57:25.928401Z"
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:93: trailing whitespace.
++    }
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:94: trailing whitespace.
++   },
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:95: trailing whitespace.
++   "outputs": [],
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:96: trailing whitespace.
++   "source": [
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:97: trailing whitespace.
++    "from src.dashboard_api import classify_dataframe\n",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:98: trailing whitespace.
++    "sample=pd.read_csv('samples/plantilla_clasificacion_ejemplo_SINTETICO.csv')\n",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:99: trailing whitespace.
++    "classified=classify_dataframe(sample)\n",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:100: trailing whitespace.
++    "classified[['unidad_id','perfil_id','perfil_nombre','distancia_centroide']]"
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:101: trailing whitespace.
++   ]
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:102: trailing whitespace.
++  },
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:103: trailing whitespace.
++  {
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:104: trailing whitespace.
++   "cell_type": "markdown",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:105: trailing whitespace.
++   "id": "d6084367",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:106: trailing whitespace.
++   "metadata": {},
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:107: trailing whitespace.
++   "source": [
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:108: trailing whitespace.
++    "## Flujo editorial asistido (determinista)\n",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:109: trailing whitespace.
++    "Los módulos funcionan como agentes especializados de datos, redacción y verificación; la aprobación humana se realiza aparte en la interfaz. No hay IA generativa externa en esta versión."
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:110: trailing whitespace.
++   ]
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:111: trailing whitespace.
++  },
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:112: trailing whitespace.
++  {
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:113: trailing whitespace.
++   "cell_type": "code",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:114: trailing whitespace.
++   "execution_count": null,
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:115: trailing whitespace.
++   "id": "e631484e",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:116: trailing whitespace.
++   "metadata": {
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:117: trailing whitespace.
++    "execution": {
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:118: trailing whitespace.
++     "iopub.execute_input": "2026-10-28T03:57:25.930607Z",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:119: trailing whitespace.
++     "iopub.status.busy": "2026-10-28T03:57:25.930328Z",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:120: trailing whitespace.
++     "iopub.status.idle": "2026-10-28T03:57:25.941585Z",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:121: trailing whitespace.
++     "shell.execute_reply": "2026-10-28T03:57:25.941098Z"
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:122: trailing whitespace.
++    }
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:123: trailing whitespace.
++   },
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:124: trailing whitespace.
++   "outputs": [],
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:125: trailing whitespace.
++   "source": [
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:126: trailing whitespace.
++    "from src.education import build_draft,pdf_for_draft\n",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:127: trailing whitespace.
++    "item=build_draft(profiles.iloc[0].to_dict(),package['package_digest'])\n",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:128: trailing whitespace.
++    "print('validación:',item['validation'])\n",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:129: trailing whitespace.
++    "print('requiere aprobación humana:',item['requires_human_approval'])\n",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:130: trailing whitespace.
++    "print(item['draft']['resumen'])\n",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:131: trailing whitespace.
++    "print('bytes PDF de muestra:',len(pdf_for_draft(item,'BORRADOR — NO APROBADO','Sin revisión')))"
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:132: trailing whitespace.
++   ]
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:133: trailing whitespace.
++  },
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:134: trailing whitespace.
++  {
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:135: trailing whitespace.
++   "cell_type": "markdown",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:136: trailing whitespace.
++   "id": "8b6332c2",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:137: trailing whitespace.
++   "metadata": {},
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:138: trailing whitespace.
++   "source": [
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:139: trailing whitespace.
++    "## Conclusión\n",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:140: trailing whitespace.
++    "Panel, modelo y generación de borradores se pueden operar en VS Code. La homologación geométrica y el despliegue público quedan expresamente fuera del MVP."
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:141: trailing whitespace.
++   ]
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:142: trailing whitespace.
++  }
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:143: trailing whitespace.
++ ],
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:144: trailing whitespace.
++ "metadata": {
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:145: trailing whitespace.
++  "kernelspec": {
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:146: trailing whitespace.
++   "display_name": "Python 3",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:147: trailing whitespace.
++   "language": "python",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:148: trailing whitespace.
++   "name": "python3"
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:149: trailing whitespace.
++  },
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:150: trailing whitespace.
++  "language_info": {
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:151: trailing whitespace.
++   "codemirror_mode": {
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:152: trailing whitespace.
++    "name": "ipython",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:153: trailing whitespace.
++    "version": 3
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:154: trailing whitespace.
++   },
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:155: trailing whitespace.
++   "file_extension": ".py",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:156: trailing whitespace.
++   "mimetype": "text/x-python",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:157: trailing whitespace.
++   "name": "python",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:158: trailing whitespace.
++   "nbconvert_exporter": "python",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:159: trailing whitespace.
++   "pygments_lexer": "ipython3",
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:160: trailing whitespace.
++   "version": "3.13.5"
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:161: trailing whitespace.
++  }
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:162: trailing whitespace.
++ },
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:163: trailing whitespace.
++ "nbformat": 4,
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:164: trailing whitespace.
++ "nbformat_minor": 5
+ml/notebooks/06_producto_inferencia_y_fichas.ipynb:165: trailing whitespace.
++}

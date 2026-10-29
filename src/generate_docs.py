@@ -2,6 +2,8 @@
 from pathlib import Path
 import json,pandas as pd
 R=Path(__file__).resolve().parents[1]
+if (R/'datos/processed/producto_activo.json').exists():
+    raise SystemExit('Generador histórico k5: no sobrescribe README/model card activos de B4. Consulte docs/00_memoria_tecnica_Hiram.md.')
 nat=pd.read_csv(R/'analisis'/'reportes'/'resumen_nacional.csv')
 comp=pd.read_csv(R/'ml'/'resultados'/'comparacion_modelos.csv')
 prof=pd.read_csv(R/'ml'/'resultados'/'fichas_perfiles_exploratorias.csv')

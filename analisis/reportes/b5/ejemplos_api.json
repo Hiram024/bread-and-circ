@@ -1,0 +1,951 @@
+{
+  "/health": {
+    "status": "ok",
+    "observaciones": 8541,
+    "perfiles": 4,
+    "package_version": "ccpc-2009-2024-k4-v1",
+    "package_digest": "ae5243026dc27552abec02bafaba94819cb49b8dd6877416b79b188fccde1ed4",
+    "k": 4
+  },
+  "/api/summary": {
+    "meta": {
+      "advertencia_territorial": "Correspondencia nominal; no hay crosswalk cartográfico histórico certificado.",
+      "anios": [
+        2009,
+        2012,
+        2015,
+        2018,
+        2021,
+        2024
+      ],
+      "cobertura_LN_2024": {
+        "denominador": 98330348,
+        "numerador": 81666826,
+        "porcentaje": 83.05353094041729,
+        "universo": "Agregado nacional procesado 2024 de cinco edades"
+      },
+      "features": [
+        "media_presidencial",
+        "media_intermedia",
+        "cambio_presidencial_pp",
+        "cambio_intermedia_pp"
+      ],
+      "filters": {
+        "6_years": true,
+        "max_ns_pct": 20,
+        "min_observados_por_anio": 100,
+        "nombre_municipal_estable": true
+      },
+      "k": 4,
+      "modelo": "KMeans k=4 exploratorio",
+      "origen": "CCPC INE 2009–2024; agregación municipio × edad",
+      "package_version": "ccpc-2009-2024-k4-v1",
+      "perfiles": [
+        {
+          "brecha_pres_intermedia": 12.71986904776819,
+          "cambio_intermedia_pp": 6.377071254945573,
+          "cambio_presidencial_pp": -7.578960804751601,
+          "edad_predominante": "18-24",
+          "k": 4,
+          "lista_nominal_2024": 27693625,
+          "media_intermedia": 35.72189919163344,
+          "media_presidencial": 48.44176823940163,
+          "municipios": 837,
+          "n_unidades": 1840,
+          "nombre": "Menor participación media; descenso presidencial",
+          "notas": [
+            "Paquete local adoptado por Hiram en B4; aprobación de Rubén no asumida.",
+            "Medias simples de unidades agregadas; no describen personas.",
+            "Correspondencia territorial nominal; límites históricos no certificados."
+          ],
+          "package_version": "ccpc-2009-2024-k4-v1",
+          "perfil_id": 1,
+          "porcentaje_unidades": 21.543144830816065
+        },
+        {
+          "brecha_pres_intermedia": 15.325235440452008,
+          "cambio_intermedia_pp": 28.584605933054327,
+          "cambio_presidencial_pp": 7.969280217175109,
+          "edad_predominante": "25-34",
+          "k": 4,
+          "lista_nominal_2024": 9288568,
+          "media_intermedia": 49.21851434169895,
+          "media_presidencial": 64.54374978215095,
+          "municipios": 779,
+          "n_unidades": 2155,
+          "nombre": "Crecimiento medio en ambos tipos de elección",
+          "notas": [
+            "Paquete local adoptado por Hiram en B4; aprobación de Rubén no asumida.",
+            "Medias simples de unidades agregadas; no describen personas.",
+            "Correspondencia territorial nominal; límites históricos no certificados."
+          ],
+          "package_version": "ccpc-2009-2024-k4-v1",
+          "perfil_id": 2,
+          "porcentaje_unidades": 25.231237560004683
+        },
+        {
+          "brecha_pres_intermedia": 8.333526626065046,
+          "cambio_intermedia_pp": 3.2817191128308987,
+          "cambio_presidencial_pp": -8.116071120823172,
+          "edad_predominante": "45-59",
+          "k": 4,
+          "lista_nominal_2024": 32433580,
+          "media_intermedia": 55.79408898013212,
+          "media_presidencial": 64.12761560619717,
+          "municipios": 1115,
+          "n_unidades": 2511,
+          "nombre": "Participación media; descenso presidencial",
+          "notas": [
+            "Paquete local adoptado por Hiram en B4; aprobación de Rubén no asumida.",
+            "Medias simples de unidades agregadas; no describen personas.",
+            "Correspondencia territorial nominal; límites históricos no certificados."
+          ],
+          "package_version": "ccpc-2009-2024-k4-v1",
+          "perfil_id": 3,
+          "porcentaje_unidades": 29.39936775553214
+        },
+        {
+          "brecha_pres_intermedia": 8.542905317201269,
+          "cambio_intermedia_pp": 15.478537315422871,
+          "cambio_presidencial_pp": -1.0032821093152735,
+          "edad_predominante": "60+",
+          "k": 4,
+          "lista_nominal_2024": 12251053,
+          "media_intermedia": 69.55722679351958,
+          "media_presidencial": 78.10013211072082,
+          "municipios": 928,
+          "n_unidades": 2035,
+          "nombre": "Mayor participación media; cambio presidencial cercano a cero",
+          "notas": [
+            "Paquete local adoptado por Hiram en B4; aprobación de Rubén no asumida.",
+            "Medias simples de unidades agregadas; no describen personas.",
+            "Correspondencia territorial nominal; límites históricos no certificados."
+          ],
+          "package_version": "ccpc-2009-2024-k4-v1",
+          "perfil_id": 4,
+          "porcentaje_unidades": 23.826249853647113
+        }
+      ],
+      "total_municipios_modelados": 1825,
+      "total_unidades_modeladas": 8541,
+      "total_unidades_panel": 12385,
+      "package_digest": "ae5243026dc27552abec02bafaba94819cb49b8dd6877416b79b188fccde1ed4"
+    },
+    "historico": [
+      {
+        "anio": 2009,
+        "tipo": "Intermedia",
+        "filas": 8706843,
+        "municipios": 2458,
+        "LN": 77481831,
+        "SV": 33316974,
+        "NV": 42298963,
+        "NS": 1865894,
+        "participacion_pct": 44.06078311242774,
+        "ns_pct": 2.4081697294943893,
+        "faltantes_DEL": 0
+      },
+      {
+        "anio": 2012,
+        "tipo": "Presidencial",
+        "filas": 8604456,
+        "municipios": 2455,
+        "LN": 76490962,
+        "SV": 47383154,
+        "NV": 28939159,
+        "NS": 168649,
+        "participacion_pct": 62.08296386405375,
+        "ns_pct": 0.22048225776007366,
+        "faltantes_DEL": 0
+      },
+      {
+        "anio": 2015,
+        "tipo": "Intermedia",
+        "filas": 9106059,
+        "municipios": 2458,
+        "LN": 83563462,
+        "SV": 36926612,
+        "NV": 41517874,
+        "NS": 5118976,
+        "participacion_pct": 47.07355976556466,
+        "ns_pct": 6.125854383582145,
+        "faltantes_DEL": 0
+      },
+      {
+        "anio": 2018,
+        "tipo": "Presidencial",
+        "filas": 9251122,
+        "municipios": 2463,
+        "LN": 89123997,
+        "SV": 51784399,
+        "NV": 31249856,
+        "NS": 6089742,
+        "participacion_pct": 62.36510341424753,
+        "ns_pct": 6.832886994509458,
+        "faltantes_DEL": 0
+      },
+      {
+        "anio": 2021,
+        "tipo": "Intermedia",
+        "filas": 9430502,
+        "municipios": 2468,
+        "LN": 93532133,
+        "SV": 46389189,
+        "NV": 43099624,
+        "NS": 4043320,
+        "participacion_pct": 51.83797554673119,
+        "ns_pct": 4.322920765636768,
+        "faltantes_DEL": 0
+      },
+      {
+        "anio": 2024,
+        "tipo": "Presidencial",
+        "filas": 9773730,
+        "municipios": 2477,
+        "LN": 98330348,
+        "SV": 54899228,
+        "NV": 37105466,
+        "NS": 6325654,
+        "participacion_pct": 59.67002944436726,
+        "ns_pct": 6.4330637780311735,
+        "faltantes_DEL": 20912
+      }
+    ],
+    "perfiles": [
+      {
+        "brecha_pres_intermedia": 12.71986904776819,
+        "cambio_intermedia_pp": 6.377071254945573,
+        "cambio_presidencial_pp": -7.578960804751601,
+        "edad_predominante": "18-24",
+        "k": 4,
+        "lista_nominal_2024": 27693625,
+        "media_intermedia": 35.72189919163344,
+        "media_presidencial": 48.44176823940163,
+        "municipios": 837,
+        "n_unidades": 1840,
+        "nombre": "Menor participación media; descenso presidencial",
+        "notas": [
+          "Paquete local adoptado por Hiram en B4; aprobación de Rubén no asumida.",
+          "Medias simples de unidades agregadas; no describen personas.",
+          "Correspondencia territorial nominal; límites históricos no certificados."
+        ],
+        "package_version": "ccpc-2009-2024-k4-v1",
+        "perfil_id": 1,
+        "porcentaje_unidades": 21.543144830816065
+      },
+      {
+        "brecha_pres_intermedia": 15.325235440452008,
+        "cambio_intermedia_pp": 28.584605933054327,
+        "cambio_presidencial_pp": 7.969280217175109,
+        "edad_predominante": "25-34",
+        "k": 4,
+        "lista_nominal_2024": 9288568,
+        "media_intermedia": 49.21851434169895,
+        "media_presidencial": 64.54374978215095,
+        "municipios": 779,
+        "n_unidades": 2155,
+        "nombre": "Crecimiento medio en ambos tipos de elección",
+        "notas": [
+          "Paquete local adoptado por Hiram en B4; aprobación de Rubén no asumida.",
+          "Medias simples de unidades agregadas; no describen personas.",
+          "Correspondencia territorial nominal; límites históricos no certificados."
+        ],
+        "package_version": "ccpc-2009-2024-k4-v1",
+        "perfil_id": 2,
+        "porcentaje_unidades": 25.231237560004683
+      },
+      {
+        "brecha_pres_intermedia": 8.333526626065046,
+        "cambio_intermedia_pp": 3.2817191128308987,
+        "cambio_presidencial_pp": -8.116071120823172,
+        "edad_predominante": "45-59",
+        "k": 4,
+        "lista_nominal_2024": 32433580,
+        "media_intermedia": 55.79408898013212,
+        "media_presidencial": 64.12761560619717,
+        "municipios": 1115,
+        "n_unidades": 2511,
+        "nombre": "Participación media; descenso presidencial",
+        "notas": [
+          "Paquete local adoptado por Hiram en B4; aprobación de Rubén no asumida.",
+          "Medias simples de unidades agregadas; no describen personas.",
+          "Correspondencia territorial nominal; límites históricos no certificados."
+        ],
+        "package_version": "ccpc-2009-2024-k4-v1",
+        "perfil_id": 3,
+        "porcentaje_unidades": 29.39936775553214
+      },
+      {
+        "brecha_pres_intermedia": 8.542905317201269,
+        "cambio_intermedia_pp": 15.478537315422871,
+        "cambio_presidencial_pp": -1.0032821093152735,
+        "edad_predominante": "60+",
+        "k": 4,
+        "lista_nominal_2024": 12251053,
+        "media_intermedia": 69.55722679351958,
+        "media_presidencial": 78.10013211072082,
+        "municipios": 928,
+        "n_unidades": 2035,
+        "nombre": "Mayor participación media; cambio presidencial cercano a cero",
+        "notas": [
+          "Paquete local adoptado por Hiram en B4; aprobación de Rubén no asumida.",
+          "Medias simples de unidades agregadas; no describen personas.",
+          "Correspondencia territorial nominal; límites históricos no certificados."
+        ],
+        "package_version": "ccpc-2009-2024-k4-v1",
+        "perfil_id": 4,
+        "porcentaje_unidades": 23.826249853647113
+      }
+    ]
+  },
+  "/api/observations?estado=2&edad=18-24&limit=2": {
+    "total": 5,
+    "package_version": "ccpc-2009-2024-k4-v1",
+    "offset": 0,
+    "limit": 2,
+    "analytics": {
+      "unidades": 5,
+      "municipios": 5,
+      "lista_nominal_2024": 446745,
+      "medias": {
+        "media_presidencial": 44.65497528168656,
+        "media_intermedia": 25.834164362249954,
+        "cambio_presidencial_pp": -7.033220914813593,
+        "cambio_intermedia_pp": 6.6882248851354715
+      },
+      "perfil_conteos": [
+        {
+          "perfil_id": 1,
+          "unidades": 5
+        }
+      ],
+      "historico": [
+        {
+          "anio": 2009,
+          "tipo": "Intermedia",
+          "media_tasa_pct": 23.87611506310362,
+          "unidades_con_tasa": 5
+        },
+        {
+          "anio": 2012,
+          "tipo": "Presidencial",
+          "media_tasa_pct": 47.57421885145752,
+          "unidades_con_tasa": 5
+        },
+        {
+          "anio": 2015,
+          "tipo": "Intermedia",
+          "media_tasa_pct": 23.06203807540714,
+          "unidades_con_tasa": 5
+        },
+        {
+          "anio": 2018,
+          "tipo": "Presidencial",
+          "media_tasa_pct": 45.84970905695825,
+          "unidades_con_tasa": 5
+        },
+        {
+          "anio": 2021,
+          "tipo": "Intermedia",
+          "media_tasa_pct": 30.56433994823909,
+          "unidades_con_tasa": 5
+        },
+        {
+          "anio": 2024,
+          "tipo": "Presidencial",
+          "media_tasa_pct": 40.54099793664393,
+          "unidades_con_tasa": 5
+        }
+      ]
+    },
+    "items": [
+      {
+        "EDOCVE": 2,
+        "MPIOCVE": 1,
+        "clave_municipal": "02-001",
+        "EDONOM": "BAJA CALIFORNIA",
+        "MPIONOM": "Ensenada",
+        "grupo_edad": "18-24",
+        "perfil_id": 1,
+        "perfil_nombre": "Menor participación media; descenso presidencial",
+        "package_version": "ccpc-2009-2024-k4-v1",
+        "media_presidencial": 45.10870797828195,
+        "media_intermedia": 25.231571467415733,
+        "cambio_presidencial_pp": -6.89844288072532,
+        "cambio_intermedia_pp": 1.4694930263714028,
+        "LN_2024": 52151.0,
+        "max_ns_pct": 4.327817299764146,
+        "tasa_2009": 25.876407248863828,
+        "tasa_2012": 48.33829536799834,
+        "tasa_2015": 22.472406878148146,
+        "tasa_2018": 45.54797607957448,
+        "tasa_2021": 27.34590027523523,
+        "tasa_2024": 41.43985248727302,
+        "observados_2009": 53029.0,
+        "observados_2012": 57772.0,
+        "observados_2015": 63331.0,
+        "observados_2018": 66554.0,
+        "observados_2021": 62492.0,
+        "observados_2024": 49894.0
+      },
+      {
+        "EDOCVE": 2,
+        "MPIOCVE": 2,
+        "clave_municipal": "02-002",
+        "EDONOM": "BAJA CALIFORNIA",
+        "MPIONOM": "Mexicali",
+        "grupo_edad": "18-24",
+        "perfil_id": 1,
+        "perfil_nombre": "Menor participación media; descenso presidencial",
+        "package_version": "ccpc-2009-2024-k4-v1",
+        "media_presidencial": 43.84997896792624,
+        "media_intermedia": 26.39551164752729,
+        "cambio_presidencial_pp": -7.537033603609466,
+        "cambio_intermedia_pp": 3.926581902366877,
+        "LN_2024": 120985.0,
+        "max_ns_pct": 10.08141505145266,
+        "tasa_2009": 26.242171792479148,
+        "tasa_2012": 46.78860546815335,
+        "tasa_2015": 22.77560945525669,
+        "tasa_2018": 45.50975957108151,
+        "tasa_2021": 30.168753694846025,
+        "tasa_2024": 39.25157186454389,
+        "observados_2009": 103951.0,
+        "observados_2012": 104752.0,
+        "observados_2015": 113503.0,
+        "observados_2018": 119370.0,
+        "observados_2021": 111642.0,
+        "observados_2024": 108788.0
+      }
+    ]
+  },
+  "/api/analysis-audit": {
+    "package_version": "ccpc-2009-2024-k4-v1",
+    "package_digest": "ae5243026dc27552abec02bafaba94819cb49b8dd6877416b79b188fccde1ed4",
+    "fuentes": {
+      "analisis/reportes/b2/resultados.json": "6238e682d6d1c34ba2fa9b33030f42f6827c05cecbc48655750f8337181bb2f8",
+      "analisis/reportes/b2/elegibilidad_y_causas.csv": "d307eb6077402ccbd0e5b377142d86667b42776b43176fa284d63b643931d661",
+      "analisis/reportes/b2/cobertura.csv": "bc676ed3d6efb663f5dd7d7a2bca91c46d43f788e2fb60dc8805bda2cf326b4f",
+      "analisis/reportes/b2/totales_anuales.csv": "4fc395c5983cacf7e7ed1f9ebda7caf87b0e1912c9cf9fe2f245c78e6ae54d3c",
+      "analisis/reportes/b2/seleccion_entidad.csv": "55cf597c3909199ea4405bbc8b671d350f5ec8d1b7584ff0e6342302bcc91d1c",
+      "analisis/reportes/b2/seleccion_edad.csv": "4fe696df656d7d8b40840e69a987ec532f47eb0b82d751648892fa08ffbf252c"
+    },
+    "decision_B2": "APTO CON ADVERTENCIAS",
+    "panel": 12385,
+    "elegibles": 8541,
+    "excluidas_unicas": 3844,
+    "cobertura": [
+      {
+        "medida": "unidades_panel",
+        "numerador": 8541,
+        "denominador": 12385,
+        "porcentaje": 68.96245458215583,
+        "universo": "Unión de municipio × edad observada en los seis CSV"
+      },
+      {
+        "medida": "municipios_panel",
+        "numerador": 1825,
+        "denominador": 2477,
+        "porcentaje": 73.67783609204683,
+        "universo": "Unión de claves municipales en los seis CSV"
+      },
+      {
+        "medida": "LN_2024_panel",
+        "numerador": 81666826,
+        "denominador": 98330348,
+        "porcentaje": 83.05353094041729,
+        "universo": "LN 2024 de unidades del panel"
+      },
+      {
+        "medida": "LN_2024_nacional_procesado",
+        "numerador": 81666826,
+        "denominador": 98330348,
+        "porcentaje": 83.05353094041729,
+        "universo": "LN del agregado nacional procesado 2024 (cinco edades)"
+      },
+      {
+        "medida": "municipios_2024",
+        "numerador": 1825,
+        "denominador": 2477,
+        "porcentaje": 73.67783609204683,
+        "universo": "Municipios presentes en agregado 2024"
+      }
+    ],
+    "causas": [
+      {
+        "codigo": "faltan_tasas",
+        "motivo": "Falta alguna tasa",
+        "unidades": 460
+      },
+      {
+        "codigo": "identidad_inestable",
+        "motivo": "Identidad nominal inestable",
+        "unidades": 190
+      },
+      {
+        "codigo": "observados_menor_100",
+        "motivo": "Menos de 100 observados en alguna elección",
+        "unidades": 863
+      },
+      {
+        "codigo": "ns_mayor_20",
+        "motivo": "NS mayor de 20% en alguna elección",
+        "unidades": 3307
+      },
+      {
+        "codigo": "faltan_conteos_o_ns",
+        "motivo": "Faltan conteos o NS",
+        "unidades": 110
+      }
+    ],
+    "combinaciones_excluidas": [
+      {
+        "causas": [
+          "ns_mayor_20"
+        ],
+        "unidades": 2740
+      },
+      {
+        "causas": [
+          "observados_menor_100"
+        ],
+        "unidades": 372
+      },
+      {
+        "causas": [
+          "observados_menor_100",
+          "ns_mayor_20"
+        ],
+        "unidades": 117
+      },
+      {
+        "causas": [
+          "identidad_inestable"
+        ],
+        "unidades": 92
+      },
+      {
+        "causas": [
+          "identidad_inestable",
+          "ns_mayor_20"
+        ],
+        "unidades": 60
+      },
+      {
+        "causas": [
+          "identidad_inestable",
+          "observados_menor_100"
+        ],
+        "unidades": 3
+      },
+      {
+        "causas": [
+          "faltan_tasas",
+          "faltan_conteos_o_ns"
+        ],
+        "unidades": 56
+      },
+      {
+        "causas": [
+          "faltan_tasas",
+          "ns_mayor_20",
+          "faltan_conteos_o_ns"
+        ],
+        "unidades": 11
+      },
+      {
+        "causas": [
+          "faltan_tasas",
+          "observados_menor_100",
+          "faltan_conteos_o_ns"
+        ],
+        "unidades": 9
+      },
+      {
+        "causas": [
+          "faltan_tasas",
+          "observados_menor_100",
+          "ns_mayor_20"
+        ],
+        "unidades": 345
+      },
+      {
+        "causas": [
+          "faltan_tasas",
+          "observados_menor_100",
+          "ns_mayor_20",
+          "faltan_conteos_o_ns"
+        ],
+        "unidades": 4
+      },
+      {
+        "causas": [
+          "faltan_tasas",
+          "identidad_inestable",
+          "faltan_conteos_o_ns"
+        ],
+        "unidades": 5
+      },
+      {
+        "causas": [
+          "faltan_tasas",
+          "identidad_inestable",
+          "ns_mayor_20",
+          "faltan_conteos_o_ns"
+        ],
+        "unidades": 17
+      },
+      {
+        "causas": [
+          "faltan_tasas",
+          "identidad_inestable",
+          "observados_menor_100",
+          "ns_mayor_20"
+        ],
+        "unidades": 5
+      },
+      {
+        "causas": [
+          "faltan_tasas",
+          "identidad_inestable",
+          "observados_menor_100",
+          "ns_mayor_20",
+          "faltan_conteos_o_ns"
+        ],
+        "unidades": 8
+      }
+    ],
+    "seleccion_edad": [
+      {
+        "grupo_edad": "18-24",
+        "unidades": 2477,
+        "incluidas": 1666,
+        "excluidas": 811,
+        "incluidas_pct_del_grupo": 67.2587807832055,
+        "excluidas_pct_del_grupo": 32.74121921679451
+      },
+      {
+        "grupo_edad": "25-34",
+        "unidades": 2477,
+        "incluidas": 1709,
+        "excluidas": 768,
+        "incluidas_pct_del_grupo": 68.99475171578523,
+        "excluidas_pct_del_grupo": 31.005248284214776
+      },
+      {
+        "grupo_edad": "35-44",
+        "unidades": 2477,
+        "incluidas": 1688,
+        "excluidas": 789,
+        "incluidas_pct_del_grupo": 68.14695195801373,
+        "excluidas_pct_del_grupo": 31.853048041986277
+      },
+      {
+        "grupo_edad": "45-59",
+        "unidades": 2477,
+        "incluidas": 1725,
+        "excluidas": 752,
+        "incluidas_pct_del_grupo": 69.64069438837303,
+        "excluidas_pct_del_grupo": 30.35930561162697
+      },
+      {
+        "grupo_edad": "60+",
+        "unidades": 2477,
+        "incluidas": 1753,
+        "excluidas": 724,
+        "incluidas_pct_del_grupo": 70.7710940654017,
+        "excluidas_pct_del_grupo": 29.228905934598306
+      }
+    ],
+    "seleccion_entidad": [
+      {
+        "EDOCVE": 1,
+        "EDONOM": "AGUASCALIENTES",
+        "unidades": 55,
+        "incluidas": 55,
+        "excluidas": 0,
+        "incluidas_pct_del_grupo": 100.0,
+        "excluidas_pct_del_grupo": 0.0
+      },
+      {
+        "EDOCVE": 2,
+        "EDONOM": "BAJA CALIFORNIA",
+        "unidades": 35,
+        "incluidas": 25,
+        "excluidas": 10,
+        "incluidas_pct_del_grupo": 71.42857142857143,
+        "excluidas_pct_del_grupo": 28.571428571428573
+      },
+      {
+        "EDOCVE": 3,
+        "EDONOM": "BAJA CALIFORNIA SUR",
+        "unidades": 25,
+        "incluidas": 15,
+        "excluidas": 10,
+        "incluidas_pct_del_grupo": 60.0,
+        "excluidas_pct_del_grupo": 40.0
+      },
+      {
+        "EDOCVE": 4,
+        "EDONOM": "CAMPECHE",
+        "unidades": 65,
+        "incluidas": 30,
+        "excluidas": 35,
+        "incluidas_pct_del_grupo": 46.15384615384615,
+        "excluidas_pct_del_grupo": 53.84615384615385
+      },
+      {
+        "EDOCVE": 5,
+        "EDONOM": "COAHUILA",
+        "unidades": 190,
+        "incluidas": 165,
+        "excluidas": 25,
+        "incluidas_pct_del_grupo": 86.84210526315789,
+        "excluidas_pct_del_grupo": 13.157894736842104
+      },
+      {
+        "EDOCVE": 6,
+        "EDONOM": "COLIMA",
+        "unidades": 50,
+        "incluidas": 45,
+        "excluidas": 5,
+        "incluidas_pct_del_grupo": 90.0,
+        "excluidas_pct_del_grupo": 10.0
+      },
+      {
+        "EDOCVE": 7,
+        "EDONOM": "CHIAPAS",
+        "unidades": 620,
+        "incluidas": 290,
+        "excluidas": 330,
+        "incluidas_pct_del_grupo": 46.774193548387096,
+        "excluidas_pct_del_grupo": 53.2258064516129
+      },
+      {
+        "EDOCVE": 8,
+        "EDONOM": "CHIHUAHUA",
+        "unidades": 335,
+        "incluidas": 155,
+        "excluidas": 180,
+        "incluidas_pct_del_grupo": 46.26865671641791,
+        "excluidas_pct_del_grupo": 53.73134328358209
+      },
+      {
+        "EDOCVE": 9,
+        "EDONOM": "CIUDAD DE MEXICO",
+        "unidades": 80,
+        "incluidas": 80,
+        "excluidas": 0,
+        "incluidas_pct_del_grupo": 100.0,
+        "excluidas_pct_del_grupo": 0.0
+      },
+      {
+        "EDOCVE": 10,
+        "EDONOM": "DURANGO",
+        "unidades": 195,
+        "incluidas": 158,
+        "excluidas": 37,
+        "incluidas_pct_del_grupo": 81.02564102564102,
+        "excluidas_pct_del_grupo": 18.97435897435897
+      },
+      {
+        "EDOCVE": 11,
+        "EDONOM": "GUANAJUATO",
+        "unidades": 230,
+        "incluidas": 195,
+        "excluidas": 35,
+        "incluidas_pct_del_grupo": 84.78260869565217,
+        "excluidas_pct_del_grupo": 15.217391304347826
+      },
+      {
+        "EDOCVE": 12,
+        "EDONOM": "GUERRERO",
+        "unidades": 425,
+        "incluidas": 238,
+        "excluidas": 187,
+        "incluidas_pct_del_grupo": 56.0,
+        "excluidas_pct_del_grupo": 44.0
+      },
+      {
+        "EDOCVE": 13,
+        "EDONOM": "HIDALGO",
+        "unidades": 420,
+        "incluidas": 326,
+        "excluidas": 94,
+        "incluidas_pct_del_grupo": 77.61904761904762,
+        "excluidas_pct_del_grupo": 22.38095238095238
+      },
+      {
+        "EDOCVE": 14,
+        "EDONOM": "JALISCO",
+        "unidades": 625,
+        "incluidas": 521,
+        "excluidas": 104,
+        "incluidas_pct_del_grupo": 83.36,
+        "excluidas_pct_del_grupo": 16.64
+      },
+      {
+        "EDOCVE": 15,
+        "EDONOM": "MEXICO",
+        "unidades": 625,
+        "incluidas": 535,
+        "excluidas": 90,
+        "incluidas_pct_del_grupo": 85.6,
+        "excluidas_pct_del_grupo": 14.4
+      },
+      {
+        "EDOCVE": 16,
+        "EDONOM": "MICHOACAN",
+        "unidades": 565,
+        "incluidas": 400,
+        "excluidas": 165,
+        "incluidas_pct_del_grupo": 70.79646017699115,
+        "excluidas_pct_del_grupo": 29.20353982300885
+      },
+      {
+        "EDOCVE": 17,
+        "EDONOM": "MORELOS",
+        "unidades": 180,
+        "incluidas": 155,
+        "excluidas": 25,
+        "incluidas_pct_del_grupo": 86.11111111111111,
+        "excluidas_pct_del_grupo": 13.88888888888889
+      },
+      {
+        "EDOCVE": 18,
+        "EDONOM": "NAYARIT",
+        "unidades": 100,
+        "incluidas": 95,
+        "excluidas": 5,
+        "incluidas_pct_del_grupo": 95.0,
+        "excluidas_pct_del_grupo": 5.0
+      },
+      {
+        "EDOCVE": 19,
+        "EDONOM": "NUEVO LEON",
+        "unidades": 255,
+        "incluidas": 109,
+        "excluidas": 146,
+        "incluidas_pct_del_grupo": 42.74509803921568,
+        "excluidas_pct_del_grupo": 57.25490196078432
+      },
+      {
+        "EDOCVE": 20,
+        "EDONOM": "OAXACA",
+        "unidades": 2850,
+        "incluidas": 1643,
+        "excluidas": 1207,
+        "incluidas_pct_del_grupo": 57.64912280701754,
+        "excluidas_pct_del_grupo": 42.35087719298246
+      },
+      {
+        "EDOCVE": 21,
+        "EDONOM": "PUEBLA",
+        "unidades": 1085,
+        "incluidas": 816,
+        "excluidas": 269,
+        "incluidas_pct_del_grupo": 75.2073732718894,
+        "excluidas_pct_del_grupo": 24.7926267281106
+      },
+      {
+        "EDOCVE": 22,
+        "EDONOM": "QUERETARO",
+        "unidades": 90,
+        "incluidas": 90,
+        "excluidas": 0,
+        "incluidas_pct_del_grupo": 100.0,
+        "excluidas_pct_del_grupo": 0.0
+      },
+      {
+        "EDOCVE": 23,
+        "EDONOM": "QUINTANA ROO",
+        "unidades": 55,
+        "incluidas": 34,
+        "excluidas": 21,
+        "incluidas_pct_del_grupo": 61.81818181818182,
+        "excluidas_pct_del_grupo": 38.18181818181818
+      },
+      {
+        "EDOCVE": 24,
+        "EDONOM": "SAN LUIS POTOSI",
+        "unidades": 290,
+        "incluidas": 233,
+        "excluidas": 57,
+        "incluidas_pct_del_grupo": 80.34482758620689,
+        "excluidas_pct_del_grupo": 19.655172413793103
+      },
+      {
+        "EDOCVE": 25,
+        "EDONOM": "SINALOA",
+        "unidades": 100,
+        "incluidas": 40,
+        "excluidas": 60,
+        "incluidas_pct_del_grupo": 40.0,
+        "excluidas_pct_del_grupo": 60.0
+      },
+      {
+        "EDOCVE": 26,
+        "EDONOM": "SONORA",
+        "unidades": 360,
+        "incluidas": 145,
+        "excluidas": 215,
+        "incluidas_pct_del_grupo": 40.27777777777778,
+        "excluidas_pct_del_grupo": 59.72222222222222
+      },
+      {
+        "EDOCVE": 27,
+        "EDONOM": "TABASCO",
+        "unidades": 85,
+        "incluidas": 75,
+        "excluidas": 10,
+        "incluidas_pct_del_grupo": 88.23529411764706,
+        "excluidas_pct_del_grupo": 11.764705882352942
+      },
+      {
+        "EDOCVE": 28,
+        "EDONOM": "TAMAULIPAS",
+        "unidades": 215,
+        "incluidas": 177,
+        "excluidas": 38,
+        "incluidas_pct_del_grupo": 82.32558139534883,
+        "excluidas_pct_del_grupo": 17.674418604651162
+      },
+      {
+        "EDOCVE": 29,
+        "EDONOM": "TLAXCALA",
+        "unidades": 300,
+        "incluidas": 252,
+        "excluidas": 48,
+        "incluidas_pct_del_grupo": 84.0,
+        "excluidas_pct_del_grupo": 16.0
+      },
+      {
+        "EDOCVE": 30,
+        "EDONOM": "VERACRUZ",
+        "unidades": 1060,
+        "incluidas": 900,
+        "excluidas": 160,
+        "incluidas_pct_del_grupo": 84.90566037735849,
+        "excluidas_pct_del_grupo": 15.09433962264151
+      },
+      {
+        "EDOCVE": 31,
+        "EDONOM": "YUCATAN",
+        "unidades": 530,
+        "incluidas": 285,
+        "excluidas": 245,
+        "incluidas_pct_del_grupo": 53.77358490566038,
+        "excluidas_pct_del_grupo": 46.22641509433962
+      },
+      {
+        "EDOCVE": 32,
+        "EDONOM": "ZACATECAS",
+        "unidades": 290,
+        "incluidas": 259,
+        "excluidas": 31,
+        "incluidas_pct_del_grupo": 89.3103448275862,
+        "excluidas_pct_del_grupo": 10.689655172413794
+      }
+    ]
+  }
+}

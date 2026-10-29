@@ -1,0 +1,53 @@
+{
+  "fecha": "2026-10-28T22:31:48.397202-07:00",
+  "comando": ".\\.venv\\Scripts\\python.exe -B -m uvicorn src.dashboard_api:app --host 127.0.0.1 --port 8501",
+  "pid_anterior_conocido": 45128,
+  "pid_nuevo": 24988,
+  "responses": {
+    "/health": {
+      "status": 200,
+      "package_version": "ccpc-2009-2024-k4-v1",
+      "keys": [
+        "status",
+        "observaciones",
+        "perfiles",
+        "package_version",
+        "package_digest",
+        "k"
+      ],
+      "package_digest": "ae5243026dc27552abec02bafaba94819cb49b8dd6877416b79b188fccde1ed4"
+    },
+    "/api/observations?limit=1": {
+      "status": 200,
+      "package_version": "ccpc-2009-2024-k4-v1",
+      "keys": [
+        "total",
+        "package_version",
+        "offset",
+        "limit",
+        "analytics",
+        "items"
+      ]
+    },
+    "/api/analysis-audit": {
+      "status": 200,
+      "package_version": "ccpc-2009-2024-k4-v1",
+      "keys": [
+        "package_version",
+        "package_digest",
+        "fuentes",
+        "decision_B2",
+        "panel",
+        "elegibles",
+        "excluidas_unicas",
+        "cobertura",
+        "causas",
+        "combinaciones_excluidas",
+        "seleccion_edad",
+        "seleccion_entidad"
+      ],
+      "package_digest": "ae5243026dc27552abec02bafaba94819cb49b8dd6877416b79b188fccde1ed4"
+    }
+  },
+  "sqlite_real_existe": false
+}

@@ -1,0 +1,104 @@
+{
+  "method": "Independent sums from six annual CSV, grouping from immutable observations, strict boolean B2 flags",
+  "annual": [
+    {
+      "anio": 2009,
+      "LN": 77481831,
+      "SV": 33316974,
+      "NV": 42298963,
+      "NS": 1865894,
+      "participacion_pct": 44.06078311242774,
+      "ns_pct": 2.4081697294943893
+    },
+    {
+      "anio": 2012,
+      "LN": 76490962,
+      "SV": 47383154,
+      "NV": 28939159,
+      "NS": 168649,
+      "participacion_pct": 62.08296386405375,
+      "ns_pct": 0.22048225776007366
+    },
+    {
+      "anio": 2015,
+      "LN": 83563462,
+      "SV": 36926612,
+      "NV": 41517874,
+      "NS": 5118976,
+      "participacion_pct": 47.07355976556466,
+      "ns_pct": 6.125854383582145
+    },
+    {
+      "anio": 2018,
+      "LN": 89123997,
+      "SV": 51784399,
+      "NV": 31249856,
+      "NS": 6089742,
+      "participacion_pct": 62.36510341424753,
+      "ns_pct": 6.832886994509458
+    },
+    {
+      "anio": 2021,
+      "LN": 93532133,
+      "SV": 46389189,
+      "NV": 43099624,
+      "NS": 4043320,
+      "participacion_pct": 51.83797554673119,
+      "ns_pct": 4.322920765636768
+    },
+    {
+      "anio": 2024,
+      "LN": 98330348,
+      "SV": 54899228,
+      "NV": 37105466,
+      "NS": 6325654,
+      "participacion_pct": 59.67002944436726,
+      "ns_pct": 6.4330637780311735
+    }
+  ],
+  "units": 8541,
+  "municipalities": 1825,
+  "panel": 12385,
+  "unique_excluded": 3844,
+  "LN_2024": 81666826,
+  "LN_2024_national": 98330348,
+  "coverage_LN_pct": 83.05353094041729,
+  "profiles": [
+    {
+      "perfil_id": 1,
+      "n_unidades": 1840,
+      "nombre": "Menor participación media; descenso presidencial",
+      "media_presidencial": 48.44176823940163,
+      "media_intermedia": 35.72189919163344,
+      "cambio_presidencial_pp": -7.578960804751601,
+      "cambio_intermedia_pp": 6.377071254945573
+    },
+    {
+      "perfil_id": 2,
+      "n_unidades": 2155,
+      "nombre": "Crecimiento medio en ambos tipos de elección",
+      "media_presidencial": 64.54374978215095,
+      "media_intermedia": 49.21851434169895,
+      "cambio_presidencial_pp": 7.969280217175109,
+      "cambio_intermedia_pp": 28.584605933054327
+    },
+    {
+      "perfil_id": 3,
+      "n_unidades": 2511,
+      "nombre": "Participación media; descenso presidencial",
+      "media_presidencial": 64.12761560619717,
+      "media_intermedia": 55.79408898013212,
+      "cambio_presidencial_pp": -8.116071120823172,
+      "cambio_intermedia_pp": 3.2817191128308987
+    },
+    {
+      "perfil_id": 4,
+      "n_unidades": 2035,
+      "nombre": "Mayor participación media; cambio presidencial cercano a cero",
+      "media_presidencial": 78.10013211072082,
+      "media_intermedia": 69.55722679351958,
+      "cambio_presidencial_pp": -1.0032821093152735,
+      "cambio_intermedia_pp": 15.478537315422871
+    }
+  ]
+}

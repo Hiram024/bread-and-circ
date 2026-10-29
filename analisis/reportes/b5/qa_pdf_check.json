@@ -1,0 +1,9 @@
+{
+  "status": "PASA",
+  "method": "Read-only extraction/render of actual browser-approved PDF with existing temporary PDFium5.14.0",
+  "pages": 1,
+  "profile_id": 2,
+  "name_counts_rates_changes_version_reviewer_limits_verified": true,
+  "source_sha256": "5a1a935b8dc8367bb7c35db866755aff9f567cd78dbbbcea5de23cc9ae8b485a",
+  "visual_review": "PASA: qa_b5 directly inspected qa_approved_page_1.png with view_image"
+}

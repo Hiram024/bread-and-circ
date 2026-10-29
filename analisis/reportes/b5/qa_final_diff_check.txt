@@ -1,0 +1,2 @@
+Command: git diff --check -- src dashboard tests README.md docs/00_memoria_tecnica_Hiram.md docs/13_dashboard_analitico_B5.md
+Exit: 0

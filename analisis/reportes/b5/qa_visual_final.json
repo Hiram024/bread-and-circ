@@ -1,0 +1,15 @@
+{
+  "revisor": "qa_b5",
+  "fecha": "2026-10-28T22:41:58.427183-07:00",
+  "method": "functions.view_image: direct inspection of final regenerated Chrome screenshots and rendered browser-approved PDF",
+  "result": "PASA",
+  "notes": "Readable layouts, complete profile names, contained horizontal table/navigation scroll at390, no essential content cuts/overlap seen. Not a full WCAG or technical-report review.",
+  "files": {
+    "qa_panorama.png": "6185ddc08105419fdcbf830ddc68c059b96ad46fe6b740c02451ffc392437d88",
+    "qa_perfiles.png": "09f57e9cdf9f32e4d8232c7827aa0eb2edb4e53b1db5418df29270a6a8a64883",
+    "qa_explorador.png": "24596af4996fd71eae2968f0d3577318964625b0aea7ed6d5b350bd83a85016b",
+    "qa_auditoria.png": "a7b6c9767f04f776d2ef82e45fec74991736ea29a6f1389b6d5ea6d910c524b4",
+    "qa_width_390.png": "173a3d2afb254efe32b913f5025570e50229f00f1070b526e013bac4b2f2cf4b",
+    "qa_approved_page_1.png": "92c16aeb24e2eaeedb2533bfe2bd7894b4828cd5c443fc1b9b8da6d0f5fa6f83"
+  }
+}

@@ -1,0 +1,15 @@
+INFO:     Started server process [9956]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:57094 (Press CTRL+C to quit)
+INFO:     127.0.0.1:53077 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53642 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52002 - "GET /static/app.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54876 - "GET /static/plotly.min.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52440 - "GET /static/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54876 - "GET /api/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52440 - "GET /api/states HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52002 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52002 - "GET /api/observations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52002 - "GET /api/territory-audit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52002 - "GET /api/observations HTTP/1.1" 200 OK

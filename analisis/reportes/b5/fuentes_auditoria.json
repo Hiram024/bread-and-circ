@@ -1,0 +1,11 @@
+{
+  "package_digest": "ae5243026dc27552abec02bafaba94819cb49b8dd6877416b79b188fccde1ed4",
+  "files": {
+    "analisis/reportes/b2/resultados.json": "6238e682d6d1c34ba2fa9b33030f42f6827c05cecbc48655750f8337181bb2f8",
+    "analisis/reportes/b2/elegibilidad_y_causas.csv": "d307eb6077402ccbd0e5b377142d86667b42776b43176fa284d63b643931d661",
+    "analisis/reportes/b2/cobertura.csv": "bc676ed3d6efb663f5dd7d7a2bca91c46d43f788e2fb60dc8805bda2cf326b4f",
+    "analisis/reportes/b2/totales_anuales.csv": "4fc395c5983cacf7e7ed1f9ebda7caf87b0e1912c9cf9fe2f245c78e6ae54d3c",
+    "analisis/reportes/b2/seleccion_entidad.csv": "55cf597c3909199ea4405bbc8b671d350f5ec8d1b7584ff0e6342302bcc91d1c",
+    "analisis/reportes/b2/seleccion_edad.csv": "4fe696df656d7d8b40840e69a987ec532f47eb0b82d751648892fa08ffbf252c"
+  }
+}

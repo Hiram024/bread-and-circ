@@ -1,0 +1,7 @@
+Server command: C:\Users\Hiram\Downloads\bread-and-circ-main\bread-and-circ-main\.venv\Scripts\python.exe -B -m uvicorn src.dashboard_api:app --host 127.0.0.1 --port 49691
+Browser command: C:\Users\Hiram\AppData\Local\ms-playwright-go\1.57.0\node.exe C:\Users\Hiram\Downloads\bread-and-circ-main\bread-and-circ-main\analisis\reportes\b5\qa_browser.cjs http://127.0.0.1:49691/
+Exit: 1
+page.waitForFunction: Timeout 30000ms exceeded.
+    at C:\Users\Hiram\Downloads\bread-and-circ-main\bread-and-circ-main\analisis\reportes\b5\qa_browser.cjs:132:16 {
+  name: 'TimeoutError'
+}

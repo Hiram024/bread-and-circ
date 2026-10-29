@@ -150,3 +150,67 @@ Tablas reutilizables: totales anuales/exclusiones/cobertura B2; comparación, es
 Fuentes/evidencia: [B2](10_auditoria_procesados_B2.md), [B3](11_evaluacion_modelo_B3.md), [QA B4](12_QA_B4.md), README raíz, `analisis/reportes/b2/`, `ml/resultados/b3/`, `analisis/reportes/b4/`, paquete activo y scripts citados. Referencias primarias consultadas para B4: [compatibilidad de persistencia sklearn1.8](https://scikit-learn.org/1.8/model_persistence.html#security-maintainability-limitations), [backup SQLite](https://docs.python.org/3.11/library/sqlite3.html#sqlite3.Connection.backup), [reemplazo de referencia os.replace](https://docs.python.org/3.11/library/os.html#os.replace). Fuente institucional declarada: [CCPC INE](https://ine.mx/transparencia/datos-abiertos/visualizacion-datos/conteos-censales-participacion/); no se reauditaron RAW ni mapas institucionales.
 
 B4 queda sin commit/push/merge/PR hasta autorización expresa. Propuesta: `feat: adopt versioned four-profile package and bind approvals to reviewed content`.
+
+## B5 — recorrido analítico orientado a preguntas
+
+Actualización28/10/2026, America/Tijuana. **B4 fue publicado con autorización posterior en7e43a2d**; sus menciones previas «sin commit» describen el cierre original, no el estado al iniciar B5. B5 parte de ese SHA, rama feat/analysis-dashboard y checkout limpio comprobado. Las ediciones nuevas permanecen locales sin commit/push; no llegan por pull hasta autorización/publicación.
+
+Esta continuación conserva y reorganiza la base de Rubén, con Hiram responsable de datos/modelo/analítica y decisiones de integración documentadas para Rubén, sin asumir su aprobación. No se entrenó ni cambió el paquete adoptado, features, nombres, umbrales, agentes, clasificación o reglas de aprobación/PDF.
+
+### Diagnóstico, fuentes y decisiones
+
+El recorrido real previo ya tenía los gráficos nacionales, distribución de perfiles, barras de medias, filtros y fichas; se conservaron. Faltaba comparar cambios en pp, recorrer más de100filas, consultar detalle por unidad y entender cobertura/exclusiones. El formateo de nulos podía mostrar0%. La línea base de QA ejecutó25tests aprobados, una deprecación previa y Chrome real sin errores de JS; estos sí son resultados nuevos B5, separados del informe histórico B4.
+
+| Pregunta | Solución B5 y significado |
+|---|---|
+|¿Qué ocurrió entre2009y2024?|Panorama nacional cronológico, presidencial/intermedia por símbolos/trazos/nombres, tabla y dos hallazgos calculados. Razón de sumas `100*SV/(SV+NV)`, no media municipal. NS no es abstención.|
+|¿Qué distingue a los perfiles?|Nombres completos intactos, proporciones y tabla de tamaño/nivel/cambio; barras de medias conservadas y única gráfica nueva de cambios pp. Las medias son simples entre unidades elegibles.|
+|¿Dónde aparecen esos patrones?|Explorador con filtros combinados,100por página, rango/total, resumen de TODASlas coincidencias y detalle por entidad+municipio+edad. Seis tasas y observados por elección; cortes transversales, no seguimiento individual.|
+|¿Hasta dónde interpretar?|Auditoría con cobertura, denominadores, exclusiones únicas y solapadas, selección por edad/entidad y advertencias. Se conserva la auditoría nominal original sin presentarla como certificación geométrica.|
+
+El filtro «Explorar Pn» cambia explícitamente el explorador, sin modificar la ficha revisada. Panorama/perfiles/auditoría no cambian con filtros del explorador. Al filtrar o paginar se invalida detalle/offset según corresponda. Cancelación nativa y contador de solicitud impiden que una respuesta antigua reemplace otra reciente; carga/error/vacío se distinguen y no retienen cifras anteriores como vigentes. Texto interpolado escapado, nulo«Sin dato», controles etiquetados, foco visible, tablas con scroll contenido y valores sin hover.
+
+`src/analytics.py` contiene filtros compartidos, medias antes de paginar, razones nacionales y vinculación de evidencia B2. `src/dashboard_api.py` amplía `/api/observations` conservando campos previos, añade `/api/analysis-audit` y documentación local por allowlist. `README.md` conserva el contrato B4, añade campos/tipos/errores/ejemplo real, fuentes/fórmulas/universos, efecto de filtros y forma de modificar presentación frente a paquete/modelo. No se creó otro README ni framework de gráficos.
+
+### Cifras y evidencia verificadas en B5
+
+Paquete activo `ccpc-2009-2024-k4-v1`; descriptor SHA256 `ae5243026dc27552abec02bafaba94819cb49b8dd6877416b79b188fccde1ed4`. La carga compatible comprueba hashes, todas las asignaciones y estadísticas B4; ningún artefacto se reserializó. Python3.11.15/sklearn1.8.0/NumPy2.4.6/SciPy1.17.1/pandas2.3.3/joblib1.6.0. B5 usa las mismas dependencias, JS/CSS/HTML y Plotly offline ya existente.
+
+De89huellas B2 heredadas,72siguen iguales y17son código/docs/tests/requirements adaptados legítimamente enB4; se registran en `analisis/reportes/b5/base.json`. Ninguna diferencia afecta los datos procesados auditados. No se afirmó que todo el código antiguo seguía idéntico. Se preservan49archivos de datos/productos/modelo inventariados por el principal y el inventario más amplio de QA para B2/B3/contratos.
+
+La auditoría complementaria se vincula mediante `analisis/reportes/b5/fuentes_auditoria.json`:digest activo y hashes de resultados/cobertura/elegibilidad/totales/selección deB2. Además compara claves exactas de elegibles, totales/tasas nacionales y denominadores. Fuente alterada o paquete no correspondiente devuelve503 sin mostrar cobertura caduca. Estas huellas no prueban origen oficial ni vuelven a certificar RAW.
+
+Resultados reutilizables, sin modificar las tablas B2/B3:
+
+|Indicador|Numerador / denominador|Resultado|
+|---|---|---:|
+|Unidades elegibles / panel|8,541 /12,385|68.9624545822%|
+|Municipios con alguna edad elegible / panel|1,825 /2,477|73.6778360920%|
+|LN2024elegible / agregado nacional procesado de cinco edades|81,666,826 /98,330,348|83.0535309404%|
+|Exclusión única|3,844 /12,385|31.0375454178%|
+
+Las4930incidencias de las cinco causas se superponen; no son4930excluidas. Las combinaciones presentes suman3844unidades únicas. Algunas descripciones de universo enCSVheredadoB2tienen caracteresU+FFFD:se conserva el archivo y sus hashes;la vista usa descripciones semánticas legibles para las cinco medidas conocidas.
+
+Participación nacional procesada:2009=44.060783%;2012=62.082964%;2015=47.073560%;2018=62.365103%;2021=51.837976%;2024=59.670029%. Diferencias del mismo tipo:intermedias2009→2021+7.777192pp;presidenciales2012→2024−2.412934pp. No son causas ni cambios individuales. PerfilesP1/P2/P3/P4mantienen1840/2155/2511/2035y todos los nombres/medias de la tabla B4 anterior.
+
+Ejemplo real verificable de filtros:estado2,edad18-24produce5unidades/5municipios,LN446745,media presidencial44.65497528% e intermedia25.83416436%;limit2solo cambia filas visibles,no el resumen. Fuente: `analisis/reportes/b5/ejemplos_api.json`. Las figuras actuales renderizadas se registran como capturas de QA; no se vuelven a etiquetar las figuras antiguas k5 como k4.
+
+### QA independiente, ejecución y pendientes
+
+Se creó y utilizó realmente **qa_b5**, dedicado exclusivamente a suite, fixtures, navegador, evidencia e informe; el principal implementa y corrige producción/documentación. El QA posee `tests/test_b5_analytics.py`, `analisis/reportes/b5/qa_*` y `docs/14_QA_B5.md`. No es certificación externa. Los25tests previos se mantienen; las aserciones nuevas usan CSVanuales, claves, datos B3 y fixtures calculadas a mano. Una fixture103filas cambia las medias más allá de la primera página; otra diferencia tasa agregada19/110de media simple50%. Alterar tasa/unidad en fixtures debe ser rechazado.
+
+El navegador detectó un defecto real en la incorporación de opciones de entidad (`innerHTML+` sin asignación); el principal corrigió `+=` y QA repitió filtros. Fallos de sincronización del harness se registran separados, sin declararlos defectos del producto ni ocultar logs. La revisión responsive espera condiciones observables de Plotly tras redimensionar y no confunde una captura durante resize con estado final. El informe independiente detalla todos los fallos, repeticiones y veredicto final sobre el estado congelado.
+
+Se reinició solo el servidor conocido de B4en8501después de identificar comando/PID; salud y endpointsB5devuelven200con misma versión/digest. QA usa puerto y SQLite propios temporales para CSV/revisión/PDF; no escribe ni limpia historial real. La comprobación de arranque está en `ejecucion_local.json`. Comandos repetibles en README e informe13; final suite/navegador y huellas en el informe14.
+
+B6 conserva aceptación con Rubén en su entorno de demo y revisión completa de notebook/informe técnico. Quedan otros navegadores/sistemas, lector de pantalla/zoom y escenarios de uso adicionales; B5 no completaB6por asociación. Persisten cobertura desigual, RAW asumidos, geografía nominal y diagnóstico temporal retrospectivo condicionado. No se añadieron mapas, LLM,autenticación,despliegue ni reentrenamiento. La evidencia descriptiva/reproducibilidad no convierte el modelo en científicamente validado.
+
+Propuesta de commitB5,no ejecutado: `feat: add question-driven analytics dashboard with verified selection summaries`.
+
+## Resultado de cierre B5 y QA independiente
+
+**B5: COMPLETADO CON ADVERTENCIAS. QA `qa_b5`: APROBADO CON ADVERTENCIAS no bloqueantes.** El recorrido y sus universos quedaron comprobados, manteniendo intactos paquete/modelo/datos y reglas B4. Pasada completa sobre código congelado: **31 pruebas aprobadas, una deprecación previa Starlette/httpx, exit0**; navegador Chrome156.0.8078.48 real, exit0, anchos1440y390sin desborde global estable,0erroresJavaScript y0solicitudesexternas. La advertencia favicon404es heredada;422corresponde al CSVinválido inducido, no un error silencioso de funcionamiento.
+
+QA inspeccionó visualmente Panorama/Perfiles/Explorador/Auditoría/móvil y un PDFP2real aprobado enSQLite temporal: nombre/tamaño2155/medias/cambios/versión/revisor/limitaciones comprobados;1página sin cortes esenciales. Comprobó teclado/foco, muestras de contraste y rechazo de respuesta antigua/red/nulos/HTML,inferenciay revisión/PDF/digestobsoleto. No es certificación WCAG ni científica. Los25tests previos no se modificaron; se añadieron6grupos B5 con oráculos independientes. Se corrigió el defecto de opciones de entidad detectado por el navegador; los fallos de sincronización del harness quedaron documentados por separado.
+
+Después de incorporar este cierre documental se repite la pasada final sin ediciones concurrentes. Su resultado autoritativo, tiempos, huellas definitivas, cambios durante la pasada y alcance visual quedan en `analisis/reportes/b5/qa_final_resultados.json`, `qa_final_state.json`, `qa_final_pytest.txt`, `qa_final_browser.txt`, `qa_visual_final.json` y `docs/14_QA_B5.md`. No hubo cambios en historial real ni fuentes auditadas. B6 mantiene aceptación conRubén, otros navegadores/sistemas, lector de pantalla/zoom, notebook e informe técnico completo; no se declara completado. B5 sigue sin commit/push/merge/PR, con propuesta en inglés Conventional Commits en README/informe13.

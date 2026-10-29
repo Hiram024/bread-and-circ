@@ -1,0 +1,350 @@
+Server command: C:\Users\Hiram\Downloads\bread-and-circ-main\bread-and-circ-main\.venv\Scripts\python.exe -B -m uvicorn src.dashboard_api:app --host 127.0.0.1 --port 62190
+Browser command: C:\Users\Hiram\AppData\Local\ms-playwright-go\1.57.0\node.exe C:\Users\Hiram\Downloads\bread-and-circ-main\bread-and-circ-main\analisis\reportes\b5\qa_width_probe.cjs http://127.0.0.1:62190/
+Exit: 0
+{
+  "viewport": 390,
+  "scroll": 390,
+  "nodes": [
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "class": "",
+      "x": 299.609375,
+      "width": 109.46875,
+      "scroll": 109,
+      "display": "flex",
+      "minWidth": "auto",
+      "text": "⇧ Clasificar CSV"
+    },
+    {
+      "tag": "SPAN",
+      "id": "",
+      "class": "",
+      "x": 328.609375,
+      "width": 71.46875,
+      "scroll": 71,
+      "display": "block",
+      "minWidth": "auto",
+      "text": "Clasificar CSV"
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "class": "",
+      "x": 412.078125,
+      "width": 132.296875,
+      "scroll": 132,
+      "display": "flex",
+      "minWidth": "auto",
+      "text": "▤ Fichas educativas"
+    },
+    {
+      "tag": "SPAN",
+      "id": "",
+      "class": "",
+      "x": 444.078125,
+      "width": 91.296875,
+      "scroll": 91,
+      "display": "block",
+      "minWidth": "auto",
+      "text": "Fichas educativas"
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "class": "",
+      "x": 547.375,
+      "width": 140.96875,
+      "scroll": 141,
+      "display": "flex",
+      "minWidth": "auto",
+      "text": "◇ Cobertura y límites"
+    },
+    {
+      "tag": "SPAN",
+      "id": "",
+      "class": "",
+      "x": 579.375,
+      "width": 99.96875,
+      "scroll": 100,
+      "display": "block",
+      "minWidth": "auto",
+      "text": "Cobertura y límites"
+    },
+    {
+      "tag": "TABLE",
+      "id": "",
+      "class": "",
+      "x": 32,
+      "width": 462.75,
+      "scroll": 463,
+      "display": "table",
+      "minWidth": "0px",
+      "text": "Totales nacionales procesados · cinco edades · fue"
+    },
+    {
+      "tag": "CAPTION",
+      "id": "",
+      "class": "",
+      "x": 32,
+      "width": 462.75,
+      "scroll": 463,
+      "display": "table-caption",
+      "minWidth": "0px",
+      "text": "Totales nacionales procesados · cinco edades · fue"
+    },
+    {
+      "tag": "THEAD",
+      "id": "",
+      "class": "",
+      "x": 32,
+      "width": 462.75,
+      "scroll": 463,
+      "display": "table-header-group",
+      "minWidth": "0px",
+      "text": "Año / tipoSV + NVSVParticipación %NS / LN %"
+    },
+    {
+      "tag": "TR",
+      "id": "",
+      "class": "",
+      "x": 32,
+      "width": 462.75,
+      "scroll": 463,
+      "display": "table-row",
+      "minWidth": "0px",
+      "text": "Año / tipoSV + NVSVParticipación %NS / LN %"
+    },
+    {
+      "tag": "TH",
+      "id": "",
+      "class": "",
+      "x": 314.140625,
+      "width": 103.90625,
+      "scroll": 104,
+      "display": "table-cell",
+      "minWidth": "0px",
+      "text": "Participación %"
+    },
+    {
+      "tag": "TH",
+      "id": "",
+      "class": "",
+      "x": 418.046875,
+      "width": 76.703125,
+      "scroll": 77,
+      "display": "table-cell",
+      "minWidth": "0px",
+      "text": "NS / LN %"
+    },
+    {
+      "tag": "TBODY",
+      "id": "nationalRows",
+      "class": "",
+      "x": 32,
+      "width": 462.75,
+      "scroll": 463,
+      "display": "table-row-group",
+      "minWidth": "0px",
+      "text": "2009 · Intermedia75,615,93733,316,97444.1%2.4%2012"
+    },
+    {
+      "tag": "TR",
+      "id": "",
+      "class": "",
+      "x": 32,
+      "width": 462.75,
+      "scroll": 463,
+      "display": "table-row",
+      "minWidth": "0px",
+      "text": "2009 · Intermedia75,615,93733,316,97444.1%2.4%"
+    },
+    {
+      "tag": "TD",
+      "id": "",
+      "class": "",
+      "x": 314.140625,
+      "width": 103.90625,
+      "scroll": 104,
+      "display": "table-cell",
+      "minWidth": "0px",
+      "text": "44.1%"
+    },
+    {
+      "tag": "TD",
+      "id": "",
+      "class": "",
+      "x": 418.046875,
+      "width": 76.703125,
+      "scroll": 77,
+      "display": "table-cell",
+      "minWidth": "0px",
+      "text": "2.4%"
+    },
+    {
+      "tag": "TR",
+      "id": "",
+      "class": "",
+      "x": 32,
+      "width": 462.75,
+      "scroll": 463,
+      "display": "table-row",
+      "minWidth": "0px",
+      "text": "2012 · Presidencial76,322,31347,383,15462.1%0.2%"
+    },
+    {
+      "tag": "TD",
+      "id": "",
+      "class": "",
+      "x": 314.140625,
+      "width": 103.90625,
+      "scroll": 104,
+      "display": "table-cell",
+      "minWidth": "0px",
+      "text": "62.1%"
+    },
+    {
+      "tag": "TD",
+      "id": "",
+      "class": "",
+      "x": 418.046875,
+      "width": 76.703125,
+      "scroll": 77,
+      "display": "table-cell",
+      "minWidth": "0px",
+      "text": "0.2%"
+    },
+    {
+      "tag": "TR",
+      "id": "",
+      "class": "",
+      "x": 32,
+      "width": 462.75,
+      "scroll": 463,
+      "display": "table-row",
+      "minWidth": "0px",
+      "text": "2015 · Intermedia78,444,48636,926,61247.1%6.1%"
+    },
+    {
+      "tag": "TD",
+      "id": "",
+      "class": "",
+      "x": 314.140625,
+      "width": 103.90625,
+      "scroll": 104,
+      "display": "table-cell",
+      "minWidth": "0px",
+      "text": "47.1%"
+    },
+    {
+      "tag": "TD",
+      "id": "",
+      "class": "",
+      "x": 418.046875,
+      "width": 76.703125,
+      "scroll": 77,
+      "display": "table-cell",
+      "minWidth": "0px",
+      "text": "6.1%"
+    },
+    {
+      "tag": "TR",
+      "id": "",
+      "class": "",
+      "x": 32,
+      "width": 462.75,
+      "scroll": 463,
+      "display": "table-row",
+      "minWidth": "0px",
+      "text": "2018 · Presidencial83,034,25551,784,39962.4%6.8%"
+    },
+    {
+      "tag": "TD",
+      "id": "",
+      "class": "",
+      "x": 314.140625,
+      "width": 103.90625,
+      "scroll": 104,
+      "display": "table-cell",
+      "minWidth": "0px",
+      "text": "62.4%"
+    },
+    {
+      "tag": "TD",
+      "id": "",
+      "class": "",
+      "x": 418.046875,
+      "width": 76.703125,
+      "scroll": 77,
+      "display": "table-cell",
+      "minWidth": "0px",
+      "text": "6.8%"
+    },
+    {
+      "tag": "TR",
+      "id": "",
+      "class": "",
+      "x": 32,
+      "width": 462.75,
+      "scroll": 463,
+      "display": "table-row",
+      "minWidth": "0px",
+      "text": "2021 · Intermedia89,488,81346,389,18951.8%4.3%"
+    },
+    {
+      "tag": "TD",
+      "id": "",
+      "class": "",
+      "x": 314.140625,
+      "width": 103.90625,
+      "scroll": 104,
+      "display": "table-cell",
+      "minWidth": "0px",
+      "text": "51.8%"
+    },
+    {
+      "tag": "TD",
+      "id": "",
+      "class": "",
+      "x": 418.046875,
+      "width": 76.703125,
+      "scroll": 77,
+      "display": "table-cell",
+      "minWidth": "0px",
+      "text": "4.3%"
+    },
+    {
+      "tag": "TR",
+      "id": "",
+      "class": "",
+      "x": 32,
+      "width": 462.75,
+      "scroll": 463,
+      "display": "table-row",
+      "minWidth": "0px",
+      "text": "2024 · Presidencial92,004,69454,899,22859.7%6.4%"
+    },
+    {
+      "tag": "TD",
+      "id": "",
+      "class": "",
+      "x": 314.140625,
+      "width": 103.90625,
+      "scroll": 104,
+      "display": "table-cell",
+      "minWidth": "0px",
+      "text": "59.7%"
+    },
+    {
+      "tag": "TD",
+      "id": "",
+      "class": "",
+      "x": 418.046875,
+      "width": 76.703125,
+      "scroll": 77,
+      "display": "table-cell",
+      "minWidth": "0px",
+      "text": "6.4%"
+    }
+  ]
+}

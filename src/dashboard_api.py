@@ -14,6 +14,7 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel,Field
 from .education import build_draft,pdf_for_draft
 from .product_contract import load_active, FEATS, YEARS
+from .analytics import AGES, filter_observations, selection_summary, audit_evidence, national_history
 
 ROOT=Path(__file__).resolve().parents[1]
 PRODUCT=ROOT/'datos/processed/producto'
@@ -66,24 +67,40 @@ def health():return {'status':'ok','observaciones':len(data()),'perfiles':len(pr
 @app.get('/api/summary')
 def summary():
     national=package()['national']
-    return {'meta':metadata(),'historico':national.replace({np.nan:None}).to_dict('records'),'perfiles':list(profiles().values())}
+    return {'meta':metadata(),'historico':national_history(national),'perfiles':list(profiles().values())}
 @app.get('/api/profiles')
 def get_profiles():return list(profiles().values())
 @app.get('/api/observations')
-def observations(estado:Optional[int]=None,perfil:Optional[int]=None,edad:Optional[str]=None,
-                 q:str='',limit:int=Query(100,ge=1,le=500),offset:int=Query(0,ge=0)):
-    frame=data()
-    if estado is not None:frame=frame[frame.EDOCVE.eq(estado)]
-    if perfil is not None:
-        if perfil not in profiles():raise HTTPException(404,'Perfil no existe en el paquete activo')
-        frame=frame[frame.perfil_id.eq(perfil)]
-    if edad:frame=frame[frame.grupo_edad.eq(edad)]
-    if q:frame=frame[frame.MPIONOM.str.contains(q,case=False,na=False,regex=False)]
+def observations(estado:Optional[int]=Query(None,ge=1,le=32),perfil:Optional[int]=None,edad:Optional[str]=None,
+                 q:str=Query('',max_length=120),limit:int=Query(100,ge=1,le=500),offset:int=Query(0,ge=0)):
+    if perfil is not None and perfil not in profiles():raise HTTPException(404,'Perfil no existe en el paquete activo')
+    if edad is not None and edad not in AGES:raise HTTPException(422,'Grupo de edad desconocido')
+    frame=filter_observations(data(),estado,perfil,edad,q)
     out=frame.iloc[offset:offset+limit].copy()
-    fields=['clave_municipal','EDONOM','MPIONOM','grupo_edad','perfil_id','perfil_nombre','package_version','media_presidencial',
-            'media_intermedia','cambio_presidencial_pp','cambio_intermedia_pp',*[f'tasa_{y}' for y in YEARS]]
-    return {'total':len(frame),'package_version':package()['package_version'],
+    fields=['EDOCVE','MPIOCVE','clave_municipal','EDONOM','MPIONOM','grupo_edad','perfil_id','perfil_nombre','package_version','media_presidencial',
+            'media_intermedia','cambio_presidencial_pp','cambio_intermedia_pp','LN_2024','max_ns_pct',
+            *[f'tasa_{y}' for y in YEARS],*[f'observados_{y}' for y in YEARS]]
+    return {'total':len(frame),'package_version':package()['package_version'],'offset':offset,'limit':limit,
+            'analytics':selection_summary(frame),
             'items':out[fields].replace({np.nan:None}).to_dict('records')}
+
+@lru_cache(maxsize=1)
+def analysis_audit():
+    return audit_evidence(ROOT,package())
+
+@app.get('/api/analysis-audit')
+def get_analysis_audit():
+    try:return analysis_audit()
+    except (OSError,ValueError,KeyError) as exc:
+        raise HTTPException(503,f'Auditoría analítica no disponible: {exc}')
+
+@app.get('/api/documentation/{name}')
+def documentation(name:str):
+    allowed={'metodologia':'docs/02_decisiones_metodologicas.md','b2':'docs/10_auditoria_procesados_B2.md',
+             'b3':'docs/11_evaluacion_modelo_B3.md','memoria':'docs/00_memoria_tecnica_Hiram.md',
+             'contrato':'README.md'}
+    if name not in allowed:raise HTTPException(404,'Documento no disponible')
+    return FileResponse(ROOT/allowed[name],media_type='text/plain; charset=utf-8')
 @app.get('/api/states')
 def states():
     return data()[['EDOCVE','EDONOM']].drop_duplicates().sort_values('EDONOM').to_dict('records')

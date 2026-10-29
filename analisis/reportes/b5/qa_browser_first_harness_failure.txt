@@ -1,0 +1,15 @@
+Server command: C:\Users\Hiram\Downloads\bread-and-circ-main\bread-and-circ-main\.venv\Scripts\python.exe -B -m uvicorn src.dashboard_api:app --host 127.0.0.1 --port 63748
+Browser command: C:\Users\Hiram\AppData\Local\ms-playwright-go\1.57.0\node.exe C:\Users\Hiram\Downloads\bread-and-circ-main\bread-and-circ-main\analisis\reportes\b5\qa_browser.cjs http://127.0.0.1:63748/
+Exit: 1
+AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert(detail.includes(first.MPIONOM)&&detail.includes(first.grupo_edad))
+
+    at C:\Users\Hiram\Downloads\bread-and-circ-main\bread-and-circ-main\analisis\reportes\b5\qa_browser.cjs:48:3 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}

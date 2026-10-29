@@ -1,0 +1,4 @@
+Server command: C:\Users\Hiram\Downloads\bread-and-circ-main\bread-and-circ-main\.venv\Scripts\python.exe -B -m uvicorn src.dashboard_api:app --host 127.0.0.1 --port 57094
+Browser command: C:\Users\Hiram\AppData\Local\ms-playwright-go\1.57.0\node.exe C:\Users\Hiram\Downloads\bread-and-circ-main\bread-and-circ-main\analisis\reportes\b5\qa_baseline_browser.cjs http://127.0.0.1:57094/
+Exit: 0
+{"browser":"156.0.8078.48","screens":["resumen","perfiles","explorar","auditoria"],"errors":[]}

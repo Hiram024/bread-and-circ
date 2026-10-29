@@ -1,0 +1,53 @@
+INFO:     Started server process [16588]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:61634 (Press CTRL+C to quit)
+INFO:     127.0.0.1:61645 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60123 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60123 - "GET /static/app.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53520 - "GET /static/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49741 - "GET /static/plotly.min.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57700 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56822 - "GET /api/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63572 - "GET /api/states HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50969 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50969 - "GET /api/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63572 - "GET /api/observations?offset=0&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50969 - "GET /api/observations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63572 - "GET /api/observations?offset=100&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63572 - "GET /api/observations?offset=0&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63572 - "GET /api/observations?estado=1&offset=0&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63572 - "GET /api/observations?estado=1&perfil=4&offset=0&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56822 - "GET /api/observations?estado=1&perfil=4&edad=60%2B&offset=0&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50969 - "GET /api/observations?estado=1&perfil=4&edad=60%2B&q=AGUAS HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57700 - "GET /api/observations?estado=1&perfil=4&edad=60%2B&q=AGUAS&offset=0&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57700 - "GET /api/observations?estado=1&perfil=4&edad=60%2B&q=QA_NO_MATCH_298129&offset=0&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57700 - "GET /api/observations?offset=0&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50969 - "GET /api/observations?q=AGUAS HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50969 - "GET /api/observations?q=Monterrey HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57700 - "GET /api/observations?q=Monterrey&offset=0&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57700 - "GET /api/observations?offset=0&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57700 - "GET /api/observations?offset=0&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57700 - "GET /api/analysis-audit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57700 - "GET /api/territory-audit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50969 - "GET /api/documentation/b2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50969 - "GET /api/documentation/b3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50969 - "GET /api/documentation/memoria HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50969 - "GET /api/documentation/contrato HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50969 - "GET /api/template HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57700 - "POST /api/classify HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57700 - "POST /api/classify HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:57700 - "GET /api/draft/1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57700 - "GET /api/observations?perfil=4&offset=0&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57700 - "GET /api/draft/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57700 - "POST /api/approve HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50969 - "GET /api/approved-pdf/1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50969 - "GET /api/draft/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50969 - "POST /api/approve HTTP/1.1" 409 Conflict
+INFO:     127.0.0.1:57700 - "GET /api/observations?perfil=4&offset=0&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57700 - "GET /api/analysis-audit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57700 - "GET /api/territory-audit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57700 - "GET /api/observations?perfil=4&offset=0&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57700 - "GET /api/analysis-audit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57700 - "GET /api/territory-audit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57700 - "GET /api/observations?perfil=4&offset=0&limit=100 HTTP/1.1" 200 OK

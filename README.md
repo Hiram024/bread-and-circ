@@ -81,7 +81,7 @@ Hiram adoptó localmente el candidato B3 **K-Means k=4, StandardScaler, n_init=3
 
 Versión activa: **`ccpc-2009-2024-k4-v1`**. Digest del paquete: `ae5243026dc27552abec02bafaba94819cb49b8dd6877416b79b188fccde1ed4`. `/health`, resumen, CSV, borradores y PDF permiten identificarla. Las cuatro estadísticas de perfiles se recalcularon desde las asignaciones, sin copiar filas del anterior k5 por posición.
 
-La entrega B4 de esta ejecución está **local y sin commit/push**: hacer pull todavía no trae estos cambios. B2 y B3 sí fueron publicados previamente (`a5794fd` y `6222f79`). El estado de QA y sus comandos se documentan en [docs/12_QA_B4.md](docs/12_QA_B4.md); la memoria acumulativa es [docs/00_memoria_tecnica_Hiram.md](docs/00_memoria_tecnica_Hiram.md).
+B4 fue publicado con autorización de Hiram en **`7e43a2d`** sobre `feat/analysis-dashboard`; B2 y B3 están en `a5794fd` y `6222f79`. **B5 permanece local y sin commit/push:** hacer pull aún no incorpora sus mejoras. El estado de QA B4 y sus comandos se documentan en [docs/12_QA_B4.md](docs/12_QA_B4.md); la memoria acumulativa es [docs/00_memoria_tecnica_Hiram.md](docs/00_memoria_tecnica_Hiram.md).
 
 ### Dónde vive cada decisión
 
@@ -240,3 +240,69 @@ Después de la publicación autorizada y pull, Rubén debe:
 6. Coordinar cualquier modificación de contrato con Hiram. El contrato ya está implementado localmente, pero no se presume que Rubén haya aprobado estas decisiones.
 
 Quedan límites de separación moderada, sensibilidad, selección territorial/etaria desigual y geografía nominal. El diagnóstico temporal previo es retrospectivo condicionado a elegibilidad de seis años, no validación temporal independiente. B5 visual, despliegue, autenticación, cartografía y modelos nuevos quedan fuera de B4.
+
+## Dashboard analítico — B5, camino B
+
+B5 amplía la presentación y la consulta analítica sobre **el mismo paquete B4**. No entrena, cambia filtros ML, nombres o asignaciones, ni modifica agentes, clasificación, aprobaciones o PDF. Es una decisión implementada de Hiram para integración; no presupone aprobación de Rubén. QA y resultados finales: [docs/14_QA_B5.md](docs/14_QA_B5.md); diagnóstico y ejecución: [docs/13_dashboard_analitico_B5.md](docs/13_dashboard_analitico_B5.md).
+
+Recorrido: **Panorama → Perfiles → Explorador → Auditoría**. CSV y Fichas conservan su acceso. Los filtros pertenecen solamente al explorador: no cambian las cifras nacionales, perfiles completos o auditoría. «Explorar Pn» cambia explícitamente el filtro de perfil y conserva los otros criterios visibles; no cambia el perfil ni contenido de una ficha revisada.
+
+### Indicadores, fórmulas y universos
+
+| Indicador / visualización | Fuente autoritativa | Cálculo y unidad | Universo / filtros |
+|---|---|---|---|
+| Historia nacional, gráfica y tabla | `files.national` del manifest activo; totales reconciliados con B2 | `100*SV/(SV+NV)` por año, SV/NV ya sumados nacionalmente. NS/LN en %. Denominador cero → nulo. No media de tasas municipales. | Agregado nacional procesado de cinco edades; sin filtros. `filas` en esta fuente es microfilas documentadas, no unidades: no se usa como contador del panel. |
+| Hallazgos de Panorama | Mismas tasas de la historia nacional | Última menos primera elección de cada tipo, en pp: 2024−2012 y 2021−2009. Se calculan al renderizar. | Nacional procesado, no selección modelada. Sin causalidad. |
+| Panel, elegibles, municipios, cobertura LN | `files.metadata`; complemento B2 validado en Auditoría | Panel 12,385; elegibles 8,541; municipios distintos por entidad+municipio 1,825. LN elegible2024 / LN nacional procesada2024. | No ciudadanos clasificados; municipio representado puede tener solo algunas edades aptas. |
+| Tamaños de perfiles | `files.profiles` contrastado con `files.observations` por loader B4 | Unidades y `100*n/8541`; municipios entre perfiles no son disjuntos. | Todas las elegibles; sin filtros. |
+| Nivel de perfiles | Mismas fuentes del paquete | Media por unidad 2012/2018/2024 o 2009/2015/2021, luego media simple entre unidades de cada perfil; %. | Sin ponderar por población/observados; no tasa nacional. |
+| Cambios de perfiles | `cambio_presidencial_pp`, `cambio_intermedia_pp` del perfil | Media simple de 2024−2012 y 2021−2009; pp. Tabla, etiquetas y barras con cero visible. | Mismos perfiles; no variación porcentual relativa ni evolución individual. |
+| Tabla del explorador | `files.observations` | Filas ordenadas por `(EDOCVE,MPIOCVE,grupo_edad)`, 100 por página. Rango visible separado del total. | Todas las elegibles que cumplen entidad, perfil, edad y búsqueda literal municipal; combinaciones AND. |
+| Resumen de selección | `analytics` de `/api/observations`, antes de paginar | Conteos de unidades/municipios, suma LN2024, medias simples de las cuatro variables y distribución por perfil. | **Todas** las coincidencias, nunca solo la página. Sin coincidencias: conteos0, medias nulas. |
+| Detalle de unidad | Mismo `items` de la consulta, identificado por clave compuesta | Seis tasas %, observados SV+NV por año, cambios pp, LN2024 y máximo NS %. | Una unidad municipio×edad. Se invalida al filtrar/paginar; no unión por posición o nombre. |
+| Cobertura / exclusiones | B2 `resultados.json`, `cobertura.csv`, `elegibilidad_y_causas.csv` y selección por edad/entidad, vinculados mediante `analisis/reportes/b5/fuentes_auditoria.json` | Numerador/denominador y %. Excluidas únicas3,844. Causas superpuestas y combinaciones presentes; estas últimas suman3,844. | Panel12,385 / municipios2,477 / LN nacional2024 de cinco edades98,330,348, según fila. Sin filtros del explorador. |
+| Identidad nominal | `files.territory_audit` del paquete | Conteos por estado de identidad y hasta50 ejemplos no estables; no cobertura de edades. | 2,477 claves municipales. No certifica fronteras históricas constantes. |
+
+Las tablas dan valores accesibles sin depender de hover o color. Presidencial e intermedia usan nombres, círculos/rombos y trazos diferentes. Las tasas nulas dicen **«Sin dato»**, no0%. El explorador limpia resultados anteriores durante carga/error y aborta/invalida respuestas antiguas incluso mientras espera el debounce de búsqueda.
+
+### Ampliación compatible de API para Rubén
+
+`GET /api/observations` conserva `total`, `items`, `package_version` y las columnas previas. Añade los campos siguientes, sin cambiar inferencia ni contrato de fichas:
+
+| Parámetro | Tipo y validación | Default |
+|---|---|---|
+| `estado` | entero opcional,1–32; no etiqueta/nombre | sin filtro |
+| `perfil` | entero opcional, ID existente en el paquete; inexistente404 | sin filtro |
+| `edad` | texto opcional: `18-24`, `25-34`, `35-44`, `45-59`, `60+`; otra etiqueta422 | sin filtro |
+| `q` | texto de hasta120 caracteres, búsqueda literal sin regex, insensible a mayúsculas en MPIONOM | vacío |
+| `limit` | entero1–500 |100|
+| `offset` | entero≥0 |0|
+
+Respuesta: `total:int`, `offset:int`, `limit:int`, `package_version:str`, `items:list`, `analytics:object`. Orden estable por clave. Offset más allá del total devuelve `items:[]` y mantiene total/resumen del universo; el cliente evita navegar fuera de rango. `items` añade `EDOCVE:int`, `MPIOCVE:int`, `LN_2024:int`, `max_ns_pct:number` y `observados_<año>:number`. `clave_municipal` conserva ceros a la izquierda; tasas nulas se serializan como JSON `null`. `analytics` contiene `unidades:int`, `municipios:int`, `lista_nominal_2024:int`, `medias:{<cuatro features>:number|null}`, `perfil_conteos:[{perfil_id:int,unidades:int}]`, `historico:[{anio:int,tipo:str,media_tasa_pct:number|null,unidades_con_tasa:int}]`. Sus medias son simples entre unidades, no ponderadas ni nacionales.
+
+Ejemplo real: `/api/observations?estado=2&edad=18-24&limit=2` devuelve total5,offset0,limit2; analytics5unidades/5municipios, LN2024=446745, medias presidencial44.65497528168656 e intermedia25.834164362249954; primera clave `(2,1,"18-24")`, `clave_municipal:"02-001"`. Cambiar offset no cambia `analytics`. Respuestas completas efectivamente ejecutadas: `analisis/reportes/b5/ejemplos_api.json`. Búsqueda literal sin coincidencias devuelve200,total0,itemsvacíos,mediasnull. Tipos/rangos/edades inválidos devuelven422; perfil inexistente404.
+
+`GET /api/analysis-audit` es **nuevo y separado**: devuelve panel/elegibles/excluidas únicas, cobertura con numerador/denominador/porcentaje/universo, causas, combinaciones, selección por edad/entidad y las huellas de las fuentes B2. Valida hashes de evidencia e insumos procesados B2, claves elegibles exactas frente al snapshot, totales/tasas nacionales y denominadores. Si cambia alguna fuente o el paquete ya no corresponde: **503**, sin presentar cobertura anterior como vigente. No reemplaza el manifest ni agrega silenciosamente archivos al paquete. Se cachea una vez, igual que el snapshot: reiniciar el proceso después de cambios deliberados; cualquier nuevo paquete necesita una nueva reconciliación y vínculo B2, no editar cifras para que pase.
+
+`GET /api/documentation/{name}` sirve texto UTF-8 de una lista fija: `b2`, `b3`, `metodologia` (histórico), `memoria`, `contrato` (este README). Nombres desconocidos404; no acepta rutas arbitrarias. OpenAPI de FastAPI sigue disponible localmente en `/openapi.json` y `/docs`. No se creó una colección/Postman workspace ni servicio adicional: pytest/TestClient y navegador ejercitan la API local existente.
+
+### Ubicación de decisiones y cambios posteriores
+
+- Datos/modelo/nombres/umbrales: manifest y builder B4, sin modificaciones B5. Cambiarlos exige proceso de evaluación/adopción y nuevo paquete/revisión conforme a B3/B4.
+- Filtros/agregaciones/nacional/auditoría: `src/analytics.py`; rutas y límites de consulta en `src/dashboard_api.py`. `AGES` centraliza categorías aceptadas en backend. No agregar reglas de elegibilidad visuales divergentes.
+- Presentación: `dashboard/index.html`, `dashboard/static/app.js`, `app.css`; los nombres/valores se leen de la API. Cambios de diseño, formato, títulos o símbolos no requieren entrenar. Las cuatro variables no se duplican como cifras sueltas en JS.
+- La identidad editorial de fichas permanece en `src/education.py`; B5 no modifica sus textos ni digests. Una modificación futura sí requiere revisión nueva conforme a B4.
+- `fuentes_auditoria.json` registra hashes de los reportes B2 utilizados y digest del paquete. Los hashes dan trazabilidad de esta vinculación, no certifican procedencia oficial. No ejecutar pipeline/modeling/prepare_product para iniciar B5.
+
+Arranque sin cambios: `cmd /c run.bat`, o `.\.venv\Scripts\python.exe -B -m uvicorn src.dashboard_api:app --host 127.0.0.1 --port 8501`. Detener y reiniciar el proceso conocido después de editar backend; no mezclar frontend B5 con API B4 cacheada. Si8501 está ocupado, identificar primero el proceso o usar otro puerto local, sin matar servicios desconocidos.
+
+Suite completa reproducible desde la raíz (PowerShell):
+
+```powershell
+$qaB5Temp = Join-Path $env:TEMP ('ccpc-b5-tests-' + [guid]::NewGuid().ToString('N'))
+& .\.venv\Scripts\python.exe -B -m pytest -q -p no:cacheprovider --basetemp $qaB5Temp tests
+# Chrome/Playwright ya existentes en esta laptop; servidor y SQLite temporales propios.
+& .\.venv\Scripts\python.exe -B analisis\reportes\b5\qa_browser_run.py
+```
+
+El segundo comando requiere las herramientas externas de QA descritas en el informe; no son dependencias de app. Las pruebas no usan ni limpian el historial SQLite real. Los resultados finales y límites se leen en el informe QA, sin confundirlos con la referencia histórica de25testsB4. B6 conserva revisión en el entorno de demo de Rubén, otros navegadores/sistemas, lector de pantalla, notebook completo e informe técnico visual completo. No se marca B6 terminado por haber probado B5. Las modificaciones de B5 siguen sin publicar hasta autorización expresa.

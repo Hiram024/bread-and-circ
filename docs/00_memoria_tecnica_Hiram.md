@@ -1,4 +1,4 @@
-# Memoria técnica acumulativa de Hiram — Hackathon INE, Reto 1
+# Memoria técnica acumulativa de Hiram — HackINE, Reto 1
 
 Este documento reúne decisiones, trabajo realizado y material reutilizable para el informe final. **No sustituye las tablas de evidencia ni certifica el origen RAW.** Fecha de cierre del bloque B4: 28/10/2026, zona America/Tijuana; los timestamps y hashes de cada ejecución están en sus reportes. La historia conserva la referencia k5: no se reescribe como si siempre hubieran existido cuatro perfiles.
 
@@ -290,3 +290,9 @@ La pasada formal final se ejecuta después de este cierre documental,con todos l
 Límites no bloqueantes:lector de pantalla no ejecutado,otros navegadores/sistemas no probados,deprecación previa Starlette/httpx y favicon404heredado. Las respuestas422delCSVinválido son negativos esperados. No se afirma conformidadWCAG ni certificación científica del clustering. B7mantiene revisión conjunta conRubén;B8/B10documento técnico/QAvisual final;B9ensayo;reproducibilidad/cierre para notebook y otros entornos requeridos. No se declara su aceptación por asociación.
 
 No se hizo commit,push,merge,PR ni publicación. Propuesta en inglés Conventional Commits:`fix: complete analytical acceptance and restore chart and zoom accessibility`.
+
+## Nombre del proyecto — HackINE
+
+Por solicitud de Hiram, la identidad del proyecto pasa a **HackINE** en el README, la memoria técnica, la interfaz, los metadatos de la API, los seis notebooks y los generadores de documentación e informes. Las fichas PDF nuevas incluyen el nombre en su encabezado y metadatos; su contenido revisado, digest y reglas de aprobación se conservan. El repositorio mantiene la ruta `Hiram024/bread-and-circ`; las denominaciones oficiales del concurso y las evidencias históricas no se renombran.
+
+Verificación de este cambio: CPython 3.11.17 en Linux, dependencias de `requirements-b3.txt`, **32 pruebas aprobadas y una advertencia Starlette/httpx**. La prueba de recuperación k5 requirió descargar el commit histórico `6222f79`; no se modificaron pruebas. Comprobaciones adicionales: título HTML y OpenAPI; cuatro fichas PDF con HackINE en texto y metadatos, una página por ficha como antes; informe técnico generado de diez páginas con HackINE; código y salidas de los seis notebooks conservados. Datos, modelo, paquete activo, filtros, pruebas y archivos de evidencia histórica permanecen sin cambios. Esta comprobación no sustituye una nueva aceptación visual o científica del producto.

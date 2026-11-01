@@ -17,6 +17,7 @@ plt.rcParams.update({'figure.figsize':(9,4.3),'figure.dpi':110})
 """
 
 def make(title,overview,cells,relative):
+    title=f'HackINE — {title}'
     nb=nbf.v4.new_notebook()
     nb.metadata={'kernelspec':{'display_name':'Python 3','language':'python','name':'python3'},
                  'language_info':{'name':'python'},'title':title}

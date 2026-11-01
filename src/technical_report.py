@@ -47,7 +47,7 @@ OUT=ROOT/'entregables/reportes'/package['package_version']/'documento_tecnico_re
 comparison=pd.read_csv(ROOT/'ml/resultados/comparacion_modelos.csv')
 summary=pd.read_csv(ROOT/'analisis/reportes/resumen_nacional.csv')
 section('1','Objetivo y síntesis ejecutiva')
-txt('<b>Hackathon INE / Reto 1: Perfiles ciudadanos de participación.</b> Propuesta técnica de segmentación estadística no supervisada a partir de los Conteos Censales de Participación Ciudadana (CCPC) de 2009, 2012, 2015, 2018, 2021 y 2024.',
+txt('<b>HackINE / Reto 1: Perfiles ciudadanos de participación.</b> Propuesta técnica de segmentación estadística no supervisada a partir de los Conteos Censales de Participación Ciudadana (CCPC) de 2009, 2012, 2015, 2018, 2021 y 2024.',
     f'El producto integra análisis descriptivo de datos electorales agregados, {package["manifest"]["k"]} perfiles exploratorios de la versión {package["package_version"]} sobre unidades <b>municipio × grupo de edad</b>, un dashboard local interactivo, un clasificador de nuevas observaciones compatibles y fichas educativas neutrales sometidas a revisión humana.',
     '<b>Alcance:</b> los perfiles representan agrupaciones de estadísticas poblacionales, no tipos de personas observadas individualmente. El proyecto no utiliza información personal ni estima el comportamiento de voto individual.')
 story.append(S('Conclusión del análisis'))
@@ -111,12 +111,12 @@ def footer(canvas,doc):
     canvas.saveState();w,h=A4
     canvas.setStrokeColor(colors.HexColor('#ddd5e7'));canvas.line(1.8*cm,1.35*cm,w-1.8*cm,1.35*cm)
     canvas.setFont(FONT,8);canvas.setFillColor(colors.HexColor('#83768f'))
-    canvas.drawString(1.9*cm,1.12*cm,'Hackathon INE · Reto 1 · Documento técnico, versión exploratoria')
+    canvas.drawString(1.9*cm,1.12*cm,'HackINE · Reto 1 · Documento técnico, versión exploratoria')
     canvas.drawRightString(w-1.9*cm,1.12*cm,f'Página {doc.page}')
     canvas.restoreState()
 
 if __name__=='__main__':
     OUT.parent.mkdir(exist_ok=True,parents=True)
     SimpleDocTemplate(str(OUT),pagesize=A4,leftMargin=1.9*cm,rightMargin=1.9*cm,
-       topMargin=1.7*cm,bottomMargin=1.75*cm,title='Documento técnico | Hackathon INE Reto 1').build(story,onFirstPage=footer,onLaterPages=footer)
+       topMargin=1.7*cm,bottomMargin=1.75*cm,title='Documento técnico | HackINE Reto 1').build(story,onFirstPage=footer,onLaterPages=footer)
     print('DOCUMENTO',OUT,OUT.stat().st_size)

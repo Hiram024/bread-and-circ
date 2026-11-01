@@ -5,11 +5,12 @@ from nbclient import NotebookClient
 ROOT=Path(__file__).resolve().parents[1]
 
 def make(title, cells, path):
+    title=f'HackINE — {title}'
     nb=nbf.v4.new_notebook()
     nb.cells=[nbf.v4.new_markdown_cell(f'# {title}\n\n**Fuente:** INE CCPC 2009–2024, bases adjuntas. No hay datos personales.')]
     for kind,body in cells:
         nb.cells.append(nbf.v4.new_markdown_cell(body) if kind=='md' else nbf.v4.new_code_cell(body))
-    nb.metadata={'kernelspec':{'display_name':'Python 3','language':'python','name':'python3'},'language_info':{'name':'python'}}
+    nb.metadata={'kernelspec':{'display_name':'Python 3','language':'python','name':'python3'},'language_info':{'name':'python'},'title':title}
     client=NotebookClient(nb,timeout=120,kernel_name='python3',resources={'metadata':{'path':str(ROOT)}})
     executed=client.execute()
     path.parent.mkdir(parents=True,exist_ok=True)

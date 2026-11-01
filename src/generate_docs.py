@@ -20,7 +20,7 @@ for _,r in comp.sort_values(['algoritmo','k']).iterrows():mods+=f"| {r.algoritmo
 profiles='| Perfil | Unidades | Municipios | Presidencial | Intermedia | Cambio presidencial | Cambio intermedio |\n|---|---:|---:|---:|---:|---:|---:|\n'
 for _,r in prof.iterrows():profiles+=f"| {int(r.perfil_id)} | {fmt(r.n_unidades)} | {fmt(r.municipios)} | {r.media_presidencial:.1f}% | {r.media_intermedia:.1f}% | {r.cambio_presidencial_pp:+.1f} pp | {r.cambio_intermedia_pp:+.1f} pp |\n"
 
-(R/'README.md').write_text(f'''# Hackathon INE — Perfiles de participación ciudadana (Reto 1)
+(R/'README.md').write_text(f'''# HackINE — Perfiles de participación ciudadana (Reto 1)
 
 Proyecto de **auditoría, preparación, análisis exploratorio y segmentación no supervisada** con las seis bases CCPC del INE (2009, 2012, 2015, 2018, 2021 y 2024).
 
@@ -38,7 +38,7 @@ Proyecto de **auditoría, preparación, análisis exploratorio y segmentación n
 ## Estructura
 
 ```text
-hackathon_ine_proyecto/
+HackINE/
 ├── README.md
 ├── requirements.txt
 ├── analisis/

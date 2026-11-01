@@ -26,7 +26,7 @@ async def lifespan(app):
     package()
     yield
 
-app=FastAPI(title='Hackathon INE — Perfiles estadísticos',version='1.1.0',lifespan=lifespan)
+app=FastAPI(title='HackINE — Perfiles estadísticos',version='1.1.0',lifespan=lifespan)
 app.mount('/static',StaticFiles(directory=str(ROOT/'dashboard/static')),name='static')
 
 @lru_cache(maxsize=1)

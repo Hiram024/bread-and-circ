@@ -1,6 +1,8 @@
-# Hackathon INE — Plataforma de perfiles estadísticos de participación (Reto 1)
+# HackINE — Plataforma de perfiles estadísticos de participación (Reto 1)
 
 **Aplicación local con cuatro perfiles adoptados en B4, análisis histórico y fichas educativas neutrales.** No es una herramienta oficial del INE. La extracción RAW confiable fue confirmada por Hiram; B2/B3/B4 no la certifican nuevamente.
+
+**Nombre del proyecto: HackINE.** El repositorio sigue en [Hiram024/bread-and-circ](https://github.com/Hiram024/bread-and-circ). Los nombres oficiales de la competencia y las fuentes del INE se conservan; las evidencias históricas de QA mantienen los títulos y rutas registrados en su ejecución. Los documentos y fichas generados a partir del código actual usan HackINE.
 
 Entrada para integrar: [Contrato de integración para Rubén — B4](#contrato-de-integración-para-rubén--b4). Historia y material del informe final: [memoria técnica de Hiram](docs/00_memoria_tecnica_Hiram.md).
 
@@ -33,7 +35,7 @@ desde un entorno con las dependencias instaladas; conserva los insumos y no entr
 ## Estructura resumida
 
 ```text
-hackathon_ine_proyecto/
+HackINE/
 ├── README.md, requirements.txt, requirements-app.txt, run.sh, run.bat
 ├── .vscode/                     # configuración y depuración
 ├── dashboard/                   # app HTML, CSS y JS + Plotly offline

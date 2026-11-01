@@ -92,14 +92,16 @@ def pdf_for_draft(item:dict, reviewer:str, when:str)->bytes:
     if not reviewer.strip():raise ValueError('Revisor requerido')
     out=io.BytesIO()
     pdf=SimpleDocTemplate(out,pagesize=A4,rightMargin=2*cm,leftMargin=2*cm,
-                          topMargin=1.8*cm,bottomMargin=1.8*cm)
+                          topMargin=1.8*cm,bottomMargin=1.8*cm,
+                          title=f'HackINE · {item["draft"]["titulo"]}')
     styles=getSampleStyleSheet();styles.add(ParagraphStyle(name='INE_H',parent=styles['Heading1'],fontName=FONT,fontSize=17,
        leading=22,textColor=colors.HexColor('#33235b'),spaceAfter=14))
     styles.add(ParagraphStyle(name='INE_P',parent=styles['BodyText'],fontName=FONT,fontSize=9,leading=14,spaceAfter=12))
     styles.add(ParagraphStyle(name='INE_sub',parent=styles['Heading2'],fontName=FONT,fontSize=11,leading=16,
        textColor=colors.HexColor('#623cad'),spaceBefore=10,spaceAfter=6))
     d=item['draft']; f=item['facts']
-    story=[Paragraph(escape(d['titulo']),styles['INE_H']),Paragraph(escape(d['subtitulo']),styles['INE_sub']),
+    story=[Paragraph('HackINE',styles['INE_sub']),
+           Paragraph(escape(d['titulo']),styles['INE_H']),Paragraph(escape(d['subtitulo']),styles['INE_sub']),
            Paragraph(escape(f'Versión del paquete: {item["package_version"]}'),styles['INE_P'])]
     for heading,key in [('Descripción estadística','resumen'),('Evolución electoral','evolucion'),
                         ('Material educativo neutral','contenido_educativo'),('Método','metodologia'),('Limitaciones','limitaciones')]:
